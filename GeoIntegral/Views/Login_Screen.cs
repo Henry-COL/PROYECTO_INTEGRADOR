@@ -16,5 +16,20 @@ namespace GeoIntegral.Views
         {
             InitializeComponent();
         }
+
+        private void btnIniciar_Sesion_Click(object sender, EventArgs e)
+        {
+            string usuario = txtUsuario.Text;
+            string contraseña = txtContraseña.Text;
+
+            if(usuario == "" || contraseña == "")
+            {
+                MessageBox.Show("El usuario y contraseña no son válidos.");
+
+            } else if(usuario == "admin" || contraseña == "1234")
+            {
+                
+            }
+        }
     }
 }
