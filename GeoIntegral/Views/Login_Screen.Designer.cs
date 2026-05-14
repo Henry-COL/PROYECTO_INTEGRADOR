@@ -41,7 +41,7 @@
             this.txtContrasena = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblMensaje_Usuario = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.lblMensaje_Contraseña = new System.Windows.Forms.Label();
+            this.lblMensaje_Contrasena = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblCrear_Cuenta = new System.Windows.Forms.Label();
             this.lblRecuperar_Contrasena = new System.Windows.Forms.Label();
@@ -90,7 +90,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackgroundImage = global::GeoIntegral.Properties.Resources.App_Login_Wallpaper;
+            this.panel2.BackgroundImage = global::GeoIntegral.Properties.Resources.App_Login_Wallpaper_;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.guna2Panel1);
@@ -106,6 +106,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Silver;
             this.label3.Location = new System.Drawing.Point(12, 579);
@@ -124,7 +125,7 @@
             this.guna2Panel1.Controls.Add(this.txtContrasena);
             this.guna2Panel1.Controls.Add(this.lblMensaje_Usuario);
             this.guna2Panel1.Controls.Add(this.label2);
-            this.guna2Panel1.Controls.Add(this.lblMensaje_Contraseña);
+            this.guna2Panel1.Controls.Add(this.lblMensaje_Contrasena);
             this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(27)))), ((int)(((byte)(56)))));
             this.guna2Panel1.Location = new System.Drawing.Point(339, 259);
             this.guna2Panel1.Name = "guna2Panel1";
@@ -179,6 +180,7 @@
             this.btnIniciar_Sesion.Size = new System.Drawing.Size(230, 45);
             this.btnIniciar_Sesion.TabIndex = 9;
             this.btnIniciar_Sesion.Text = "Iniciar Sesión";
+            this.btnIniciar_Sesion.Click += new System.EventHandler(this.btnIniciar_Sesion_Click);
             // 
             // txtContrasena
             // 
@@ -225,17 +227,17 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Contraseña:";
             // 
-            // lblMensaje_Contraseña
+            // lblMensaje_Contrasena
             // 
-            this.lblMensaje_Contraseña.AutoSize = true;
-            this.lblMensaje_Contraseña.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMensaje_Contraseña.ForeColor = System.Drawing.Color.Red;
-            this.lblMensaje_Contraseña.Location = new System.Drawing.Point(182, 86);
-            this.lblMensaje_Contraseña.Name = "lblMensaje_Contraseña";
-            this.lblMensaje_Contraseña.Size = new System.Drawing.Size(195, 31);
-            this.lblMensaje_Contraseña.TabIndex = 8;
-            this.lblMensaje_Contraseña.Text = "Campo obligatorio*";
-            this.lblMensaje_Contraseña.Visible = false;
+            this.lblMensaje_Contrasena.AutoSize = true;
+            this.lblMensaje_Contrasena.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMensaje_Contrasena.ForeColor = System.Drawing.Color.Red;
+            this.lblMensaje_Contrasena.Location = new System.Drawing.Point(182, 86);
+            this.lblMensaje_Contrasena.Name = "lblMensaje_Contrasena";
+            this.lblMensaje_Contrasena.Size = new System.Drawing.Size(195, 31);
+            this.lblMensaje_Contrasena.TabIndex = 8;
+            this.lblMensaje_Contrasena.Text = "Campo obligatorio*";
+            this.lblMensaje_Contrasena.Visible = false;
             // 
             // pictureBox2
             // 
@@ -321,7 +323,7 @@
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2TextBox txtUsuario;
         private System.Windows.Forms.Label lblMensaje_Usuario;
-        private System.Windows.Forms.Label lblMensaje_Contraseña;
+        private System.Windows.Forms.Label lblMensaje_Contrasena;
         private System.Windows.Forms.Label lblCrear_Cuenta;
         private System.Windows.Forms.Label lblRecuperar_Contrasena;
         private Guna.UI2.WinForms.Guna2Button btnIniciar_Sesion;

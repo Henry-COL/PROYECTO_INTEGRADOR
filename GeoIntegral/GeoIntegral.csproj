@@ -106,6 +106,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Multimedia\App_Login_Wallpaper.png" />
+    <Content Include="Multimedia\App_Login_Wallpaper_.png" />
+    <Content Include="Multimedia\App_Registrar_Wallpaper.png" />
     <Content Include="Multimedia\GeoIntegral-Logo.png" />
     <Content Include="Multimedia\GeoIntegral-LogoTipo.png" />
   </ItemGroup>

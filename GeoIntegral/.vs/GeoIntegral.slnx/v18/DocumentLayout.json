@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Henry Quintero\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|C:\\Users\\Henry Quintero\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\views\\registrar_screen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|solutionrelative:views\\registrar_screen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|c:\\users\\henry quintero\\documents\\github\\proyecto_integrador\\geointegral\\views\\login_screen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|solutionrelative:views\\login_screen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|C:\\Users\\Henry Quintero\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\views\\registrar_screen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|solutionrelative:views\\registrar_screen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|C:\\Users\\Henry Quintero\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\views\\login_screen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|solutionrelative:views\\login_screen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|C:\\Users\\Henry Quintero\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\views\\registrar_screen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|solutionrelative:views\\registrar_screen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|C:\\Users\\Henry Quintero\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\views\\registrar_screen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|solutionrelative:views\\registrar_screen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|C:\\Users\\Henry Quintero\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\views\\recuperar_screen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -21,10 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|C:\\Users\\Henry Quintero\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\views\\recuperar_screen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|solutionrelative:views\\recuperar_screen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|C:\\Users\\Henry Quintero\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\views\\login_screen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|solutionrelative:views\\login_screen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|C:\\Users\\Henry Quintero\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\app.manifest||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
@@ -42,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -58,30 +58,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Registrar_Screen.cs",
-              "DocumentMoniker": "C:\\Users\\Henry Quintero\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Registrar_Screen.cs",
-              "RelativeDocumentMoniker": "Views\\Registrar_Screen.cs",
-              "ToolTip": "C:\\Users\\Henry Quintero\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Registrar_Screen.cs",
-              "RelativeToolTip": "Views\\Registrar_Screen.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAhwBUAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-13T18:49:56.801Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Registrar_Screen.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Henry Quintero\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Registrar_Screen.cs",
               "RelativeDocumentMoniker": "Views\\Registrar_Screen.cs",
               "ToolTip": "C:\\Users\\Henry Quintero\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Registrar_Screen.cs [Dise\u00F1o]",
               "RelativeToolTip": "Views\\Registrar_Screen.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-13T06:53:46.584Z"
+              "WhenOpened": "2026-05-13T06:53:46.584Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Login_Screen.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Henry Quintero\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Login_Screen.cs",
               "RelativeDocumentMoniker": "Views\\Login_Screen.cs",
@@ -93,7 +82,33 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Login_Screen.cs",
+              "DocumentMoniker": "C:\\Users\\Henry Quintero\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Login_Screen.cs",
+              "RelativeDocumentMoniker": "Views\\Login_Screen.cs",
+              "ToolTip": "C:\\Users\\Henry Quintero\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Login_Screen.cs",
+              "RelativeToolTip": "Views\\Login_Screen.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAAADEAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T21:34:14.05Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "Registrar_Screen.cs",
+              "DocumentMoniker": "C:\\Users\\Henry Quintero\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Registrar_Screen.cs",
+              "RelativeDocumentMoniker": "Views\\Registrar_Screen.cs",
+              "ToolTip": "C:\\Users\\Henry Quintero\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Registrar_Screen.cs",
+              "RelativeToolTip": "Views\\Registrar_Screen.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAhwBUAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-13T18:49:56.801Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Recuperar_Screen.cs",
               "DocumentMoniker": "C:\\Users\\Henry Quintero\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Recuperar_Screen.cs",
               "RelativeDocumentMoniker": "Views\\Recuperar_Screen.cs",
@@ -105,7 +120,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Recuperar_Screen.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Henry Quintero\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Recuperar_Screen.cs",
               "RelativeDocumentMoniker": "Views\\Recuperar_Screen.cs",
@@ -113,18 +128,6 @@
               "RelativeToolTip": "Views\\Recuperar_Screen.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-13T06:53:33.168Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Login_Screen.cs",
-              "DocumentMoniker": "C:\\Users\\Henry Quintero\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Login_Screen.cs",
-              "RelativeDocumentMoniker": "Views\\Login_Screen.cs",
-              "ToolTip": "C:\\Users\\Henry Quintero\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Login_Screen.cs",
-              "RelativeToolTip": "Views\\Login_Screen.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAIAzwCEAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-12T21:34:14.05Z"
             },
             {
               "$type": "Document",

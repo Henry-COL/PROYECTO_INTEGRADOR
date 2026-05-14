@@ -33,5 +33,34 @@ namespace GeoIntegral.Views
             Registrar_Screen Crear_cuenta = new Registrar_Screen();
             Crear_cuenta.Show();
         }
+
+        private void btnIniciar_Sesion_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                lblMensaje_Usuario.Visible = false;
+                lblMensaje_Contrasena.Visible = false;
+                bool validar_inicio = true;
+
+                if (txtUsuario.Text == "")
+                {
+                    lblMensaje_Usuario.Visible = true;
+                    validar_inicio = false;
+                }
+                if (txtContrasena.Text == "")
+                {
+                    lblMensaje_Contrasena.Visible = true;
+                    validar_inicio = false;
+                }
+                if (validar_inicio == true)
+                {
+                        MessageBox.Show("Inicio de sesión exitoso");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al iniciar sesión: " + ex.Message);
+            }
+        }
     }
 }
