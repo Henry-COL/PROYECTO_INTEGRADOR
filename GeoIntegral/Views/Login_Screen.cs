@@ -17,19 +17,21 @@ namespace GeoIntegral.Views
             InitializeComponent();
         }
 
-        private void btnIniciar_Sesion_Click(object sender, EventArgs e)
+        private void btnCerrar_App_Click(object sender, EventArgs e)
         {
-            string usuario = txtUsuario.Text;
-            string contraseña = txtContraseña.Text;
+            Application.Exit();
+        }
 
-            if(usuario == "" || contraseña == "")
-            {
-                MessageBox.Show("El usuario y contraseña no son válidos.");
+        private void lblRecuperar_Contrasena_Click(object sender, EventArgs e)
+        {
+            Recuperar_Screen Ventana_recuperar = new Recuperar_Screen();
+            Ventana_recuperar.Show();
+        }
 
-            } else if(usuario == "admin" || contraseña == "1234")
-            {
-                
-            }
+        private void lblCrear_Cuenta_Click(object sender, EventArgs e)
+        {
+            Registrar_Screen Crear_cuenta = new Registrar_Screen();
+            Crear_cuenta.Show();
         }
     }
 }

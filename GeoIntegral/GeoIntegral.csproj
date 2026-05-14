@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Guna.UI2">
       <HintPath>..\..\HENZO\Corte_2\EjerciciosPractica\EjerciciosClase\app_inventario\packages\Guna.UI2.WinForms.2.0.4.7\lib\net45\Guna.UI2.dll</HintPath>
@@ -65,9 +68,22 @@
     <Compile Include="Views\Login_Screen.Designer.cs">
       <DependentUpon>Login_Screen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Recuperar_Screen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Recuperar_Screen.Designer.cs">
+      <DependentUpon>Recuperar_Screen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Registrar_Screen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Registrar_Screen.Designer.cs">
+      <DependentUpon>Registrar_Screen.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="app.manifest" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controller\" />
@@ -81,9 +97,17 @@
     <EmbeddedResource Include="Views\Login_Screen.resx">
       <DependentUpon>Login_Screen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Recuperar_Screen.resx">
+      <DependentUpon>Recuperar_Screen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Registrar_Screen.resx">
+      <DependentUpon>Registrar_Screen.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Multimedia\App_Logo.png" />
+    <Content Include="Multimedia\App_Login_Wallpaper.png" />
+    <Content Include="Multimedia\GeoIntegral-Logo.png" />
+    <Content Include="Multimedia\GeoIntegral-LogoTipo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
