@@ -239,6 +239,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::GeoIntegral.Properties.Resources.GeoIntegral_LogoTipo;
             this.pictureBox2.Location = new System.Drawing.Point(354, 96);
             this.pictureBox2.Name = "pictureBox2";
@@ -250,6 +251,7 @@
             // lblCrear_Cuenta
             // 
             this.lblCrear_Cuenta.AutoSize = true;
+            this.lblCrear_Cuenta.BackColor = System.Drawing.Color.Transparent;
             this.lblCrear_Cuenta.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblCrear_Cuenta.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCrear_Cuenta.ForeColor = System.Drawing.SystemColors.ActiveCaption;
@@ -263,6 +265,7 @@
             // lblRecuperar_Contrasena
             // 
             this.lblRecuperar_Contrasena.AutoSize = true;
+            this.lblRecuperar_Contrasena.BackColor = System.Drawing.Color.Transparent;
             this.lblRecuperar_Contrasena.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblRecuperar_Contrasena.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblRecuperar_Contrasena.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -276,6 +279,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::GeoIntegral.Properties.Resources.GeoIntegral_Logo;
             this.pictureBox1.Location = new System.Drawing.Point(198, 96);
             this.pictureBox1.Name = "pictureBox1";
