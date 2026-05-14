@@ -29,11 +29,25 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registrar_Screen));
             this.btnCerrar_App = new Guna.UI2.WinForms.Guna2Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.Guna2_Bordes = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.txtConfirmar_Contrasena = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.lblMensaje_Contrasena_Confirmar = new System.Windows.Forms.Label();
+            this.txtContrasena = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.lblMensaje_Contrasena_ = new System.Windows.Forms.Label();
+            this.txtGmail_Confirmar = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lblMensaje_Gmail_Confirmar = new System.Windows.Forms.Label();
+            this.txtGmail = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblMensaje_Gmail_ = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.lblRecuperar_Contrasena = new System.Windows.Forms.Label();
             this.txtUsuario = new Guna.UI2.WinForms.Guna2TextBox();
@@ -43,19 +57,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txtGmail = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lblMensaje_Gmail_ = new System.Windows.Forms.Label();
-            this.txtConfirmar_Gmail = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.lblMensaje_Gmail_Confirmar = new System.Windows.Forms.Label();
-            this.txtContrasena = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.lblMensaje_Contrasena_ = new System.Windows.Forms.Label();
-            this.txtConfirmar_Contrasena = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.lblMensaje_Contrasena_Confirmar = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
@@ -110,8 +111,20 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(0, 61);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(648, 645);
+            this.panel2.Size = new System.Drawing.Size(645, 645);
             this.panel2.TabIndex = 17;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Poppins", 7F);
+            this.label11.ForeColor = System.Drawing.Color.Khaki;
+            this.label11.Location = new System.Drawing.Point(153, 93);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(321, 25);
+            this.label11.TabIndex = 28;
+            this.label11.Text = "Crea una nueva cuenta de manera gratuita.";
             // 
             // guna2Panel1
             // 
@@ -123,7 +136,7 @@
             this.guna2Panel1.Controls.Add(this.txtContrasena);
             this.guna2Panel1.Controls.Add(this.label7);
             this.guna2Panel1.Controls.Add(this.lblMensaje_Contrasena_);
-            this.guna2Panel1.Controls.Add(this.txtConfirmar_Gmail);
+            this.guna2Panel1.Controls.Add(this.txtGmail_Confirmar);
             this.guna2Panel1.Controls.Add(this.label5);
             this.guna2Panel1.Controls.Add(this.lblMensaje_Gmail_Confirmar);
             this.guna2Panel1.Controls.Add(this.txtGmail);
@@ -141,12 +154,192 @@
             this.guna2Panel1.Size = new System.Drawing.Size(512, 475);
             this.guna2Panel1.TabIndex = 1;
             // 
+            // txtConfirmar_Contrasena
+            // 
+            this.txtConfirmar_Contrasena.BorderRadius = 4;
+            this.txtConfirmar_Contrasena.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtConfirmar_Contrasena.DefaultText = "";
+            this.txtConfirmar_Contrasena.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtConfirmar_Contrasena.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtConfirmar_Contrasena.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtConfirmar_Contrasena.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtConfirmar_Contrasena.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtConfirmar_Contrasena.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtConfirmar_Contrasena.ForeColor = System.Drawing.Color.Black;
+            this.txtConfirmar_Contrasena.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtConfirmar_Contrasena.Location = new System.Drawing.Point(39, 310);
+            this.txtConfirmar_Contrasena.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtConfirmar_Contrasena.Name = "txtConfirmar_Contrasena";
+            this.txtConfirmar_Contrasena.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtConfirmar_Contrasena.PlaceholderText = "Ingrse nuevamente la contraseña.";
+            this.txtConfirmar_Contrasena.SelectedText = "";
+            this.txtConfirmar_Contrasena.Size = new System.Drawing.Size(435, 28);
+            this.txtConfirmar_Contrasena.TabIndex = 38;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.SystemColors.Control;
+            this.label9.Location = new System.Drawing.Point(33, 281);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(221, 31);
+            this.label9.TabIndex = 37;
+            this.label9.Text = "Confirmar contraseña:";
+            // 
+            // lblMensaje_Contrasena_Confirmar
+            // 
+            this.lblMensaje_Contrasena_Confirmar.AutoSize = true;
+            this.lblMensaje_Contrasena_Confirmar.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMensaje_Contrasena_Confirmar.ForeColor = System.Drawing.Color.Red;
+            this.lblMensaje_Contrasena_Confirmar.Location = new System.Drawing.Point(279, 281);
+            this.lblMensaje_Contrasena_Confirmar.Name = "lblMensaje_Contrasena_Confirmar";
+            this.lblMensaje_Contrasena_Confirmar.Size = new System.Drawing.Size(195, 31);
+            this.lblMensaje_Contrasena_Confirmar.TabIndex = 39;
+            this.lblMensaje_Contrasena_Confirmar.Text = "Campo obligatorio*";
+            this.lblMensaje_Contrasena_Confirmar.Visible = false;
+            // 
+            // txtContrasena
+            // 
+            this.txtContrasena.BorderRadius = 4;
+            this.txtContrasena.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtContrasena.DefaultText = "";
+            this.txtContrasena.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtContrasena.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtContrasena.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtContrasena.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtContrasena.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtContrasena.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtContrasena.ForeColor = System.Drawing.Color.Black;
+            this.txtContrasena.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtContrasena.Location = new System.Drawing.Point(39, 245);
+            this.txtContrasena.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtContrasena.Name = "txtContrasena";
+            this.txtContrasena.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtContrasena.PlaceholderText = "Ingrese una contraseña.";
+            this.txtContrasena.SelectedText = "";
+            this.txtContrasena.Size = new System.Drawing.Size(435, 28);
+            this.txtContrasena.TabIndex = 35;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.Control;
+            this.label7.Location = new System.Drawing.Point(33, 216);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(126, 31);
+            this.label7.TabIndex = 34;
+            this.label7.Text = "Contraseña:";
+            // 
+            // lblMensaje_Contrasena_
+            // 
+            this.lblMensaje_Contrasena_.AutoSize = true;
+            this.lblMensaje_Contrasena_.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMensaje_Contrasena_.ForeColor = System.Drawing.Color.Red;
+            this.lblMensaje_Contrasena_.Location = new System.Drawing.Point(279, 216);
+            this.lblMensaje_Contrasena_.Name = "lblMensaje_Contrasena_";
+            this.lblMensaje_Contrasena_.Size = new System.Drawing.Size(195, 31);
+            this.lblMensaje_Contrasena_.TabIndex = 36;
+            this.lblMensaje_Contrasena_.Text = "Campo obligatorio*";
+            this.lblMensaje_Contrasena_.Visible = false;
+            // 
+            // txtGmail_Confirmar
+            // 
+            this.txtGmail_Confirmar.BorderRadius = 4;
+            this.txtGmail_Confirmar.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtGmail_Confirmar.DefaultText = "";
+            this.txtGmail_Confirmar.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtGmail_Confirmar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtGmail_Confirmar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtGmail_Confirmar.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtGmail_Confirmar.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtGmail_Confirmar.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtGmail_Confirmar.ForeColor = System.Drawing.Color.Black;
+            this.txtGmail_Confirmar.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtGmail_Confirmar.Location = new System.Drawing.Point(39, 180);
+            this.txtGmail_Confirmar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtGmail_Confirmar.Name = "txtGmail_Confirmar";
+            this.txtGmail_Confirmar.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtGmail_Confirmar.PlaceholderText = "Ingrese nuevamente su Gmail.";
+            this.txtGmail_Confirmar.SelectedText = "";
+            this.txtGmail_Confirmar.Size = new System.Drawing.Size(435, 28);
+            this.txtGmail_Confirmar.TabIndex = 32;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.Control;
+            this.label5.Location = new System.Drawing.Point(33, 151);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(169, 31);
+            this.label5.TabIndex = 31;
+            this.label5.Text = "Confirmar Gmail:";
+            // 
+            // lblMensaje_Gmail_Confirmar
+            // 
+            this.lblMensaje_Gmail_Confirmar.AutoSize = true;
+            this.lblMensaje_Gmail_Confirmar.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMensaje_Gmail_Confirmar.ForeColor = System.Drawing.Color.Red;
+            this.lblMensaje_Gmail_Confirmar.Location = new System.Drawing.Point(279, 151);
+            this.lblMensaje_Gmail_Confirmar.Name = "lblMensaje_Gmail_Confirmar";
+            this.lblMensaje_Gmail_Confirmar.Size = new System.Drawing.Size(195, 31);
+            this.lblMensaje_Gmail_Confirmar.TabIndex = 33;
+            this.lblMensaje_Gmail_Confirmar.Text = "Campo obligatorio*";
+            this.lblMensaje_Gmail_Confirmar.Visible = false;
+            // 
+            // txtGmail
+            // 
+            this.txtGmail.BorderRadius = 4;
+            this.txtGmail.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtGmail.DefaultText = "";
+            this.txtGmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtGmail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtGmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtGmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtGmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtGmail.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtGmail.ForeColor = System.Drawing.Color.Black;
+            this.txtGmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtGmail.Location = new System.Drawing.Point(39, 115);
+            this.txtGmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtGmail.Name = "txtGmail";
+            this.txtGmail.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtGmail.PlaceholderText = "Ingrece una cuenta de Gmail.";
+            this.txtGmail.SelectedText = "";
+            this.txtGmail.Size = new System.Drawing.Size(435, 28);
+            this.txtGmail.TabIndex = 29;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.Control;
+            this.label3.Location = new System.Drawing.Point(33, 86);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(71, 31);
+            this.label3.TabIndex = 28;
+            this.label3.Text = "Gmail:";
+            // 
+            // lblMensaje_Gmail_
+            // 
+            this.lblMensaje_Gmail_.AutoSize = true;
+            this.lblMensaje_Gmail_.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMensaje_Gmail_.ForeColor = System.Drawing.Color.Red;
+            this.lblMensaje_Gmail_.Location = new System.Drawing.Point(279, 86);
+            this.lblMensaje_Gmail_.Name = "lblMensaje_Gmail_";
+            this.lblMensaje_Gmail_.Size = new System.Drawing.Size(195, 31);
+            this.lblMensaje_Gmail_.TabIndex = 30;
+            this.lblMensaje_Gmail_.Text = "Campo obligatorio*";
+            this.lblMensaje_Gmail_.Visible = false;
+            // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.Control;
-            this.label10.Location = new System.Drawing.Point(90, 417);
+            this.label10.Location = new System.Drawing.Point(91, 417);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(184, 31);
             this.label10.TabIndex = 27;
@@ -214,6 +407,7 @@
             this.btnRegistrar.Size = new System.Drawing.Size(264, 45);
             this.btnRegistrar.TabIndex = 16;
             this.btnRegistrar.Text = "Registrar Cuenta";
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // lblMensaje_Usuario
             // 
@@ -233,7 +427,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Poppins", 26F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(168, 22);
+            this.label1.Location = new System.Drawing.Point(168, 17);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(315, 92);
             this.label1.TabIndex = 0;
@@ -261,198 +455,6 @@
             this.pictureBox2.TabIndex = 20;
             this.pictureBox2.TabStop = false;
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Poppins", 7F);
-            this.label11.ForeColor = System.Drawing.Color.Khaki;
-            this.label11.Location = new System.Drawing.Point(153, 98);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(321, 25);
-            this.label11.TabIndex = 28;
-            this.label11.Text = "Crea una nueva cuenta de manera gratuita.";
-            // 
-            // txtGmail
-            // 
-            this.txtGmail.BorderRadius = 4;
-            this.txtGmail.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtGmail.DefaultText = "";
-            this.txtGmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtGmail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtGmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtGmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtGmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtGmail.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtGmail.ForeColor = System.Drawing.Color.Black;
-            this.txtGmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtGmail.Location = new System.Drawing.Point(39, 115);
-            this.txtGmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtGmail.Name = "txtGmail";
-            this.txtGmail.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtGmail.PlaceholderText = "Ingrece una cuenta de Gmail.";
-            this.txtGmail.SelectedText = "";
-            this.txtGmail.Size = new System.Drawing.Size(435, 28);
-            this.txtGmail.TabIndex = 29;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(33, 86);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 31);
-            this.label3.TabIndex = 28;
-            this.label3.Text = "Gmail:";
-            // 
-            // lblMensaje_Gmail_
-            // 
-            this.lblMensaje_Gmail_.AutoSize = true;
-            this.lblMensaje_Gmail_.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMensaje_Gmail_.ForeColor = System.Drawing.Color.Red;
-            this.lblMensaje_Gmail_.Location = new System.Drawing.Point(279, 86);
-            this.lblMensaje_Gmail_.Name = "lblMensaje_Gmail_";
-            this.lblMensaje_Gmail_.Size = new System.Drawing.Size(195, 31);
-            this.lblMensaje_Gmail_.TabIndex = 30;
-            this.lblMensaje_Gmail_.Text = "Campo obligatorio*";
-            this.lblMensaje_Gmail_.Visible = false;
-            // 
-            // txtConfirmar_Gmail
-            // 
-            this.txtConfirmar_Gmail.BorderRadius = 4;
-            this.txtConfirmar_Gmail.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtConfirmar_Gmail.DefaultText = "";
-            this.txtConfirmar_Gmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtConfirmar_Gmail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtConfirmar_Gmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtConfirmar_Gmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtConfirmar_Gmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtConfirmar_Gmail.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtConfirmar_Gmail.ForeColor = System.Drawing.Color.Black;
-            this.txtConfirmar_Gmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtConfirmar_Gmail.Location = new System.Drawing.Point(39, 180);
-            this.txtConfirmar_Gmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtConfirmar_Gmail.Name = "txtConfirmar_Gmail";
-            this.txtConfirmar_Gmail.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtConfirmar_Gmail.PlaceholderText = "Ingrese nuevamente su Gmail.";
-            this.txtConfirmar_Gmail.SelectedText = "";
-            this.txtConfirmar_Gmail.Size = new System.Drawing.Size(435, 28);
-            this.txtConfirmar_Gmail.TabIndex = 32;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.Control;
-            this.label5.Location = new System.Drawing.Point(33, 151);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(169, 31);
-            this.label5.TabIndex = 31;
-            this.label5.Text = "Confirmar Gmail:";
-            // 
-            // lblMensaje_Gmail_Confirmar
-            // 
-            this.lblMensaje_Gmail_Confirmar.AutoSize = true;
-            this.lblMensaje_Gmail_Confirmar.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMensaje_Gmail_Confirmar.ForeColor = System.Drawing.Color.Red;
-            this.lblMensaje_Gmail_Confirmar.Location = new System.Drawing.Point(279, 151);
-            this.lblMensaje_Gmail_Confirmar.Name = "lblMensaje_Gmail_Confirmar";
-            this.lblMensaje_Gmail_Confirmar.Size = new System.Drawing.Size(195, 31);
-            this.lblMensaje_Gmail_Confirmar.TabIndex = 33;
-            this.lblMensaje_Gmail_Confirmar.Text = "Campo obligatorio*";
-            this.lblMensaje_Gmail_Confirmar.Visible = false;
-            // 
-            // txtContrasena
-            // 
-            this.txtContrasena.BorderRadius = 4;
-            this.txtContrasena.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtContrasena.DefaultText = "";
-            this.txtContrasena.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtContrasena.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtContrasena.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtContrasena.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtContrasena.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtContrasena.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtContrasena.ForeColor = System.Drawing.Color.Black;
-            this.txtContrasena.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtContrasena.Location = new System.Drawing.Point(39, 245);
-            this.txtContrasena.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtContrasena.Name = "txtContrasena";
-            this.txtContrasena.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtContrasena.PlaceholderText = "Ingrese una contraseña.";
-            this.txtContrasena.SelectedText = "";
-            this.txtContrasena.Size = new System.Drawing.Size(435, 28);
-            this.txtContrasena.TabIndex = 35;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.Control;
-            this.label7.Location = new System.Drawing.Point(33, 216);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(126, 31);
-            this.label7.TabIndex = 34;
-            this.label7.Text = "Contraseña:";
-            // 
-            // lblMensaje_Contrasena_
-            // 
-            this.lblMensaje_Contrasena_.AutoSize = true;
-            this.lblMensaje_Contrasena_.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMensaje_Contrasena_.ForeColor = System.Drawing.Color.Red;
-            this.lblMensaje_Contrasena_.Location = new System.Drawing.Point(279, 216);
-            this.lblMensaje_Contrasena_.Name = "lblMensaje_Contrasena_";
-            this.lblMensaje_Contrasena_.Size = new System.Drawing.Size(195, 31);
-            this.lblMensaje_Contrasena_.TabIndex = 36;
-            this.lblMensaje_Contrasena_.Text = "Campo obligatorio*";
-            this.lblMensaje_Contrasena_.Visible = false;
-            // 
-            // txtConfirmar_Contrasena
-            // 
-            this.txtConfirmar_Contrasena.BorderRadius = 4;
-            this.txtConfirmar_Contrasena.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtConfirmar_Contrasena.DefaultText = "";
-            this.txtConfirmar_Contrasena.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtConfirmar_Contrasena.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtConfirmar_Contrasena.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtConfirmar_Contrasena.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtConfirmar_Contrasena.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtConfirmar_Contrasena.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtConfirmar_Contrasena.ForeColor = System.Drawing.Color.Black;
-            this.txtConfirmar_Contrasena.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtConfirmar_Contrasena.Location = new System.Drawing.Point(39, 310);
-            this.txtConfirmar_Contrasena.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtConfirmar_Contrasena.Name = "txtConfirmar_Contrasena";
-            this.txtConfirmar_Contrasena.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtConfirmar_Contrasena.PlaceholderText = "Ingrse nuevamente la contraseña.";
-            this.txtConfirmar_Contrasena.SelectedText = "";
-            this.txtConfirmar_Contrasena.Size = new System.Drawing.Size(435, 28);
-            this.txtConfirmar_Contrasena.TabIndex = 38;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.SystemColors.Control;
-            this.label9.Location = new System.Drawing.Point(33, 281);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(221, 31);
-            this.label9.TabIndex = 37;
-            this.label9.Text = "Confirmar contraseña:";
-            // 
-            // lblMensaje_Contrasena_Confirmar
-            // 
-            this.lblMensaje_Contrasena_Confirmar.AutoSize = true;
-            this.lblMensaje_Contrasena_Confirmar.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMensaje_Contrasena_Confirmar.ForeColor = System.Drawing.Color.Red;
-            this.lblMensaje_Contrasena_Confirmar.Location = new System.Drawing.Point(279, 281);
-            this.lblMensaje_Contrasena_Confirmar.Name = "lblMensaje_Contrasena_Confirmar";
-            this.lblMensaje_Contrasena_Confirmar.Size = new System.Drawing.Size(195, 31);
-            this.lblMensaje_Contrasena_Confirmar.TabIndex = 39;
-            this.lblMensaje_Contrasena_Confirmar.Text = "Campo obligatorio*";
-            this.lblMensaje_Contrasena_Confirmar.Visible = false;
-            // 
             // Registrar_Screen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -463,9 +465,10 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Registrar_Screen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Registrar_Screen";
+            this.Text = "Registrar Cuenta";
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -497,7 +500,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txtContrasena;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lblMensaje_Contrasena_;
-        private Guna.UI2.WinForms.Guna2TextBox txtConfirmar_Gmail;
+        private Guna.UI2.WinForms.Guna2TextBox txtGmail_Confirmar;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblMensaje_Gmail_Confirmar;
         private Guna.UI2.WinForms.Guna2TextBox txtGmail;

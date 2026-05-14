@@ -54,7 +54,9 @@ namespace GeoIntegral.Views
                 }
                 if (validar_inicio == true)
                 {
-                        MessageBox.Show("Inicio de sesión exitoso");
+                   MessageBox.Show("Inicio de sesión exitoso");
+                    var ventana_principal = new Principal_Screen();
+                    ventana_principal.Show();
                 }
             }
             catch (Exception ex)
