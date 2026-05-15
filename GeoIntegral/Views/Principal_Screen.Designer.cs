@@ -120,6 +120,7 @@
             this.btnAdmin_Menu.Size = new System.Drawing.Size(220, 60);
             this.btnAdmin_Menu.TabIndex = 5;
             this.btnAdmin_Menu.Text = "Menu Admin";
+            this.btnAdmin_Menu.Visible = false;
             // 
             // btnMenu_5
             // 

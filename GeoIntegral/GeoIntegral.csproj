@@ -132,6 +132,9 @@
     <EmbeddedResource Include="Views\Recuperar_Screen.resx">
       <DependentUpon>Recuperar_Screen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Registrar_Cliente.resx">
+      <DependentUpon>Registrar_Cliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Registrar_Screen.resx">
       <DependentUpon>Registrar_Screen.cs</DependentUpon>
     </EmbeddedResource>
@@ -145,6 +148,7 @@
     <Content Include="Multimedia\App_Login_Wallpaper.png" />
     <Content Include="Multimedia\App_Login_Wallpaper_.png" />
     <Content Include="Multimedia\App_Recuperar_Wallpaper.png" />
+    <Content Include="Multimedia\App_Registrar_Cliente_Wallpaper.png" />
     <Content Include="Multimedia\App_Registrar_Wallpaper.png" />
     <Content Include="Multimedia\App_TipoCuenta_Wallpaper.png" />
     <Content Include="Multimedia\GeoIntegral-Logo.png" />
