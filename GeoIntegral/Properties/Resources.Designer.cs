@@ -113,6 +113,16 @@ namespace GeoIntegral.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap App_Registrar_Cliente_Wallpaper {
+            get {
+                object obj = ResourceManager.GetObject("App_Registrar_Cliente_Wallpaper", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap App_Registrar_Wallpaper {
             get {
                 object obj = ResourceManager.GetObject("App_Registrar_Wallpaper", resourceCulture);

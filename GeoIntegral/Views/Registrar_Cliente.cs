@@ -16,5 +16,10 @@ namespace GeoIntegral.Views
         {
             InitializeComponent();
         }
+
+        private void btnCerrar_App_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
