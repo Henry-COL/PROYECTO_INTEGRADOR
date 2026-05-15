@@ -29,49 +29,83 @@ namespace GeoIntegral.Views
         {
             try
             {
+                // Limpiar mensajes
                 lblMensaje_Usuario.Visible = false;
                 lblMensaje_Gmail_.Visible = false;
                 lblMensaje_Gmail_Confirmar.Visible = false;
                 lblMensaje_Contrasena_.Visible = false;
                 lblMensaje_Contrasena_Confirmar.Visible = false;
-                bool validar_inicio = true;
 
+                bool validar = true;
+
+                // Validar campos vacíos
                 if (txtUsuario.Text == "")
                 {
                     lblMensaje_Usuario.Visible = true;
-                    validar_inicio = false;
+                    validar = false;
                 }
                 if (txtGmail.Text == "")
                 {
                     lblMensaje_Gmail_.Visible = true;
-                    validar_inicio = false;
+                    validar = false;
                 }
                 if (txtGmail_Confirmar.Text == "")
                 {
                     lblMensaje_Gmail_Confirmar.Visible = true;
-                    validar_inicio = false;
+                    validar = false;
                 }
                 if (txtContrasena.Text == "")
                 {
                     lblMensaje_Contrasena_.Visible = true;
-                    validar_inicio = false;
+                    validar = false;
                 }
                 if (txtConfirmar_Contrasena.Text == "")
                 {
                     lblMensaje_Contrasena_Confirmar.Visible = true;
-                    validar_inicio = false;
+                    validar = false;
                 }
 
-                if (validar_inicio == true)
-                {
-                    Usuario usuarioParaRegistrar = new Usuario(txtUsuario.Text, txtContrasena.Text, txtGmail.Text, Enums.RolUsuario.Usuario, Enums.EstadoUsuario.Activo);
-                    UsuarioController control = new UsuarioController();
+                if (!validar) return;
 
-                    if (control.RegistrarUsuario(usuarioParaRegistrar))
-                    {
-                        MessageBox.Show("¡Usuario registrado con éxito en la base de datos!", "GeoIntegral", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.Close();
-                    }
+                // Validar que los Gmail coincidan
+                if (txtGmail.Text != txtGmail_Confirmar.Text)
+                {
+                    lblMensaje_Gmail_Confirmar.Text = "Los Gmail no coinciden*";
+                    lblMensaje_Gmail_Confirmar.Visible = true;
+                    return;
+                }
+
+                // Validar que las contraseñas coincidan
+                if (txtContrasena.Text != txtConfirmar_Contrasena.Text)
+                {
+                    lblMensaje_Contrasena_Confirmar.Text = "Las contraseñas no coinciden*";
+                    lblMensaje_Contrasena_Confirmar.Visible = true;
+                    return;
+                }
+
+                // Validar que el usuario no exista ya
+                UsuarioController control = new UsuarioController();
+                if (control.UsuarioExiste(txtUsuario.Text))
+                {
+                    lblMensaje_Usuario.Text = "Ese usuario ya existe*";
+                    lblMensaje_Usuario.Visible = true;
+                    return;
+                }
+
+                // Registrar
+                Usuario usuarioParaRegistrar = new Usuario(
+                    txtUsuario.Text,
+                    txtContrasena.Text,
+                    txtGmail.Text,
+                    RolUsuario.Usuario,
+                    EstadoUsuario.Activo
+                );
+
+                if (control.RegistrarUsuario(usuarioParaRegistrar))
+                {
+                    MessageBox.Show("¡Usuario registrado con éxito!", "GeoIntegral",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
                 }
             }
             catch (Exception ex)

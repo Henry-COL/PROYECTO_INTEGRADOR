@@ -27,3 +27,8 @@ C:\Users\LENOVO\Desktop\Proyectos\PROYECTO_INTEGRADOR\GeoIntegral\obj\Debug\GeoI
 >>>>>>> 738cc21701f16a01638194a5d12ec1c183ededfa
 C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\obj\Debug\GeoIntegral.Views.Principal_Screen.resources
 C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\obj\Debug\GeoIntegral.Views.Tipo_Registrar.resources
+C:\Users\LENOVO\Desktop\Proyectos\PROYECTO_INTEGRADOR\GeoIntegral\obj\Debug\GeoIntegral.Views.Principal_Screen.resources
+C:\Users\LENOVO\Desktop\Proyectos\PROYECTO_INTEGRADOR\GeoIntegral\obj\Debug\GeoIntegral.Views.Recuperar_Screen.resources
+C:\Users\LENOVO\Desktop\Proyectos\PROYECTO_INTEGRADOR\GeoIntegral\obj\Debug\GeoIntegral.Views.Registrar_Screen.resources
+C:\Users\LENOVO\Desktop\Proyectos\PROYECTO_INTEGRADOR\GeoIntegral\obj\Debug\GeoIntegral.Views.Tipo_Registrar.resources
+C:\Users\LENOVO\Desktop\Proyectos\PROYECTO_INTEGRADOR\GeoIntegral\obj\Debug\GeoInteg.74D226CE.Up2Date

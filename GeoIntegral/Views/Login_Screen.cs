@@ -69,6 +69,10 @@ namespace GeoIntegral.Views
                         menu.FormClosed += (s, args) => this.Close();
                         menu.Show();
                         
+                    } else
+                    {
+                        txtContrasena.Text = "";
+                        txtContrasena.Focus();
                     }
                 }
             }
