@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GeoIntegral.DataBase;
 
 namespace GeoIntegral
 {
@@ -15,6 +16,10 @@ namespace GeoIntegral
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            ArchivosCSV archivos = new ArchivosCSV();
+            archivos.CrearInfraestructura();
+
             Application.Run(new Login_Screen());
         }
     }

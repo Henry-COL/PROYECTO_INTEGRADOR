@@ -26,3 +26,4 @@ C:\Users\LENOVO\Desktop\Proyectos\PROYECTO_INTEGRADOR\GeoIntegral\obj\Debug\GeoI
 C:\Users\LENOVO\Desktop\Proyectos\PROYECTO_INTEGRADOR\GeoIntegral\obj\Debug\GeoIntegral.pdb
 >>>>>>> 738cc21701f16a01638194a5d12ec1c183ededfa
 C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\obj\Debug\GeoIntegral.Views.Principal_Screen.resources
+C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\obj\Debug\GeoIntegral.Views.Tipo_Registrar.resources

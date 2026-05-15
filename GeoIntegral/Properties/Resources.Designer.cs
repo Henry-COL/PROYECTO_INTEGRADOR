@@ -63,6 +63,26 @@ namespace GeoIntegral.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap App_CuentaEmpresa_Imagen {
+            get {
+                object obj = ResourceManager.GetObject("App_CuentaEmpresa_Imagen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap App_CuentaPersonal_Imagen {
+            get {
+                object obj = ResourceManager.GetObject("App_CuentaPersonal_Imagen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap App_Login_Wallpaper {
             get {
                 object obj = ResourceManager.GetObject("App_Login_Wallpaper", resourceCulture);
@@ -96,6 +116,16 @@ namespace GeoIntegral.Properties {
         internal static System.Drawing.Bitmap App_Registrar_Wallpaper {
             get {
                 object obj = ResourceManager.GetObject("App_Registrar_Wallpaper", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap App_TipoCuenta_Wallpaper {
+            get {
+                object obj = ResourceManager.GetObject("App_TipoCuenta_Wallpaper", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

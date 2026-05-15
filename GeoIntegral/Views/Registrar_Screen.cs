@@ -1,4 +1,7 @@
-﻿using System;
+﻿using GeoIntegral.Controller;
+using GeoIntegral.Enums;
+using GeoIntegral.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -61,13 +64,25 @@ namespace GeoIntegral.Views
 
                 if (validar_inicio == true)
                 {
-                    MessageBox.Show("Cuenta registrada exitosamente");
+                    Usuario usuarioParaRegistrar = new Usuario(txtUsuario.Text, txtContrasena.Text, txtGmail.Text, Enums.RolUsuario.Usuario, Enums.EstadoUsuario.Activo);
+                    UsuarioController control = new UsuarioController();
+
+                    if (control.RegistrarUsuario(usuarioParaRegistrar))
+                    {
+                        MessageBox.Show("¡Usuario registrado con éxito en la base de datos!", "GeoIntegral", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+                    }
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error al registrar cuenta: " + ex.Message);
             }
+        }
+
+        private void lblIniciar_Sesion_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

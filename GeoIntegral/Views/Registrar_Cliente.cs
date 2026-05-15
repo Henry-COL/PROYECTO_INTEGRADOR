@@ -1,5 +1,4 @@
-﻿using GeoIntegral.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,16 +10,11 @@ using System.Windows.Forms;
 
 namespace GeoIntegral.Views
 {
-    public partial class Principal_Screen : Form
+    public partial class Registrar_Cliente : Form
     {
-        public Principal_Screen(Usuario usuario)
+        public Registrar_Cliente()
         {
             InitializeComponent();
-        }
-
-        private void CargarDatosUsuario()
-        {
-
         }
     }
 }

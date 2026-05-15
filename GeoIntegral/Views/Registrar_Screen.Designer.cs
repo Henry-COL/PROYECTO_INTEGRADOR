@@ -49,7 +49,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lblMensaje_Gmail_ = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.lblRecuperar_Contrasena = new System.Windows.Forms.Label();
+            this.lblIniciar_Sesion = new System.Windows.Forms.Label();
             this.txtUsuario = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnRegistrar = new Guna.UI2.WinForms.Guna2Button();
@@ -76,7 +76,7 @@
             this.btnCerrar_App.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrar_App.ForeColor = System.Drawing.Color.White;
             this.btnCerrar_App.HoverState.FillColor = System.Drawing.Color.Maroon;
-            this.btnCerrar_App.Location = new System.Drawing.Point(567, 9);
+            this.btnCerrar_App.Location = new System.Drawing.Point(588, 9);
             this.btnCerrar_App.Name = "btnCerrar_App";
             this.btnCerrar_App.Size = new System.Drawing.Size(69, 45);
             this.btnCerrar_App.TabIndex = 18;
@@ -92,7 +92,7 @@
             this.panel1.Enabled = false;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(648, 62);
+            this.panel1.Size = new System.Drawing.Size(669, 62);
             this.panel1.TabIndex = 16;
             // 
             // Guna2_Bordes
@@ -111,7 +111,7 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(0, 61);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(645, 645);
+            this.panel2.Size = new System.Drawing.Size(667, 685);
             this.panel2.TabIndex = 17;
             // 
             // label11
@@ -120,7 +120,7 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Poppins", 7F);
             this.label11.ForeColor = System.Drawing.Color.Khaki;
-            this.label11.Location = new System.Drawing.Point(153, 93);
+            this.label11.Location = new System.Drawing.Point(169, 83);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(321, 25);
             this.label11.TabIndex = 28;
@@ -143,15 +143,15 @@
             this.guna2Panel1.Controls.Add(this.label3);
             this.guna2Panel1.Controls.Add(this.lblMensaje_Gmail_);
             this.guna2Panel1.Controls.Add(this.label10);
-            this.guna2Panel1.Controls.Add(this.lblRecuperar_Contrasena);
+            this.guna2Panel1.Controls.Add(this.lblIniciar_Sesion);
             this.guna2Panel1.Controls.Add(this.txtUsuario);
             this.guna2Panel1.Controls.Add(this.label2);
             this.guna2Panel1.Controls.Add(this.btnRegistrar);
             this.guna2Panel1.Controls.Add(this.lblMensaje_Usuario);
             this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(27)))), ((int)(((byte)(56)))));
-            this.guna2Panel1.Location = new System.Drawing.Point(58, 126);
+            this.guna2Panel1.Location = new System.Drawing.Point(71, 132);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(512, 475);
+            this.guna2Panel1.Size = new System.Drawing.Size(512, 485);
             this.guna2Panel1.TabIndex = 1;
             // 
             // txtConfirmar_Contrasena
@@ -339,25 +339,26 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.Control;
-            this.label10.Location = new System.Drawing.Point(91, 417);
+            this.label10.Location = new System.Drawing.Point(89, 423);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(184, 31);
             this.label10.TabIndex = 27;
             this.label10.Text = "¿Ya tienes cuenta?";
             // 
-            // lblRecuperar_Contrasena
+            // lblIniciar_Sesion
             // 
-            this.lblRecuperar_Contrasena.AutoSize = true;
-            this.lblRecuperar_Contrasena.BackColor = System.Drawing.Color.Transparent;
-            this.lblRecuperar_Contrasena.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblRecuperar_Contrasena.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblRecuperar_Contrasena.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRecuperar_Contrasena.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lblRecuperar_Contrasena.Location = new System.Drawing.Point(272, 417);
-            this.lblRecuperar_Contrasena.Name = "lblRecuperar_Contrasena";
-            this.lblRecuperar_Contrasena.Size = new System.Drawing.Size(130, 31);
-            this.lblRecuperar_Contrasena.TabIndex = 26;
-            this.lblRecuperar_Contrasena.Text = "Iniciar sesión";
+            this.lblIniciar_Sesion.AutoSize = true;
+            this.lblIniciar_Sesion.BackColor = System.Drawing.Color.Transparent;
+            this.lblIniciar_Sesion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblIniciar_Sesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblIniciar_Sesion.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIniciar_Sesion.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblIniciar_Sesion.Location = new System.Drawing.Point(270, 423);
+            this.lblIniciar_Sesion.Name = "lblIniciar_Sesion";
+            this.lblIniciar_Sesion.Size = new System.Drawing.Size(130, 31);
+            this.lblIniciar_Sesion.TabIndex = 26;
+            this.lblIniciar_Sesion.Text = "Iniciar sesión";
+            this.lblIniciar_Sesion.Click += new System.EventHandler(this.lblIniciar_Sesion_Click);
             // 
             // txtUsuario
             // 
@@ -402,7 +403,7 @@
             this.btnRegistrar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(147)))), ((int)(((byte)(81)))));
             this.btnRegistrar.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrar.ForeColor = System.Drawing.Color.White;
-            this.btnRegistrar.Location = new System.Drawing.Point(126, 358);
+            this.btnRegistrar.Location = new System.Drawing.Point(124, 364);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(264, 45);
             this.btnRegistrar.TabIndex = 16;
@@ -427,7 +428,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Poppins", 26F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(168, 17);
+            this.label1.Location = new System.Drawing.Point(179, 7);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(315, 92);
             this.label1.TabIndex = 0;
@@ -460,7 +461,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(15)))), ((int)(((byte)(33)))));
-            this.ClientSize = new System.Drawing.Size(648, 708);
+            this.ClientSize = new System.Drawing.Size(669, 744);
             this.Controls.Add(this.btnCerrar_App);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -495,7 +496,7 @@
         private Guna.UI2.WinForms.Guna2Button btnRegistrar;
         private System.Windows.Forms.Label lblMensaje_Usuario;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label lblRecuperar_Contrasena;
+        private System.Windows.Forms.Label lblIniciar_Sesion;
         private System.Windows.Forms.Label label11;
         private Guna.UI2.WinForms.Guna2TextBox txtContrasena;
         private System.Windows.Forms.Label label7;

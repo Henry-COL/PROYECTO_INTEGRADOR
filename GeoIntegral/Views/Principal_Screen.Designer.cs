@@ -34,12 +34,12 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnMenu_1 = new Guna.UI2.WinForms.Guna2Button();
-            this.btnMenu_2 = new Guna.UI2.WinForms.Guna2Button();
-            this.btnMenu_3 = new Guna.UI2.WinForms.Guna2Button();
-            this.btnMenu_4 = new Guna.UI2.WinForms.Guna2Button();
-            this.btnMenu_5 = new Guna.UI2.WinForms.Guna2Button();
             this.btnAdmin_Menu = new Guna.UI2.WinForms.Guna2Button();
+            this.btnMenu_5 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnMenu_4 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnMenu_3 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnMenu_2 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnMenu_1 = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -86,7 +86,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 78);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(281, 667);
+            this.panel2.Size = new System.Drawing.Size(281, 712);
             this.panel2.TabIndex = 1;
             // 
             // guna2Panel1
@@ -103,91 +103,6 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(245, 563);
             this.guna2Panel1.TabIndex = 0;
-            // 
-            // btnMenu_1
-            // 
-            this.btnMenu_1.BackColor = System.Drawing.Color.Transparent;
-            this.btnMenu_1.BorderRadius = 6;
-            this.btnMenu_1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnMenu_1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnMenu_1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnMenu_1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnMenu_1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(15)))), ((int)(((byte)(33)))));
-            this.btnMenu_1.Font = new System.Drawing.Font("Poppins Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMenu_1.ForeColor = System.Drawing.Color.White;
-            this.btnMenu_1.Location = new System.Drawing.Point(12, 53);
-            this.btnMenu_1.Name = "btnMenu_1";
-            this.btnMenu_1.Size = new System.Drawing.Size(220, 60);
-            this.btnMenu_1.TabIndex = 0;
-            this.btnMenu_1.Text = "Menu 1";
-            // 
-            // btnMenu_2
-            // 
-            this.btnMenu_2.BackColor = System.Drawing.Color.Transparent;
-            this.btnMenu_2.BorderRadius = 6;
-            this.btnMenu_2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnMenu_2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnMenu_2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnMenu_2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnMenu_2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(15)))), ((int)(((byte)(33)))));
-            this.btnMenu_2.Font = new System.Drawing.Font("Poppins Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMenu_2.ForeColor = System.Drawing.Color.White;
-            this.btnMenu_2.Location = new System.Drawing.Point(12, 136);
-            this.btnMenu_2.Name = "btnMenu_2";
-            this.btnMenu_2.Size = new System.Drawing.Size(220, 60);
-            this.btnMenu_2.TabIndex = 1;
-            this.btnMenu_2.Text = "Menu 2";
-            // 
-            // btnMenu_3
-            // 
-            this.btnMenu_3.BackColor = System.Drawing.Color.Transparent;
-            this.btnMenu_3.BorderRadius = 6;
-            this.btnMenu_3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnMenu_3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnMenu_3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnMenu_3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnMenu_3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(15)))), ((int)(((byte)(33)))));
-            this.btnMenu_3.Font = new System.Drawing.Font("Poppins Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMenu_3.ForeColor = System.Drawing.Color.White;
-            this.btnMenu_3.Location = new System.Drawing.Point(12, 222);
-            this.btnMenu_3.Name = "btnMenu_3";
-            this.btnMenu_3.Size = new System.Drawing.Size(220, 60);
-            this.btnMenu_3.TabIndex = 2;
-            this.btnMenu_3.Text = "Menu 3";
-            // 
-            // btnMenu_4
-            // 
-            this.btnMenu_4.BackColor = System.Drawing.Color.Transparent;
-            this.btnMenu_4.BorderRadius = 6;
-            this.btnMenu_4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnMenu_4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnMenu_4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnMenu_4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnMenu_4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(15)))), ((int)(((byte)(33)))));
-            this.btnMenu_4.Font = new System.Drawing.Font("Poppins Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMenu_4.ForeColor = System.Drawing.Color.White;
-            this.btnMenu_4.Location = new System.Drawing.Point(12, 303);
-            this.btnMenu_4.Name = "btnMenu_4";
-            this.btnMenu_4.Size = new System.Drawing.Size(220, 60);
-            this.btnMenu_4.TabIndex = 3;
-            this.btnMenu_4.Text = "Menu 4";
-            // 
-            // btnMenu_5
-            // 
-            this.btnMenu_5.BackColor = System.Drawing.Color.Transparent;
-            this.btnMenu_5.BorderRadius = 6;
-            this.btnMenu_5.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnMenu_5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnMenu_5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnMenu_5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnMenu_5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(15)))), ((int)(((byte)(33)))));
-            this.btnMenu_5.Font = new System.Drawing.Font("Poppins Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMenu_5.ForeColor = System.Drawing.Color.White;
-            this.btnMenu_5.Location = new System.Drawing.Point(12, 390);
-            this.btnMenu_5.Name = "btnMenu_5";
-            this.btnMenu_5.Size = new System.Drawing.Size(220, 60);
-            this.btnMenu_5.TabIndex = 4;
-            this.btnMenu_5.Text = "Menu 5";
             // 
             // btnAdmin_Menu
             // 
@@ -206,12 +121,97 @@
             this.btnAdmin_Menu.TabIndex = 5;
             this.btnAdmin_Menu.Text = "Menu Admin";
             // 
+            // btnMenu_5
+            // 
+            this.btnMenu_5.BackColor = System.Drawing.Color.Transparent;
+            this.btnMenu_5.BorderRadius = 6;
+            this.btnMenu_5.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnMenu_5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnMenu_5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnMenu_5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnMenu_5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(15)))), ((int)(((byte)(33)))));
+            this.btnMenu_5.Font = new System.Drawing.Font("Poppins Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMenu_5.ForeColor = System.Drawing.Color.White;
+            this.btnMenu_5.Location = new System.Drawing.Point(12, 390);
+            this.btnMenu_5.Name = "btnMenu_5";
+            this.btnMenu_5.Size = new System.Drawing.Size(220, 60);
+            this.btnMenu_5.TabIndex = 4;
+            this.btnMenu_5.Text = "Menu 5";
+            // 
+            // btnMenu_4
+            // 
+            this.btnMenu_4.BackColor = System.Drawing.Color.Transparent;
+            this.btnMenu_4.BorderRadius = 6;
+            this.btnMenu_4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnMenu_4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnMenu_4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnMenu_4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnMenu_4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(15)))), ((int)(((byte)(33)))));
+            this.btnMenu_4.Font = new System.Drawing.Font("Poppins Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMenu_4.ForeColor = System.Drawing.Color.White;
+            this.btnMenu_4.Location = new System.Drawing.Point(12, 303);
+            this.btnMenu_4.Name = "btnMenu_4";
+            this.btnMenu_4.Size = new System.Drawing.Size(220, 60);
+            this.btnMenu_4.TabIndex = 3;
+            this.btnMenu_4.Text = "Menu 4";
+            // 
+            // btnMenu_3
+            // 
+            this.btnMenu_3.BackColor = System.Drawing.Color.Transparent;
+            this.btnMenu_3.BorderRadius = 6;
+            this.btnMenu_3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnMenu_3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnMenu_3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnMenu_3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnMenu_3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(15)))), ((int)(((byte)(33)))));
+            this.btnMenu_3.Font = new System.Drawing.Font("Poppins Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMenu_3.ForeColor = System.Drawing.Color.White;
+            this.btnMenu_3.Location = new System.Drawing.Point(12, 222);
+            this.btnMenu_3.Name = "btnMenu_3";
+            this.btnMenu_3.Size = new System.Drawing.Size(220, 60);
+            this.btnMenu_3.TabIndex = 2;
+            this.btnMenu_3.Text = "Menu 3";
+            // 
+            // btnMenu_2
+            // 
+            this.btnMenu_2.BackColor = System.Drawing.Color.Transparent;
+            this.btnMenu_2.BorderRadius = 6;
+            this.btnMenu_2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnMenu_2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnMenu_2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnMenu_2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnMenu_2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(15)))), ((int)(((byte)(33)))));
+            this.btnMenu_2.Font = new System.Drawing.Font("Poppins Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMenu_2.ForeColor = System.Drawing.Color.White;
+            this.btnMenu_2.Location = new System.Drawing.Point(12, 136);
+            this.btnMenu_2.Name = "btnMenu_2";
+            this.btnMenu_2.Size = new System.Drawing.Size(220, 60);
+            this.btnMenu_2.TabIndex = 1;
+            this.btnMenu_2.Text = "Menu 2";
+            // 
+            // btnMenu_1
+            // 
+            this.btnMenu_1.BackColor = System.Drawing.Color.Transparent;
+            this.btnMenu_1.BorderRadius = 6;
+            this.btnMenu_1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnMenu_1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnMenu_1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnMenu_1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnMenu_1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(15)))), ((int)(((byte)(33)))));
+            this.btnMenu_1.Font = new System.Drawing.Font("Poppins Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMenu_1.ForeColor = System.Drawing.Color.White;
+            this.btnMenu_1.Location = new System.Drawing.Point(12, 53);
+            this.btnMenu_1.Name = "btnMenu_1";
+            this.btnMenu_1.Size = new System.Drawing.Size(220, 60);
+            this.btnMenu_1.TabIndex = 0;
+            this.btnMenu_1.Text = "Menu 1";
+            // 
             // Principal_Screen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(15)))), ((int)(((byte)(33)))));
-            this.ClientSize = new System.Drawing.Size(1217, 745);
+            this.ClientSize = new System.Drawing.Size(1217, 790);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GeoIntegral.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,15 +8,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GeoIntegral.Controller;
 
 namespace GeoIntegral.Views
 {
     public partial class Login_Screen : Form
     {
+        private Usuario usuarioSesion;
         public Login_Screen()
         {
             InitializeComponent();
         }
+
 
         private void btnCerrar_App_Click(object sender, EventArgs e)
         {
@@ -30,8 +34,8 @@ namespace GeoIntegral.Views
 
         private void lblCrear_Cuenta_Click(object sender, EventArgs e)
         {
-            Registrar_Screen Crear_cuenta = new Registrar_Screen();
-            Crear_cuenta.Show();
+            var Tipo_Registrar = new Tipo_Registrar();
+            Tipo_Registrar.Show();
         }
 
         private void btnIniciar_Sesion_Click(object sender, EventArgs e)
@@ -54,9 +58,18 @@ namespace GeoIntegral.Views
                 }
                 if (validar_inicio == true)
                 {
-                   MessageBox.Show("Inicio de sesión exitoso");
-                    var ventana_principal = new Principal_Screen();
-                    ventana_principal.Show();
+                    UsuarioController control = new UsuarioController();
+                    Usuario usuarioEncontrado = control.Autenticar(txtUsuario.Text, txtContrasena.Text);
+
+                    if (usuarioEncontrado != null)
+                    {
+                        this.Hide();
+                        Principal_Screen menu = new Principal_Screen(usuarioEncontrado);
+                        menu = new Principal_Screen(usuarioEncontrado);
+                        menu.FormClosed += (s, args) => this.Close();
+                        menu.Show();
+                        
+                    }
                 }
             }
             catch (Exception ex)

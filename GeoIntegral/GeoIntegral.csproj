@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{35D13296-5344-4938-9991-C95F298BD49F}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>WinExe</OutputType>
     <RootNamespace>GeoIntegral</RootNamespace>
     <AssemblyName>GeoIntegral</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
@@ -32,6 +32,13 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Multimedia\GeoIntegral_ICO.ico</ApplicationIcon>
+  </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
@@ -55,7 +62,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\ClienteController.cs" />
+    <Compile Include="Controller\UsuarioController.cs" />
+    <Compile Include="DataBase\ArchivosCSV.cs" />
+    <Compile Include="Enums\EstadoUsuario.cs" />
+    <Compile Include="Enums\RolUsuario.cs" />
     <Compile Include="Main_Program.cs" />
+    <Compile Include="Models\Cliente.cs" />
+    <Compile Include="Models\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -80,21 +94,30 @@
     <Compile Include="Views\Recuperar_Screen.Designer.cs">
       <DependentUpon>Recuperar_Screen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Registrar_Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Registrar_Cliente.Designer.cs">
+      <DependentUpon>Registrar_Cliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Registrar_Screen.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\Registrar_Screen.Designer.cs">
       <DependentUpon>Registrar_Screen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Tipo_Registrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Tipo_Registrar.Designer.cs">
+      <DependentUpon>Tipo_Registrar.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="app.manifest" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controller\" />
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -112,12 +135,18 @@
     <EmbeddedResource Include="Views\Registrar_Screen.resx">
       <DependentUpon>Registrar_Screen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Tipo_Registrar.resx">
+      <DependentUpon>Tipo_Registrar.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Multimedia\App_CuentaEmpresa_Imagen.png" />
+    <Content Include="Multimedia\App_CuentaPersonal_Imagen.png" />
     <Content Include="Multimedia\App_Login_Wallpaper.png" />
     <Content Include="Multimedia\App_Login_Wallpaper_.png" />
     <Content Include="Multimedia\App_Recuperar_Wallpaper.png" />
     <Content Include="Multimedia\App_Registrar_Wallpaper.png" />
+    <Content Include="Multimedia\App_TipoCuenta_Wallpaper.png" />
     <Content Include="Multimedia\GeoIntegral-Logo.png" />
     <Content Include="Multimedia\GeoIntegral-LogoTipo.png" />
     <Content Include="Multimedia\GeoIntegral_ICO.ico" />
