@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\GeoIntegral"
+    "\\GeoIntegral",
+    "\\GeoIntegral\\Views"
   ],
-  "SelectedNode": "\\GeoIntegral\\Main_Program.cs",
+  "SelectedNode": "\\GeoIntegral\\Views\\Login_Screen.cs",
   "PreviewInSolutionExplorer": false
 }
