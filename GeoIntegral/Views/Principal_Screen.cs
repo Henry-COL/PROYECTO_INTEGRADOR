@@ -22,5 +22,10 @@ namespace GeoIntegral.Views
         {
 
         }
+
+        private void btnAdmin_Menu_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
