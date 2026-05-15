@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnCerrar_App = new Guna.UI2.WinForms.Guna2Button();
-            this.Guna2_Bordes = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnCerrar_App = new Guna.UI2.WinForms.Guna2Button();
+            this.Guna2_Bordes = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -61,6 +61,28 @@
             this.panel1.Size = new System.Drawing.Size(914, 78);
             this.panel1.TabIndex = 31;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::GeoIntegral.Properties.Resources.GeoIntegral_Logo;
+            this.pictureBox1.Location = new System.Drawing.Point(14, 15);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(51, 45);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 35;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = global::GeoIntegral.Properties.Resources.GeoIntegral_LogoTipo;
+            this.pictureBox2.Location = new System.Drawing.Point(62, 17);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(187, 43);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 36;
+            this.pictureBox2.TabStop = false;
+            // 
             // btnCerrar_App
             // 
             this.btnCerrar_App.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(27)))), ((int)(((byte)(56)))));
@@ -86,28 +108,6 @@
             this.Guna2_Bordes.ContainerControl = this;
             this.Guna2_Bordes.DockIndicatorTransparencyValue = 0.6D;
             this.Guna2_Bordes.TransparentWhileDrag = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::GeoIntegral.Properties.Resources.GeoIntegral_Logo;
-            this.pictureBox1.Location = new System.Drawing.Point(14, 15);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(51, 45);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 35;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = global::GeoIntegral.Properties.Resources.GeoIntegral_LogoTipo;
-            this.pictureBox2.Location = new System.Drawing.Point(62, 17);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(187, 43);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 36;
-            this.pictureBox2.TabStop = false;
             // 
             // panel2
             // 
@@ -143,9 +143,9 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(216, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(477, 70);
+            this.label1.Size = new System.Drawing.Size(462, 70);
             this.label1.TabIndex = 30;
-            this.label1.Text = "Eliga el tipo de cuenta";
+            this.label1.Text = "Elija el tipo de cuenta";
             // 
             // guna2ShadowPanel2
             // 
@@ -162,6 +162,7 @@
             // btnCrerCuentaEmpresa
             // 
             this.btnCrerCuentaEmpresa.BorderRadius = 7;
+            this.btnCrerCuentaEmpresa.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCrerCuentaEmpresa.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnCrerCuentaEmpresa.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnCrerCuentaEmpresa.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -193,6 +194,7 @@
             // btnCrearCuentaPersonal
             // 
             this.btnCrearCuentaPersonal.BorderRadius = 7;
+            this.btnCrearCuentaPersonal.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCrearCuentaPersonal.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnCrearCuentaPersonal.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnCrearCuentaPersonal.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));

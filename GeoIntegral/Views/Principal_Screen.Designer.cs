@@ -40,6 +40,8 @@
             this.btnMenu_3 = new Guna.UI2.WinForms.Guna2Button();
             this.btnMenu_2 = new Guna.UI2.WinForms.Guna2Button();
             this.btnMenu_1 = new Guna.UI2.WinForms.Guna2Button();
+            this.lblNombre_Usuario = new System.Windows.Forms.Label();
+            this.lblTipo_Usuario = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -50,23 +52,23 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(27)))), ((int)(((byte)(56)))));
+            this.panel1.Controls.Add(this.lblTipo_Usuario);
+            this.panel1.Controls.Add(this.lblNombre_Usuario);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(811, 51);
+            this.panel1.Size = new System.Drawing.Size(1216, 78);
             this.panel1.TabIndex = 0;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::GeoIntegral.Properties.Resources.GeoIntegral_Logo;
-            this.pictureBox1.Location = new System.Drawing.Point(11, 12);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(16, 18);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(34, 29);
+            this.pictureBox1.Size = new System.Drawing.Size(51, 45);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 33;
             this.pictureBox1.TabStop = false;
@@ -75,10 +77,9 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::GeoIntegral.Properties.Resources.GeoIntegral_LogoTipo;
-            this.pictureBox2.Location = new System.Drawing.Point(43, 14);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Location = new System.Drawing.Point(64, 22);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(125, 28);
+            this.pictureBox2.Size = new System.Drawing.Size(188, 43);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 34;
             this.pictureBox2.TabStop = false;
@@ -87,10 +88,9 @@
             // 
             this.panel2.Controls.Add(this.guna2Panel1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 51);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Location = new System.Drawing.Point(0, 78);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(187, 433);
+            this.panel2.Size = new System.Drawing.Size(280, 667);
             this.panel2.TabIndex = 1;
             // 
             // guna2Panel1
@@ -103,10 +103,9 @@
             this.guna2Panel1.Controls.Add(this.btnMenu_3);
             this.guna2Panel1.Controls.Add(this.btnMenu_2);
             this.guna2Panel1.Controls.Add(this.btnMenu_1);
-            this.guna2Panel1.Location = new System.Drawing.Point(11, 20);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel1.Location = new System.Drawing.Point(16, 31);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(163, 366);
+            this.guna2Panel1.Size = new System.Drawing.Size(244, 563);
             this.guna2Panel1.TabIndex = 0;
             // 
             // btnAdmin_Menu
@@ -120,10 +119,9 @@
             this.btnAdmin_Menu.FillColor = System.Drawing.Color.White;
             this.btnAdmin_Menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdmin_Menu.ForeColor = System.Drawing.Color.Black;
-            this.btnAdmin_Menu.Location = new System.Drawing.Point(8, 304);
-            this.btnAdmin_Menu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAdmin_Menu.Location = new System.Drawing.Point(12, 468);
             this.btnAdmin_Menu.Name = "btnAdmin_Menu";
-            this.btnAdmin_Menu.Size = new System.Drawing.Size(147, 39);
+            this.btnAdmin_Menu.Size = new System.Drawing.Size(220, 60);
             this.btnAdmin_Menu.TabIndex = 5;
             this.btnAdmin_Menu.Text = "Menu Admin";
             this.btnAdmin_Menu.Visible = false;
@@ -140,10 +138,9 @@
             this.btnMenu_5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(15)))), ((int)(((byte)(33)))));
             this.btnMenu_5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMenu_5.ForeColor = System.Drawing.Color.White;
-            this.btnMenu_5.Location = new System.Drawing.Point(8, 253);
-            this.btnMenu_5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMenu_5.Location = new System.Drawing.Point(12, 389);
             this.btnMenu_5.Name = "btnMenu_5";
-            this.btnMenu_5.Size = new System.Drawing.Size(147, 39);
+            this.btnMenu_5.Size = new System.Drawing.Size(220, 60);
             this.btnMenu_5.TabIndex = 4;
             this.btnMenu_5.Text = "Menu 5";
             // 
@@ -158,10 +155,9 @@
             this.btnMenu_4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(15)))), ((int)(((byte)(33)))));
             this.btnMenu_4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMenu_4.ForeColor = System.Drawing.Color.White;
-            this.btnMenu_4.Location = new System.Drawing.Point(8, 197);
-            this.btnMenu_4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMenu_4.Location = new System.Drawing.Point(12, 303);
             this.btnMenu_4.Name = "btnMenu_4";
-            this.btnMenu_4.Size = new System.Drawing.Size(147, 39);
+            this.btnMenu_4.Size = new System.Drawing.Size(220, 60);
             this.btnMenu_4.TabIndex = 3;
             this.btnMenu_4.Text = "Menu 4";
             // 
@@ -176,10 +172,9 @@
             this.btnMenu_3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(15)))), ((int)(((byte)(33)))));
             this.btnMenu_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMenu_3.ForeColor = System.Drawing.Color.White;
-            this.btnMenu_3.Location = new System.Drawing.Point(8, 144);
-            this.btnMenu_3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMenu_3.Location = new System.Drawing.Point(12, 222);
             this.btnMenu_3.Name = "btnMenu_3";
-            this.btnMenu_3.Size = new System.Drawing.Size(147, 39);
+            this.btnMenu_3.Size = new System.Drawing.Size(220, 60);
             this.btnMenu_3.TabIndex = 2;
             this.btnMenu_3.Text = "Menu 3";
             // 
@@ -194,10 +189,9 @@
             this.btnMenu_2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(15)))), ((int)(((byte)(33)))));
             this.btnMenu_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMenu_2.ForeColor = System.Drawing.Color.White;
-            this.btnMenu_2.Location = new System.Drawing.Point(8, 88);
-            this.btnMenu_2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMenu_2.Location = new System.Drawing.Point(12, 135);
             this.btnMenu_2.Name = "btnMenu_2";
-            this.btnMenu_2.Size = new System.Drawing.Size(147, 39);
+            this.btnMenu_2.Size = new System.Drawing.Size(220, 60);
             this.btnMenu_2.TabIndex = 1;
             this.btnMenu_2.Text = "Menu 2";
             // 
@@ -212,27 +206,48 @@
             this.btnMenu_1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(15)))), ((int)(((byte)(33)))));
             this.btnMenu_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMenu_1.ForeColor = System.Drawing.Color.White;
-            this.btnMenu_1.Location = new System.Drawing.Point(8, 34);
-            this.btnMenu_1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMenu_1.Location = new System.Drawing.Point(12, 52);
             this.btnMenu_1.Name = "btnMenu_1";
-            this.btnMenu_1.Size = new System.Drawing.Size(147, 39);
+            this.btnMenu_1.Size = new System.Drawing.Size(220, 60);
             this.btnMenu_1.TabIndex = 0;
             this.btnMenu_1.Text = "Menu 1";
             // 
+            // lblNombre_Usuario
+            // 
+            this.lblNombre_Usuario.AutoSize = true;
+            this.lblNombre_Usuario.Font = new System.Drawing.Font("Poppins Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre_Usuario.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblNombre_Usuario.Location = new System.Drawing.Point(791, 20);
+            this.lblNombre_Usuario.Name = "lblNombre_Usuario";
+            this.lblNombre_Usuario.Size = new System.Drawing.Size(206, 31);
+            this.lblNombre_Usuario.TabIndex = 35;
+            this.lblNombre_Usuario.Text = "Nombre de usuario";
+            // 
+            // lblTipo_Usuario
+            // 
+            this.lblTipo_Usuario.AutoSize = true;
+            this.lblTipo_Usuario.Font = new System.Drawing.Font("Poppins Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipo_Usuario.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblTipo_Usuario.Location = new System.Drawing.Point(907, 45);
+            this.lblTipo_Usuario.Name = "lblTipo_Usuario";
+            this.lblTipo_Usuario.Size = new System.Drawing.Size(90, 31);
+            this.lblTipo_Usuario.TabIndex = 36;
+            this.lblTipo_Usuario.Text = "Usuario";
+            // 
             // Principal_Screen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(15)))), ((int)(((byte)(33)))));
-            this.ClientSize = new System.Drawing.Size(811, 484);
+            this.ClientSize = new System.Drawing.Size(1216, 745);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Principal_Screen";
             this.Text = "GeoIntegral 0.0.1";
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
@@ -254,5 +269,7 @@
         private Guna.UI2.WinForms.Guna2Button btnMenu_3;
         private Guna.UI2.WinForms.Guna2Button btnMenu_2;
         private Guna.UI2.WinForms.Guna2Button btnMenu_1;
+        private System.Windows.Forms.Label lblTipo_Usuario;
+        private System.Windows.Forms.Label lblNombre_Usuario;
     }
 }
