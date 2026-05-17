@@ -108,8 +108,16 @@ namespace GeoIntegral.Controller
                 {
                     return true;
                 }
-                    
+
+                if (datos[4] == "Inactivo")
+                {
+                    MessageBox.Show("Tu cuenta está inactiva. Contacta al administrador.",
+                        "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+
             }
+
             return false;
         }
 

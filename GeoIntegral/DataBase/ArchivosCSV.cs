@@ -13,7 +13,7 @@ namespace GeoIntegral.DataBase
             {
                 Directory.CreateDirectory(rutaBase);
             }
-            string[] archivos = { "Usuarios.csv", "Clientes.csv", "Materiales.csv", "Terrenos.csv", "Cotizaciones.csv", "Facturas.csv", "Coordenadas_terreno.csv" };
+            string[] archivos = { "Usuarios.csv", "Clientes.csv", "Materiales.csv", "Terrenos.csv", "Cotizaciones.csv", "Facturas.csv", "Coordenadas_terreno.csv", "Notificaciones.csv" };
 
             foreach (string nombre in archivos)
             {
@@ -48,6 +48,10 @@ namespace GeoIntegral.DataBase
                     else if (nombre == "Facturas.csv")
                     {
                         File.WriteAllText(path, "NumeroFactura;IdCotizacion;IdentificacionCliente;FechaEmision;Estado\n");
+                    }
+                    else if (nombre == "Notificaciones.csv")
+                    {
+                        File.WriteAllText(path, "IdNotificacion;IdUsuario;Mensaje;Fecha;Leida\n");
                     }
                 }
             }

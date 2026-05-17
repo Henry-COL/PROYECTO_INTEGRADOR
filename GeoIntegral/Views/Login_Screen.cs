@@ -34,8 +34,8 @@ namespace GeoIntegral.Views
 
         private void lblCrear_Cuenta_Click(object sender, EventArgs e)
         {
-            var Tipo_Registrar = new Tipo_Registrar();
-            Tipo_Registrar.Show();
+            var ventanaRegistrar = new Registrar_Screen();
+            ventanaRegistrar.Show();
         }
 
         private void btnIniciar_Sesion_Click(object sender, EventArgs e)
@@ -65,7 +65,6 @@ namespace GeoIntegral.Views
                     {
                         this.Hide();
                         Principal_Screen menu = new Principal_Screen(usuarioEncontrado);
-                        menu = new Principal_Screen(usuarioEncontrado);
                         menu.FormClosed += (s, args) => this.Close();
                         menu.Show();
                         

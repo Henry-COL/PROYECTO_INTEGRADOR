@@ -1,4 +1,6 @@
 ﻿using GeoIntegral.Controller;
+using GeoIntegral.Enums;
+using GeoIntegral.Models;
 using System;
 using System.Windows.Forms;
 
@@ -6,6 +8,7 @@ namespace GeoIntegral.Views
 {
     public partial class Recuperar_Screen : Form
     {
+        public string rutaNotificaciones = System.IO.Path.GetFullPath(System.IO.Path.Combine(Application.StartupPath, "..", "..", "DataBase", "Notificaciones.csv"));
         public Recuperar_Screen()
         {
             InitializeComponent();
@@ -27,58 +30,86 @@ namespace GeoIntegral.Views
 
         private void btnRecuperarContraseña_Click(object sender, EventArgs e)
         {
-            lblMensaje_Usuario.Visible = false;
-            lblMensaje_Gmail_.Visible = false;
-
-            bool validar = true;
-
-            if (txtUsuario.Text == "")
+            try
             {
-                lblMensaje_Usuario.Visible = true;
-                validar = false;
+                lblMensaje_Usuario.Visible = false;
+                lblMensaje_Gmail_.Visible = false;
+
+                bool validar = true;
+
+                if (txtUsuario.Text == "")
+                {
+                    lblMensaje_Usuario.Visible = true;
+                    validar = false;
+                }
+                if (txtGmail.Text == "")
+                {
+                    lblMensaje_Gmail_.Visible = true;
+                    validar = false;
+                }
+
+                if (!validar) return;
+
+                UsuarioController control = new UsuarioController();
+                bool encontrado = control.VerificarUsuarioYGmail(txtUsuario.Text, txtGmail.Text);
+
+                NotificacionController notificar = new NotificacionController();
+
+                if (!encontrado)
+                {
+                    MessageBox.Show("No se encontró ninguna cuenta con ese usuario y Gmail.",
+                        "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                else
+                {
+                    
+                    Notificacion Notificacion_Registrar = new Notificacion(0, txtUsuario.Text, "Olvido de contraseña", DateTime.Today.ToString("dd/MM/yyyy"), EstadoNotificacion.Pendiente);
+
+                    if (notificar.RegistrarNotificacion(Notificacion_Registrar.IdNotificacion.ToString(), Notificacion_Registrar.NombreUsuario, Notificacion_Registrar.Mensaje, Notificacion_Registrar.Fecha, EstadoNotificacion.Pendiente))
+                    {
+                        MessageBox.Show("¡Notificación enviada al administrador! El equipo de soporte se pondrá en contacto con usted lo antes posible.",
+                            "GeoIntegral", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ocurrió un error al enviar la notificación al administrador.",
+                            "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    }
+                }
             }
-            if (txtGmail.Text == "")
+            catch (Exception ex)
             {
-                lblMensaje_Gmail_.Visible = true;
-                validar = false;
-            }
-
-            if (!validar) return;
-
-            UsuarioController control = new UsuarioController();
-            bool encontrado = control.VerificarUsuarioYGmail(txtUsuario.Text, txtGmail.Text);
-
-            if (!encontrado)
-            {
-                MessageBox.Show("No se encontró ninguna cuenta con ese usuario y Gmail.",
-                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            
-            string nuevaContrasena = Microsoft.VisualBasic.Interaction.InputBox(
-                "Ingrese la nueva contraseña:",
-                "Nueva contraseña",
-                "");
-
-            if (string.IsNullOrWhiteSpace(nuevaContrasena))
-            {
-                MessageBox.Show("La contraseña no puede estar vacía.",
-                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            if (control.CambiarContrasena(txtUsuario.Text, nuevaContrasena))
-            {
-                MessageBox.Show("¡Contraseña actualizada con éxito! Ya puede iniciar sesión.",
-                    "GeoIntegral", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
-            }
-            else
-            {
-                MessageBox.Show("Ocurrió un error al actualizar la contraseña.",
+                MessageBox.Show("Ocurrió un error al procesar la solicitud: " + ex.Message,
                     "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+
+            //string nuevaContrasena = Microsoft.VisualBasic.Interaction.InputBox(
+            //    "Ingrese la nueva contraseña:",
+            //    "Nueva contraseña",
+            //    "");
+
+            //if (string.IsNullOrWhiteSpace(nuevaContrasena))
+            //{
+            //    MessageBox.Show("La contraseña no puede estar vacía.",
+            //        "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //    return;
+            //}
+
+            //if (control.CambiarContrasena(txtUsuario.Text, nuevaContrasena))
+            //{
+            //    MessageBox.Show("¡Contraseña actualizada con éxito! Ya puede iniciar sesión.",
+            //        "GeoIntegral", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    this.Close();
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Ocurrió un error al actualizar la contraseña.",
+            //        "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
         }
     }
 }

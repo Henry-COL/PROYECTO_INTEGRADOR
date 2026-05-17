@@ -30,9 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal_Screen));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.lblTipo_Usuario = new System.Windows.Forms.Label();
+            this.lblNombre_Usuario = new System.Windows.Forms.Label();
+            this.Panel_Menu = new System.Windows.Forms.Panel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnAdmin_Menu = new Guna.UI2.WinForms.Guna2Button();
             this.btnMenu_5 = new Guna.UI2.WinForms.Guna2Button();
@@ -40,13 +40,14 @@
             this.btnMenu_3 = new Guna.UI2.WinForms.Guna2Button();
             this.btnMenu_2 = new Guna.UI2.WinForms.Guna2Button();
             this.btnMenu_1 = new Guna.UI2.WinForms.Guna2Button();
-            this.lblNombre_Usuario = new System.Windows.Forms.Label();
-            this.lblTipo_Usuario = new System.Windows.Forms.Label();
+            this.Panel_Ventanas = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            this.Panel_Menu.SuspendLayout();
+            this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panel2.SuspendLayout();
-            this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -59,39 +60,39 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1216, 78);
+            this.panel1.Size = new System.Drawing.Size(1388, 78);
             this.panel1.TabIndex = 0;
             // 
-            // pictureBox1
+            // lblTipo_Usuario
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::GeoIntegral.Properties.Resources.GeoIntegral_Logo;
-            this.pictureBox1.Location = new System.Drawing.Point(16, 18);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(51, 45);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 33;
-            this.pictureBox1.TabStop = false;
+            this.lblTipo_Usuario.AutoSize = true;
+            this.lblTipo_Usuario.Font = new System.Drawing.Font("Poppins Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipo_Usuario.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblTipo_Usuario.Location = new System.Drawing.Point(907, 45);
+            this.lblTipo_Usuario.Name = "lblTipo_Usuario";
+            this.lblTipo_Usuario.Size = new System.Drawing.Size(90, 31);
+            this.lblTipo_Usuario.TabIndex = 36;
+            this.lblTipo_Usuario.Text = "Usuario";
             // 
-            // pictureBox2
+            // lblNombre_Usuario
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = global::GeoIntegral.Properties.Resources.GeoIntegral_LogoTipo;
-            this.pictureBox2.Location = new System.Drawing.Point(64, 22);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(188, 43);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 34;
-            this.pictureBox2.TabStop = false;
+            this.lblNombre_Usuario.AutoSize = true;
+            this.lblNombre_Usuario.Font = new System.Drawing.Font("Poppins Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre_Usuario.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblNombre_Usuario.Location = new System.Drawing.Point(791, 20);
+            this.lblNombre_Usuario.Name = "lblNombre_Usuario";
+            this.lblNombre_Usuario.Size = new System.Drawing.Size(206, 31);
+            this.lblNombre_Usuario.TabIndex = 35;
+            this.lblNombre_Usuario.Text = "Nombre de usuario";
             // 
-            // panel2
+            // Panel_Menu
             // 
-            this.panel2.Controls.Add(this.guna2Panel1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 78);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(280, 667);
-            this.panel2.TabIndex = 1;
+            this.Panel_Menu.Controls.Add(this.guna2Panel1);
+            this.Panel_Menu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.Panel_Menu.Location = new System.Drawing.Point(0, 78);
+            this.Panel_Menu.Name = "Panel_Menu";
+            this.Panel_Menu.Size = new System.Drawing.Size(280, 667);
+            this.Panel_Menu.TabIndex = 1;
             // 
             // guna2Panel1
             // 
@@ -123,7 +124,7 @@
             this.btnAdmin_Menu.Name = "btnAdmin_Menu";
             this.btnAdmin_Menu.Size = new System.Drawing.Size(220, 60);
             this.btnAdmin_Menu.TabIndex = 5;
-            this.btnAdmin_Menu.Text = "Menu Admin";
+            this.btnAdmin_Menu.Text = "Menu Usuarios";
             this.btnAdmin_Menu.Visible = false;
             this.btnAdmin_Menu.Click += new System.EventHandler(this.btnAdmin_Menu_Click);
             // 
@@ -212,35 +213,45 @@
             this.btnMenu_1.TabIndex = 0;
             this.btnMenu_1.Text = "Menu 1";
             // 
-            // lblNombre_Usuario
+            // Panel_Ventanas
             // 
-            this.lblNombre_Usuario.AutoSize = true;
-            this.lblNombre_Usuario.Font = new System.Drawing.Font("Poppins Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre_Usuario.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblNombre_Usuario.Location = new System.Drawing.Point(791, 20);
-            this.lblNombre_Usuario.Name = "lblNombre_Usuario";
-            this.lblNombre_Usuario.Size = new System.Drawing.Size(206, 31);
-            this.lblNombre_Usuario.TabIndex = 35;
-            this.lblNombre_Usuario.Text = "Nombre de usuario";
+            this.Panel_Ventanas.BackColor = System.Drawing.Color.LightCoral;
+            this.Panel_Ventanas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Panel_Ventanas.Location = new System.Drawing.Point(280, 78);
+            this.Panel_Ventanas.Name = "Panel_Ventanas";
+            this.Panel_Ventanas.Size = new System.Drawing.Size(1108, 667);
+            this.Panel_Ventanas.TabIndex = 2;
             // 
-            // lblTipo_Usuario
+            // pictureBox1
             // 
-            this.lblTipo_Usuario.AutoSize = true;
-            this.lblTipo_Usuario.Font = new System.Drawing.Font("Poppins Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTipo_Usuario.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblTipo_Usuario.Location = new System.Drawing.Point(907, 45);
-            this.lblTipo_Usuario.Name = "lblTipo_Usuario";
-            this.lblTipo_Usuario.Size = new System.Drawing.Size(90, 31);
-            this.lblTipo_Usuario.TabIndex = 36;
-            this.lblTipo_Usuario.Text = "Usuario";
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::GeoIntegral.Properties.Resources.GeoIntegral_Logo;
+            this.pictureBox1.Location = new System.Drawing.Point(16, 18);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(51, 45);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 33;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = global::GeoIntegral.Properties.Resources.GeoIntegral_LogoTipo;
+            this.pictureBox2.Location = new System.Drawing.Point(64, 22);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(188, 43);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 34;
+            this.pictureBox2.TabStop = false;
             // 
             // Principal_Screen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(15)))), ((int)(((byte)(33)))));
-            this.ClientSize = new System.Drawing.Size(1216, 745);
-            this.Controls.Add(this.panel2);
+            this.ClientSize = new System.Drawing.Size(1388, 745);
+            this.Controls.Add(this.Panel_Ventanas);
+            this.Controls.Add(this.Panel_Menu);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -248,10 +259,10 @@
             this.Text = "GeoIntegral 0.0.1";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.Panel_Menu.ResumeLayout(false);
+            this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.guna2Panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -261,7 +272,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel Panel_Menu;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Button btnAdmin_Menu;
         private Guna.UI2.WinForms.Guna2Button btnMenu_5;
@@ -271,5 +282,6 @@
         private Guna.UI2.WinForms.Guna2Button btnMenu_1;
         private System.Windows.Forms.Label lblTipo_Usuario;
         private System.Windows.Forms.Label lblNombre_Usuario;
+        private System.Windows.Forms.Panel Panel_Ventanas;
     }
 }

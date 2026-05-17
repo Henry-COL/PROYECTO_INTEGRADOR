@@ -72,10 +72,9 @@
             this.btnCerrar_App.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrar_App.ForeColor = System.Drawing.Color.White;
             this.btnCerrar_App.HoverState.FillColor = System.Drawing.Color.Maroon;
-            this.btnCerrar_App.Location = new System.Drawing.Point(646, 6);
-            this.btnCerrar_App.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCerrar_App.Location = new System.Drawing.Point(969, 9);
             this.btnCerrar_App.Name = "btnCerrar_App";
-            this.btnCerrar_App.Size = new System.Drawing.Size(46, 29);
+            this.btnCerrar_App.Size = new System.Drawing.Size(69, 45);
             this.btnCerrar_App.TabIndex = 0;
             this.btnCerrar_App.Text = "X";
             this.btnCerrar_App.Click += new System.EventHandler(this.btnCerrar_App_Click);
@@ -86,9 +85,8 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Enabled = false;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(700, 40);
+            this.panel1.Size = new System.Drawing.Size(1050, 62);
             this.panel1.TabIndex = 12;
             // 
             // panel2
@@ -101,10 +99,9 @@
             this.panel2.Controls.Add(this.lblCrear_Cuenta);
             this.panel2.Controls.Add(this.lblRecuperar_Contrasena);
             this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Location = new System.Drawing.Point(0, 39);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Location = new System.Drawing.Point(0, 60);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(698, 400);
+            this.panel2.Size = new System.Drawing.Size(1047, 615);
             this.panel2.TabIndex = 13;
             // 
             // label3
@@ -113,10 +110,9 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Silver;
-            this.label3.Location = new System.Drawing.Point(8, 376);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(12, 578);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(186, 15);
+            this.label3.Size = new System.Drawing.Size(276, 22);
             this.label3.TabIndex = 10;
             this.label3.Text = "Copyright © 2026 | @GeoIntegral";
             // 
@@ -132,10 +128,9 @@
             this.guna2Panel1.Controls.Add(this.label2);
             this.guna2Panel1.Controls.Add(this.lblMensaje_Contrasena);
             this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(27)))), ((int)(((byte)(56)))));
-            this.guna2Panel1.Location = new System.Drawing.Point(226, 168);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel1.Location = new System.Drawing.Point(339, 258);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(265, 141);
+            this.guna2Panel1.Size = new System.Drawing.Size(398, 217);
             this.guna2Panel1.TabIndex = 12;
             // 
             // txtUsuario
@@ -151,12 +146,13 @@
             this.txtUsuario.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtUsuario.ForeColor = System.Drawing.Color.Black;
             this.txtUsuario.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUsuario.Location = new System.Drawing.Point(16, 29);
+            this.txtUsuario.Location = new System.Drawing.Point(24, 45);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.PlaceholderForeColor = System.Drawing.Color.DarkGray;
             this.txtUsuario.PlaceholderText = "Ingrese su nombre de usuario.";
             this.txtUsuario.SelectedText = "";
-            this.txtUsuario.Size = new System.Drawing.Size(231, 18);
+            this.txtUsuario.Size = new System.Drawing.Size(346, 28);
             this.txtUsuario.TabIndex = 4;
             // 
             // label1
@@ -164,10 +160,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(12, 13);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(18, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 15);
+            this.label1.Size = new System.Drawing.Size(77, 22);
             this.label1.TabIndex = 3;
             this.label1.Text = "Usuario:";
             // 
@@ -181,10 +176,9 @@
             this.btnIniciar_Sesion.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(147)))), ((int)(((byte)(81)))));
             this.btnIniciar_Sesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIniciar_Sesion.ForeColor = System.Drawing.Color.White;
-            this.btnIniciar_Sesion.Location = new System.Drawing.Point(59, 100);
-            this.btnIniciar_Sesion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnIniciar_Sesion.Location = new System.Drawing.Point(88, 154);
             this.btnIniciar_Sesion.Name = "btnIniciar_Sesion";
-            this.btnIniciar_Sesion.Size = new System.Drawing.Size(153, 29);
+            this.btnIniciar_Sesion.Size = new System.Drawing.Size(230, 45);
             this.btnIniciar_Sesion.TabIndex = 9;
             this.btnIniciar_Sesion.Text = "Iniciar Sesión";
             this.btnIniciar_Sesion.Click += new System.EventHandler(this.btnIniciar_Sesion_Click);
@@ -202,23 +196,24 @@
             this.txtContrasena.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtContrasena.ForeColor = System.Drawing.Color.Black;
             this.txtContrasena.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtContrasena.Location = new System.Drawing.Point(16, 72);
+            this.txtContrasena.Location = new System.Drawing.Point(24, 111);
+            this.txtContrasena.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.PlaceholderForeColor = System.Drawing.Color.DarkGray;
             this.txtContrasena.PlaceholderText = "Ingrese la contraseña de la cuenta.";
             this.txtContrasena.SelectedText = "";
-            this.txtContrasena.Size = new System.Drawing.Size(231, 18);
+            this.txtContrasena.Size = new System.Drawing.Size(346, 28);
             this.txtContrasena.TabIndex = 6;
+            this.txtContrasena.UseSystemPasswordChar = true;
             // 
             // lblMensaje_Usuario
             // 
             this.lblMensaje_Usuario.AutoSize = true;
             this.lblMensaje_Usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMensaje_Usuario.ForeColor = System.Drawing.Color.Red;
-            this.lblMensaje_Usuario.Location = new System.Drawing.Point(121, 13);
-            this.lblMensaje_Usuario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblMensaje_Usuario.Location = new System.Drawing.Point(182, 20);
             this.lblMensaje_Usuario.Name = "lblMensaje_Usuario";
-            this.lblMensaje_Usuario.Size = new System.Drawing.Size(113, 15);
+            this.lblMensaje_Usuario.Size = new System.Drawing.Size(162, 22);
             this.lblMensaje_Usuario.TabIndex = 7;
             this.lblMensaje_Usuario.Text = "Campo obligatorio*";
             this.lblMensaje_Usuario.Visible = false;
@@ -228,10 +223,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(12, 56);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(18, 86);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 15);
+            this.label2.Size = new System.Drawing.Size(108, 22);
             this.label2.TabIndex = 5;
             this.label2.Text = "Contraseña:";
             // 
@@ -240,10 +234,9 @@
             this.lblMensaje_Contrasena.AutoSize = true;
             this.lblMensaje_Contrasena.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMensaje_Contrasena.ForeColor = System.Drawing.Color.Red;
-            this.lblMensaje_Contrasena.Location = new System.Drawing.Point(121, 56);
-            this.lblMensaje_Contrasena.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblMensaje_Contrasena.Location = new System.Drawing.Point(182, 86);
             this.lblMensaje_Contrasena.Name = "lblMensaje_Contrasena";
-            this.lblMensaje_Contrasena.Size = new System.Drawing.Size(113, 15);
+            this.lblMensaje_Contrasena.Size = new System.Drawing.Size(162, 22);
             this.lblMensaje_Contrasena.TabIndex = 8;
             this.lblMensaje_Contrasena.Text = "Campo obligatorio*";
             this.lblMensaje_Contrasena.Visible = false;
@@ -252,10 +245,9 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::GeoIntegral.Properties.Resources.GeoIntegral_LogoTipo;
-            this.pictureBox2.Location = new System.Drawing.Point(236, 62);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Location = new System.Drawing.Point(354, 95);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(341, 115);
+            this.pictureBox2.Size = new System.Drawing.Size(512, 177);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
@@ -267,10 +259,9 @@
             this.lblCrear_Cuenta.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblCrear_Cuenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCrear_Cuenta.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lblCrear_Cuenta.Location = new System.Drawing.Point(360, 311);
-            this.lblCrear_Cuenta.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCrear_Cuenta.Location = new System.Drawing.Point(540, 478);
             this.lblCrear_Cuenta.Name = "lblCrear_Cuenta";
-            this.lblCrear_Cuenta.Size = new System.Drawing.Size(137, 15);
+            this.lblCrear_Cuenta.Size = new System.Drawing.Size(203, 22);
             this.lblCrear_Cuenta.TabIndex = 11;
             this.lblCrear_Cuenta.Text = "Crear una nueva cuenta";
             this.lblCrear_Cuenta.Click += new System.EventHandler(this.lblCrear_Cuenta_Click);
@@ -283,10 +274,9 @@
             this.lblRecuperar_Contrasena.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblRecuperar_Contrasena.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRecuperar_Contrasena.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lblRecuperar_Contrasena.Location = new System.Drawing.Point(209, 311);
-            this.lblRecuperar_Contrasena.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblRecuperar_Contrasena.Location = new System.Drawing.Point(314, 478);
             this.lblRecuperar_Contrasena.Name = "lblRecuperar_Contrasena";
-            this.lblRecuperar_Contrasena.Size = new System.Drawing.Size(131, 15);
+            this.lblRecuperar_Contrasena.Size = new System.Drawing.Size(192, 22);
             this.lblRecuperar_Contrasena.TabIndex = 10;
             this.lblRecuperar_Contrasena.Text = "Recuperar Contraseña";
             this.lblRecuperar_Contrasena.Click += new System.EventHandler(this.lblRecuperar_Contrasena_Click);
@@ -295,26 +285,24 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::GeoIntegral.Properties.Resources.GeoIntegral_Logo;
-            this.pictureBox1.Location = new System.Drawing.Point(132, 62);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(198, 95);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(112, 115);
+            this.pictureBox1.Size = new System.Drawing.Size(168, 177);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
             // Login_Screen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(15)))), ((int)(((byte)(33)))));
-            this.ClientSize = new System.Drawing.Size(700, 441);
+            this.ClientSize = new System.Drawing.Size(1050, 678);
             this.Controls.Add(this.btnCerrar_App);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Login_Screen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login App";
