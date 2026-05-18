@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
@@ -105,14 +106,14 @@ namespace GeoIntegral.Controller
 
                 if (datos[0] == nombreUsuario && datos[2] == gmail)
                 {
-                    return true;
-                }
+                    if (datos[4] == "Inactivo")
+                    {
+                        MessageBox.Show("Tu cuenta está inactiva. Contacta al administrador.",
+                            "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return false;
+                    }
 
-                if (datos[4] == "Inactivo")
-                {
-                    MessageBox.Show("Tu cuenta está inactiva. Contacta al administrador.",
-                        "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return false;
+                    return true;
                 }
 
             }
@@ -147,6 +148,32 @@ namespace GeoIntegral.Controller
                 MessageBox.Show("Error al cambiar contraseña: " + ex.Message);
                 return false;
             }
+        }
+
+        public List<Usuario> ObtenerTodosLosUsuarios()
+        {
+            var lista = new List<Usuario>();
+            if (!File.Exists(rutaUsuarios)) 
+            {
+                return lista;
+            }
+
+            var lineas = File.ReadAllLines(rutaUsuarios).Skip(1);
+            foreach (var linea in lineas)
+            {
+                if (string.IsNullOrWhiteSpace(linea))
+                {
+                    continue;
+                }
+
+                string[] datos = linea.Split(';');
+
+                RolUsuario rol = (RolUsuario)Enum.Parse(typeof(RolUsuario), datos[3].Trim());
+                EstadoUsuario estado = (EstadoUsuario)Enum.Parse(typeof(EstadoUsuario), datos[4].Trim());
+
+                lista.Add(new Usuario(datos[0], datos[1], datos[2], rol, estado));
+            }
+            return lista;
         }
     }
 }

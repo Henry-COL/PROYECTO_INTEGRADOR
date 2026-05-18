@@ -66,7 +66,7 @@ namespace GeoIntegral.Views
                     
                     Notificacion Notificacion_Registrar = new Notificacion(0, txtUsuario.Text, "Olvido de contraseña", DateTime.Today.ToString("dd/MM/yyyy"), EstadoNotificacion.Pendiente);
 
-                    if (notificar.RegistrarNotificacion(Notificacion_Registrar.IdNotificacion.ToString(), Notificacion_Registrar.NombreUsuario, Notificacion_Registrar.Mensaje, Notificacion_Registrar.Fecha, EstadoNotificacion.Pendiente))
+                    if (notificar.RegistrarNotificacion(Notificacion_Registrar))
                     {
                         MessageBox.Show("¡Notificación enviada al administrador! El equipo de soporte se pondrá en contacto con usted lo antes posible.",
                             "GeoIntegral", MessageBoxButtons.OK, MessageBoxIcon.Information);

@@ -28,12 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbl = new System.Windows.Forms.Label();
             this.cmbListaUsuarios = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btnModificar = new Guna.UI2.WinForms.Guna2Button();
             this.grp = new System.Windows.Forms.GroupBox();
             this.dgvListaUsuarios = new System.Windows.Forms.DataGridView();
+            this.IDNotificacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Mensaje = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnCerrar_App = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             this.grp.SuspendLayout();
@@ -50,20 +56,20 @@
             this.panel1.Controls.Add(this.btnCerrar_App);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.MaximumSize = new System.Drawing.Size(0, 0);
-            this.panel1.MinimumSize = new System.Drawing.Size(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1145, 691);
+            this.panel1.Size = new System.Drawing.Size(763, 449);
             this.panel1.TabIndex = 1;
             // 
             // lbl
             // 
             this.lbl.AutoSize = true;
-            this.lbl.Font = new System.Drawing.Font("Poppins Medium", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.lbl.Location = new System.Drawing.Point(391, 603);
+            this.lbl.Location = new System.Drawing.Point(261, 392);
+            this.lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl.Name = "lbl";
-            this.lbl.Size = new System.Drawing.Size(189, 28);
+            this.lbl.Size = new System.Drawing.Size(117, 13);
             this.lbl.TabIndex = 20;
             this.lbl.Text = "Nombre de usuario:";
             // 
@@ -77,9 +83,10 @@
             this.cmbListaUsuarios.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cmbListaUsuarios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cmbListaUsuarios.ItemHeight = 30;
-            this.cmbListaUsuarios.Location = new System.Drawing.Point(586, 599);
+            this.cmbListaUsuarios.Location = new System.Drawing.Point(389, 382);
+            this.cmbListaUsuarios.Margin = new System.Windows.Forms.Padding(2);
             this.cmbListaUsuarios.Name = "cmbListaUsuarios";
-            this.cmbListaUsuarios.Size = new System.Drawing.Size(289, 36);
+            this.cmbListaUsuarios.Size = new System.Drawing.Size(194, 36);
             this.cmbListaUsuarios.TabIndex = 19;
             // 
             // btnModificar
@@ -92,34 +99,81 @@
             this.btnModificar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(147)))), ((int)(((byte)(81)))));
             this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.ForeColor = System.Drawing.Color.White;
-            this.btnModificar.Location = new System.Drawing.Point(881, 593);
+            this.btnModificar.Location = new System.Drawing.Point(587, 382);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(2);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(230, 45);
+            this.btnModificar.Size = new System.Drawing.Size(153, 32);
             this.btnModificar.TabIndex = 18;
             this.btnModificar.Text = "Modificar contraseña";
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // grp
             // 
             this.grp.Controls.Add(this.dgvListaUsuarios);
-            this.grp.Font = new System.Drawing.Font("Poppins", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grp.ForeColor = System.Drawing.SystemColors.Window;
-            this.grp.Location = new System.Drawing.Point(25, 73);
+            this.grp.Location = new System.Drawing.Point(17, 47);
+            this.grp.Margin = new System.Windows.Forms.Padding(2);
             this.grp.Name = "grp";
-            this.grp.Size = new System.Drawing.Size(1086, 509);
+            this.grp.Padding = new System.Windows.Forms.Padding(2);
+            this.grp.Size = new System.Drawing.Size(724, 331);
             this.grp.TabIndex = 17;
             this.grp.TabStop = false;
             this.grp.Text = "Lista de notificación: Restaurar contraseñas";
             // 
             // dgvListaUsuarios
             // 
+            this.dgvListaUsuarios.AllowUserToAddRows = false;
+            this.dgvListaUsuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvListaUsuarios.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(24)))), ((int)(((byte)(42)))));
             this.dgvListaUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListaUsuarios.Location = new System.Drawing.Point(13, 30);
+            this.dgvListaUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.IDNotificacion,
+            this.Usuario,
+            this.Mensaje,
+            this.Fecha,
+            this.Estado});
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.MenuText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvListaUsuarios.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvListaUsuarios.Location = new System.Drawing.Point(9, 20);
+            this.dgvListaUsuarios.Margin = new System.Windows.Forms.Padding(2);
             this.dgvListaUsuarios.Name = "dgvListaUsuarios";
+            this.dgvListaUsuarios.RowHeadersVisible = false;
             this.dgvListaUsuarios.RowHeadersWidth = 62;
             this.dgvListaUsuarios.RowTemplate.Height = 28;
-            this.dgvListaUsuarios.Size = new System.Drawing.Size(1057, 448);
+            this.dgvListaUsuarios.Size = new System.Drawing.Size(705, 291);
             this.dgvListaUsuarios.TabIndex = 0;
+            // 
+            // IDNotificacion
+            // 
+            this.IDNotificacion.HeaderText = "ID";
+            this.IDNotificacion.Name = "IDNotificacion";
+            // 
+            // Usuario
+            // 
+            this.Usuario.HeaderText = "Usuario";
+            this.Usuario.Name = "Usuario";
+            // 
+            // Mensaje
+            // 
+            this.Mensaje.HeaderText = "Mensaje";
+            this.Mensaje.Name = "Mensaje";
+            // 
+            // Fecha
+            // 
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.Name = "Fecha";
+            // 
+            // Estado
+            // 
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
             // 
             // btnCerrar_App
             // 
@@ -133,21 +187,23 @@
             this.btnCerrar_App.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrar_App.ForeColor = System.Drawing.Color.White;
             this.btnCerrar_App.HoverState.FillColor = System.Drawing.Color.Maroon;
-            this.btnCerrar_App.Location = new System.Drawing.Point(951, 12);
+            this.btnCerrar_App.Location = new System.Drawing.Point(626, 8);
+            this.btnCerrar_App.Margin = new System.Windows.Forms.Padding(2);
             this.btnCerrar_App.Name = "btnCerrar_App";
-            this.btnCerrar_App.Size = new System.Drawing.Size(176, 45);
+            this.btnCerrar_App.Size = new System.Drawing.Size(125, 29);
             this.btnCerrar_App.TabIndex = 16;
             this.btnCerrar_App.Text = "Volver al inicio";
             this.btnCerrar_App.Click += new System.EventHandler(this.btnCerrar_App_Click);
             // 
             // Notificaciones_Panel
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1145, 691);
+            this.ClientSize = new System.Drawing.Size(763, 449);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Notificaciones_Panel";
             this.Text = "Notificaciones_Panel";
             this.panel1.ResumeLayout(false);
@@ -166,5 +222,10 @@
         private Guna.UI2.WinForms.Guna2Button btnModificar;
         private System.Windows.Forms.DataGridView dgvListaUsuarios;
         private System.Windows.Forms.Label lbl;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IDNotificacion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Usuario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Mensaje;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
     }
 }

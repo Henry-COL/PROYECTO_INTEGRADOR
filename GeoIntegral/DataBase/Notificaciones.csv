@@ -1,1 +1,3 @@
-IdNotificacion;IdUsuario;Mensaje;Fecha;Leida
+IdNotificacion;NombreUsuario;Mensaje;Fecha;Estado
+1;David;Olvido de contraseña;18/05/2026;Pendiente
+2;David;Olvido de contraseña;18/05/2026;Pendiente

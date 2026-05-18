@@ -51,7 +51,7 @@ namespace GeoIntegral.DataBase
                     }
                     else if (nombre == "Notificaciones.csv")
                     {
-                        File.WriteAllText(path, "IdNotificacion;IdUsuario;Mensaje;Fecha;Leida\n");
+                        File.WriteAllText(path, "IdNotificacion;NombreUsuario;Mensaje;Fecha;Estado\n");
                     }
                 }
             }
