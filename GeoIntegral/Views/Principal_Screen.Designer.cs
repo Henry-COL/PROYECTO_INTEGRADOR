@@ -36,13 +36,13 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.Panel_Ventanas = new System.Windows.Forms.Panel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnMenu_1 = new Guna.UI2.WinForms.Guna2Button();
-            this.btnMenu_2 = new Guna.UI2.WinForms.Guna2Button();
-            this.btnMenu_3 = new Guna.UI2.WinForms.Guna2Button();
             this.Admin_Panel = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnAdmin_Menu = new Guna.UI2.WinForms.Guna2Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnAdmin_Menu2 = new Guna.UI2.WinForms.Guna2Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnAdmin_Menu = new Guna.UI2.WinForms.Guna2Button();
+            this.btnMenu_3 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnMenu_2 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnMenu_1 = new Guna.UI2.WinForms.Guna2Button();
             this.Panel_Menu = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -116,10 +116,10 @@
             // Panel_Ventanas
             // 
             this.Panel_Ventanas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Panel_Ventanas.Dock = System.Windows.Forms.DockStyle.Left;
+            this.Panel_Ventanas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Panel_Ventanas.Location = new System.Drawing.Point(280, 83);
             this.Panel_Ventanas.Name = "Panel_Ventanas";
-            this.Panel_Ventanas.Size = new System.Drawing.Size(1141, 652);
+            this.Panel_Ventanas.Size = new System.Drawing.Size(1139, 652);
             this.Panel_Ventanas.TabIndex = 2;
             // 
             // guna2Panel1
@@ -136,61 +136,6 @@
             this.guna2Panel1.Size = new System.Drawing.Size(280, 652);
             this.guna2Panel1.TabIndex = 0;
             // 
-            // btnMenu_1
-            // 
-            this.btnMenu_1.BackColor = System.Drawing.Color.Transparent;
-            this.btnMenu_1.BorderColor = System.Drawing.Color.Transparent;
-            this.btnMenu_1.BorderRadius = 6;
-            this.btnMenu_1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnMenu_1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnMenu_1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnMenu_1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnMenu_1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(24)))), ((int)(((byte)(42)))));
-            this.btnMenu_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMenu_1.ForeColor = System.Drawing.Color.White;
-            this.btnMenu_1.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(69)))));
-            this.btnMenu_1.Location = new System.Drawing.Point(27, 85);
-            this.btnMenu_1.Name = "btnMenu_1";
-            this.btnMenu_1.Size = new System.Drawing.Size(220, 60);
-            this.btnMenu_1.TabIndex = 0;
-            this.btnMenu_1.Text = "Menu 1";
-            // 
-            // btnMenu_2
-            // 
-            this.btnMenu_2.BackColor = System.Drawing.Color.Transparent;
-            this.btnMenu_2.BorderRadius = 6;
-            this.btnMenu_2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnMenu_2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnMenu_2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnMenu_2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnMenu_2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(24)))), ((int)(((byte)(42)))));
-            this.btnMenu_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMenu_2.ForeColor = System.Drawing.Color.White;
-            this.btnMenu_2.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(69)))));
-            this.btnMenu_2.Location = new System.Drawing.Point(27, 168);
-            this.btnMenu_2.Name = "btnMenu_2";
-            this.btnMenu_2.Size = new System.Drawing.Size(220, 60);
-            this.btnMenu_2.TabIndex = 1;
-            this.btnMenu_2.Text = "Menu 2";
-            // 
-            // btnMenu_3
-            // 
-            this.btnMenu_3.BackColor = System.Drawing.Color.Transparent;
-            this.btnMenu_3.BorderRadius = 6;
-            this.btnMenu_3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnMenu_3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnMenu_3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnMenu_3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnMenu_3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(24)))), ((int)(((byte)(42)))));
-            this.btnMenu_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMenu_3.ForeColor = System.Drawing.Color.White;
-            this.btnMenu_3.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(69)))));
-            this.btnMenu_3.Location = new System.Drawing.Point(27, 255);
-            this.btnMenu_3.Name = "btnMenu_3";
-            this.btnMenu_3.Size = new System.Drawing.Size(220, 60);
-            this.btnMenu_3.TabIndex = 2;
-            this.btnMenu_3.Text = "Menu 3";
-            // 
             // Admin_Panel
             // 
             this.Admin_Panel.BackColor = System.Drawing.Color.Transparent;
@@ -204,6 +149,40 @@
             this.Admin_Panel.Size = new System.Drawing.Size(280, 197);
             this.Admin_Panel.TabIndex = 39;
             this.Admin_Panel.Visible = false;
+            // 
+            // btnAdmin_Menu2
+            // 
+            this.btnAdmin_Menu2.BackColor = System.Drawing.Color.Transparent;
+            this.btnAdmin_Menu2.BorderRadius = 6;
+            this.btnAdmin_Menu2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAdmin_Menu2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAdmin_Menu2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAdmin_Menu2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAdmin_Menu2.FillColor = System.Drawing.Color.Black;
+            this.btnAdmin_Menu2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdmin_Menu2.ForeColor = System.Drawing.Color.White;
+            this.btnAdmin_Menu2.HoverState.FillColor = System.Drawing.Color.Gray;
+            this.btnAdmin_Menu2.Image = global::GeoIntegral.Properties.Resources.App_Admin_Menu2;
+            this.btnAdmin_Menu2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnAdmin_Menu2.ImageOffset = new System.Drawing.Point(-15, 0);
+            this.btnAdmin_Menu2.ImageSize = new System.Drawing.Size(70, 45);
+            this.btnAdmin_Menu2.Location = new System.Drawing.Point(27, 51);
+            this.btnAdmin_Menu2.Name = "btnAdmin_Menu2";
+            this.btnAdmin_Menu2.Size = new System.Drawing.Size(220, 60);
+            this.btnAdmin_Menu2.TabIndex = 6;
+            this.btnAdmin_Menu2.Text = "Notificaciones";
+            this.btnAdmin_Menu2.TextOffset = new System.Drawing.Point(11, 0);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Poppins ExtraBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(70, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(132, 31);
+            this.label1.TabIndex = 37;
+            this.label1.Text = "Admin Panel";
             // 
             // btnAdmin_Menu
             // 
@@ -229,39 +208,60 @@
             this.btnAdmin_Menu.TextOffset = new System.Drawing.Point(11, 0);
             this.btnAdmin_Menu.Click += new System.EventHandler(this.btnAdmin_Menu_Click);
             // 
-            // label1
+            // btnMenu_3
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Poppins ExtraBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(70, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 31);
-            this.label1.TabIndex = 37;
-            this.label1.Text = "Admin Panel";
+            this.btnMenu_3.BackColor = System.Drawing.Color.Transparent;
+            this.btnMenu_3.BorderRadius = 6;
+            this.btnMenu_3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnMenu_3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnMenu_3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnMenu_3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnMenu_3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(24)))), ((int)(((byte)(42)))));
+            this.btnMenu_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMenu_3.ForeColor = System.Drawing.Color.White;
+            this.btnMenu_3.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(69)))));
+            this.btnMenu_3.Location = new System.Drawing.Point(27, 255);
+            this.btnMenu_3.Name = "btnMenu_3";
+            this.btnMenu_3.Size = new System.Drawing.Size(220, 60);
+            this.btnMenu_3.TabIndex = 2;
+            this.btnMenu_3.Text = "Menu 3";
             // 
-            // btnAdmin_Menu2
+            // btnMenu_2
             // 
-            this.btnAdmin_Menu2.BackColor = System.Drawing.Color.Transparent;
-            this.btnAdmin_Menu2.BorderRadius = 6;
-            this.btnAdmin_Menu2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAdmin_Menu2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAdmin_Menu2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAdmin_Menu2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAdmin_Menu2.FillColor = System.Drawing.Color.Black;
-            this.btnAdmin_Menu2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdmin_Menu2.ForeColor = System.Drawing.Color.White;
-            this.btnAdmin_Menu2.HoverState.FillColor = System.Drawing.Color.Gray;
-            this.btnAdmin_Menu2.Image = global::GeoIntegral.Properties.Resources.App_Admin_Menu2;
-            this.btnAdmin_Menu2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnAdmin_Menu2.ImageOffset = new System.Drawing.Point(-15, 0);
-            this.btnAdmin_Menu2.ImageSize = new System.Drawing.Size(70, 45);
-            this.btnAdmin_Menu2.Location = new System.Drawing.Point(27, 51);
-            this.btnAdmin_Menu2.Name = "btnAdmin_Menu2";
-            this.btnAdmin_Menu2.Size = new System.Drawing.Size(220, 60);
-            this.btnAdmin_Menu2.TabIndex = 6;
-            this.btnAdmin_Menu2.Text = "Notificaciones";
-            this.btnAdmin_Menu2.TextOffset = new System.Drawing.Point(11, 0);
+            this.btnMenu_2.BackColor = System.Drawing.Color.Transparent;
+            this.btnMenu_2.BorderRadius = 6;
+            this.btnMenu_2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnMenu_2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnMenu_2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnMenu_2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnMenu_2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(24)))), ((int)(((byte)(42)))));
+            this.btnMenu_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMenu_2.ForeColor = System.Drawing.Color.White;
+            this.btnMenu_2.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(69)))));
+            this.btnMenu_2.Location = new System.Drawing.Point(27, 168);
+            this.btnMenu_2.Name = "btnMenu_2";
+            this.btnMenu_2.Size = new System.Drawing.Size(220, 60);
+            this.btnMenu_2.TabIndex = 1;
+            this.btnMenu_2.Text = "Menu 2";
+            // 
+            // btnMenu_1
+            // 
+            this.btnMenu_1.BackColor = System.Drawing.Color.Transparent;
+            this.btnMenu_1.BorderColor = System.Drawing.Color.Transparent;
+            this.btnMenu_1.BorderRadius = 6;
+            this.btnMenu_1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnMenu_1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnMenu_1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnMenu_1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnMenu_1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(24)))), ((int)(((byte)(42)))));
+            this.btnMenu_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMenu_1.ForeColor = System.Drawing.Color.White;
+            this.btnMenu_1.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(69)))));
+            this.btnMenu_1.Location = new System.Drawing.Point(27, 85);
+            this.btnMenu_1.Name = "btnMenu_1";
+            this.btnMenu_1.Size = new System.Drawing.Size(220, 60);
+            this.btnMenu_1.TabIndex = 0;
+            this.btnMenu_1.Text = "Menu 1";
             // 
             // Panel_Menu
             // 

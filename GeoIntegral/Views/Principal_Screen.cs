@@ -20,9 +20,6 @@ namespace GeoIntegral.Views
             InitializeComponent();
             this.usuarioSesion = usuario;
             CargarDatosUsuario();
-
-            Panel_Menu.Dock = DockStyle.Left;
-            Panel_Ventanas.Dock = DockStyle.Fill;
         }
 
         private void CargarDatosUsuario()
