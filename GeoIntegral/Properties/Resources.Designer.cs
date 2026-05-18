@@ -63,6 +63,26 @@ namespace GeoIntegral.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap App_Admin_Menu1 {
+            get {
+                object obj = ResourceManager.GetObject("App_Admin_Menu1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap App_Admin_Menu2 {
+            get {
+                object obj = ResourceManager.GetObject("App_Admin_Menu2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap App_CuentaEmpresa_Imagen {
             get {
                 object obj = ResourceManager.GetObject("App_CuentaEmpresa_Imagen", resourceCulture);

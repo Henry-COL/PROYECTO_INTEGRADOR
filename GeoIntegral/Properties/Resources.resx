@@ -121,6 +121,9 @@
   <data name="App_CuentaEmpresa_Imagen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Multimedia\App_CuentaEmpresa_Imagen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="App_Admin_Menu1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Multimedia\App_Admin_Menu1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="App_Login_Wallpaper_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Multimedia\App_Login_Wallpaper_.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -136,6 +139,9 @@
   <data name="App_Recuperar_Wallpaper" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Multimedia\App_Recuperar_Wallpaper.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="App_Registrar_Cliente_Wallpaper" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Multimedia\App_Registrar_Cliente_Wallpaper.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="GeoIntegral-Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Multimedia\GeoIntegral-Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -145,7 +151,7 @@
   <data name="App_CuentaPersonal_Imagen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Multimedia\App_CuentaPersonal_Imagen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="App_Registrar_Cliente_Wallpaper" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Multimedia\App_Registrar_Cliente_Wallpaper.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="App_Admin_Menu2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Multimedia\App_Admin_Menu2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

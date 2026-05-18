@@ -23,13 +23,6 @@ namespace GeoIntegral.Views
 
             Panel_Menu.Dock = DockStyle.Left;
             Panel_Ventanas.Dock = DockStyle.Fill;
-            Panel_Ventanas.BringToFront();
-
-            this.Resize += (s, e) => // <- Agrega esto
-            {
-                if (Panel_Ventanas.Controls.Count > 0)
-                    Panel_Ventanas.Controls[0].Size = Panel_Ventanas.Size;
-            };
         }
 
         private void CargarDatosUsuario()
@@ -45,17 +38,15 @@ namespace GeoIntegral.Views
                 {
                     lblNombre_Usuario.Text = "Usuario no identificado";
                     lblTipo_Usuario.Text = "Rol: No asignado";
-
-
                 }
 
                 if (usuarioSesion != null && usuarioSesion.Rol == RolUsuario.Administrador)
                 {
-                    btnAdmin_Menu.Visible = true;
+                    Admin_Panel.Visible = true;
                 }
                 else
                 {
-                    btnAdmin_Menu.Visible = false;
+                    Admin_Panel.Visible = false;
                 }
             }
             catch (Exception ex)
@@ -66,25 +57,41 @@ namespace GeoIntegral.Views
 
         private void CargarVentana(Form formulario)
         {
+            Panel_Ventanas.Resize -= Panel_Ventanas_Resize;
             Panel_Ventanas.Controls.Clear();
+
+            // Forzar que el panel calcule su tamaño real antes de usarlo
+            Panel_Ventanas.PerformLayout();
 
             formulario.TopLevel = false;
             formulario.FormBorderStyle = FormBorderStyle.None;
             formulario.Dock = DockStyle.Fill;
             formulario.MinimumSize = new Size(0, 0);
             formulario.MaximumSize = new Size(0, 0);
-            formulario.Size = Panel_Ventanas.Size; // <- Fuerza el tamaño del panel
 
             Panel_Ventanas.Controls.Add(formulario);
             Panel_Ventanas.Tag = formulario;
             formulario.Show();
+
+            formulario.Size = Panel_Ventanas.ClientSize;
+            formulario.Location = new Point(0, 0);
+
+            Panel_Ventanas.Resize += Panel_Ventanas_Resize;
         }
 
-
+        private void Panel_Ventanas_Resize(object sender, EventArgs e)
+        {
+            if (Panel_Ventanas.Controls.Count > 0)
+            {
+                Panel_Ventanas.Controls[0].Size = Panel_Ventanas.ClientSize;
+                Panel_Ventanas.Controls[0].Location = new Point(0, 0);
+            }
+        }
 
         private void btnAdmin_Menu_Click(object sender, EventArgs e)
         {
-            CargarVentana(new Notificaciones_Panel());
+            Panel_Ventanas.PerformLayout();
+            CargarVentana(new Notificaciones_Panel(Panel_Ventanas.ClientSize));
         }
     }
 }

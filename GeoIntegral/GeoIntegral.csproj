@@ -175,6 +175,8 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Multimedia\App_Admin_Menu1.png" />
+    <Content Include="Multimedia\App_Admin_Menu2.png" />
     <Content Include="Multimedia\App_CuentaEmpresa_Imagen.png" />
     <Content Include="Multimedia\App_CuentaPersonal_Imagen.png" />
     <Content Include="Multimedia\App_Login_Wallpaper.png" />
