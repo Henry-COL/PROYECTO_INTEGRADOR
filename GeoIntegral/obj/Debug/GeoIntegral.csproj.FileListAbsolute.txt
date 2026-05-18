@@ -26,7 +26,6 @@ C:\Users\LENOVO\Desktop\Proyectos\PROYECTO_INTEGRADOR\GeoIntegral\obj\Debug\GeoI
 C:\Users\LENOVO\Desktop\Proyectos\PROYECTO_INTEGRADOR\GeoIntegral\obj\Debug\GeoIntegral.Views.Recuperar_Screen.resources
 C:\Users\LENOVO\Desktop\Proyectos\PROYECTO_INTEGRADOR\GeoIntegral\obj\Debug\GeoIntegral.Views.Registrar_Cliente.resources
 C:\Users\LENOVO\Desktop\Proyectos\PROYECTO_INTEGRADOR\GeoIntegral\obj\Debug\GeoIntegral.Views.Registrar_Screen.resources
-C:\Users\LENOVO\Desktop\Proyectos\PROYECTO_INTEGRADOR\GeoIntegral\obj\Debug\GeoIntegral.Views.Tipo_Registrar.resources
 C:\Users\LENOVO\Desktop\Proyectos\PROYECTO_INTEGRADOR\GeoIntegral\obj\Debug\GeoIntegral.csproj.GenerateResource.cache
 C:\Users\LENOVO\Desktop\Proyectos\PROYECTO_INTEGRADOR\GeoIntegral\obj\Debug\GeoIntegral.csproj.CoreCompileInputs.cache
 C:\Users\LENOVO\Desktop\Proyectos\PROYECTO_INTEGRADOR\GeoIntegral\obj\Debug\GeoInteg.74D226CE.Up2Date
@@ -44,3 +43,14 @@ C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Deb
 C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\obj\Debug\GeoIntegral.Views.Menu_Admin.resources
 C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\obj\Debug\GeoIntegral.Views.Notificaciones_Panel.resources
+C:\Users\LENOVO\Desktop\Proyectos\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\BCrypt-Net-Next.dll
+C:\Users\LENOVO\Desktop\Proyectos\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\System.Buffers.dll
+C:\Users\LENOVO\Desktop\Proyectos\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\System.Memory.dll
+C:\Users\LENOVO\Desktop\Proyectos\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\LENOVO\Desktop\Proyectos\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\LENOVO\Desktop\Proyectos\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\System.Buffers.xml
+C:\Users\LENOVO\Desktop\Proyectos\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\System.Memory.xml
+C:\Users\LENOVO\Desktop\Proyectos\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\LENOVO\Desktop\Proyectos\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\LENOVO\Desktop\Proyectos\PROYECTO_INTEGRADOR\GeoIntegral\obj\Debug\GeoIntegral.Views.Menu_Admin.resources
+C:\Users\LENOVO\Desktop\Proyectos\PROYECTO_INTEGRADOR\GeoIntegral\obj\Debug\GeoIntegral.Views.Notificaciones_Panel.resources
