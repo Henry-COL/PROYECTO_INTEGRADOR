@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\Henry Quintero\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|C:\\Users\\Henry Quintero\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\controller\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|solutionrelative:controller\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|c:\\users\\henry quintero\\documents\\github\\proyecto_integrador\\geointegral\\repository\\iclienterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|solutionrelative:repository\\iclienterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|c:\\users\\henry quintero\\documents\\github\\proyecto_integrador\\geointegral\\controller\\notificacioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|C:\\Users\\Henry Quintero\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\controller\\notificacioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|solutionrelative:controller\\notificacioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -15,8 +15,16 @@
       "RelativeMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|solutionrelative:controller\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|C:\\Users\\Henry Quintero\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\controller\\administradorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|C:\\Users\\Henry Quintero\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\controller\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|solutionrelative:controller\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|c:\\users\\henry quintero\\documents\\github\\proyecto_integrador\\geointegral\\controller\\administradorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|solutionrelative:controller\\administradorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|C:\\Users\\Henry Quintero\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|solutionrelative:models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|C:\\Users\\Henry Quintero\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\models\\notificacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -85,10 +93,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|C:\\Users\\Henry Quintero\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|solutionrelative:models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|C:\\Users\\Henry Quintero\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|solutionrelative:models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -98,7 +102,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -114,15 +118,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "NotificacionController.cs",
-              "DocumentMoniker": "C:\\Users\\Henry Quintero\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Controller\\NotificacionController.cs",
-              "RelativeDocumentMoniker": "Controller\\NotificacionController.cs",
-              "ToolTip": "C:\\Users\\Henry Quintero\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Controller\\NotificacionController.cs",
-              "RelativeToolTip": "Controller\\NotificacionController.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAYwCMAAAAfAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "IClienteRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Henry Quintero\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Repository\\IClienteRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\IClienteRepository.cs",
+              "ToolTip": "C:\\Users\\Henry Quintero\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Repository\\IClienteRepository.cs",
+              "RelativeToolTip": "Repository\\IClienteRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T14:05:31.271Z",
+              "WhenOpened": "2026-05-21T23:44:31.166Z",
               "EditorCaption": ""
             },
             {
@@ -140,20 +144,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "UsuarioController.cs",
               "DocumentMoniker": "C:\\Users\\Henry Quintero\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Controller\\UsuarioController.cs",
               "RelativeDocumentMoniker": "Controller\\UsuarioController.cs",
               "ToolTip": "C:\\Users\\Henry Quintero\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Controller\\UsuarioController.cs",
               "RelativeToolTip": "Controller\\UsuarioController.cs",
-              "ViewState": "AgIAAJAAAAAAAAAAAAAAwLMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAGcAAAAAAAAAAAAkwKAAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-18T14:10:13.095Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
+              "Title": "NotificacionController.cs",
+              "DocumentMoniker": "C:\\Users\\Henry Quintero\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Controller\\NotificacionController.cs",
+              "RelativeDocumentMoniker": "Controller\\NotificacionController.cs",
+              "ToolTip": "C:\\Users\\Henry Quintero\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Controller\\NotificacionController.cs",
+              "RelativeToolTip": "Controller\\NotificacionController.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAYwCMAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-18T14:05:31.271Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "AdministradorController.cs",
               "DocumentMoniker": "C:\\Users\\Henry Quintero\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Controller\\AdministradorController.cs",
               "RelativeDocumentMoniker": "Controller\\AdministradorController.cs",
@@ -166,7 +183,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\Henry Quintero\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Models\\Usuario.cs",
+              "RelativeDocumentMoniker": "Models\\Usuario.cs",
+              "ToolTip": "C:\\Users\\Henry Quintero\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Models\\Usuario.cs",
+              "RelativeToolTip": "Models\\Usuario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-18T13:36:22.992Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "EstadoNotificacion.cs",
               "DocumentMoniker": "C:\\Users\\Henry Quintero\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Enums\\EstadoNotificacion.cs",
               "RelativeDocumentMoniker": "Enums\\EstadoNotificacion.cs",
@@ -178,7 +207,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Notificacion.cs",
               "DocumentMoniker": "C:\\Users\\Henry Quintero\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Models\\Notificacion.cs",
               "RelativeDocumentMoniker": "Models\\Notificacion.cs",
@@ -190,7 +219,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "Notificaciones_Panel.cs",
               "DocumentMoniker": "C:\\Users\\Henry Quintero\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Notificaciones_Panel.cs",
               "RelativeDocumentMoniker": "Views\\Notificaciones_Panel.cs",
@@ -202,7 +231,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "Principal_Screen.cs",
               "DocumentMoniker": "C:\\Users\\Henry Quintero\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Principal_Screen.cs",
               "RelativeDocumentMoniker": "Views\\Principal_Screen.cs",
@@ -214,7 +243,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "Login_Screen.cs",
               "DocumentMoniker": "C:\\Users\\Henry Quintero\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Login_Screen.cs",
               "RelativeDocumentMoniker": "Views\\Login_Screen.cs",
@@ -226,18 +255,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Login_Screen.cs [Design]",
+              "DocumentIndex": 11,
+              "Title": "Login_Screen.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Henry Quintero\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Login_Screen.cs",
               "RelativeDocumentMoniker": "Views\\Login_Screen.cs",
-              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\Proyectos\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Login_Screen.cs [Design]",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\LENOVO\\Desktop\\Proyectos\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Login_Screen.cs [Design]",
+              "ToolTip": "C:\\Users\\Henry Quintero\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Login_Screen.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Views\\Login_Screen.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-18T15:06:00.651Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "Recuperar_Screen.resx",
               "DocumentMoniker": "C:\\Users\\Henry Quintero\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Recuperar_Screen.resx",
               "RelativeDocumentMoniker": "Views\\Recuperar_Screen.resx",
@@ -248,7 +277,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "Recuperar_Screen.Designer.cs",
               "DocumentMoniker": "C:\\Users\\Henry Quintero\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Recuperar_Screen.Designer.cs",
               "RelativeDocumentMoniker": "Views\\Recuperar_Screen.Designer.cs",
@@ -260,7 +289,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "ArchivosCSV.cs",
               "DocumentMoniker": "C:\\Users\\Henry Quintero\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\DataBase\\ArchivosCSV.cs",
               "RelativeDocumentMoniker": "DataBase\\ArchivosCSV.cs",
@@ -272,7 +301,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "Recuperar_Screen.cs",
               "DocumentMoniker": "C:\\Users\\Henry Quintero\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Recuperar_Screen.cs",
               "RelativeDocumentMoniker": "Views\\Recuperar_Screen.cs",
@@ -284,18 +313,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Principal_Screen.cs [Design]",
+              "DocumentIndex": 16,
+              "Title": "Principal_Screen.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Henry Quintero\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Principal_Screen.cs",
               "RelativeDocumentMoniker": "Views\\Principal_Screen.cs",
-              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\Proyectos\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Principal_Screen.cs [Design]",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\LENOVO\\Desktop\\Proyectos\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Principal_Screen.cs [Design]",
+              "ToolTip": "C:\\Users\\Henry Quintero\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Principal_Screen.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Views\\Principal_Screen.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-18T13:33:25.089Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "Notificaciones_Panel.Designer.cs",
               "DocumentMoniker": "C:\\Users\\Henry Quintero\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Notificaciones_Panel.Designer.cs",
               "RelativeDocumentMoniker": "Views\\Notificaciones_Panel.Designer.cs",
@@ -307,18 +336,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Notificaciones_Panel.cs [Design]",
+              "DocumentIndex": 18,
+              "Title": "Notificaciones_Panel.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Henry Quintero\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Notificaciones_Panel.cs",
               "RelativeDocumentMoniker": "Views\\Notificaciones_Panel.cs",
-              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\Proyectos\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Notificaciones_Panel.cs [Design]",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\LENOVO\\Desktop\\Proyectos\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Notificaciones_Panel.cs [Design]",
+              "ToolTip": "C:\\Users\\Henry Quintero\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Notificaciones_Panel.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Views\\Notificaciones_Panel.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-18T13:41:58.602Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "RolUsuario.cs",
               "DocumentMoniker": "C:\\Users\\Henry Quintero\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Enums\\RolUsuario.cs",
               "RelativeDocumentMoniker": "Enums\\RolUsuario.cs",
@@ -330,7 +359,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "EstadoUsuario.cs",
               "DocumentMoniker": "C:\\Users\\Henry Quintero\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Enums\\EstadoUsuario.cs",
               "RelativeDocumentMoniker": "Enums\\EstadoUsuario.cs",
@@ -342,7 +371,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "Administrador.cs",
               "DocumentMoniker": "C:\\Users\\Henry Quintero\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Models\\Administrador.cs",
               "RelativeDocumentMoniker": "Models\\Administrador.cs",
@@ -354,7 +383,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "Cliente.cs",
               "DocumentMoniker": "C:\\Users\\Henry Quintero\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Models\\Cliente.cs",
               "RelativeDocumentMoniker": "Models\\Cliente.cs",
@@ -363,18 +392,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-18T13:36:09.871Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "Usuario.cs",
-              "DocumentMoniker": "C:\\Users\\Henry Quintero\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Models\\Usuario.cs",
-              "RelativeDocumentMoniker": "Models\\Usuario.cs",
-              "ToolTip": "C:\\Users\\Henry Quintero\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Models\\Usuario.cs",
-              "RelativeToolTip": "Models\\Usuario.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T13:36:22.992Z"
             }
           ]
         }
