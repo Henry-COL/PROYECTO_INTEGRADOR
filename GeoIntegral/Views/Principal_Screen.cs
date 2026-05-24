@@ -81,13 +81,20 @@ namespace GeoIntegral.Views
 
         private void btnAdmin_Menu_Click(object sender, EventArgs e)
         {
-            
+            Panel_Ventanas.PerformLayout();
+            CargarVentana(new Admin_Usuarios(Panel_Ventanas.ClientSize));
         }
 
         private void btnAdmin_Menu2_Click(object sender, EventArgs e)
         {
             Panel_Ventanas.PerformLayout();
-            CargarVentana(new Notificaciones_Panel(Panel_Ventanas.ClientSize));
+            CargarVentana(new Admin_Notificaciones(Panel_Ventanas.ClientSize));
+        }
+
+        private void btnMenuRegistrarClientes_Click(object sender, EventArgs e)
+        {
+            Panel_Ventanas.PerformLayout();
+            CargarVentana(new Registrar_Cliente(Panel_Ventanas.ClientSize));
         }
     }
 }

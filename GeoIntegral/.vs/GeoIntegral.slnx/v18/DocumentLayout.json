@@ -1,8 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\alvar\\OneDrive\\Documentos\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\",
+  "WorkspaceRootPath": "C:\\Users\\LENOVO\\Desktop\\Proyectos\\PROYECTO_INTEGRADOR\\GeoIntegral\\",
   "Documents": [
     {
+<<<<<<< HEAD
 <<<<<<< Updated upstream
       "AbsoluteMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|c:\\users\\lenovo\\desktop\\proyectos\\proyecto_integrador\\geointegral\\controller\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|solutionrelative:controller\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -174,6 +175,54 @@
       "AbsoluteMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|C:\\Users\\alvar\\OneDrive\\Documentos\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
 >>>>>>> Stashed changes
       "RelativeMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|solutionrelative:models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+      "AbsoluteMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|c:\\users\\lenovo\\desktop\\proyectos\\proyecto_integrador\\geointegral\\views\\registrar_screen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|solutionrelative:views\\registrar_screen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|c:\\users\\lenovo\\desktop\\proyectos\\proyecto_integrador\\geointegral\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|solutionrelative:models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|C:\\Users\\LENOVO\\Desktop\\Proyectos\\PROYECTO_INTEGRADOR\\GeoIntegral\\database\\archivoscsv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|solutionrelative:database\\archivoscsv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|C:\\Users\\LENOVO\\Desktop\\Proyectos\\PROYECTO_INTEGRADOR\\GeoIntegral\\controller\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|solutionrelative:controller\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|C:\\Users\\LENOVO\\Desktop\\Proyectos\\PROYECTO_INTEGRADOR\\GeoIntegral\\views\\principal_screen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|solutionrelative:views\\principal_screen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|C:\\Users\\LENOVO\\Desktop\\Proyectos\\PROYECTO_INTEGRADOR\\GeoIntegral\\views\\registrar_cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|solutionrelative:views\\registrar_cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|C:\\Users\\LENOVO\\Desktop\\Proyectos\\PROYECTO_INTEGRADOR\\GeoIntegral\\views\\principal_screen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|solutionrelative:views\\principal_screen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|C:\\Users\\LENOVO\\Desktop\\Proyectos\\PROYECTO_INTEGRADOR\\GeoIntegral\\views\\registrar_cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|solutionrelative:views\\registrar_cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|C:\\Users\\LENOVO\\Desktop\\Proyectos\\PROYECTO_INTEGRADOR\\GeoIntegral\\views\\registrar_cliente.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|solutionrelative:views\\registrar_cliente.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|C:\\Users\\LENOVO\\Desktop\\Proyectos\\PROYECTO_INTEGRADOR\\GeoIntegral\\views\\admin_notificaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|solutionrelative:views\\admin_notificaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|C:\\Users\\LENOVO\\Desktop\\Proyectos\\PROYECTO_INTEGRADOR\\GeoIntegral\\views\\admin_notificaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|solutionrelative:views\\admin_notificaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|C:\\Users\\LENOVO\\Desktop\\Proyectos\\PROYECTO_INTEGRADOR\\GeoIntegral\\views\\admin_usuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|solutionrelative:views\\admin_usuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> parent of 96af5ff (0.0.9)
     }
   ],
   "DocumentGroupContainers": [
@@ -183,128 +232,134 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 8,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Cliente.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\Proyectos\\PROYECTO_INTEGRADOR\\GeoIntegral\\Models\\Cliente.cs",
+              "RelativeDocumentMoniker": "Models\\Cliente.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\Proyectos\\PROYECTO_INTEGRADOR\\GeoIntegral\\Models\\Cliente.cs",
+              "RelativeToolTip": "Models\\Cliente.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAuwBYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-18T13:36:09.871Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Registrar_Cliente.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\Proyectos\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Registrar_Cliente.cs",
+              "RelativeDocumentMoniker": "Views\\Registrar_Cliente.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\Proyectos\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Registrar_Cliente.cs",
+              "RelativeToolTip": "Views\\Registrar_Cliente.cs",
+              "ViewState": "AgIAAGgAAAAAAAAAAAAMwHwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T15:58:20.244Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Registrar_Cliente.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\Proyectos\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Registrar_Cliente.cs",
+              "RelativeDocumentMoniker": "Views\\Registrar_Cliente.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\Proyectos\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Registrar_Cliente.cs [Design]",
+              "RelativeToolTip": "Views\\Registrar_Cliente.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T15:56:50.389Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ClienteController.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\Proyectos\\PROYECTO_INTEGRADOR\\GeoIntegral\\Controller\\ClienteController.cs",
+              "RelativeDocumentMoniker": "Controller\\ClienteController.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\Proyectos\\PROYECTO_INTEGRADOR\\GeoIntegral\\Controller\\ClienteController.cs",
+              "RelativeToolTip": "Controller\\ClienteController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-18T13:35:24.558Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Registrar_Cliente.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\Proyectos\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Registrar_Cliente.Designer.cs",
+              "RelativeDocumentMoniker": "Views\\Registrar_Cliente.Designer.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\Proyectos\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Registrar_Cliente.Designer.cs",
+              "RelativeToolTip": "Views\\Registrar_Cliente.Designer.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAA6wCQAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T16:10:15.001Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Principal_Screen.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\Proyectos\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Principal_Screen.cs",
+              "RelativeDocumentMoniker": "Views\\Principal_Screen.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\Proyectos\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Principal_Screen.cs [Design]",
+              "RelativeToolTip": "Views\\Principal_Screen.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-18T13:33:25.089Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Principal_Screen.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\Proyectos\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Principal_Screen.cs",
+              "RelativeDocumentMoniker": "Views\\Principal_Screen.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\Proyectos\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Principal_Screen.cs",
+              "RelativeToolTip": "Views\\Principal_Screen.cs",
+              "ViewState": "AgIAAFYAAAAAAAAAAAApwGIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T16:19:48.619Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ArchivosCSV.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\Proyectos\\PROYECTO_INTEGRADOR\\GeoIntegral\\DataBase\\ArchivosCSV.cs",
+              "RelativeDocumentMoniker": "DataBase\\ArchivosCSV.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\Proyectos\\PROYECTO_INTEGRADOR\\GeoIntegral\\DataBase\\ArchivosCSV.cs",
+              "RelativeToolTip": "DataBase\\ArchivosCSV.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAxwB8AAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T16:17:50.18Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Registrar_Screen.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\Proyectos\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Registrar_Screen.cs",
+              "RelativeDocumentMoniker": "Views\\Registrar_Screen.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\Proyectos\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Registrar_Screen.cs [Design]",
+              "RelativeToolTip": "Views\\Registrar_Screen.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T16:42:59.557Z",
+              "EditorCaption": " [Design]"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "NotificacionController.cs",
-              "DocumentMoniker": "C:\\Users\\alvar\\OneDrive\\Documentos\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Controller\\NotificacionController.cs",
-              "RelativeDocumentMoniker": "Controller\\NotificacionController.cs",
-              "ToolTip": "C:\\Users\\alvar\\OneDrive\\Documentos\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Controller\\NotificacionController.cs",
-              "RelativeToolTip": "Controller\\NotificacionController.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAYwCMAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T14:05:31.271Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ClienteController.cs",
-              "DocumentMoniker": "C:\\Users\\alvar\\OneDrive\\Documentos\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Controller\\ClienteController.cs",
-              "RelativeDocumentMoniker": "Controller\\ClienteController.cs",
-              "ToolTip": "C:\\Users\\alvar\\OneDrive\\Documentos\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Controller\\ClienteController.cs",
-              "RelativeToolTip": "Controller\\ClienteController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T13:35:24.558Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UsuarioController.cs",
-              "DocumentMoniker": "C:\\Users\\alvar\\OneDrive\\Documentos\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Controller\\UsuarioController.cs",
-              "RelativeDocumentMoniker": "Controller\\UsuarioController.cs",
-              "ToolTip": "C:\\Users\\alvar\\OneDrive\\Documentos\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Controller\\UsuarioController.cs",
-              "RelativeToolTip": "Controller\\UsuarioController.cs",
-              "ViewState": "AgIAAJAAAAAAAAAAAAAAwLMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T14:10:13.095Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AdministradorController.cs",
-              "DocumentMoniker": "C:\\Users\\alvar\\OneDrive\\Documentos\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Controller\\AdministradorController.cs",
-              "RelativeDocumentMoniker": "Controller\\AdministradorController.cs",
-              "ToolTip": "C:\\Users\\alvar\\OneDrive\\Documentos\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Controller\\AdministradorController.cs",
-              "RelativeToolTip": "Controller\\AdministradorController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T13:35:20.138Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "EstadoNotificacion.cs",
-              "DocumentMoniker": "C:\\Users\\alvar\\OneDrive\\Documentos\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Enums\\EstadoNotificacion.cs",
-              "RelativeDocumentMoniker": "Enums\\EstadoNotificacion.cs",
-              "ToolTip": "C:\\Users\\alvar\\OneDrive\\Documentos\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Enums\\EstadoNotificacion.cs",
-              "RelativeToolTip": "Enums\\EstadoNotificacion.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T13:35:41.302Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Notificacion.cs",
-              "DocumentMoniker": "C:\\Users\\alvar\\OneDrive\\Documentos\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Models\\Notificacion.cs",
-              "RelativeDocumentMoniker": "Models\\Notificacion.cs",
-              "ToolTip": "C:\\Users\\alvar\\OneDrive\\Documentos\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Models\\Notificacion.cs",
-              "RelativeToolTip": "Models\\Notificacion.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T14:20:27.167Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Notificaciones_Panel.cs",
-              "DocumentMoniker": "C:\\Users\\alvar\\OneDrive\\Documentos\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Notificaciones_Panel.cs",
-              "RelativeDocumentMoniker": "Views\\Notificaciones_Panel.cs",
-              "ToolTip": "C:\\Users\\alvar\\OneDrive\\Documentos\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Notificaciones_Panel.cs",
-              "RelativeToolTip": "Views\\Notificaciones_Panel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T14:03:35.602Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Principal_Screen.cs",
-              "DocumentMoniker": "C:\\Users\\alvar\\OneDrive\\Documentos\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Principal_Screen.cs",
-              "RelativeDocumentMoniker": "Views\\Principal_Screen.cs",
-              "ToolTip": "C:\\Users\\alvar\\OneDrive\\Documentos\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Principal_Screen.cs",
-              "RelativeToolTip": "Views\\Principal_Screen.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAAgwEsAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T13:33:24.862Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Login_Screen.cs",
-              "DocumentMoniker": "C:\\Users\\alvar\\OneDrive\\Documentos\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Login_Screen.cs",
-              "RelativeDocumentMoniker": "Views\\Login_Screen.cs",
-              "ToolTip": "C:\\Users\\alvar\\OneDrive\\Documentos\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Login_Screen.cs",
-              "RelativeToolTip": "Views\\Login_Screen.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAAcwA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T13:36:37.171Z"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
@@ -427,18 +482,23 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
 =======
               "DocumentIndex": 9,
-              "Title": "Login_Screen.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\alvar\\OneDrive\\Documentos\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Login_Screen.cs",
-              "RelativeDocumentMoniker": "Views\\Login_Screen.cs",
-              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\Proyectos\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Login_Screen.cs [Design]",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\LENOVO\\Desktop\\Proyectos\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Login_Screen.cs [Design]",
+              "Title": "Admin_Notificaciones.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\Proyectos\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Admin_Notificaciones.cs",
+              "RelativeDocumentMoniker": "Views\\Admin_Notificaciones.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\Proyectos\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Admin_Notificaciones.cs [Design]",
+              "RelativeToolTip": "Views\\Admin_Notificaciones.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+<<<<<<< HEAD
 >>>>>>> Stashed changes
               "WhenOpened": "2026-05-18T15:06:00.651Z"
+=======
+              "WhenOpened": "2026-05-24T16:30:25.221Z"
+>>>>>>> parent of 96af5ff (0.0.9)
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
+<<<<<<< HEAD
               "Title": "Recuperar_Screen.resx",
 <<<<<<< Updated upstream
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\Proyectos\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Recuperar_Screen.resx",
@@ -452,10 +512,21 @@
               "RelativeToolTip": "Views\\Recuperar_Screen.resx",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
               "WhenOpened": "2026-05-18T15:19:12.004Z"
+=======
+              "Title": "Admin_Notificaciones.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\Proyectos\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Admin_Notificaciones.cs",
+              "RelativeDocumentMoniker": "Views\\Admin_Notificaciones.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\Proyectos\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Admin_Notificaciones.cs",
+              "RelativeToolTip": "Views\\Admin_Notificaciones.cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAAASwFoAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T16:30:22.164Z"
+>>>>>>> parent of 96af5ff (0.0.9)
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
+<<<<<<< HEAD
               "Title": "Recuperar_Screen.Designer.cs",
 <<<<<<< Updated upstream
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\Proyectos\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Recuperar_Screen.Designer.cs",
@@ -650,6 +721,16 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-18T13:36:22.992Z"
+=======
+              "Title": "Admin_Usuarios.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\Proyectos\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Admin_Usuarios.cs",
+              "RelativeDocumentMoniker": "Views\\Admin_Usuarios.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\Proyectos\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Admin_Usuarios.cs",
+              "RelativeToolTip": "Views\\Admin_Usuarios.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T16:27:26.257Z"
+>>>>>>> parent of 96af5ff (0.0.9)
             }
           ]
         }
