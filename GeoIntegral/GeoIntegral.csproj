@@ -105,17 +105,17 @@
     <Compile Include="Views\Login_Screen.Designer.cs">
       <DependentUpon>Login_Screen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Admin_Usuarios.cs">
+    <Compile Include="Views\Menu_Admin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Admin_Usuarios.Designer.cs">
-      <DependentUpon>Admin_Usuarios.cs</DependentUpon>
+    <Compile Include="Views\Menu_Admin.Designer.cs">
+      <DependentUpon>Menu_Admin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Admin_Notificaciones.cs">
+    <Compile Include="Views\Notificaciones_Panel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Admin_Notificaciones.Designer.cs">
-      <DependentUpon>Admin_Notificaciones.cs</DependentUpon>
+    <Compile Include="Views\Notificaciones_Panel.Designer.cs">
+      <DependentUpon>Notificaciones_Panel.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Principal_Screen.cs">
       <SubType>Form</SubType>
@@ -156,11 +156,11 @@
     <EmbeddedResource Include="Views\Login_Screen.resx">
       <DependentUpon>Login_Screen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Admin_Usuarios.resx">
-      <DependentUpon>Admin_Usuarios.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Menu_Admin.resx">
+      <DependentUpon>Menu_Admin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Admin_Notificaciones.resx">
-      <DependentUpon>Admin_Notificaciones.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Notificaciones_Panel.resx">
+      <DependentUpon>Notificaciones_Panel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Principal_Screen.resx">
       <DependentUpon>Principal_Screen.cs</DependentUpon>

@@ -7,20 +7,8 @@ using System.Threading.Tasks;
 
 namespace GeoIntegral.Models
 {
-    public class Cliente
+    public class Cliente : Persona
     {
-        public long Identificacion { get; set; }
-        public string Nombre { get; set; }
-        public string Telefono { get; set; }
-        public string Correo { get; set; }
-
-        public Cliente(long identificacion, string nombreCliente, string numeroTelefono, string correoCliente)
-        {
-            this.Identificacion = identificacion;
-            this.Nombre = nombreCliente;
-            this.Telefono = numeroTelefono;
-            this.Correo = correoCliente;
-        }
 
     }
 }

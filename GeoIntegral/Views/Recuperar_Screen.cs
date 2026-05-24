@@ -63,15 +63,7 @@ namespace GeoIntegral.Views
                 }
                 else
                 {
-
-                    // Verificar si ya tiene una notificación pendiente
-                    if (notificar.TieneNotificacionPendiente(txtUsuario.Text))
-                    {
-                        MessageBox.Show("Ya enviaste una solicitud al administrador. Por favor espera a que sea atendida.",
-                            "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        return;
-                    }
-
+                    
                     Notificacion Notificacion_Registrar = new Notificacion(0, txtUsuario.Text, "Olvido de contraseña", DateTime.Today.ToString("dd/MM/yyyy"), EstadoNotificacion.Pendiente);
 
                     if (notificar.RegistrarNotificacion(Notificacion_Registrar))
