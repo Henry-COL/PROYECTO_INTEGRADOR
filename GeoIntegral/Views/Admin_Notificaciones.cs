@@ -5,12 +5,12 @@ using System.Windows.Forms;
 
 namespace GeoIntegral.Views
 {
-    public partial class Notificaciones_Panel : Form
+    public partial class Admin_Notificaciones : Form
     {
         private NotificacionController notificacionController = new NotificacionController();
         private UsuarioController usuarioController = new UsuarioController();
 
-        public Notificaciones_Panel(Size tamano)
+        public Admin_Notificaciones(Size tamano)
         {
             InitializeComponent();
             this.Size = tamano;
@@ -39,12 +39,15 @@ namespace GeoIntegral.Views
         private void CargarUsuariosEnCombo()
         {
             cmbListaUsuarios.Items.Clear();
+            var notificaciones = notificacionController.ObtenerNotificaciones();
 
-            var usuarios = usuarioController.ObtenerTodosLosUsuarios();
-
-            foreach (var u in usuarios)
+            foreach (var n in notificaciones)
             {
-                cmbListaUsuarios.Items.Add(u.Nombre_Usuario);
+                if (n.Estado == GeoIntegral.Enums.EstadoNotificacion.Pendiente &&
+                    !cmbListaUsuarios.Items.Contains(n.NombreUsuario))
+                {
+                    cmbListaUsuarios.Items.Add(n.NombreUsuario);
+                }
             }
         }
 
@@ -72,17 +75,14 @@ namespace GeoIntegral.Views
 
             if (usuarioController.CambiarContrasena(usuarioSeleccionado, nuevaContrasena))
             {
-                // Marcar la notificación como leída si hay una seleccionada
-                if (dgvListaUsuarios.SelectedRows.Count > 0)
-                {
-                    string idNotificacion = dgvListaUsuarios.SelectedRows[0].Cells["IDNotificacion"].Value.ToString();
-                    notificacionController.MarcarComoLeida(idNotificacion);
-                }
+                // Marcar la notificación del usuario como leída automáticamente
+                notificacionController.MarcarNotificacionPorUsuario(usuarioSeleccionado);
 
                 MessageBox.Show($"Contraseña de '{usuarioSeleccionado}' actualizada con éxito.",
                     "GeoIntegral", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 CargarNotificaciones();
+                CargarUsuariosEnCombo();
             }
         }
 

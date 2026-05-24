@@ -1,9 +1,10 @@
-﻿using GeoIntegral.Enums;
-using GeoIntegral.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Windows.Forms;
+using GeoIntegral.Enums;
+using GeoIntegral.Models;
 
 namespace GeoIntegral.Controller
 {
@@ -112,6 +113,65 @@ namespace GeoIntegral.Controller
                 }
 
                 File.WriteAllLines(rutaNotificaciones, lineas);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al actualizar notificación: " + ex.Message);
+                return false;
+            }
+        }
+
+        public bool TieneNotificacionPendiente(string nombreUsuario)
+        {
+            if (!File.Exists(rutaNotificaciones))
+            {
+                return false;
+            }
+
+            var lineas = File.ReadAllLines(rutaNotificaciones).Skip(1);
+
+            foreach (var linea in lineas)
+            {
+                if (string.IsNullOrWhiteSpace(linea))
+                {
+                    continue;
+                }
+
+                string[] datos = linea.Split(';');
+
+                if (datos[1] == nombreUsuario && datos[4].Trim() == EstadoNotificacion.Pendiente.ToString()) 
+                {
+                    return true;
+                }
+                    
+            }
+            return false;
+        }
+
+        public bool MarcarNotificacionPorUsuario(string nombreUsuario)
+        {
+            try
+            {
+                var lineas = File.ReadAllLines(rutaNotificaciones);
+                for (int i = 1; i < lineas.Length; i++)
+                {
+                    if (string.IsNullOrWhiteSpace(lineas[i]))
+                    {
+                        continue;
+                    }
+
+                    string[] datos = lineas[i].Split(';');
+
+                    if (datos[1] == nombreUsuario && datos[4].Trim() == EstadoNotificacion.Pendiente.ToString())
+                    {
+                        datos[4] = EstadoNotificacion.Leida.ToString();
+                        lineas[i] = string.Join(";", datos);
+                    }
+                }
+
+                File.WriteAllLines(rutaNotificaciones, lineas);
+
                 return true;
             }
             catch (Exception ex)

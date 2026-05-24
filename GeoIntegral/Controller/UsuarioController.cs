@@ -175,5 +175,35 @@ namespace GeoIntegral.Controller
             }
             return lista;
         }
+
+        public bool CambiarEstadoUsuario(string nombreUsuario, string nuevoEstado)
+        {
+            try
+            {
+                var lineas = File.ReadAllLines(rutaUsuarios);
+
+                for (int i = 1; i < lineas.Length; i++)
+                {
+                    if (string.IsNullOrWhiteSpace(lineas[i])) continue;
+                    string[] datos = lineas[i].Split(';');
+
+                    if (datos[0] == nombreUsuario)
+                    {
+                        datos[4] = nuevoEstado;
+                        lineas[i] = string.Join(";", datos);
+                        break;
+                    }
+                }
+
+                File.WriteAllLines(rutaUsuarios, lineas);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cambiar estado: " + ex.Message);
+                return false;
+            }
+        }
+
     }
 }

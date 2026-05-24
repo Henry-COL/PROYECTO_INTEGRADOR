@@ -1,7 +1,8 @@
-﻿using GeoIntegral.Models;
-using System;
+﻿using System;
 using System.IO;
+using System.Linq;
 using System.Windows.Forms;
+using GeoIntegral.Models;
 
 namespace GeoIntegral.Controller
 {
@@ -12,7 +13,7 @@ namespace GeoIntegral.Controller
         {
             try
             {
-                string linea = $"{nuevoCliente.Identificacion};{nuevoCliente.Nombre_Cliente};{nuevoCliente.NumeroTelefono};{nuevoCliente.Gmail_Cliente}{Environment.NewLine}";
+                string linea = $"{nuevoCliente.Identificacion};{nuevoCliente.Nombre};{nuevoCliente.Telefono};{nuevoCliente.Correo}{Environment.NewLine}";
                 File.AppendAllText(rutaClientes, linea);
                 return true;
             }
@@ -21,6 +22,31 @@ namespace GeoIntegral.Controller
                 MessageBox.Show("Error al guardar en base de datos: " + ex.Message);
                 return false;
             }
+        }
+
+        public bool ClienteExiste(long identificacion)
+        {
+            if (!File.Exists(rutaClientes))
+            {
+                return false;
+            }
+
+            var lineas = File.ReadAllLines(rutaClientes).Skip(1);
+
+            foreach (var linea in lineas)
+            {
+                if (string.IsNullOrWhiteSpace(linea))
+                {
+                    continue;
+                }
+
+                string[] datos = linea.Split(';');
+                if (datos[0] == identificacion.ToString())
+                {
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }
