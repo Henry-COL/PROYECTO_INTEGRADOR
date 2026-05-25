@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 
 namespace GeoIntegral.Models
 {
-    public class Cliente
+    public class Cliente : Persona
     {
+<<<<<<< HEAD
         public long Identificacion { get; set; }
         public string Nombre_Cliente { get; set; }
         public string NumeroTelefono { get; set; }
@@ -21,6 +22,8 @@ namespace GeoIntegral.Models
             this.NumeroTelefono = numeroTelefono;
             this.Gmail_Cliente = gmailCliente;
         }
+=======
+>>>>>>> parent of 37ecb93 (0.0.9)
 
     }
 }

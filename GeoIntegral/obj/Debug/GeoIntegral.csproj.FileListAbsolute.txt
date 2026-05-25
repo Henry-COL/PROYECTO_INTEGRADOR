@@ -54,6 +54,7 @@ C:\Users\LENOVO\Desktop\Proyectos\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\Syst
 C:\Users\LENOVO\Desktop\Proyectos\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\LENOVO\Desktop\Proyectos\PROYECTO_INTEGRADOR\GeoIntegral\obj\Debug\GeoIntegral.Views.Menu_Admin.resources
 C:\Users\LENOVO\Desktop\Proyectos\PROYECTO_INTEGRADOR\GeoIntegral\obj\Debug\GeoIntegral.Views.Notificaciones_Panel.resources
+<<<<<<< HEAD
 C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\obj\Debug\GeoIntegral.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\CommunityToolkit.Common.dll
 C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\CommunityToolkit.Diagnostics.dll
@@ -77,3 +78,31 @@ C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Deb
 C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
 C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\System.Diagnostics.DiagnosticSource.xml
 C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\System.Threading.Tasks.Extensions.xml
+=======
+C:\Users\alvar\OneDrive\Documentos\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\GeoIntegral.exe.config
+C:\Users\alvar\OneDrive\Documentos\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\GeoIntegral.exe
+C:\Users\alvar\OneDrive\Documentos\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\GeoIntegral.pdb
+C:\Users\alvar\OneDrive\Documentos\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\BCrypt-Net-Next.dll
+C:\Users\alvar\OneDrive\Documentos\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\System.Buffers.dll
+C:\Users\alvar\OneDrive\Documentos\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\System.Memory.dll
+C:\Users\alvar\OneDrive\Documentos\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\alvar\OneDrive\Documentos\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\alvar\OneDrive\Documentos\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\System.Buffers.xml
+C:\Users\alvar\OneDrive\Documentos\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\System.Memory.xml
+C:\Users\alvar\OneDrive\Documentos\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\alvar\OneDrive\Documentos\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\alvar\OneDrive\Documentos\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\obj\Debug\GeoIntegral.csproj.AssemblyReference.cache
+C:\Users\alvar\OneDrive\Documentos\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\obj\Debug\GeoIntegral.Properties.Resources.resources
+C:\Users\alvar\OneDrive\Documentos\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\obj\Debug\GeoIntegral.Views.Login_Screen.resources
+C:\Users\alvar\OneDrive\Documentos\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\obj\Debug\GeoIntegral.Views.Menu_Admin.resources
+C:\Users\alvar\OneDrive\Documentos\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\obj\Debug\GeoIntegral.Views.Notificaciones_Panel.resources
+C:\Users\alvar\OneDrive\Documentos\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\obj\Debug\GeoIntegral.Views.Principal_Screen.resources
+C:\Users\alvar\OneDrive\Documentos\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\obj\Debug\GeoIntegral.Views.Recuperar_Screen.resources
+C:\Users\alvar\OneDrive\Documentos\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\obj\Debug\GeoIntegral.Views.Registrar_Cliente.resources
+C:\Users\alvar\OneDrive\Documentos\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\obj\Debug\GeoIntegral.Views.Registrar_Screen.resources
+C:\Users\alvar\OneDrive\Documentos\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\obj\Debug\GeoIntegral.csproj.GenerateResource.cache
+C:\Users\alvar\OneDrive\Documentos\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\obj\Debug\GeoIntegral.csproj.CoreCompileInputs.cache
+C:\Users\alvar\OneDrive\Documentos\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\obj\Debug\GeoInteg.74D226CE.Up2Date
+C:\Users\alvar\OneDrive\Documentos\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\obj\Debug\GeoIntegral.exe
+C:\Users\alvar\OneDrive\Documentos\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\obj\Debug\GeoIntegral.pdb
+>>>>>>> parent of 37ecb93 (0.0.9)
