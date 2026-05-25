@@ -7,7 +7,6 @@ namespace GeoIntegral.Views
 {
     public partial class Login_Screen : Form
     {
-        private Usuario usuarioSesion;
         public Login_Screen()
         {
             InitializeComponent();
