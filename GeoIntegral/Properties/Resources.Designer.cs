@@ -83,6 +83,16 @@ namespace GeoIntegral.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap App_Cerrar_Sesion {
+            get {
+                object obj = ResourceManager.GetObject("App_Cerrar_Sesion", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap App_CuentaEmpresa_Imagen {
             get {
                 object obj = ResourceManager.GetObject("App_CuentaEmpresa_Imagen", resourceCulture);
@@ -123,9 +133,29 @@ namespace GeoIntegral.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap App_Perfil {
+            get {
+                object obj = ResourceManager.GetObject("App_Perfil", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap App_Recuperar_Wallpaper {
             get {
                 object obj = ResourceManager.GetObject("App_Recuperar_Wallpaper", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap App_Registrar_Cliente {
+            get {
+                object obj = ResourceManager.GetObject("App_Registrar_Cliente", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -156,6 +186,16 @@ namespace GeoIntegral.Properties {
         internal static System.Drawing.Bitmap App_TipoCuenta_Wallpaper {
             get {
                 object obj = ResourceManager.GetObject("App_TipoCuenta_Wallpaper", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap App_Wallpaper_Principal {
+            get {
+                object obj = ResourceManager.GetObject("App_Wallpaper_Principal", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

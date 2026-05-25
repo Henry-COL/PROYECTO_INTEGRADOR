@@ -9,11 +9,22 @@ namespace GeoIntegral.Views
     public partial class Principal_Screen : Form
     {
         private Usuario usuarioSesion;
+        public bool CierrePorCerrarSesion { get; private set; } = false;
+
         public Principal_Screen(Usuario usuario)
         {
             InitializeComponent();
             this.usuarioSesion = usuario;
             CargarDatosUsuario();
+            this.FormClosed += new FormClosedEventHandler(Principal_Screen_FormClosed);
+        }
+
+        private void Principal_Screen_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (!CierrePorCerrarSesion)
+            {
+                Environment.Exit(0); // Esto cierra todo el proceso //
+            }
         }
 
         private void CargarDatosUsuario()
@@ -23,7 +34,7 @@ namespace GeoIntegral.Views
                 if (usuarioSesion != null)
                 {
                     lblNombre_Usuario.Text = usuarioSesion.Nombre_Usuario;
-                    lblTipo_Usuario.Text = $"Rol: {usuarioSesion.Rol}";
+                    lblTipo_Usuario.Text = $"{usuarioSesion.Rol}";
                 }
                 else
                 {
@@ -50,8 +61,6 @@ namespace GeoIntegral.Views
         {
             Panel_Ventanas.Resize -= Panel_Ventanas_Resize;
             Panel_Ventanas.Controls.Clear();
-
-            // Forzar que el panel calcule su tamaño real antes de usarlo
             Panel_Ventanas.PerformLayout();
 
             formulario.TopLevel = false;
@@ -88,13 +97,62 @@ namespace GeoIntegral.Views
         private void btnAdmin_Menu2_Click(object sender, EventArgs e)
         {
             Panel_Ventanas.PerformLayout();
+            foreach (Control control in Panel_Ventanas.Controls)
+            {
+                if (control is Admin_Notificaciones ventanaExistente)
+                {
+                    ventanaExistente.BringToFront();
+                    return;
+                }
+            }
             CargarVentana(new Admin_Notificaciones(Panel_Ventanas.ClientSize));
         }
 
         private void btnMenuRegistrarClientes_Click(object sender, EventArgs e)
         {
             Panel_Ventanas.PerformLayout();
+            foreach (Control control in Panel_Ventanas.Controls)
+            {
+                if (control is Registrar_Cliente ventanaExistente)
+                {
+                    ventanaExistente.BringToFront();
+                    return;
+                }
+            }
             CargarVentana(new Registrar_Cliente(Panel_Ventanas.ClientSize));
+        }
+
+        private void btnConfiguracion_Perfil_Click(object sender, EventArgs e)
+        {
+            var perfilForm = new User_Screen(usuarioSesion, Panel_Ventanas.ClientSize);
+            foreach (Control control in Panel_Ventanas.Controls)
+            {
+                if (control is User_Screen ventanaExistente)
+                {
+                    ventanaExistente.BringToFront();
+                    return;
+                }
+            }
+            CargarVentana(perfilForm);
+        }
+
+        private void btn_Cerrar_Sesion_Click(object sender, EventArgs e)
+        {
+            DialogResult resultado = MessageBox.Show(
+                "¿Está seguro de que desea cerrar la sesión actual?",
+                "Cerrar Sesión",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
+
+            if (resultado == DialogResult.Yes)
+            {
+                CierrePorCerrarSesion = true;
+
+                Login_Screen login = new Login_Screen();
+                login.Show();
+                this.Dispose(); // Libera los recursos de esta ventana por completo
+            }
         }
     }
 }

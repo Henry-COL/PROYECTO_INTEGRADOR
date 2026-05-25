@@ -1,60 +1,123 @@
-﻿using GeoIntegral.Controller;
-using GeoIntegral.Enums;
+﻿using GeoIntegral.Repositorys;
 using GeoIntegral.Models;
+using GeoIntegral.Enums;
 using System;
-using System.Drawing;
 using System.Collections.Generic;
+using System.Drawing;
+using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace GeoIntegral.Views
 {
     public partial class Admin_Usuarios : Form
     {
-        private UsuarioController usuarioController = new UsuarioController();
-        private List<Usuario> todosLosUsuarios = new List<Usuario>();
+        private UsuarioRepository repo = new UsuarioRepository();
 
-        public Admin_Usuarios(Size tamano)
+        public Admin_Usuarios(Size size)
         {
             InitializeComponent();
-            this.Size = tamano;
+            this.Size = size;
+            EstilarTabla();
             CargarUsuarios();
+
+            this.Shown += (s, e) =>
+            {
+                dgvListaUsuarios.ClearSelection();
+                dgvListaUsuarios.CurrentCell = null;
+            };
+
         }
 
         private void CargarUsuarios()
         {
-            todosLosUsuarios = usuarioController.ObtenerTodosLosUsuarios();
-            MostrarEnTabla(todosLosUsuarios);
-        }
-
-        private void MostrarEnTabla(List<Usuario> lista)
-        {
-            dgvUsuarios.Rows.Clear();
-            foreach (var u in lista)
+            try
             {
-                dgvUsuarios.Rows.Add(u.Nombre_Usuario, u.Gmail, u.Rol, u.Estado);
+                dgvListaUsuarios.Rows.Clear();
+                var lineas = repo.ObtenerLineas();
+                foreach (var datos in lineas)
+                {
+                    if (datos.Length < 5) continue;
+                    string usuario = datos[0]?.Trim();
+                    string gmail = datos[2]?.Trim();
+                    string rol = datos[3]?.Trim();
+                    string estado = datos[4]?.Trim();
+                    dgvListaUsuarios.Rows.Add(usuario, gmail, rol, estado);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar usuarios: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            if (cmbFiltro.SelectedItem == null)
+            // Filtrar por estado
+            try
             {
-                MostrarEnTabla(todosLosUsuarios);
-                return;
+                var filtro = cmbFiltro.SelectedItem?.ToString() ?? "Todos";
+                dgvListaUsuarios.Rows.Clear();
+                var lineas = repo.ObtenerLineas();
+                foreach (var datos in lineas)
+                {
+                    if (datos.Length < 5) continue;
+                    string estado = datos[4]?.Trim();
+                    if (filtro == "Todos" || estado.Equals(filtro, StringComparison.OrdinalIgnoreCase))
+                    {
+                        dgvListaUsuarios.Rows.Add(datos[0].Trim(), datos[2].Trim(), datos[3].Trim(), estado);
+                    }
+                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al filtrar: " + ex.Message);
+            }
+        }
 
-            string filtro = cmbFiltro.SelectedItem.ToString();
+        private void EstilarTabla()
+        {
+            dgvListaUsuarios.BackgroundColor = Color.FromArgb(15, 23, 33);
+            dgvListaUsuarios.GridColor = Color.FromArgb(30, 45, 60);
+            dgvListaUsuarios.BorderStyle = BorderStyle.None;
+            dgvListaUsuarios.RowHeadersVisible = false;
+            dgvListaUsuarios.AllowUserToAddRows = false;
+            dgvListaUsuarios.AllowUserToResizeRows = false;
+            dgvListaUsuarios.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvListaUsuarios.ReadOnly = true;
+            dgvListaUsuarios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvListaUsuarios.EnableHeadersVisualStyles = false;
 
-            if (filtro == "Todos")
-            {
-                MostrarEnTabla(todosLosUsuarios);
-            }
-            else
-            {
-                EstadoUsuario estadoFiltro = (EstadoUsuario)Enum.Parse(typeof(EstadoUsuario), filtro);
-                var filtrados = todosLosUsuarios.FindAll(u => u.Estado == estadoFiltro);
-                MostrarEnTabla(filtrados);
-            }
+            // Encabezado
+            dgvListaUsuarios.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 32, 46);
+            dgvListaUsuarios.ColumnHeadersDefaultCellStyle.ForeColor = Color.FromArgb(180, 210, 230);
+            dgvListaUsuarios.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10f, FontStyle.Bold);
+            dgvListaUsuarios.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvListaUsuarios.ColumnHeadersHeight = 38;
+            dgvListaUsuarios.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+
+            // Filas normales
+            dgvListaUsuarios.DefaultCellStyle.BackColor = Color.FromArgb(22, 34, 48);
+            dgvListaUsuarios.DefaultCellStyle.ForeColor = Color.White;
+            dgvListaUsuarios.DefaultCellStyle.Font = new Font("Segoe UI", 9.5f);
+            dgvListaUsuarios.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            // Fila seleccionada
+            dgvListaUsuarios.DefaultCellStyle.SelectionBackColor = Color.FromArgb(7, 16, 30);
+            dgvListaUsuarios.DefaultCellStyle.SelectionForeColor = Color.White;
+
+            // Filas alternadas
+            dgvListaUsuarios.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(18, 28, 40);
+            dgvListaUsuarios.AlternatingRowsDefaultCellStyle.SelectionBackColor = Color.FromArgb(26, 95, 80);
+            dgvListaUsuarios.AlternatingRowsDefaultCellStyle.SelectionForeColor = Color.White;
+
+            dgvListaUsuarios.RowTemplate.Height = 32;
+        }
+
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // event handler placeholder
         }
 
         private void cmbFiltro_SelectedIndexChanged(object sender, EventArgs e)
@@ -64,35 +127,27 @@ namespace GeoIntegral.Views
 
         private void btnCambiarEstado_Click(object sender, EventArgs e)
         {
-            if (dgvUsuarios.SelectedRows.Count == 0)
+            try
             {
-                MessageBox.Show("Seleccione un usuario de la tabla.",
-                    "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            string nombreUsuario = dgvUsuarios.SelectedRows[0].Cells["Usuario"].Value.ToString();
-            string estadoActual = dgvUsuarios.SelectedRows[0].Cells["Estado"].Value.ToString();
-            string nuevoEstado = estadoActual == "Activo" ? "Inactivo" : "Activo";
-
-            var confirmacion = MessageBox.Show(
-                $"¿Desea cambiar el estado de '{nombreUsuario}' a {nuevoEstado}?",
-                "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (confirmacion == DialogResult.Yes)
-            {
-                if (usuarioController.CambiarEstadoUsuario(nombreUsuario, nuevoEstado))
+                if (dgvListaUsuarios.SelectedRows.Count == 0)
                 {
-                    MessageBox.Show($"Estado de '{nombreUsuario}' cambiado a {nuevoEstado}.",
-                        "GeoIntegral", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    CargarUsuarios();
+                    MessageBox.Show("Seleccione un usuario primero.");
+                    return;
                 }
-            }
-        }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            // Reservado para uso futuro
+                var fila = dgvListaUsuarios.SelectedRows[0];
+                string nombreUsuario = fila.Cells[0].Value?.ToString();
+                string estadoActual = fila.Cells[3].Value?.ToString();
+                string nuevoEstado = estadoActual.Equals("Activo", StringComparison.OrdinalIgnoreCase) ? "Inactivo" : "Activo";
+
+                bool ok = repo.ActualizarCampo(nombreUsuario, 4, nuevoEstado);
+                if (ok) CargarUsuarios();
+                else MessageBox.Show("No se pudo cambiar el estado del usuario.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cambiar estado: " + ex.Message);
+            }
         }
     }
 }

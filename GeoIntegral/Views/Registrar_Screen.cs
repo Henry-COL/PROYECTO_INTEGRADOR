@@ -8,6 +8,7 @@ namespace GeoIntegral.Views
 {
     public partial class Registrar_Screen : Form
     {
+        private readonly UsuarioController controller = new UsuarioController();
         public Registrar_Screen()
         {
             InitializeComponent();
@@ -22,7 +23,6 @@ namespace GeoIntegral.Views
         {
             try
             {
-                // Limpiar mensajes
                 lblMensaje_Usuario.Visible = false;
                 lblMensaje_Gmail_.Visible = false;
                 lblMensaje_Gmail_Confirmar.Visible = false;
@@ -30,8 +30,6 @@ namespace GeoIntegral.Views
                 lblMensaje_Contrasena_Confirmar.Visible = false;
 
                 bool validar = true;
-
-                // Validar campos vacíos
                 if (txtUsuario.Text == "")
                 {
                     lblMensaje_Usuario.Visible = true;
@@ -58,9 +56,11 @@ namespace GeoIntegral.Views
                     validar = false;
                 }
 
-                if (!validar) return;
+                if (!validar)
+                {
+                    return;
+                }
 
-                // Validar que los Gmail coincidan
                 if (txtGmail.Text != txtGmail_Confirmar.Text)
                 {
                     lblMensaje_Gmail_Confirmar.Text = "Los Gmail no coinciden*";
@@ -68,7 +68,6 @@ namespace GeoIntegral.Views
                     return;
                 }
 
-                // Validar que las contraseñas coincidan
                 if (txtContrasena.Text != txtConfirmar_Contrasena.Text)
                 {
                     lblMensaje_Contrasena_Confirmar.Text = "Las contraseñas no coinciden*";
@@ -76,30 +75,24 @@ namespace GeoIntegral.Views
                     return;
                 }
 
-                // Validar que el usuario no exista ya
-                UsuarioController control = new UsuarioController();
-                if (control.UsuarioExiste(txtUsuario.Text))
+                if (controller.UsuarioExiste(txtUsuario.Text))
                 {
                     lblMensaje_Usuario.Text = "Ese usuario ya existe*";
                     lblMensaje_Usuario.Visible = true;
                     return;
                 }
 
-                // Registrar
-                Usuario usuarioParaRegistrar = new Usuario(
-                    txtUsuario.Text,
-                    txtContrasena.Text,
-                    txtGmail.Text,
-                    RolUsuario.Usuario,
-                    EstadoUsuario.Activo
-                );
+                Usuario usuarioParaRegistrar = new Usuario(txtUsuario.Text, txtContrasena.Text, txtGmail.Text, RolUsuario.Usuario, EstadoUsuario.Activo);
 
-                if (control.RegistrarUsuario(usuarioParaRegistrar))
+                if (controller.RegistrarUsuario(usuarioParaRegistrar))
                 {
-                    MessageBox.Show("¡Usuario registrado con éxito!", "GeoIntegral",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("¡Usuario registrado con éxito!", "GeoIntegral", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();
                 }
+            }
+            catch (Exception ex) when (ex.Message == "INACTIVO")
+            {
+                MessageBox.Show("Tu cuenta está inactiva. Contacta al administrador.","Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             catch (Exception ex)
             {

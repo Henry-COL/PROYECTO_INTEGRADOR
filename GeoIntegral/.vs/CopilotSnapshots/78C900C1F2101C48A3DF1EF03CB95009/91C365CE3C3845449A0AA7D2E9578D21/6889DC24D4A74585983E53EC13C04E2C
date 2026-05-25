@@ -1,0 +1,136 @@
+﻿using GeoIntegral.Controller;
+using GeoIntegral.Enums;
+using GeoIntegral.Models;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Windows.Forms;
+
+namespace GeoIntegral.Repositorys
+{
+    public class UsuarioRepository
+    {
+        private UsuarioController usuarioController = new UsuarioController();
+        private string rutaUsuarios = Path.GetFullPath(Path.Combine(Application.StartupPath, "..", "..", "DataBase", "Usuarios.csv"));
+
+        public bool Agregar(Usuario nuevoUsuario)
+        {
+            try
+            {
+                // Si el archivo no existe, creamos el encabezado primero para que el Skip(1) no borre datos reales
+                if (!File.Exists(rutaUsuarios))
+                {
+                    string encabezado = $"Nombre_Usuario;PasswordHash;Gmail;Rol;Estado{Environment.NewLine}";
+                    File.WriteAllText(rutaUsuarios, encabezado);
+                }
+
+                // Aseguramos que la línea se agregue limpiamente sin duplicar saltos extraños
+                string linea = $"{nuevoUsuario.Nombre_Usuario.Trim()};{nuevoUsuario.PasswordHash.Trim()};{nuevoUsuario.Gmail.Trim()};{nuevoUsuario.Rol};{nuevoUsuario.Estado}{Environment.NewLine}";
+                File.AppendAllText(rutaUsuarios, linea);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error de escritura en repositorio: " + ex.Message);
+            }
+        }
+
+        public List<string[]> ObtenerLineas()
+        {
+            try
+            {
+                if (!File.Exists(rutaUsuarios))
+                {
+                    return new List<string[]>();
+                }
+
+                // CORREGIDO: Leemos de forma segura compartiendo el acceso por si el archivo está en uso
+                var lineasValidas = new List<string[]>();
+
+                using (var fs = new FileStream(rutaUsuarios, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                using (var reader = new StreamReader(fs))
+                {
+                    string linea;
+                    bool esPrimeraLinea = true;
+
+                    while ((linea = reader.ReadLine()) != null)
+                    {
+                        if (string.IsNullOrWhiteSpace(linea)) continue;
+
+                        // Nos saltamos la primera línea ÚNICAMENTE si contiene el nombre de la columna "Gmail" o "Usuario"
+                        if (esPrimeraLinea)
+                        {
+                            esPrimeraLinea = false;
+                            if (linea.Contains("Gmail") || linea.Contains("Nombre_Usuario"))
+                            {
+                                continue;
+                            }
+                        }
+
+                        lineasValidas.Add(linea.Split(';'));
+                    }
+                }
+
+                return lineasValidas;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error de lectura en repositorio: " + ex.Message);
+            }
+        }
+
+        public bool ActualizarCampo(string nombreUsuario, int indiceCampo, string nuevoValor)
+        {
+            if (!File.Exists(rutaUsuarios))
+            {
+                return false;
+            }
+
+            try
+            {
+                // Leemos usando el buffer compartido para evitar bloqueos mutuos en la RAM
+                string[] lineas;
+                using (var fs = new FileStream(rutaUsuarios, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                using (var reader = new StreamReader(fs))
+                {
+                    var listaTmp = new List<string>();
+                    string l;
+                    while ((l = reader.ReadLine()) != null) listaTmp.Add(l);
+                    lineas = listaTmp.ToArray();
+                }
+
+                for (int i = 0; i < lineas.Length; i++)
+                {
+                    if (string.IsNullOrWhiteSpace(lineas[i])) continue;
+
+                    string[] datos = lineas[i].Split(';');
+
+                    // Validamos de forma segura ignorando espacios remanentes del archivo plano
+                    if (datos[0].Trim().Equals(nombreUsuario.Trim(), StringComparison.OrdinalIgnoreCase))
+                    {
+                        datos[indiceCampo] = nuevoValor.Trim();
+                        lineas[i] = string.Join(";", datos);
+                        break;
+                    }
+                }
+
+                // Guardamos los cambios de vuelta de manera segura
+                using (var fs = new FileStream(rutaUsuarios, FileMode.Create, FileAccess.Write, FileShare.ReadWrite))
+                using (var writer = new StreamWriter(fs))
+                {
+                    foreach (var l in lineas)
+                    {
+                        writer.WriteLine(l);
+                    }
+                }
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al actualizar registro en archivo CSV: " + ex.Message);
+            }
+        }
+    }
+}

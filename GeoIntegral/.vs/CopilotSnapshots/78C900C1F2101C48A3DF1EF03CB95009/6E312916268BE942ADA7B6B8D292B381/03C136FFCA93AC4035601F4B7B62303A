@@ -1,0 +1,59 @@
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Windows.Forms;
+using GeoIntegral.Enums;
+using GeoIntegral.Models;
+
+namespace GeoIntegral.Repositorys
+{
+    public class UsuarioRepository
+    {
+        private string rutaUsuarios = Path.GetFullPath(Path.Combine(Application.StartupPath, "..", "..", "DataBase", "Usuarios.csv"));
+
+        public bool Agregar(Usuario nuevoUsuario)
+        {
+            string linea = $"{nuevoUsuario.Nombre_Usuario};{nuevoUsuario.PasswordHash};" + $"{nuevoUsuario.Gmail};{nuevoUsuario.Rol};{nuevoUsuario.Estado}{Environment.NewLine}";
+            File.AppendAllText(rutaUsuarios, linea);
+            return true;
+        }
+
+        public List<string[]> ObtenerLineas()
+        {
+            if (!File.Exists(rutaUsuarios))
+            {
+                return new List<string[]>();
+            }
+            return File.ReadAllLines(rutaUsuarios).Skip(1).Where(l => !string.IsNullOrWhiteSpace(l)).Select(l => l.Split(';')).ToList();
+        }
+
+        public bool ActualizarCampo(string nombreUsuario, int indiceCampo, string nuevoValor)
+        {
+            if (!File.Exists(rutaUsuarios))
+            {
+                return false;
+            }
+
+            var lineas = File.ReadAllLines(rutaUsuarios);
+            for (int i = 1; i < lineas.Length; i++)
+            {
+                if (string.IsNullOrWhiteSpace(lineas[i]))
+                {
+                    continue;
+                }
+
+                string[] datos = lineas[i].Split(';');
+                if (datos[0] == nombreUsuario)
+                {
+                    datos[indiceCampo] = nuevoValor;
+                    lineas[i] = string.Join(";", datos);
+                    break;
+                }
+            }
+
+            File.WriteAllLines(rutaUsuarios, lineas);
+            return true;
+        }
+    }
+}

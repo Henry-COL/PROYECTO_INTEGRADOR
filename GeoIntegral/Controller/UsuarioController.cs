@@ -1,88 +1,79 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Windows.Forms;
+using BCrypt.Net;
 using GeoIntegral.Enums;
 using GeoIntegral.Models;
+using GeoIntegral.Repositorys;
 
 namespace GeoIntegral.Controller
 {
     public class UsuarioController
     {
-        private string rutaUsuarios = Path.GetFullPath(Path.Combine(Application.StartupPath, "..", "..", "DataBase", "Usuarios.csv"));
+        private readonly UsuarioRepository repo = new UsuarioRepository();
+
         public bool RegistrarUsuario(Usuario nuevoUsuario)
         {
             try
             {
-                string linea = $"{nuevoUsuario.Nombre_Usuario};{nuevoUsuario.PasswordHash};{nuevoUsuario.Gmail};{nuevoUsuario.Rol};{nuevoUsuario.Estado}{Environment.NewLine}";
-                File.AppendAllText(rutaUsuarios, linea);
-                return true;
+                nuevoUsuario.PasswordHash = BCrypt.Net.BCrypt.HashPassword(nuevoUsuario.PasswordHash);
+                return repo.Agregar(nuevoUsuario);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al guardar en base de datos: " + ex.Message);
-                return false;
+                throw new Exception("Error al guardar en base de datos: " + ex.Message);
             }
         }
 
         public Usuario Autenticar(string usuario, string password)
         {
-            if (!File.Exists(rutaUsuarios)) return null;
-
             try
             {
-                var lineas = File.ReadAllLines(rutaUsuarios).Skip(1);
-
-                foreach (var linea in lineas)
+                foreach (var datos in repo.ObtenerLineas())
                 {
-                    if (string.IsNullOrWhiteSpace(linea)) continue;
-
-                    string[] datos = linea.Split(';');
-
-                    if (datos[0] == usuario && datos[1] == password)
+                    if (datos[0].Trim() == usuario.Trim())
                     {
-                        RolUsuario rol = (RolUsuario)Enum.Parse(typeof(RolUsuario), datos[3]);
-                        EstadoUsuario estado = (EstadoUsuario)Enum.Parse(typeof(EstadoUsuario), datos[4]);
+                        bool passwordValido = BCrypt.Net.BCrypt.Verify(password, datos[1]);
+                        if (!passwordValido)
+                        {
+                            break;
+                        }
+                        RolUsuario rol = (RolUsuario)Enum.Parse(typeof(RolUsuario), datos[3].Trim());
+                        EstadoUsuario estado = (EstadoUsuario)Enum.Parse(typeof(EstadoUsuario), datos[4].Trim());
 
                         if (estado == EstadoUsuario.Inactivo)
                         {
-                            MessageBox.Show("Tu cuenta está inactiva. Contacta al administrador.",
-                                "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                            return null;
+                            throw new Exception("INACTIVO");
                         }
 
                         return new Usuario(datos[0], datos[1], datos[2], rol, estado);
                     }
                 }
-
-                MessageBox.Show("Usuario o contraseña incorrectos.",
-                    "Error de acceso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al leer base de datos: " + ex.Message);
+                throw new Exception(ex.Message);
             }
+        }
 
-            return null;
+        public bool CambiarContrasena(string nombreUsuario, string nuevaContrasena)
+        {
+            try
+            {
+                string hashNueva = BCrypt.Net.BCrypt.HashPassword(nuevaContrasena);
+                return repo.ActualizarCampo(nombreUsuario, 1, hashNueva);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al cambiar contraseña: " + ex.Message);
+            }
         }
 
         public bool UsuarioExiste(string nombreUsuario)
         {
-            if (!File.Exists(rutaUsuarios)) return false;
-
-            var lineas = File.ReadAllLines(rutaUsuarios).Skip(1);
-
-            foreach (var linea in lineas)
+            foreach (var datos in repo.ObtenerLineas())
             {
-                if (string.IsNullOrWhiteSpace(linea))
-                {
-                    continue;
-                }
-
-                string[] datos = linea.Split(';');
-
-                if (datos[0] == nombreUsuario)
+                if (datos[0].Trim() == nombreUsuario.Trim())
                 {
                     return true;
                 }
@@ -92,85 +83,35 @@ namespace GeoIntegral.Controller
 
         public bool VerificarUsuarioYGmail(string nombreUsuario, string gmail)
         {
-            if (!File.Exists(rutaUsuarios)) return false;
-
-            var lineas = File.ReadAllLines(rutaUsuarios).Skip(1);
-            foreach (var linea in lineas)
-            {
-                if (string.IsNullOrWhiteSpace(linea)) 
-                {
-                    continue;
-                }
-                
-                string[] datos = linea.Split(';');
-
-                if (datos[0] == nombreUsuario && datos[2] == gmail)
-                {
-                    if (datos[4] == "Inactivo")
-                    {
-                        MessageBox.Show("Tu cuenta está inactiva. Contacta al administrador.",
-                            "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        return false;
-                    }
-
-                    return true;
-                }
-
-            }
-
-            return false;
-        }
-
-        public bool CambiarContrasena(string nombreUsuario, string nuevaContrasena)
-        {
             try
             {
-                var lineas = File.ReadAllLines(rutaUsuarios);
-
-                for (int i = 1; i < lineas.Length; i++)
+                foreach (var datos in repo.ObtenerLineas())
                 {
-                    if (string.IsNullOrWhiteSpace(lineas[i])) continue;
-                    string[] datos = lineas[i].Split(';');
-
-                    if (datos[0] == nombreUsuario)
+                    if (datos[0].Trim() == nombreUsuario.Trim() && datos[2].Trim() == gmail.Trim())
                     {
-                        datos[1] = nuevaContrasena;
-                        lineas[i] = string.Join(";", datos);
-                        break;
+                        // Corrección menor: Validamos contra el Enum o ignorando mayúsculas/minúsculas
+                        if (datos[4].Trim().Equals("Inactivo", StringComparison.OrdinalIgnoreCase))
+                        {
+                            throw new Exception("INACTIVO");
+                        }
+                        return true;
                     }
                 }
-
-                File.WriteAllLines(rutaUsuarios, lineas);
-                return true;
+                return false;
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al cambiar contraseña: " + ex.Message);
-                return false;
+                throw new Exception(ex.Message);
             }
         }
 
         public List<Usuario> ObtenerTodosLosUsuarios()
         {
             var lista = new List<Usuario>();
-            if (!File.Exists(rutaUsuarios)) 
+            foreach (var datos in repo.ObtenerLineas())
             {
-                return lista;
-            }
-
-            var lineas = File.ReadAllLines(rutaUsuarios).Skip(1);
-            foreach (var linea in lineas)
-            {
-                if (string.IsNullOrWhiteSpace(linea))
-                {
-                    continue;
-                }
-
-                string[] datos = linea.Split(';');
-
                 RolUsuario rol = (RolUsuario)Enum.Parse(typeof(RolUsuario), datos[3].Trim());
                 EstadoUsuario estado = (EstadoUsuario)Enum.Parse(typeof(EstadoUsuario), datos[4].Trim());
-
                 lista.Add(new Usuario(datos[0], datos[1], datos[2], rol, estado));
             }
             return lista;
@@ -180,30 +121,12 @@ namespace GeoIntegral.Controller
         {
             try
             {
-                var lineas = File.ReadAllLines(rutaUsuarios);
-
-                for (int i = 1; i < lineas.Length; i++)
-                {
-                    if (string.IsNullOrWhiteSpace(lineas[i])) continue;
-                    string[] datos = lineas[i].Split(';');
-
-                    if (datos[0] == nombreUsuario)
-                    {
-                        datos[4] = nuevoEstado;
-                        lineas[i] = string.Join(";", datos);
-                        break;
-                    }
-                }
-
-                File.WriteAllLines(rutaUsuarios, lineas);
-                return true;
+                return repo.ActualizarCampo(nombreUsuario, 4, nuevoEstado);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al cambiar estado: " + ex.Message);
-                return false;
+                throw new Exception("Error al cambiar estado: " + ex.Message);
             }
         }
-
     }
 }

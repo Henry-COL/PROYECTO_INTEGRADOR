@@ -99,6 +99,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Repositorys\NotificacionRepository.cs" />
+    <Compile Include="Repositorys\UsuarioRepository.cs" />
     <Compile Include="Views\Login_Screen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +143,12 @@
     <Compile Include="Views\Registrar_Screen.Designer.cs">
       <DependentUpon>Registrar_Screen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\User_Screen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\User_Screen.Designer.cs">
+      <DependentUpon>User_Screen.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -174,18 +182,25 @@
     <EmbeddedResource Include="Views\Registrar_Screen.resx">
       <DependentUpon>Registrar_Screen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\User_Screen.resx">
+      <DependentUpon>User_Screen.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Multimedia\App_Admin_Menu1.png" />
     <Content Include="Multimedia\App_Admin_Menu2.png" />
+    <Content Include="Multimedia\App_Cerrar_Sesion.png" />
     <Content Include="Multimedia\App_CuentaEmpresa_Imagen.png" />
     <Content Include="Multimedia\App_CuentaPersonal_Imagen.png" />
     <Content Include="Multimedia\App_Login_Wallpaper.png" />
     <Content Include="Multimedia\App_Login_Wallpaper_.png" />
+    <Content Include="Multimedia\App_Perfil.png" />
     <Content Include="Multimedia\App_Recuperar_Wallpaper.png" />
+    <Content Include="Multimedia\App_Registrar_Cliente.png" />
     <Content Include="Multimedia\App_Registrar_Cliente_Wallpaper.png" />
     <Content Include="Multimedia\App_Registrar_Wallpaper.png" />
     <Content Include="Multimedia\App_TipoCuenta_Wallpaper.png" />
+    <Content Include="Multimedia\App_Wallpaper_Principal.png" />
     <Content Include="Multimedia\GeoIntegral-Logo.png" />
     <Content Include="Multimedia\GeoIntegral-LogoTipo.png" />
     <Content Include="Multimedia\GeoIntegral_ICO.ico" />

@@ -1,5 +1,3 @@
 Usuario;PasswordHash;Gmail;Rol;Estado
-admin;admin;Henryquinteroco@gmail.com;Administrador;Activo
-David;12345;david.esper735@gmail.com;Usuario;Activo
-Henzo;1234;henryballestero@gmail.com;Usuario;Activo
-Edinson;edinson44;edinson@gmail.com;Usuario;Activo
+admin;$2a$11$BohtMBA6KuMfiDoVzbDb4OfBwChLsFE2qmZvHuaMpZ4/5eHVhWQTy;admin@gmail.com;Administrador;Activo
+Henzo;$2a$11$TKgaApLIYqWvvK99T0mNK.70xYG9OzlVL93Y99fyY7hgk9TmAzqtK;henzo@gmail.com;Usuario;Activo

@@ -10,12 +10,18 @@ namespace GeoIntegral.Views
         public Login_Screen()
         {
             InitializeComponent();
+            // Vinculamos el evento por código para asegurar que mate el proceso al cerrar con la "X"
+            this.FormClosed += new FormClosedEventHandler(Login_Screen_FormClosed);
         }
-
 
         private void btnCerrar_App_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Environment.Exit(0); // Mata el proceso de raíz en el Administrador de Tareas
+        }
+
+        private void Login_Screen_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Environment.Exit(0); // Asegura que no quede oculto si cierran desde la "X"
         }
 
         private void lblRecuperar_Contrasena_Click(object sender, EventArgs e)
@@ -57,10 +63,9 @@ namespace GeoIntegral.Views
                     {
                         this.Hide();
                         Principal_Screen menu = new Principal_Screen(usuarioEncontrado);
-                        menu.FormClosed += (s, args) => this.Close();
                         menu.Show();
-                        
-                    } else
+                    }
+                    else
                     {
                         txtContrasena.Text = "";
                         txtContrasena.Focus();

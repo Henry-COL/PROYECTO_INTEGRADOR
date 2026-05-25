@@ -28,96 +28,131 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnFiltrarBusqueda = new Guna.UI2.WinForms.Guna2Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnCambiarEstado = new System.Windows.Forms.Button();
-            this.dgvUsuarios = new System.Windows.Forms.DataGridView();
-            this.Usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Gmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Rol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnCerrar_App = new Guna.UI2.WinForms.Guna2Button();
+            this.grp = new System.Windows.Forms.GroupBox();
+            this.dgvListaUsuarios = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
             this.cmbFiltro = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.panel2.SuspendLayout();
+            this.grp.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListaUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnFiltrarBusqueda
+            // panel2
             // 
-            this.btnFiltrarBusqueda.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnFiltrarBusqueda.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnFiltrarBusqueda.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnFiltrarBusqueda.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnFiltrarBusqueda.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnFiltrarBusqueda.ForeColor = System.Drawing.Color.White;
-            this.btnFiltrarBusqueda.Location = new System.Drawing.Point(13, 316);
-            this.btnFiltrarBusqueda.Margin = new System.Windows.Forms.Padding(2);
-            this.btnFiltrarBusqueda.Name = "btnFiltrarBusqueda";
-            this.btnFiltrarBusqueda.Size = new System.Drawing.Size(174, 29);
-            this.btnFiltrarBusqueda.TabIndex = 0;
-            this.btnFiltrarBusqueda.Text = "Filtrar busqueda";
-            this.btnFiltrarBusqueda.Click += new System.EventHandler(this.guna2Button1_Click);
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(10)))), ((int)(((byte)(30)))));
+            this.panel2.Controls.Add(this.btnCerrar_App);
+            this.panel2.Controls.Add(this.grp);
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.cmbFiltro);
+            this.panel2.Controls.Add(this.guna2Button1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1144, 691);
+            this.panel2.TabIndex = 5;
             // 
-            // panel1
+            // btnCerrar_App
             // 
-            this.panel1.Controls.Add(this.btnCambiarEstado);
-            this.panel1.Controls.Add(this.dgvUsuarios);
-            this.panel1.Controls.Add(this.cmbFiltro);
-            this.panel1.Controls.Add(this.btnFiltrarBusqueda);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(609, 397);
-            this.panel1.TabIndex = 1;
+            this.btnCerrar_App.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCerrar_App.BackColor = System.Drawing.Color.Transparent;
+            this.btnCerrar_App.BorderRadius = 8;
+            this.btnCerrar_App.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCerrar_App.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCerrar_App.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCerrar_App.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCerrar_App.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnCerrar_App.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.btnCerrar_App.ForeColor = System.Drawing.Color.White;
+            this.btnCerrar_App.HoverState.FillColor = System.Drawing.Color.Maroon;
+            this.btnCerrar_App.Location = new System.Drawing.Point(944, 12);
+            this.btnCerrar_App.Name = "btnCerrar_App";
+            this.btnCerrar_App.Size = new System.Drawing.Size(188, 45);
+            this.btnCerrar_App.TabIndex = 17;
+            this.btnCerrar_App.Text = "Volver al inicio";
             // 
-            // btnCambiarEstado
+            // grp
             // 
-            this.btnCambiarEstado.Location = new System.Drawing.Point(424, 295);
-            this.btnCambiarEstado.Name = "btnCambiarEstado";
-            this.btnCambiarEstado.Size = new System.Drawing.Size(131, 23);
-            this.btnCambiarEstado.TabIndex = 3;
-            this.btnCambiarEstado.Text = "Cambiar estado";
-            this.btnCambiarEstado.UseVisualStyleBackColor = true;
-            this.btnCambiarEstado.Click += new System.EventHandler(this.btnCambiarEstado_Click);
+            this.grp.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grp.Controls.Add(this.dgvListaUsuarios);
+            this.grp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grp.ForeColor = System.Drawing.SystemColors.Window;
+            this.grp.Location = new System.Drawing.Point(26, 72);
+            this.grp.Name = "grp";
+            this.grp.Size = new System.Drawing.Size(1086, 509);
+            this.grp.TabIndex = 18;
+            this.grp.TabStop = false;
+            this.grp.Text = "Lista de usuarios: Información";
             // 
-            // dgvUsuarios
+            // dgvListaUsuarios
             // 
-            this.dgvUsuarios.AllowUserToAddRows = false;
-            this.dgvUsuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Usuario,
-            this.Gmail,
-            this.Rol,
-            this.Estado});
-            this.dgvUsuarios.Location = new System.Drawing.Point(13, 31);
-            this.dgvUsuarios.Name = "dgvUsuarios";
-            this.dgvUsuarios.Size = new System.Drawing.Size(551, 179);
-            this.dgvUsuarios.TabIndex = 2;
-            this.dgvUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dgvListaUsuarios.AllowUserToAddRows = false;
+            this.dgvListaUsuarios.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvListaUsuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvListaUsuarios.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(24)))), ((int)(((byte)(42)))));
+            this.dgvListaUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListaUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4});
+            this.dgvListaUsuarios.Enabled = false;
+            this.dgvListaUsuarios.Location = new System.Drawing.Point(14, 31);
+            this.dgvListaUsuarios.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dgvListaUsuarios.MultiSelect = false;
+            this.dgvListaUsuarios.Name = "dgvListaUsuarios";
+            this.dgvListaUsuarios.RowHeadersWidth = 62;
+            this.dgvListaUsuarios.Size = new System.Drawing.Size(1058, 448);
+            this.dgvListaUsuarios.TabIndex = 2;
             // 
-            // Usuario
+            // dataGridViewTextBoxColumn1
             // 
-            this.Usuario.HeaderText = "Usuario";
-            this.Usuario.Name = "Usuario";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Usuario";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             // 
-            // Gmail
+            // dataGridViewTextBoxColumn2
             // 
-            this.Gmail.HeaderText = "Gmail";
-            this.Gmail.Name = "Gmail";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Gmail";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
-            // Rol
+            // dataGridViewTextBoxColumn3
             // 
-            this.Rol.HeaderText = "Rol";
-            this.Rol.Name = "Rol";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Rol";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             // 
-            // Estado
+            // dataGridViewTextBoxColumn4
             // 
-            this.Estado.HeaderText = "Estado";
-            this.Estado.Name = "Estado";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Estado";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Location = new System.Drawing.Point(45, 593);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(196, 35);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Cambiar estado";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // cmbFiltro
             // 
+            this.cmbFiltro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbFiltro.BackColor = System.Drawing.Color.Transparent;
             this.cmbFiltro.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cmbFiltro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -130,40 +165,55 @@
             "Todos",
             "Activo",
             "Inactivo"});
-            this.cmbFiltro.Location = new System.Drawing.Point(13, 282);
-            this.cmbFiltro.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbFiltro.Location = new System.Drawing.Point(636, 602);
             this.cmbFiltro.Name = "cmbFiltro";
-            this.cmbFiltro.Size = new System.Drawing.Size(175, 36);
+            this.cmbFiltro.Size = new System.Drawing.Size(260, 36);
             this.cmbFiltro.TabIndex = 1;
-            this.cmbFiltro.SelectedIndexChanged += new System.EventHandler(this.cmbFiltro_SelectedIndexChanged);
             // 
-            // Menu_Admin
+            // guna2Button1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.guna2Button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Location = new System.Drawing.Point(324, 593);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(261, 45);
+            this.guna2Button1.TabIndex = 0;
+            this.guna2Button1.Text = "Filtrar busqueda";
+            // 
+            // Admin_Usuarios
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(609, 397);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(1144, 691);
+            this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "Menu_Admin";
+            this.Name = "Admin_Usuarios";
             this.Text = "Menu_Admin";
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.grp.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListaUsuarios)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2Button btnFiltrarBusqueda;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private Guna.UI2.WinForms.Guna2Button btnCerrar_App;
+        private System.Windows.Forms.GroupBox grp;
+        private System.Windows.Forms.DataGridView dgvListaUsuarios;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.Button button1;
         private Guna.UI2.WinForms.Guna2ComboBox cmbFiltro;
-        private System.Windows.Forms.DataGridView dgvUsuarios;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Usuario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Gmail;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Rol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
-        private System.Windows.Forms.Button btnCambiarEstado;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }
