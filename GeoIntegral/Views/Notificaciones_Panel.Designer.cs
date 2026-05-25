@@ -30,8 +30,11 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
 <<<<<<< HEAD
+<<<<<<< HEAD
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+=======
+>>>>>>> parent of 37ecb93 (0.0.9)
 =======
 >>>>>>> parent of 37ecb93 (0.0.9)
             this.panel1 = new System.Windows.Forms.Panel();
@@ -139,6 +142,7 @@
             this.Fecha,
             this.Estado});
 <<<<<<< HEAD
+<<<<<<< HEAD
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -148,6 +152,8 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvListaUsuarios.DefaultCellStyle = dataGridViewCellStyle3;
 =======
+=======
+>>>>>>> parent of 37ecb93 (0.0.9)
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -156,6 +162,9 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvListaUsuarios.DefaultCellStyle = dataGridViewCellStyle1;
+<<<<<<< HEAD
+>>>>>>> parent of 37ecb93 (0.0.9)
+=======
 >>>>>>> parent of 37ecb93 (0.0.9)
             this.dgvListaUsuarios.Location = new System.Drawing.Point(9, 20);
             this.dgvListaUsuarios.Margin = new System.Windows.Forms.Padding(2);

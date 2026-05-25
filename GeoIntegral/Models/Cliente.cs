@@ -10,6 +10,7 @@ namespace GeoIntegral.Models
     public class Cliente : Persona
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         public long Identificacion { get; set; }
         public string Nombre_Cliente { get; set; }
         public string NumeroTelefono { get; set; }
@@ -22,6 +23,8 @@ namespace GeoIntegral.Models
             this.NumeroTelefono = numeroTelefono;
             this.Gmail_Cliente = gmailCliente;
         }
+=======
+>>>>>>> parent of 37ecb93 (0.0.9)
 =======
 >>>>>>> parent of 37ecb93 (0.0.9)
 

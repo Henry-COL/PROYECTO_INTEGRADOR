@@ -55,6 +55,7 @@ C:\Users\LENOVO\Desktop\Proyectos\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\Syst
 C:\Users\LENOVO\Desktop\Proyectos\PROYECTO_INTEGRADOR\GeoIntegral\obj\Debug\GeoIntegral.Views.Menu_Admin.resources
 C:\Users\LENOVO\Desktop\Proyectos\PROYECTO_INTEGRADOR\GeoIntegral\obj\Debug\GeoIntegral.Views.Notificaciones_Panel.resources
 <<<<<<< HEAD
+<<<<<<< HEAD
 C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\obj\Debug\GeoIntegral.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\CommunityToolkit.Common.dll
 C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\CommunityToolkit.Diagnostics.dll
@@ -79,6 +80,8 @@ C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Deb
 C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\System.Diagnostics.DiagnosticSource.xml
 C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\System.Threading.Tasks.Extensions.xml
 =======
+=======
+>>>>>>> parent of 37ecb93 (0.0.9)
 C:\Users\alvar\OneDrive\Documentos\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\GeoIntegral.exe.config
 C:\Users\alvar\OneDrive\Documentos\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\GeoIntegral.exe
 C:\Users\alvar\OneDrive\Documentos\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\GeoIntegral.pdb
@@ -105,4 +108,7 @@ C:\Users\alvar\OneDrive\Documentos\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\obj\De
 C:\Users\alvar\OneDrive\Documentos\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\obj\Debug\GeoInteg.74D226CE.Up2Date
 C:\Users\alvar\OneDrive\Documentos\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\obj\Debug\GeoIntegral.exe
 C:\Users\alvar\OneDrive\Documentos\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\obj\Debug\GeoIntegral.pdb
+<<<<<<< HEAD
+>>>>>>> parent of 37ecb93 (0.0.9)
+=======
 >>>>>>> parent of 37ecb93 (0.0.9)
