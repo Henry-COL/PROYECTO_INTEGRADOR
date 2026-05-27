@@ -84,6 +84,7 @@
   <ItemGroup>
     <Compile Include="Controller\AdministradorController.cs" />
     <Compile Include="Controller\ClienteController.cs" />
+    <Compile Include="Controller\CotizacionController.cs" />
     <Compile Include="Controller\MaterialController.cs" />
     <Compile Include="Controller\NotificacionController.cs" />
     <Compile Include="Controller\TerrenoController.cs" />
@@ -95,6 +96,7 @@
     <Compile Include="Main_Program.cs" />
     <Compile Include="Models\Administrador.cs" />
     <Compile Include="Models\Cliente.cs" />
+    <Compile Include="Models\Cotizacion.cs" />
     <Compile Include="Models\Material.cs" />
     <Compile Include="Models\Notificacion.cs" />
     <Compile Include="Models\Persona.cs" />
@@ -107,6 +109,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Repositorys\CotizacionRepository.cs" />
     <Compile Include="Repositorys\NotificacionRepository.cs" />
     <Compile Include="Repositorys\UsuarioRepository.cs" />
     <Compile Include="Views\Login_Screen.cs">
@@ -156,6 +159,12 @@
     </Compile>
     <Compile Include="Views\User_Screen.Designer.cs">
       <DependentUpon>User_Screen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Usuario_Cotizaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Usuario_Cotizaciones.Designer.cs">
+      <DependentUpon>Usuario_Cotizaciones.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Usuario_ListaClientes.cs">
       <SubType>Form</SubType>
@@ -210,6 +219,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\User_Screen.resx">
       <DependentUpon>User_Screen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Usuario_Cotizaciones.resx">
+      <DependentUpon>Usuario_Cotizaciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Usuario_ListaClientes.resx">
       <DependentUpon>Usuario_ListaClientes.cs</DependentUpon>

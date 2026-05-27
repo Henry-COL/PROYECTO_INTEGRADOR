@@ -180,5 +180,11 @@ namespace GeoIntegral.Views
             Panel_Ventanas.PerformLayout();
             CargarVentana(new Usuario_Terrenos(Panel_Ventanas.ClientSize));
         }
+
+        private void btnCotizaciones_Click(object sender, EventArgs e)
+        {
+            Panel_Ventanas.PerformLayout();
+            CargarVentana(new Usuario_Cotizaciones(Panel_Ventanas.ClientSize));
+        }
     }
 }

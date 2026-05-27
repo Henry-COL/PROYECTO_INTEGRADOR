@@ -87,3 +87,4 @@ C:\Users\LENOVO\Desktop\Proyectos\PROYECTO_INTEGRADOR\GeoIntegral\obj\Debug\GeoI
 C:\Users\LENOVO\Desktop\Proyectos\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\MathNet.Numerics.dll
 C:\Users\LENOVO\Desktop\Proyectos\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\MathNet.Numerics.xml
 C:\Users\LENOVO\Desktop\Proyectos\PROYECTO_INTEGRADOR\GeoIntegral\obj\Debug\GeoIntegral.Views.Usuario_Terrenos.resources
+C:\Users\LENOVO\Desktop\Proyectos\PROYECTO_INTEGRADOR\GeoIntegral\obj\Debug\GeoIntegral.Views.Usuario_Cotizaciones.resources

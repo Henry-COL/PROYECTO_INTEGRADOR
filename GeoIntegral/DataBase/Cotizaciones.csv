@@ -1,1 +1,4 @@
 IdCotizacion;IdentificacionCliente;IdTerreno;Material;CostoTotal;Fecha;Estado
+1;1065871453;1;Roca;960000;2026-05-27;Pendiente
+2;1065871453;1;Arena;300000;2026-05-27;Pendiente
+3;1065871453;1;Tierra;180000;2026-05-27;Pendiente
