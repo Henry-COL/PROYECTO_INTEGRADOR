@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
@@ -47,6 +48,42 @@ namespace GeoIntegral.Controller
                 }
             }
             return false;
+        }
+
+        public List<Cliente> ObtenerTodosLosClientes()
+        {
+            var lista = new List<Cliente>();
+            if (!File.Exists(rutaClientes)) return lista;
+
+            var lineas = File.ReadAllLines(rutaClientes).Skip(1);
+            foreach (var linea in lineas)
+            {
+                if (string.IsNullOrWhiteSpace(linea)) continue;
+                string[] datos = linea.Split(';');
+                lista.Add(new Cliente(long.Parse(datos[0]), datos[1], datos[2], datos[3]));
+            }
+            return lista;
+        }
+
+        public bool EliminarCliente(long identificacion)
+        {
+            try
+            {
+                var lineas = File.ReadAllLines(rutaClientes).ToList();
+                lineas.RemoveAll(l =>
+                {
+                    if (string.IsNullOrWhiteSpace(l)) return false;
+                    string[] datos = l.Split(';');
+                    return datos[0] == identificacion.ToString();
+                });
+                File.WriteAllLines(rutaClientes, lineas);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al eliminar cliente: " + ex.Message);
+                return false;
+            }
         }
     }
 }

@@ -23,7 +23,10 @@ namespace GeoIntegral.Repositorys
         public List<string[]> ObtenerLineas()
         {
             if (!File.Exists(rutaNotificaciones))
+            {
                 return new List<string[]>();
+            }
+                
 
             return File.ReadAllLines(rutaNotificaciones)
                        .Skip(1)
@@ -35,14 +38,19 @@ namespace GeoIntegral.Repositorys
         public bool ActualizarCampo(long idNotificacion, int indiceCampo, string nuevoValor)
         {
             if (!File.Exists(rutaNotificaciones))
+            {
                 return false;
+            }
+                
 
             var lineas = File.ReadAllLines(rutaNotificaciones);
 
             for (int i = 1; i < lineas.Length; i++)
             {
                 if (string.IsNullOrWhiteSpace(lineas[i]))
+                {
                     continue;
+                } 
 
                 string[] datos = lineas[i].Split(';');
 
@@ -61,7 +69,10 @@ namespace GeoIntegral.Repositorys
         public long ObtenerProximoId()
         {
             if (!File.Exists(rutaNotificaciones))
+            {
                 return 1;
+            }
+                
 
             var lineas = File.ReadAllLines(rutaNotificaciones);
             long maxId = 0;
@@ -69,12 +80,17 @@ namespace GeoIntegral.Repositorys
             for (int i = 1; i < lineas.Length; i++)
             {
                 if (string.IsNullOrWhiteSpace(lineas[i]))
+                {
                     continue;
-
+                }
+                    
                 string[] datos = lineas[i].Split(';');
 
                 if (long.TryParse(datos[0], out long id) && id > maxId)
+                {
                     maxId = id;
+                }
+                    
             }
 
             return maxId + 1;

@@ -154,5 +154,31 @@ namespace GeoIntegral.Views
                 this.Dispose(); // Libera los recursos de esta ventana por completo
             }
         }
+
+        private void btnMenuListaClientes_Click(object sender, EventArgs e)
+        {
+            Panel_Ventanas.PerformLayout();
+            foreach (Control control in Panel_Ventanas.Controls)
+            {
+                if (control is Usuario_ListaClientes ventanaExistente)
+                {
+                    ventanaExistente.BringToFront();
+                    return;
+                }
+            }
+            CargarVentana(new Usuario_ListaClientes(Panel_Ventanas.ClientSize));
+        }
+
+        private void btnMenuMateriales_Click(object sender, EventArgs e)
+        {
+            Panel_Ventanas.PerformLayout();
+            CargarVentana(new Usuario_Materiales(Panel_Ventanas.ClientSize));
+        }
+
+        private void btnTerrenos_Click(object sender, EventArgs e)
+        {
+            Panel_Ventanas.PerformLayout();
+            CargarVentana(new Usuario_Terrenos(Panel_Ventanas.ClientSize));
+        }
     }
 }

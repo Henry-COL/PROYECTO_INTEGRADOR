@@ -30,6 +30,7 @@ namespace GeoIntegral.Views
                 lblMensaje_Contrasena_Confirmar.Visible = false;
 
                 bool validar = true;
+
                 if (txtUsuario.Text == "")
                 {
                     lblMensaje_Usuario.Visible = true;
@@ -56,10 +57,7 @@ namespace GeoIntegral.Views
                     validar = false;
                 }
 
-                if (!validar)
-                {
-                    return;
-                }
+                if (!validar) return;
 
                 if (txtGmail.Text != txtGmail_Confirmar.Text)
                 {
@@ -75,6 +73,14 @@ namespace GeoIntegral.Views
                     return;
                 }
 
+                // Validar seguridad de la contraseña
+                if (!ValidarContrasena(txtContrasena.Text))
+                {
+                    lblMensaje_Contrasena_.Text = "Mínimo 8 caracteres, una mayúscula, un número y un carácter especial*";
+                    lblMensaje_Contrasena_.Visible = true;
+                    return;
+                }
+
                 if (controller.UsuarioExiste(txtUsuario.Text))
                 {
                     lblMensaje_Usuario.Text = "Ese usuario ya existe*";
@@ -82,22 +88,48 @@ namespace GeoIntegral.Views
                     return;
                 }
 
-                Usuario usuarioParaRegistrar = new Usuario(txtUsuario.Text, txtContrasena.Text, txtGmail.Text, RolUsuario.Usuario, EstadoUsuario.Activo);
+                Usuario usuarioParaRegistrar = new Usuario(
+                    txtUsuario.Text,
+                    txtContrasena.Text,
+                    txtGmail.Text,
+                    RolUsuario.Usuario,
+                    EstadoUsuario.Activo
+                );
 
                 if (controller.RegistrarUsuario(usuarioParaRegistrar))
                 {
-                    MessageBox.Show("¡Usuario registrado con éxito!", "GeoIntegral", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("¡Usuario registrado con éxito!", "GeoIntegral",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();
                 }
             }
             catch (Exception ex) when (ex.Message == "INACTIVO")
             {
-                MessageBox.Show("Tu cuenta está inactiva. Contacta al administrador.","Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Tu cuenta está inactiva. Contacta al administrador.",
+                    "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error al registrar cuenta: " + ex.Message);
             }
+        }
+
+        private bool ValidarContrasena(string contrasena)
+        {
+            if (contrasena.Length < 8) return false;
+
+            bool tieneMayuscula = false;
+            bool tieneNumero = false;
+            bool tieneEspecial = false;
+
+            foreach (char c in contrasena)
+            {
+                if (char.IsUpper(c)) tieneMayuscula = true;
+                if (char.IsDigit(c)) tieneNumero = true;
+                if (!char.IsLetterOrDigit(c)) tieneEspecial = true;
+            }
+
+            return tieneMayuscula && tieneNumero && tieneEspecial;
         }
 
         private void lblIniciar_Sesion_Click(object sender, EventArgs e)

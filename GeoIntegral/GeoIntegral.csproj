@@ -49,6 +49,9 @@
     <Reference Include="Guna.UI2">
       <HintPath>..\..\HENZO\Corte_2\EjerciciosPractica\EjerciciosClase\app_inventario\packages\Guna.UI2.WinForms.2.0.4.7\lib\net45\Guna.UI2.dll</HintPath>
     </Reference>
+    <Reference Include="MathNet.Numerics, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\MathNet.Numerics.5.0.0\lib\net48\MathNet.Numerics.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Buffers.4.6.1\lib\net462\System.Buffers.dll</HintPath>
@@ -81,7 +84,9 @@
   <ItemGroup>
     <Compile Include="Controller\AdministradorController.cs" />
     <Compile Include="Controller\ClienteController.cs" />
+    <Compile Include="Controller\MaterialController.cs" />
     <Compile Include="Controller\NotificacionController.cs" />
+    <Compile Include="Controller\TerrenoController.cs" />
     <Compile Include="Controller\UsuarioController.cs" />
     <Compile Include="DataBase\ArchivosCSV.cs" />
     <Compile Include="Enums\EstadoNotificacion.cs" />
@@ -90,8 +95,11 @@
     <Compile Include="Main_Program.cs" />
     <Compile Include="Models\Administrador.cs" />
     <Compile Include="Models\Cliente.cs" />
+    <Compile Include="Models\Material.cs" />
     <Compile Include="Models\Notificacion.cs" />
     <Compile Include="Models\Persona.cs" />
+    <Compile Include="Models\PuntoTerreno.cs" />
+    <Compile Include="Models\Terreno.cs" />
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -149,6 +157,24 @@
     <Compile Include="Views\User_Screen.Designer.cs">
       <DependentUpon>User_Screen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Usuario_ListaClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Usuario_ListaClientes.Designer.cs">
+      <DependentUpon>Usuario_ListaClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Usuario_Materiales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Usuario_Materiales.Designer.cs">
+      <DependentUpon>Usuario_Materiales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Usuario_Terrenos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Usuario_Terrenos.Designer.cs">
+      <DependentUpon>Usuario_Terrenos.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -184,6 +210,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\User_Screen.resx">
       <DependentUpon>User_Screen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Usuario_ListaClientes.resx">
+      <DependentUpon>Usuario_ListaClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Usuario_Materiales.resx">
+      <DependentUpon>Usuario_Materiales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Usuario_Terrenos.resx">
+      <DependentUpon>Usuario_Terrenos.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

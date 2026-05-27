@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Windows.Forms;
 
 namespace GeoIntegral.DataBase
@@ -31,7 +32,7 @@ namespace GeoIntegral.DataBase
                     }
                     else if (nombre == "Materiales.csv")
                     {
-                        File.WriteAllText(path, "NombreMaterial;CostoUnidad\n");
+                        File.WriteAllText(path, "ID;Nombre;CostoUnidad\n");
                     }
                     else if (nombre == "Terrenos.csv")
                     {
