@@ -44,13 +44,21 @@ namespace GeoIntegral.Views
             comboBox1.Items.Clear();
             var terrenos = terrenoController.ObtenerTodosLosTerrenos();
             foreach (var t in terrenos)
-                comboBox1.Items.Add($"{t.Id} - {t.NombreProyecto} ({t.Volumen:N2} m³)");
+                comboBox1.Items.Add(
+                    t.Id + " - " +
+                    t.NombreProyecto +
+                    " (" + t.Volumen.ToString("N2") + " m³)"
+                    );
 
             // Materiales
             cmbMateriales.Items.Clear();
             var materiales = materialController.ObtenerTodosLosMateriales();
             foreach (var m in materiales)
-                cmbMateriales.Items.Add($"{m.Id} - {m.Nombre} (${m.CostoUnidad:N2}/m³)");
+                cmbMateriales.Items.Add(
+                    m.Id + " - " +
+                    m.Nombre +
+                    " ($" + m.CostoUnidad.ToString("N2") + "/m³)"
+                    );
         }
 
         private void ActualizarCostoTotal(object sender, EventArgs e)
@@ -76,7 +84,7 @@ namespace GeoIntegral.Views
                 var material = materiales.Find(m => m.Id == idMaterial);
 
                 double costoTotal = terreno.Volumen * material.CostoUnidad;
-                lblCostoTotal.Text = $"Costo Total: ${costoTotal:N2}";
+                lblCostoTotal.Text = "Costo Total: $" + costoTotal.ToString("N2");
             }
             catch
             {
@@ -104,7 +112,7 @@ namespace GeoIntegral.Views
                     nombreCliente,
                     nombreTerreno,
                     c.Material,
-                    $"${c.CostoTotal:N2}",
+                    "$" + c.CostoTotal.ToString("N2"),
                     c.Fecha,
                     c.Estado
                 );
@@ -138,7 +146,7 @@ namespace GeoIntegral.Views
                 var material = materiales.Find(m => m.Id == idMaterial);
 
                 var confirmacion = MessageBox.Show(
-                    $"¿Generar cotización?\n\nCliente: {cmbClientes.SelectedItem}\nTerreno: {terreno.NombreProyecto}\nMaterial: {material.Nombre}\nCosto Total: ${terreno.Volumen * material.CostoUnidad:N2}",
+                    $"¿Generar cotización?\n\nCliente: {cmbClientes.SelectedItem}\nTerreno: {terreno.NombreProyecto}\nMaterial: {material.Nombre}\nCosto Total: ${terreno.Volumen * material.CostoUnidad}",
                     "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if (confirmacion == DialogResult.Yes)
@@ -187,7 +195,7 @@ namespace GeoIntegral.Views
                              $"Proyecto:       {(terreno != null ? terreno.NombreProyecto : cotizacion.IdTerreno.ToString())}\n" +
                              $"Volumen:        {(terreno != null ? terreno.Volumen.ToString("N2") : "--")} m³\n\n" +
                              $"Material:       {cotizacion.Material}\n" +
-                             $"Costo Total:    ${cotizacion.CostoTotal:N2}";
+                             $"Costo Total:    ${cotizacion.CostoTotal}";
 
             MessageBox.Show(detalle, "Detalle Cotización",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);

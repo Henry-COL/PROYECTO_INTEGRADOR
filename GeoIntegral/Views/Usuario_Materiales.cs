@@ -37,7 +37,7 @@ namespace GeoIntegral.Views
             var materiales = materialController.ObtenerTodosLosMateriales();
             foreach (var m in materiales)
             {
-                dgvMateriales.Rows.Add(m.Id, m.Nombre, $"${m.CostoUnidad:N2}");
+                dgvMateriales.Rows.Add(m.Id, m.Nombre, $"${m.CostoUnidad}");
             }
         }
 

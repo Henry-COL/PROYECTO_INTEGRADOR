@@ -120,8 +120,8 @@ namespace GeoIntegral.Views
                 double area = terrenoController.CalcularArea();
                 double volumen = terrenoController.CalcularVolumen();
 
-                lblArea.Text = $"Área: {area:N2} m²";
-                lblVolumen.Text = $"Volumen: {volumen:N2} m³";
+                lblArea.Text = $"Área: {area} m²";
+                lblVolumen.Text = $"Volumen: {volumen} m³";
 
                 calculado = true;
                 DibujarGrafica();

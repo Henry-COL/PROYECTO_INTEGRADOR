@@ -1,8 +1,8 @@
 ﻿using GeoIntegral.Models;
+using GeoIntegral.Repositorys;
 using MathNet.Numerics.Integration;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -10,9 +10,7 @@ namespace GeoIntegral.Controller
 {
     public class TerrenoController
     {
-        private string rutaTerrenos = Path.GetFullPath(Path.Combine(Application.StartupPath, "..", "..", "DataBase", "Terrenos.csv"));
-        private string rutaCoordenadas = Path.GetFullPath(Path.Combine(Application.StartupPath, "..", "..", "DataBase", "Coordenadas_Terreno.csv"));
-
+        private TerrenoRepository repo = new TerrenoRepository();
         private List<PuntoTerreno> puntos = new List<PuntoTerreno>();
 
         public void AgregarPunto(double x, double y, double z)
@@ -87,23 +85,13 @@ namespace GeoIntegral.Controller
         {
             try
             {
-                int id = GenerarNuevoId();
-                double area = CalcularArea();
-                double volumen = CalcularVolumen();
-                string fecha = DateTime.Now.ToString("yyyy-MM-dd");
+                var terreno = new Terreno(repo.GenerarNuevoId(), nombreProyecto);
+                terreno.FechaRegistro = DateTime.Now.ToString("yyyy-MM-dd");
+                terreno.Volumen = CalcularVolumen();
+                terreno.Observaciones = observaciones;
+                terreno.Puntos = new List<PuntoTerreno>(puntos);
 
-                // Guardar terreno
-                string lineaTerreno = $"{id};{fecha};{nombreProyecto};{volumen};{observaciones}{Environment.NewLine}";
-                File.AppendAllText(rutaTerrenos, lineaTerreno);
-
-                // Guardar coordenadas
-                foreach (var p in puntos)
-                {
-                    string lineaCoordenada = $"{id};{p.X};{p.Y};{p.Z}{Environment.NewLine}";
-                    File.AppendAllText(rutaCoordenadas, lineaCoordenada);
-                }
-
-                return true;
+                return repo.Guardar(terreno);
             }
             catch (Exception ex)
             {
@@ -112,30 +100,19 @@ namespace GeoIntegral.Controller
             }
         }
 
-        private int GenerarNuevoId()
-        {
-            if (!File.Exists(rutaTerrenos)) return 1;
-            var lineas = File.ReadAllLines(rutaTerrenos).Skip(1)
-                .Where(l => !string.IsNullOrWhiteSpace(l)).ToList();
-            if (lineas.Count == 0) return 1;
-            return lineas.Select(l => int.Parse(l.Split(';')[0])).Max() + 1;
-        }
-
         public List<Terreno> ObtenerTodosLosTerrenos()
         {
-            var lista = new List<Terreno>();
-            if (!File.Exists(rutaTerrenos)) return lista;
+            return repo.ObtenerTodos();
+        }
 
-            var lineas = File.ReadAllLines(rutaTerrenos).Skip(1);
-            foreach (var linea in lineas)
-            {
-                if (string.IsNullOrWhiteSpace(linea)) continue;
-                string[] datos = linea.Split(';');
-                var terreno = new Terreno(int.Parse(datos[0]), datos[2]);
-                terreno.Volumen = double.Parse(datos[3]);
-                lista.Add(terreno);
-            }
-            return lista;
+        public Terreno ObtenerTerrenoPorId(int id)
+        {
+            return repo.ObtenerPorId(id);
+        }
+
+        public List<PuntoTerreno> ObtenerCoordenadas(int idTerreno)
+        {
+            return repo.ObtenerCoordenadas(idTerreno);
         }
     }
 }

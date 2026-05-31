@@ -2,3 +2,4 @@ Usuario;PasswordHash;Gmail;Rol;Estado
 admin;$2a$11$BohtMBA6KuMfiDoVzbDb4OfBwChLsFE2qmZvHuaMpZ4/5eHVhWQTy;admin@gmail.com;Administrador;Activo
 Henzo;$2a$11$TKgaApLIYqWvvK99T0mNK.70xYG9OzlVL93Y99fyY7hgk9TmAzqtK;henzo@gmail.com;Usuario;Activo
 Juan;$2a$11$K9xk860P44.tzLVpptUx3.dUqa65CZZHkSqhei/KlEfqwGkdwZKxm;juan@gmail.com;Usuario;Activo
+David Esper;$2a$11$j54MuMctv6odRIS877h2auERwOmYwN22LOAv47dpJK/ajXBE8i1ky;killozchito.9080@gmail.com;Usuario;Activo
