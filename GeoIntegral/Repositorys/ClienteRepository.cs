@@ -23,8 +23,15 @@ namespace GeoIntegral.Repositorys
                 var candidate1 = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "DataBase", "Clientes.csv"));
                 var candidate2 = Path.GetFullPath(Path.Combine(Application.StartupPath, "..", "..", "DataBase", "Clientes.csv"));
 
-                if (File.Exists(candidate1)) return candidate1;
-                if (File.Exists(candidate2)) return candidate2;
+                if (File.Exists(candidate1))
+                {
+                    return candidate1;
+                }
+
+                if (File.Exists(candidate2))
+                {
+                    return candidate2;
+                }
 
                 return candidate1;
             }
@@ -58,11 +65,18 @@ namespace GeoIntegral.Repositorys
         public List<Cliente> ObtenerTodos()
         {
             var lista = new List<Cliente>();
-            if (!File.Exists(rutaClientes)) return lista;
+            if (!File.Exists(rutaClientes))
+            {
+                return lista;
+            }
 
             foreach (var linea in File.ReadAllLines(rutaClientes).Skip(1))
             {
-                if (string.IsNullOrWhiteSpace(linea)) continue;
+                if (string.IsNullOrWhiteSpace(linea)) 
+                {
+                    continue;
+                }
+                
                 string[] d = linea.Split(';');
                 lista.Add(new Cliente(long.Parse(d[0]), d[1], d[2], d[3]));
             }
@@ -81,8 +95,12 @@ namespace GeoIntegral.Repositorys
                 var lineas = File.ReadAllLines(rutaClientes).ToList();
                 lineas.RemoveAll(l =>
                 {
-                    if (string.IsNullOrWhiteSpace(l)) return false;
+                    if (string.IsNullOrWhiteSpace(l))
+                    {
+                        return false;
+                    }
                     string[] d = l.Split(';');
+
                     return d[0] == identificacion.ToString();
                 });
                 File.WriteAllLines(rutaClientes, lineas);
