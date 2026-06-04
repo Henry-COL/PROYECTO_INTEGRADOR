@@ -5,8 +5,9 @@ using System.Windows.Forms;
 
 namespace GeoIntegral.Views
 {
-    public partial class Usuario_Terrenos : Form
+    public partial class Usuario_Terrenos : Form, ICerrable
     {
+        public event EventHandler VentanaCerrada;
         private TerrenoController terrenoController = new TerrenoController();
         private bool calculado = false;
 

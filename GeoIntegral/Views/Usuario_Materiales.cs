@@ -6,8 +6,9 @@ using System.Windows.Forms;
 
 namespace GeoIntegral.Views
 {
-    public partial class Usuario_Materiales : Form
+    public partial class Usuario_Materiales : Form, ICerrable
     {
+        public event EventHandler VentanaCerrada;
         private MaterialController materialController = new MaterialController();
 
         public Usuario_Materiales(Size tamano)

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnCerrar_App = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.grp = new System.Windows.Forms.GroupBox();
             this.dgvListaUsuarios = new System.Windows.Forms.DataGridView();
@@ -43,6 +42,7 @@
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.cmbUsuario = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btnCambiar_Estado = new Guna.UI2.WinForms.Guna2Button();
+            this.btnCerrar_App = new Guna.UI2.WinForms.Guna2Button();
             this.panel2.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.grp.SuspendLayout();
@@ -63,26 +63,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1640, 997);
             this.panel2.TabIndex = 5;
-            // 
-            // btnCerrar_App
-            // 
-            this.btnCerrar_App.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCerrar_App.BackColor = System.Drawing.Color.Transparent;
-            this.btnCerrar_App.BorderRadius = 8;
-            this.btnCerrar_App.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnCerrar_App.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnCerrar_App.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnCerrar_App.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnCerrar_App.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnCerrar_App.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.btnCerrar_App.ForeColor = System.Drawing.Color.White;
-            this.btnCerrar_App.HoverState.FillColor = System.Drawing.Color.Maroon;
-            this.btnCerrar_App.Location = new System.Drawing.Point(1440, 12);
-            this.btnCerrar_App.Name = "btnCerrar_App";
-            this.btnCerrar_App.Size = new System.Drawing.Size(188, 45);
-            this.btnCerrar_App.TabIndex = 17;
-            this.btnCerrar_App.Text = "Volver al inicio";
-            this.btnCerrar_App.Click += new System.EventHandler(this.btnCerrar_App_Click);
             // 
             // guna2Panel1
             // 
@@ -200,12 +180,14 @@
             // btnFiltrar_Busqueda
             // 
             this.btnFiltrar_Busqueda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnFiltrar_Busqueda.BorderColor = System.Drawing.Color.DarkGreen;
             this.btnFiltrar_Busqueda.BorderRadius = 8;
+            this.btnFiltrar_Busqueda.BorderThickness = 3;
             this.btnFiltrar_Busqueda.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnFiltrar_Busqueda.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnFiltrar_Busqueda.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnFiltrar_Busqueda.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnFiltrar_Busqueda.FillColor = System.Drawing.Color.DarkGreen;
+            this.btnFiltrar_Busqueda.FillColor = System.Drawing.Color.LimeGreen;
             this.btnFiltrar_Busqueda.Font = new System.Drawing.Font("Poppins Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFiltrar_Busqueda.ForeColor = System.Drawing.Color.White;
             this.btnFiltrar_Busqueda.HoverState.FillColor = System.Drawing.Color.ForestGreen;
@@ -247,12 +229,14 @@
             // 
             // btnCambiar_Estado
             // 
+            this.btnCambiar_Estado.BorderColor = System.Drawing.Color.Teal;
             this.btnCambiar_Estado.BorderRadius = 8;
+            this.btnCambiar_Estado.BorderThickness = 3;
             this.btnCambiar_Estado.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnCambiar_Estado.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnCambiar_Estado.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnCambiar_Estado.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnCambiar_Estado.FillColor = System.Drawing.Color.Teal;
+            this.btnCambiar_Estado.FillColor = System.Drawing.Color.LightSeaGreen;
             this.btnCambiar_Estado.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold);
             this.btnCambiar_Estado.ForeColor = System.Drawing.Color.White;
             this.btnCambiar_Estado.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
@@ -261,6 +245,30 @@
             this.btnCambiar_Estado.Size = new System.Drawing.Size(212, 39);
             this.btnCambiar_Estado.TabIndex = 6;
             this.btnCambiar_Estado.Text = "Cambiar estado";
+            // 
+            // btnCerrar_App
+            // 
+            this.btnCerrar_App.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCerrar_App.BackColor = System.Drawing.Color.Transparent;
+            this.btnCerrar_App.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(22)))), ((int)(((byte)(54)))));
+            this.btnCerrar_App.BorderRadius = 8;
+            this.btnCerrar_App.BorderThickness = 3;
+            this.btnCerrar_App.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCerrar_App.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCerrar_App.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCerrar_App.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCerrar_App.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(32)))), ((int)(((byte)(87)))));
+            this.btnCerrar_App.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.btnCerrar_App.ForeColor = System.Drawing.Color.White;
+            this.btnCerrar_App.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnCerrar_App.HoverState.FillColor = System.Drawing.Color.Maroon;
+            this.btnCerrar_App.Location = new System.Drawing.Point(1440, 12);
+            this.btnCerrar_App.Name = "btnCerrar_App";
+            this.btnCerrar_App.PressedColor = System.Drawing.Color.Empty;
+            this.btnCerrar_App.Size = new System.Drawing.Size(188, 45);
+            this.btnCerrar_App.TabIndex = 48;
+            this.btnCerrar_App.Text = "Volver al inicio";
+            this.btnCerrar_App.Click += new System.EventHandler(this.btnCerrar_App_Click);
             // 
             // Admin_Usuarios
             // 
@@ -285,7 +293,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel2;
-        private Guna.UI2.WinForms.Guna2Button btnCerrar_App;
         private System.Windows.Forms.GroupBox grp;
         private System.Windows.Forms.DataGridView dgvListaUsuarios;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
@@ -299,5 +306,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
         private Guna.UI2.WinForms.Guna2ComboBox cmbUsuario;
         private Guna.UI2.WinForms.Guna2Button btnCambiar_Estado;
+        private Guna.UI2.WinForms.Guna2Button btnCerrar_App;
     }
 }

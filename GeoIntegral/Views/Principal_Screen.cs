@@ -1,5 +1,6 @@
 ﻿using GeoIntegral.Enums;
 using GeoIntegral.Models;
+using GeoIntegral.Repositorys;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
@@ -24,7 +25,7 @@ namespace GeoIntegral.Views
         {
             if (!CierrePorCerrarSesion)
             {
-                Environment.Exit(0); // Esto cierra todo el proceso //
+                Environment.Exit(0);
             }
         }
 
@@ -43,14 +44,7 @@ namespace GeoIntegral.Views
                     lblTipo_Usuario.Text = "Rol: No asignado";
                 }
 
-                if (usuarioSesion != null && usuarioSesion.Rol == RolUsuario.Administrador)
-                {
-                    Admin_Panel.Visible = true;
-                }
-                else
-                {
-                    Admin_Panel.Visible = false;
-                }
+                Admin_Panel.Visible = usuarioSesion != null && usuarioSesion.Rol == RolUsuario.Administrador;
             }
             catch (Exception ex)
             {
@@ -58,8 +52,10 @@ namespace GeoIntegral.Views
             }
         }
 
-        private void CargarVentana(Form formulario)
+        private void CargarVentana(Form formulario, Control botonOrigen = null)
         {
+            NavegacionService.ActivarBoton(botonOrigen);
+
             Panel_Ventanas.Resize -= Panel_Ventanas_Resize;
             Panel_Ventanas.Controls.Clear();
             Panel_Ventanas.PerformLayout();
@@ -70,8 +66,17 @@ namespace GeoIntegral.Views
             formulario.MinimumSize = new Size(0, 0);
             formulario.MaximumSize = new Size(0, 0);
 
+            if (formulario is ICerrable cerrable)
+            {
+                cerrable.VentanaCerrada += (s, e) =>
+                {
+                    MessageBox.Show("Evento recibido en CargarVentana");
+                    NavegacionService.LiberarBoton();
+                    Panel_Ventanas.Controls.Remove(formulario);
+                };
+            }
+
             Panel_Ventanas.Controls.Add(formulario);
-            Panel_Ventanas.Tag = formulario;
             formulario.Show();
 
             formulario.Size = Panel_Ventanas.ClientSize;
@@ -89,52 +94,51 @@ namespace GeoIntegral.Views
             }
         }
 
+        //><><>< Botones ><><><>//
+
+        // -- Admin --
         private void btnAdmin_Menu_Click(object sender, EventArgs e)
         {
-            Panel_Ventanas.PerformLayout();
-            CargarVentana(new Admin_Usuarios(Panel_Ventanas.ClientSize));
+            btnAdmin_Menu.Enabled = false;
+            CargarVentana(new Admin_Usuarios(Panel_Ventanas.ClientSize), sender as Control);
         }
 
         private void btnAdmin_Menu2_Click(object sender, EventArgs e)
         {
-            Panel_Ventanas.PerformLayout();
-            foreach (Control control in Panel_Ventanas.Controls)
-            {
-                if (control is Admin_Notificaciones ventanaExistente)
-                {
-                    ventanaExistente.BringToFront();
-                    return;
-                }
-            }
-            CargarVentana(new Admin_Notificaciones(Panel_Ventanas.ClientSize));
+            btnAdmin_Menu2.Enabled = false;
+            CargarVentana(new Admin_Notificaciones(Panel_Ventanas.ClientSize), sender as Control);
         }
 
+        // -- Usuario --
         private void btnMenuRegistrarClientes_Click(object sender, EventArgs e)
         {
-            Panel_Ventanas.PerformLayout();
-            foreach (Control control in Panel_Ventanas.Controls)
-            {
-                if (control is Registrar_Cliente ventanaExistente)
-                {
-                    ventanaExistente.BringToFront();
-                    return;
-                }
-            }
-            CargarVentana(new Registrar_Cliente(Panel_Ventanas.ClientSize));
+            CargarVentana(new Registrar_Cliente(Panel_Ventanas.ClientSize), sender as Control);
         }
 
+        private void btnMenuListaClientes_Click(object sender, EventArgs e)
+        {
+            CargarVentana(new Usuario_ListaClientes(Panel_Ventanas.ClientSize), sender as Control);
+        }
+
+        private void btnMenuMateriales_Click(object sender, EventArgs e)
+        {
+            CargarVentana(new Usuario_Materiales(Panel_Ventanas.ClientSize), sender as Control);
+        }
+
+        private void btnTerrenos_Click(object sender, EventArgs e)
+        {
+            CargarVentana(new Usuario_Terrenos(Panel_Ventanas.ClientSize), sender as Control);
+        }
+
+        private void btnCotizaciones_Click(object sender, EventArgs e)
+        {
+            CargarVentana(new Usuario_Cotizaciones(Panel_Ventanas.ClientSize), sender as Control);
+        }
+
+        // -- Perfil / Sesión --
         private void btnConfiguracion_Perfil_Click(object sender, EventArgs e)
         {
-            var perfilForm = new User_Screen(usuarioSesion, Panel_Ventanas.ClientSize);
-            foreach (Control control in Panel_Ventanas.Controls)
-            {
-                if (control is User_Screen ventanaExistente)
-                {
-                    ventanaExistente.BringToFront();
-                    return;
-                }
-            }
-            CargarVentana(perfilForm);
+            CargarVentana(new User_Screen(usuarioSesion, Panel_Ventanas.ClientSize), sender as Control);
         }
 
         private void btn_Cerrar_Sesion_Click(object sender, EventArgs e)
@@ -149,45 +153,12 @@ namespace GeoIntegral.Views
             if (resultado == DialogResult.Yes)
             {
                 CierrePorCerrarSesion = true;
-
-                Login_Screen login = new Login_Screen();
-                login.Show();
-                this.Dispose(); // Libera los recursos de esta ventana por completo
+                new Login_Screen().Show();
+                this.Dispose();
             }
         }
 
-        private void btnMenuListaClientes_Click(object sender, EventArgs e)
-        {
-            Panel_Ventanas.PerformLayout();
-            foreach (Control control in Panel_Ventanas.Controls)
-            {
-                if (control is Usuario_ListaClientes ventanaExistente)
-                {
-                    ventanaExistente.BringToFront();
-                    return;
-                }
-            }
-            CargarVentana(new Usuario_ListaClientes(Panel_Ventanas.ClientSize));
-        }
-
-        private void btnMenuMateriales_Click(object sender, EventArgs e)
-        {
-            Panel_Ventanas.PerformLayout();
-            CargarVentana(new Usuario_Materiales(Panel_Ventanas.ClientSize));
-        }
-
-        private void btnTerrenos_Click(object sender, EventArgs e)
-        {
-            Panel_Ventanas.PerformLayout();
-            CargarVentana(new Usuario_Terrenos(Panel_Ventanas.ClientSize));
-        }
-
-        private void btnCotizaciones_Click(object sender, EventArgs e)
-        {
-            Panel_Ventanas.PerformLayout();
-            CargarVentana(new Usuario_Cotizaciones(Panel_Ventanas.ClientSize));
-        }
-
+        // -- Ventana --
         private void btnMinimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -204,5 +175,12 @@ namespace GeoIntegral.Views
                 }
             }
         }
+
+        private void btnCerrar_App_Principal_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        //><><>< Fin Botones ><><><>//
     }
 }

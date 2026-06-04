@@ -7,8 +7,9 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace GeoIntegral.Views
 {
-    public partial class Usuario_Cotizaciones : Form
+    public partial class Usuario_Cotizaciones : Form, ICerrable
     {
+        public event EventHandler VentanaCerrada;
         private ClienteController clienteController = new ClienteController();
         private TerrenoController terrenoController = new TerrenoController();
         private MaterialController materialController = new MaterialController();
@@ -203,7 +204,7 @@ namespace GeoIntegral.Views
 
         private void btnCerrar_App_Click(object sender, EventArgs e)
         {
-            this.Close();
+            VentanaCerrada?.Invoke(this, EventArgs.Empty);
         }
     }
 }

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnCerrar_App = new Guna.UI2.WinForms.Guna2Button();
             this.lblMensaje_Telefono = new System.Windows.Forms.Label();
             this.txtTelefono = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblTelefono = new System.Windows.Forms.Label();
@@ -38,7 +37,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.btnRegistrarCliente = new Guna.UI2.WinForms.Guna2Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.txtNombreCliente = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblMensaje_Usuario = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -48,6 +46,8 @@
             this.txtGmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.lblMensaje_Gmail_ = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnCerrar_App = new Guna.UI2.WinForms.Guna2Button();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,29 +74,11 @@
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.lblMensaje_Gmail_);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(0, 6);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1059, 617);
+            this.panel2.Size = new System.Drawing.Size(1640, 997);
             this.panel2.TabIndex = 17;
-            // 
-            // btnCerrar_App
-            // 
-            this.btnCerrar_App.BackColor = System.Drawing.Color.Transparent;
-            this.btnCerrar_App.BorderRadius = 8;
-            this.btnCerrar_App.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnCerrar_App.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnCerrar_App.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnCerrar_App.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnCerrar_App.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnCerrar_App.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrar_App.ForeColor = System.Drawing.Color.White;
-            this.btnCerrar_App.HoverState.FillColor = System.Drawing.Color.Maroon;
-            this.btnCerrar_App.Location = new System.Drawing.Point(855, 23);
-            this.btnCerrar_App.Name = "btnCerrar_App";
-            this.btnCerrar_App.Size = new System.Drawing.Size(188, 45);
-            this.btnCerrar_App.TabIndex = 33;
-            this.btnCerrar_App.Text = "Volver al inicio";
-            this.btnCerrar_App.Click += new System.EventHandler(this.btnCerrar_App_Click);
             // 
             // lblMensaje_Telefono
             // 
@@ -220,18 +202,6 @@
             this.btnRegistrarCliente.TabIndex = 16;
             this.btnRegistrarCliente.Text = "Registrar Cliente";
             this.btnRegistrarCliente.Click += new System.EventHandler(this.btnRegistrarCliente_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Poppins", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(221, 3);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(568, 92);
-            this.label1.TabIndex = 29;
-            this.label1.Text = "Registro de Clientes";
             // 
             // txtNombreCliente
             // 
@@ -374,12 +344,48 @@
             this.lblMensaje_Gmail_.Text = "Campo obligatorio*";
             this.lblMensaje_Gmail_.Visible = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Poppins", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(221, 3);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(568, 92);
+            this.label1.TabIndex = 29;
+            this.label1.Text = "Registro de Clientes";
+            // 
+            // btnCerrar_App
+            // 
+            this.btnCerrar_App.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCerrar_App.BackColor = System.Drawing.Color.Transparent;
+            this.btnCerrar_App.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(22)))), ((int)(((byte)(54)))));
+            this.btnCerrar_App.BorderRadius = 8;
+            this.btnCerrar_App.BorderThickness = 3;
+            this.btnCerrar_App.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCerrar_App.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCerrar_App.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCerrar_App.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCerrar_App.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(32)))), ((int)(((byte)(87)))));
+            this.btnCerrar_App.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.btnCerrar_App.ForeColor = System.Drawing.Color.White;
+            this.btnCerrar_App.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnCerrar_App.HoverState.FillColor = System.Drawing.Color.Maroon;
+            this.btnCerrar_App.Location = new System.Drawing.Point(960, 23);
+            this.btnCerrar_App.Name = "btnCerrar_App";
+            this.btnCerrar_App.PressedColor = System.Drawing.Color.Empty;
+            this.btnCerrar_App.Size = new System.Drawing.Size(188, 45);
+            this.btnCerrar_App.TabIndex = 46;
+            this.btnCerrar_App.Text = "Volver al inicio";
+            this.btnCerrar_App.Click += new System.EventHandler(this.btnCerrar_App_Click);
+            // 
             // Registrar_Cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(15)))), ((int)(((byte)(33)))));
-            this.ClientSize = new System.Drawing.Size(1059, 626);
+            this.ClientSize = new System.Drawing.Size(1640, 997);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Registrar_Cliente";

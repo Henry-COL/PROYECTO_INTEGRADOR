@@ -7,8 +7,9 @@ using System.Windows.Forms;
 
 namespace GeoIntegral.Views
 {
-    public partial class Usuario_ListaClientes : Form
+    public partial class Usuario_ListaClientes : Form, ICerrable
     {
+        public event EventHandler VentanaCerrada;
         private ClienteController clienteController = new ClienteController();
         private List<Cliente> todosLosClientes = new List<Cliente>();
 

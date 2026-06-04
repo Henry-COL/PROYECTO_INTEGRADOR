@@ -43,9 +43,9 @@
             this.lblMensaje_Usuario = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblMensaje_Contrasena = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblCrear_Cuenta = new System.Windows.Forms.Label();
             this.lblRecuperar_Contrasena = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
@@ -119,7 +119,9 @@
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(41)))), ((int)(((byte)(76)))));
             this.guna2Panel1.BorderRadius = 7;
+            this.guna2Panel1.BorderThickness = 6;
             this.guna2Panel1.Controls.Add(this.txtUsuario);
             this.guna2Panel1.Controls.Add(this.label1);
             this.guna2Panel1.Controls.Add(this.btnIniciar_Sesion);
@@ -127,7 +129,7 @@
             this.guna2Panel1.Controls.Add(this.lblMensaje_Usuario);
             this.guna2Panel1.Controls.Add(this.label2);
             this.guna2Panel1.Controls.Add(this.lblMensaje_Contrasena);
-            this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(15)))), ((int)(((byte)(33)))));
+            this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(24)))), ((int)(((byte)(42)))));
             this.guna2Panel1.Location = new System.Drawing.Point(339, 258);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(398, 217);
@@ -168,7 +170,9 @@
             // 
             // btnIniciar_Sesion
             // 
+            this.btnIniciar_Sesion.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(99)))), ((int)(((byte)(56)))));
             this.btnIniciar_Sesion.BorderRadius = 7;
+            this.btnIniciar_Sesion.BorderThickness = 3;
             this.btnIniciar_Sesion.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnIniciar_Sesion.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnIniciar_Sesion.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -185,7 +189,8 @@
             // 
             // txtContrasena
             // 
-            this.txtContrasena.BorderRadius = 4;
+            this.txtContrasena.BorderColor = System.Drawing.Color.Gray;
+            this.txtContrasena.BorderRadius = 3;
             this.txtContrasena.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtContrasena.DefaultText = "";
             this.txtContrasena.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -241,6 +246,17 @@
             this.lblMensaje_Contrasena.Text = "Campo obligatorio*";
             this.lblMensaje_Contrasena.Visible = false;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = global::GeoIntegral.Properties.Resources.GeoIntegral_LogoTipo;
+            this.pictureBox2.Location = new System.Drawing.Point(354, 95);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(512, 177);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
+            // 
             // lblCrear_Cuenta
             // 
             this.lblCrear_Cuenta.AutoSize = true;
@@ -269,17 +285,6 @@
             this.lblRecuperar_Contrasena.TabIndex = 10;
             this.lblRecuperar_Contrasena.Text = "Recuperar Contraseña";
             this.lblRecuperar_Contrasena.Click += new System.EventHandler(this.lblRecuperar_Contrasena_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = global::GeoIntegral.Properties.Resources.GeoIntegral_LogoTipo;
-            this.pictureBox2.Location = new System.Drawing.Point(354, 95);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(512, 177);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
             // 
             // pictureBox1
             // 

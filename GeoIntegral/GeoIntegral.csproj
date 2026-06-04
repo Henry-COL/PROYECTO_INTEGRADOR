@@ -201,9 +201,11 @@
     <Compile Include="Repositorys\CotizacionRepository.cs" />
     <Compile Include="Repositorys\FacturaRepository.cs" />
     <Compile Include="Repositorys\MaterialRepository.cs" />
+    <Compile Include="Repositorys\NavegacionService.cs" />
     <Compile Include="Repositorys\NotificacionRepository.cs" />
     <Compile Include="Repositorys\TerrenoRepository.cs" />
     <Compile Include="Repositorys\UsuarioRepository.cs" />
+    <Compile Include="Views\ICerrable.cs" />
     <Compile Include="Views\Login_Screen.cs">
       <SubType>Form</SubType>
     </Compile>

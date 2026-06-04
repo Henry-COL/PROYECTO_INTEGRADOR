@@ -29,16 +29,19 @@
             private void InitializeComponent()
             {
             this.gbDatosCotizacion = new System.Windows.Forms.GroupBox();
-            this.lblCostoTotal = new System.Windows.Forms.Label();
-            this.btnGenerarCotizacion = new System.Windows.Forms.Button();
             this.lblMaterial = new System.Windows.Forms.Label();
             this.cmbMateriales = new System.Windows.Forms.ComboBox();
             this.lblTerreno = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.lblCliente = new System.Windows.Forms.Label();
             this.cmbClientes = new System.Windows.Forms.ComboBox();
+            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnGenerar_Cotizacion = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblCostoTotal = new System.Windows.Forms.Label();
+            this.btnGenerarCotizacion = new System.Windows.Forms.Button();
             this.gbListaCotizaciones = new System.Windows.Forms.GroupBox();
-            this.btnVerDetalle = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.IdCotizacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,20 +50,17 @@
             this.CostoTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnVerDetalle = new System.Windows.Forms.Button();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnCerrar_App = new Guna.UI2.WinForms.Guna2Button();
-            this.btnGenerar_Cotizacion = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.gbDatosCotizacion.SuspendLayout();
+            this.guna2Panel3.SuspendLayout();
+            this.guna2Panel4.SuspendLayout();
             this.gbListaCotizaciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.guna2Panel2.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
-            this.guna2Panel3.SuspendLayout();
-            this.guna2Panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbDatosCotizacion
@@ -85,29 +85,6 @@
             this.gbDatosCotizacion.TabIndex = 0;
             this.gbDatosCotizacion.TabStop = false;
             this.gbDatosCotizacion.Text = "Datos Cotización";
-            // 
-            // lblCostoTotal
-            // 
-            this.lblCostoTotal.AutoSize = true;
-            this.lblCostoTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCostoTotal.Location = new System.Drawing.Point(56, 26);
-            this.lblCostoTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblCostoTotal.Name = "lblCostoTotal";
-            this.lblCostoTotal.Size = new System.Drawing.Size(143, 29);
-            this.lblCostoTotal.TabIndex = 6;
-            this.lblCostoTotal.Text = "Costo Total:";
-            // 
-            // btnGenerarCotizacion
-            // 
-            this.btnGenerarCotizacion.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnGenerarCotizacion.Location = new System.Drawing.Point(705, 283);
-            this.btnGenerarCotizacion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnGenerarCotizacion.Name = "btnGenerarCotizacion";
-            this.btnGenerarCotizacion.Size = new System.Drawing.Size(188, 35);
-            this.btnGenerarCotizacion.TabIndex = 1;
-            this.btnGenerarCotizacion.Text = "Generar Cotizacion";
-            this.btnGenerarCotizacion.UseVisualStyleBackColor = true;
-            this.btnGenerarCotizacion.Click += new System.EventHandler(this.btnGenerarCotizacion_Click);
             // 
             // lblMaterial
             // 
@@ -166,6 +143,76 @@
             this.cmbClientes.Size = new System.Drawing.Size(333, 28);
             this.cmbClientes.TabIndex = 0;
             // 
+            // guna2Panel3
+            // 
+            this.guna2Panel3.BorderRadius = 8;
+            this.guna2Panel3.Controls.Add(this.label1);
+            this.guna2Panel3.Controls.Add(this.btnGenerar_Cotizacion);
+            this.guna2Panel3.Controls.Add(this.guna2Panel4);
+            this.guna2Panel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(10)))), ((int)(((byte)(30)))));
+            this.guna2Panel3.Location = new System.Drawing.Point(372, 41);
+            this.guna2Panel3.Name = "guna2Panel3";
+            this.guna2Panel3.Size = new System.Drawing.Size(333, 203);
+            this.guna2Panel3.TabIndex = 8;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(11, 11);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(90, 20);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Costo total:";
+            // 
+            // btnGenerar_Cotizacion
+            // 
+            this.btnGenerar_Cotizacion.BorderRadius = 8;
+            this.btnGenerar_Cotizacion.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnGenerar_Cotizacion.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnGenerar_Cotizacion.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnGenerar_Cotizacion.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnGenerar_Cotizacion.FillColor = System.Drawing.Color.SteelBlue;
+            this.btnGenerar_Cotizacion.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenerar_Cotizacion.ForeColor = System.Drawing.Color.White;
+            this.btnGenerar_Cotizacion.Location = new System.Drawing.Point(45, 134);
+            this.btnGenerar_Cotizacion.Name = "btnGenerar_Cotizacion";
+            this.btnGenerar_Cotizacion.Size = new System.Drawing.Size(237, 45);
+            this.btnGenerar_Cotizacion.TabIndex = 7;
+            this.btnGenerar_Cotizacion.Text = "Generar cotizacion";
+            // 
+            // guna2Panel4
+            // 
+            this.guna2Panel4.BorderRadius = 8;
+            this.guna2Panel4.Controls.Add(this.lblCostoTotal);
+            this.guna2Panel4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(25)))), ((int)(((byte)(46)))));
+            this.guna2Panel4.Location = new System.Drawing.Point(15, 40);
+            this.guna2Panel4.Name = "guna2Panel4";
+            this.guna2Panel4.Size = new System.Drawing.Size(298, 75);
+            this.guna2Panel4.TabIndex = 9;
+            // 
+            // lblCostoTotal
+            // 
+            this.lblCostoTotal.AutoSize = true;
+            this.lblCostoTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCostoTotal.Location = new System.Drawing.Point(56, 26);
+            this.lblCostoTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCostoTotal.Name = "lblCostoTotal";
+            this.lblCostoTotal.Size = new System.Drawing.Size(143, 29);
+            this.lblCostoTotal.TabIndex = 6;
+            this.lblCostoTotal.Text = "Costo Total:";
+            // 
+            // btnGenerarCotizacion
+            // 
+            this.btnGenerarCotizacion.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnGenerarCotizacion.Location = new System.Drawing.Point(705, 283);
+            this.btnGenerarCotizacion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnGenerarCotizacion.Name = "btnGenerarCotizacion";
+            this.btnGenerarCotizacion.Size = new System.Drawing.Size(188, 35);
+            this.btnGenerarCotizacion.TabIndex = 1;
+            this.btnGenerarCotizacion.Text = "Generar Cotizacion";
+            this.btnGenerarCotizacion.UseVisualStyleBackColor = true;
+            this.btnGenerarCotizacion.Click += new System.EventHandler(this.btnGenerarCotizacion_Click);
+            // 
             // gbListaCotizaciones
             // 
             this.gbListaCotizaciones.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -181,19 +228,6 @@
             this.gbListaCotizaciones.TabIndex = 1;
             this.gbListaCotizaciones.TabStop = false;
             this.gbListaCotizaciones.Text = "Lista de Cotizaciones";
-            // 
-            // btnVerDetalle
-            // 
-            this.btnVerDetalle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnVerDetalle.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnVerDetalle.Location = new System.Drawing.Point(1468, 475);
-            this.btnVerDetalle.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnVerDetalle.Name = "btnVerDetalle";
-            this.btnVerDetalle.Size = new System.Drawing.Size(132, 35);
-            this.btnVerDetalle.TabIndex = 2;
-            this.btnVerDetalle.Text = "Detalle";
-            this.btnVerDetalle.UseVisualStyleBackColor = true;
-            this.btnVerDetalle.Click += new System.EventHandler(this.btnVerDetalle_Click);
             // 
             // dataGridView1
             // 
@@ -261,6 +295,19 @@
             this.Estado.MinimumWidth = 8;
             this.Estado.Name = "Estado";
             // 
+            // btnVerDetalle
+            // 
+            this.btnVerDetalle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnVerDetalle.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnVerDetalle.Location = new System.Drawing.Point(1468, 475);
+            this.btnVerDetalle.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnVerDetalle.Name = "btnVerDetalle";
+            this.btnVerDetalle.Size = new System.Drawing.Size(132, 35);
+            this.btnVerDetalle.TabIndex = 2;
+            this.btnVerDetalle.Text = "Detalle";
+            this.btnVerDetalle.UseVisualStyleBackColor = true;
+            this.btnVerDetalle.Click += new System.EventHandler(this.btnVerDetalle_Click);
+            // 
             // guna2Panel2
             // 
             this.guna2Panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
@@ -294,68 +341,25 @@
             // 
             this.btnCerrar_App.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCerrar_App.BackColor = System.Drawing.Color.Transparent;
+            this.btnCerrar_App.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(22)))), ((int)(((byte)(54)))));
             this.btnCerrar_App.BorderRadius = 8;
+            this.btnCerrar_App.BorderThickness = 3;
             this.btnCerrar_App.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnCerrar_App.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnCerrar_App.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnCerrar_App.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnCerrar_App.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnCerrar_App.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(32)))), ((int)(((byte)(87)))));
             this.btnCerrar_App.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.btnCerrar_App.ForeColor = System.Drawing.Color.White;
+            this.btnCerrar_App.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnCerrar_App.HoverState.FillColor = System.Drawing.Color.Maroon;
             this.btnCerrar_App.Location = new System.Drawing.Point(1440, 12);
             this.btnCerrar_App.Name = "btnCerrar_App";
+            this.btnCerrar_App.PressedColor = System.Drawing.Color.Empty;
             this.btnCerrar_App.Size = new System.Drawing.Size(188, 45);
             this.btnCerrar_App.TabIndex = 18;
             this.btnCerrar_App.Text = "Volver al inicio";
             this.btnCerrar_App.Click += new System.EventHandler(this.btnCerrar_App_Click);
-            // 
-            // btnGenerar_Cotizacion
-            // 
-            this.btnGenerar_Cotizacion.BorderRadius = 8;
-            this.btnGenerar_Cotizacion.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnGenerar_Cotizacion.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnGenerar_Cotizacion.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnGenerar_Cotizacion.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnGenerar_Cotizacion.FillColor = System.Drawing.Color.SteelBlue;
-            this.btnGenerar_Cotizacion.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGenerar_Cotizacion.ForeColor = System.Drawing.Color.White;
-            this.btnGenerar_Cotizacion.Location = new System.Drawing.Point(51, 154);
-            this.btnGenerar_Cotizacion.Name = "btnGenerar_Cotizacion";
-            this.btnGenerar_Cotizacion.Size = new System.Drawing.Size(194, 45);
-            this.btnGenerar_Cotizacion.TabIndex = 7;
-            this.btnGenerar_Cotizacion.Text = "Generar cotizacion";
-            // 
-            // guna2Panel3
-            // 
-            this.guna2Panel3.BorderRadius = 8;
-            this.guna2Panel3.Controls.Add(this.label1);
-            this.guna2Panel3.Controls.Add(this.btnGenerar_Cotizacion);
-            this.guna2Panel3.Controls.Add(this.guna2Panel4);
-            this.guna2Panel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(10)))), ((int)(((byte)(30)))));
-            this.guna2Panel3.Location = new System.Drawing.Point(368, 28);
-            this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(333, 219);
-            this.guna2Panel3.TabIndex = 8;
-            // 
-            // guna2Panel4
-            // 
-            this.guna2Panel4.BorderRadius = 8;
-            this.guna2Panel4.Controls.Add(this.lblCostoTotal);
-            this.guna2Panel4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(25)))), ((int)(((byte)(46)))));
-            this.guna2Panel4.Location = new System.Drawing.Point(15, 40);
-            this.guna2Panel4.Name = "guna2Panel4";
-            this.guna2Panel4.Size = new System.Drawing.Size(298, 75);
-            this.guna2Panel4.TabIndex = 9;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(11, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 20);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Costo total:";
             // 
             // Usuario_Cotizaciones
             // 
@@ -372,14 +376,14 @@
             this.Text = "cmbTerrenos";
             this.gbDatosCotizacion.ResumeLayout(false);
             this.gbDatosCotizacion.PerformLayout();
-            this.gbListaCotizaciones.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.guna2Panel2.ResumeLayout(false);
-            this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel3.PerformLayout();
             this.guna2Panel4.ResumeLayout(false);
             this.guna2Panel4.PerformLayout();
+            this.gbListaCotizaciones.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.guna2Panel2.ResumeLayout(false);
+            this.guna2Panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
             }

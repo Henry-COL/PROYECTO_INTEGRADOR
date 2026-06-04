@@ -10,8 +10,9 @@ using System.Windows.Forms;
 
 namespace GeoIntegral.Views
 {
-    public partial class Admin_Usuarios : Form
+    public partial class Admin_Usuarios : Form, ICerrable
     {
+        public event EventHandler VentanaCerrada;
         private UsuarioRepository repo = new UsuarioRepository();
 
         public Admin_Usuarios(Size size)
@@ -150,10 +151,9 @@ namespace GeoIntegral.Views
                 MessageBox.Show("Error al cambiar estado: " + ex.Message);
             }
         }
-
         private void btnCerrar_App_Click(object sender, EventArgs e)
         {
-           this.Close();
+            VentanaCerrada?.Invoke(this, EventArgs.Empty);
         }
     }
 }

@@ -10,8 +10,10 @@ using System.Windows.Forms;
 
 namespace GeoIntegral.Views
 {
-    public partial class Usuario_Facturas : Form
+    public partial class Usuario_Facturas : Form, ICerrable
     {
+        public event EventHandler VentanaCerrada;
+
         public Usuario_Facturas()
         {
             InitializeComponent();

@@ -48,11 +48,12 @@
             this.FechaEmision = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlAcciones = new System.Windows.Forms.Panel();
+            this.lblTotalFacturas = new System.Windows.Forms.Label();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnCambiarEstado = new System.Windows.Forms.Button();
             this.btnVerDetalle = new System.Windows.Forms.Button();
             this.btnConvertir = new System.Windows.Forms.Button();
-            this.btnCambiarEstado = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.lblTotalFacturas = new System.Windows.Forms.Label();
+            this.btnCerrar_App = new Guna.UI2.WinForms.Guna2Button();
             this.gbFiltros.SuspendLayout();
             this.gbTabla.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFacturas)).BeginInit();
@@ -71,27 +72,34 @@
             this.gbFiltros.Controls.Add(this.dtpDesde);
             this.gbFiltros.Controls.Add(this.lblFiltroCliente);
             this.gbFiltros.Controls.Add(this.cmbFiltroCliente);
-            this.gbFiltros.Location = new System.Drawing.Point(13, 13);
+            this.gbFiltros.ForeColor = System.Drawing.SystemColors.Control;
+            this.gbFiltros.Location = new System.Drawing.Point(20, 20);
+            this.gbFiltros.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gbFiltros.Name = "gbFiltros";
-            this.gbFiltros.Size = new System.Drawing.Size(824, 115);
+            this.gbFiltros.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gbFiltros.Size = new System.Drawing.Size(1236, 177);
             this.gbFiltros.TabIndex = 0;
             this.gbFiltros.TabStop = false;
             this.gbFiltros.Text = "Filtros";
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(310, 83);
+            this.btnLimpiar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnLimpiar.Location = new System.Drawing.Point(465, 128);
+            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
+            this.btnLimpiar.Size = new System.Drawing.Size(112, 35);
             this.btnLimpiar.TabIndex = 9;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = true;
             // 
             // btnFiltrar
             // 
-            this.btnFiltrar.Location = new System.Drawing.Point(229, 83);
+            this.btnFiltrar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnFiltrar.Location = new System.Drawing.Point(344, 128);
+            this.btnFiltrar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnFiltrar.Name = "btnFiltrar";
-            this.btnFiltrar.Size = new System.Drawing.Size(75, 23);
+            this.btnFiltrar.Size = new System.Drawing.Size(112, 35);
             this.btnFiltrar.TabIndex = 8;
             this.btnFiltrar.Text = "Filtrar";
             this.btnFiltrar.UseVisualStyleBackColor = true;
@@ -99,75 +107,86 @@
             // lblFiltroEstado
             // 
             this.lblFiltroEstado.AutoSize = true;
-            this.lblFiltroEstado.Location = new System.Drawing.Point(6, 67);
+            this.lblFiltroEstado.Location = new System.Drawing.Point(9, 103);
+            this.lblFiltroEstado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFiltroEstado.Name = "lblFiltroEstado";
-            this.lblFiltroEstado.Size = new System.Drawing.Size(68, 13);
+            this.lblFiltroEstado.Size = new System.Drawing.Size(103, 20);
             this.lblFiltroEstado.TabIndex = 7;
             this.lblFiltroEstado.Text = "Filtro Estado:";
             // 
             // cmbFiltroEstado
             // 
             this.cmbFiltroEstado.FormattingEnabled = true;
-            this.cmbFiltroEstado.Location = new System.Drawing.Point(6, 83);
+            this.cmbFiltroEstado.Location = new System.Drawing.Point(9, 128);
+            this.cmbFiltroEstado.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbFiltroEstado.Name = "cmbFiltroEstado";
-            this.cmbFiltroEstado.Size = new System.Drawing.Size(188, 21);
+            this.cmbFiltroEstado.Size = new System.Drawing.Size(280, 28);
             this.cmbFiltroEstado.TabIndex = 6;
             // 
             // lblHasta
             // 
             this.lblHasta.AutoSize = true;
-            this.lblHasta.Location = new System.Drawing.Point(452, 27);
+            this.lblHasta.Location = new System.Drawing.Point(678, 42);
+            this.lblHasta.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHasta.Name = "lblHasta";
-            this.lblHasta.Size = new System.Drawing.Size(38, 13);
+            this.lblHasta.Size = new System.Drawing.Size(56, 20);
             this.lblHasta.TabIndex = 5;
             this.lblHasta.Text = "Hasta:";
             // 
             // lblDesde
             // 
             this.lblDesde.AutoSize = true;
-            this.lblDesde.Location = new System.Drawing.Point(226, 27);
+            this.lblDesde.Location = new System.Drawing.Point(339, 42);
+            this.lblDesde.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDesde.Name = "lblDesde";
-            this.lblDesde.Size = new System.Drawing.Size(41, 13);
+            this.lblDesde.Size = new System.Drawing.Size(60, 20);
             this.lblDesde.TabIndex = 4;
             this.lblDesde.Text = "Desde:";
             // 
             // dtpHasta
             // 
-            this.dtpHasta.Location = new System.Drawing.Point(455, 44);
+            this.dtpHasta.Location = new System.Drawing.Point(682, 68);
+            this.dtpHasta.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dtpHasta.Name = "dtpHasta";
-            this.dtpHasta.Size = new System.Drawing.Size(200, 20);
+            this.dtpHasta.Size = new System.Drawing.Size(298, 26);
             this.dtpHasta.TabIndex = 3;
             // 
             // dtpDesde
             // 
-            this.dtpDesde.Location = new System.Drawing.Point(229, 44);
+            this.dtpDesde.Location = new System.Drawing.Point(344, 68);
+            this.dtpDesde.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dtpDesde.Name = "dtpDesde";
-            this.dtpDesde.Size = new System.Drawing.Size(200, 20);
+            this.dtpDesde.Size = new System.Drawing.Size(298, 26);
             this.dtpDesde.TabIndex = 2;
             // 
             // lblFiltroCliente
             // 
             this.lblFiltroCliente.AutoSize = true;
-            this.lblFiltroCliente.Location = new System.Drawing.Point(7, 27);
+            this.lblFiltroCliente.Location = new System.Drawing.Point(10, 42);
+            this.lblFiltroCliente.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFiltroCliente.Name = "lblFiltroCliente";
-            this.lblFiltroCliente.Size = new System.Drawing.Size(67, 13);
+            this.lblFiltroCliente.Size = new System.Drawing.Size(101, 20);
             this.lblFiltroCliente.TabIndex = 1;
             this.lblFiltroCliente.Text = "Filtro Cliente:";
             // 
             // cmbFiltroCliente
             // 
             this.cmbFiltroCliente.FormattingEnabled = true;
-            this.cmbFiltroCliente.Location = new System.Drawing.Point(6, 43);
+            this.cmbFiltroCliente.Location = new System.Drawing.Point(9, 66);
+            this.cmbFiltroCliente.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbFiltroCliente.Name = "cmbFiltroCliente";
-            this.cmbFiltroCliente.Size = new System.Drawing.Size(188, 21);
+            this.cmbFiltroCliente.Size = new System.Drawing.Size(280, 28);
             this.cmbFiltroCliente.TabIndex = 0;
             // 
             // gbTabla
             // 
             this.gbTabla.Controls.Add(this.dgvFacturas);
-            this.gbTabla.Location = new System.Drawing.Point(12, 134);
+            this.gbTabla.ForeColor = System.Drawing.SystemColors.Control;
+            this.gbTabla.Location = new System.Drawing.Point(18, 206);
+            this.gbTabla.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gbTabla.Name = "gbTabla";
-            this.gbTabla.Size = new System.Drawing.Size(824, 174);
+            this.gbTabla.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gbTabla.Size = new System.Drawing.Size(1236, 268);
             this.gbTabla.TabIndex = 1;
             this.gbTabla.TabStop = false;
             this.gbTabla.Text = "Tabla";
@@ -184,46 +203,54 @@
             this.CostoTotal,
             this.FechaEmision,
             this.Estado});
-            this.dgvFacturas.Location = new System.Drawing.Point(7, 20);
+            this.dgvFacturas.Location = new System.Drawing.Point(10, 31);
+            this.dgvFacturas.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvFacturas.Name = "dgvFacturas";
             this.dgvFacturas.ReadOnly = true;
+            this.dgvFacturas.RowHeadersWidth = 62;
             this.dgvFacturas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvFacturas.Size = new System.Drawing.Size(811, 148);
+            this.dgvFacturas.Size = new System.Drawing.Size(1216, 228);
             this.dgvFacturas.TabIndex = 0;
             // 
             // NumeroFactura
             // 
             this.NumeroFactura.HeaderText = "N° Factura";
+            this.NumeroFactura.MinimumWidth = 8;
             this.NumeroFactura.Name = "NumeroFactura";
             this.NumeroFactura.ReadOnly = true;
             // 
             // NombreCliente
             // 
             this.NombreCliente.HeaderText = "Cliente";
+            this.NombreCliente.MinimumWidth = 8;
             this.NombreCliente.Name = "NombreCliente";
             this.NombreCliente.ReadOnly = true;
             // 
             // IdCotizacion
             // 
             this.IdCotizacion.HeaderText = "Cotización";
+            this.IdCotizacion.MinimumWidth = 8;
             this.IdCotizacion.Name = "IdCotizacion";
             this.IdCotizacion.ReadOnly = true;
             // 
             // CostoTotal
             // 
             this.CostoTotal.HeaderText = "Costo Total";
+            this.CostoTotal.MinimumWidth = 8;
             this.CostoTotal.Name = "CostoTotal";
             this.CostoTotal.ReadOnly = true;
             // 
             // FechaEmision
             // 
             this.FechaEmision.HeaderText = "Fecha Emisión";
+            this.FechaEmision.MinimumWidth = 8;
             this.FechaEmision.Name = "FechaEmision";
             this.FechaEmision.ReadOnly = true;
             // 
             // Estado
             // 
             this.Estado.HeaderText = "Estado";
+            this.Estado.MinimumWidth = 8;
             this.Estado.Name = "Estado";
             this.Estado.ReadOnly = true;
             // 
@@ -234,16 +261,49 @@
             this.pnlAcciones.Controls.Add(this.btnCambiarEstado);
             this.pnlAcciones.Controls.Add(this.btnVerDetalle);
             this.pnlAcciones.Controls.Add(this.btnConvertir);
-            this.pnlAcciones.Location = new System.Drawing.Point(13, 315);
+            this.pnlAcciones.Location = new System.Drawing.Point(20, 485);
+            this.pnlAcciones.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnlAcciones.Name = "pnlAcciones";
-            this.pnlAcciones.Size = new System.Drawing.Size(823, 188);
+            this.pnlAcciones.Size = new System.Drawing.Size(1234, 289);
             this.pnlAcciones.TabIndex = 2;
+            // 
+            // lblTotalFacturas
+            // 
+            this.lblTotalFacturas.AutoSize = true;
+            this.lblTotalFacturas.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblTotalFacturas.Location = new System.Drawing.Point(9, 29);
+            this.lblTotalFacturas.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTotalFacturas.Name = "lblTotalFacturas";
+            this.lblTotalFacturas.Size = new System.Drawing.Size(123, 20);
+            this.lblTotalFacturas.TabIndex = 4;
+            this.lblTotalFacturas.Text = "Total: 0 facturas";
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Location = new System.Drawing.Point(1068, 234);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(158, 35);
+            this.btnEliminar.TabIndex = 3;
+            this.btnEliminar.Text = "Eliminar Factura";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            // 
+            // btnCambiarEstado
+            // 
+            this.btnCambiarEstado.Location = new System.Drawing.Point(885, 234);
+            this.btnCambiarEstado.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnCambiarEstado.Name = "btnCambiarEstado";
+            this.btnCambiarEstado.Size = new System.Drawing.Size(174, 35);
+            this.btnCambiarEstado.TabIndex = 2;
+            this.btnCambiarEstado.Text = "Cambiar Estado";
+            this.btnCambiarEstado.UseVisualStyleBackColor = true;
             // 
             // btnVerDetalle
             // 
-            this.btnVerDetalle.Location = new System.Drawing.Point(10, 152);
+            this.btnVerDetalle.Location = new System.Drawing.Point(15, 234);
+            this.btnVerDetalle.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnVerDetalle.Name = "btnVerDetalle";
-            this.btnVerDetalle.Size = new System.Drawing.Size(92, 23);
+            this.btnVerDetalle.Size = new System.Drawing.Size(138, 35);
             this.btnVerDetalle.TabIndex = 1;
             this.btnVerDetalle.Text = "Ver Detalle";
             this.btnVerDetalle.UseVisualStyleBackColor = true;
@@ -251,48 +311,49 @@
             // 
             // btnConvertir
             // 
-            this.btnConvertir.Location = new System.Drawing.Point(116, 152);
+            this.btnConvertir.Location = new System.Drawing.Point(174, 234);
+            this.btnConvertir.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnConvertir.Name = "btnConvertir";
-            this.btnConvertir.Size = new System.Drawing.Size(188, 23);
+            this.btnConvertir.Size = new System.Drawing.Size(282, 35);
             this.btnConvertir.TabIndex = 0;
             this.btnConvertir.Text = "Convertir Cotización en Factura";
             this.btnConvertir.UseVisualStyleBackColor = true;
             // 
-            // btnCambiarEstado
+            // btnCerrar_App
             // 
-            this.btnCambiarEstado.Location = new System.Drawing.Point(590, 152);
-            this.btnCambiarEstado.Name = "btnCambiarEstado";
-            this.btnCambiarEstado.Size = new System.Drawing.Size(116, 23);
-            this.btnCambiarEstado.TabIndex = 2;
-            this.btnCambiarEstado.Text = "Cambiar Estado";
-            this.btnCambiarEstado.UseVisualStyleBackColor = true;
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Location = new System.Drawing.Point(712, 152);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(105, 23);
-            this.btnEliminar.TabIndex = 3;
-            this.btnEliminar.Text = "Eliminar Factura";
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            // 
-            // lblTotalFacturas
-            // 
-            this.lblTotalFacturas.AutoSize = true;
-            this.lblTotalFacturas.Location = new System.Drawing.Point(6, 19);
-            this.lblTotalFacturas.Name = "lblTotalFacturas";
-            this.lblTotalFacturas.Size = new System.Drawing.Size(84, 13);
-            this.lblTotalFacturas.TabIndex = 4;
-            this.lblTotalFacturas.Text = "Total: 0 facturas";
+            this.btnCerrar_App.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCerrar_App.BackColor = System.Drawing.Color.Transparent;
+            this.btnCerrar_App.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(22)))), ((int)(((byte)(54)))));
+            this.btnCerrar_App.BorderRadius = 8;
+            this.btnCerrar_App.BorderThickness = 3;
+            this.btnCerrar_App.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCerrar_App.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCerrar_App.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCerrar_App.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCerrar_App.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(32)))), ((int)(((byte)(87)))));
+            this.btnCerrar_App.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.btnCerrar_App.ForeColor = System.Drawing.Color.White;
+            this.btnCerrar_App.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnCerrar_App.HoverState.FillColor = System.Drawing.Color.Maroon;
+            this.btnCerrar_App.Location = new System.Drawing.Point(1440, 12);
+            this.btnCerrar_App.Name = "btnCerrar_App";
+            this.btnCerrar_App.PressedColor = System.Drawing.Color.Empty;
+            this.btnCerrar_App.Size = new System.Drawing.Size(188, 45);
+            this.btnCerrar_App.TabIndex = 19;
+            this.btnCerrar_App.Text = "Volver al inicio";
             // 
             // Usuario_Facturas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(849, 515);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(10)))), ((int)(((byte)(30)))));
+            this.ClientSize = new System.Drawing.Size(1640, 997);
+            this.Controls.Add(this.btnCerrar_App);
             this.Controls.Add(this.pnlAcciones);
             this.Controls.Add(this.gbTabla);
             this.Controls.Add(this.gbFiltros);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Usuario_Facturas";
             this.Text = "Usuario_Facturas";
             this.gbFiltros.ResumeLayout(false);
@@ -332,5 +393,6 @@
         private System.Windows.Forms.Label lblTotalFacturas;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnCambiarEstado;
+        private Guna.UI2.WinForms.Guna2Button btnCerrar_App;
     }
 }

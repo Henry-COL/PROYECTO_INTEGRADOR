@@ -59,12 +59,12 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(10)))), ((int)(((byte)(30)))));
             this.panel1.BackgroundImage = global::GeoIntegral.Properties.Resources.App_Wallpaper_Principal;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.btnCerrar_App);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.lbl);
             this.panel1.Controls.Add(this.cmbListaUsuarios);
             this.panel1.Controls.Add(this.btnModificar);
             this.panel1.Controls.Add(this.grp);
-            this.panel1.Controls.Add(this.btnCerrar_App);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -102,6 +102,9 @@
             // 
             this.cmbListaUsuarios.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbListaUsuarios.BackColor = System.Drawing.Color.Transparent;
+            this.cmbListaUsuarios.BorderColor = System.Drawing.Color.Silver;
+            this.cmbListaUsuarios.BorderRadius = 8;
+            this.cmbListaUsuarios.BorderThickness = 3;
             this.cmbListaUsuarios.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cmbListaUsuarios.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbListaUsuarios.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -117,17 +120,19 @@
             // btnModificar
             // 
             this.btnModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnModificar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(147)))), ((int)(((byte)(81)))));
             this.btnModificar.BorderRadius = 7;
+            this.btnModificar.BorderThickness = 5;
             this.btnModificar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnModificar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnModificar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnModificar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnModificar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(147)))), ((int)(((byte)(81)))));
+            this.btnModificar.FillColor = System.Drawing.Color.Green;
             this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.ForeColor = System.Drawing.Color.White;
-            this.btnModificar.Location = new System.Drawing.Point(1376, 897);
+            this.btnModificar.Location = new System.Drawing.Point(1376, 899);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(230, 49);
+            this.btnModificar.Size = new System.Drawing.Size(230, 44);
             this.btnModificar.TabIndex = 18;
             this.btnModificar.Text = "Modificar contraseña";
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
@@ -223,19 +228,23 @@
             // 
             this.btnCerrar_App.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCerrar_App.BackColor = System.Drawing.Color.Transparent;
+            this.btnCerrar_App.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(22)))), ((int)(((byte)(54)))));
             this.btnCerrar_App.BorderRadius = 8;
+            this.btnCerrar_App.BorderThickness = 3;
             this.btnCerrar_App.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnCerrar_App.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnCerrar_App.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnCerrar_App.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnCerrar_App.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnCerrar_App.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(32)))), ((int)(((byte)(87)))));
             this.btnCerrar_App.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.btnCerrar_App.ForeColor = System.Drawing.Color.White;
+            this.btnCerrar_App.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnCerrar_App.HoverState.FillColor = System.Drawing.Color.Maroon;
             this.btnCerrar_App.Location = new System.Drawing.Point(1440, 12);
             this.btnCerrar_App.Name = "btnCerrar_App";
+            this.btnCerrar_App.PressedColor = System.Drawing.Color.Empty;
             this.btnCerrar_App.Size = new System.Drawing.Size(188, 45);
-            this.btnCerrar_App.TabIndex = 16;
+            this.btnCerrar_App.TabIndex = 47;
             this.btnCerrar_App.Text = "Volver al inicio";
             this.btnCerrar_App.Click += new System.EventHandler(this.btnCerrar_App_Click);
             // 
@@ -259,7 +268,6 @@
 
         #endregion
         private System.Windows.Forms.Panel panel1;
-        private Guna.UI2.WinForms.Guna2Button btnCerrar_App;
         private System.Windows.Forms.GroupBox grp;
         private Guna.UI2.WinForms.Guna2ComboBox cmbListaUsuarios;
         private Guna.UI2.WinForms.Guna2Button btnModificar;
@@ -272,5 +280,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
         private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2Button btnCerrar_App;
     }
 }
