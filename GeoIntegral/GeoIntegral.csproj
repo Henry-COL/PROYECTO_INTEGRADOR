@@ -342,6 +342,7 @@
     <Content Include="Multimedia\App_CuentaPersonal_Imagen.png" />
     <Content Include="Multimedia\App_Login_Wallpaper.png" />
     <Content Include="Multimedia\App_Login_Wallpaper_.png" />
+    <Content Include="Multimedia\App_Minimizar.png" />
     <Content Include="Multimedia\App_Perfil.png" />
     <Content Include="Multimedia\App_Recuperar_Wallpaper.png" />
     <Content Include="Multimedia\App_Registrar_Cliente.png" />

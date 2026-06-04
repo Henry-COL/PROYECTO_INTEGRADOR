@@ -21,6 +21,7 @@ namespace GeoIntegral.Views
             EstilarTabla();
             CargarUsuarios();
 
+            
             this.Shown += (s, e) =>
             {
                 dgvListaUsuarios.ClearSelection();
@@ -148,6 +149,11 @@ namespace GeoIntegral.Views
             {
                 MessageBox.Show("Error al cambiar estado: " + ex.Message);
             }
+        }
+
+        private void btnCerrar_App_Click(object sender, EventArgs e)
+        {
+           this.Close();
         }
     }
 }

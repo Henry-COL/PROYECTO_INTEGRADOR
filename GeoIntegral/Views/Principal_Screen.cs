@@ -17,6 +17,7 @@ namespace GeoIntegral.Views
             this.usuarioSesion = usuario;
             CargarDatosUsuario();
             this.FormClosed += new FormClosedEventHandler(Principal_Screen_FormClosed);
+            this.WindowState = FormWindowState.Maximized;
         }
 
         private void Principal_Screen_FormClosed(object sender, FormClosedEventArgs e)
@@ -185,6 +186,23 @@ namespace GeoIntegral.Views
         {
             Panel_Ventanas.PerformLayout();
             CargarVentana(new Usuario_Cotizaciones(Panel_Ventanas.ClientSize));
+        }
+
+        private void btnMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void FormPrincipal_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                if (this.WindowState == FormWindowState.Maximized && this.FormBorderStyle == FormBorderStyle.None)
+                {
+                    this.WindowState = FormWindowState.Minimized;
+                    this.StartPosition = FormStartPosition.CenterScreen;
+                }
+            }
         }
     }
 }

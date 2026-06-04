@@ -84,11 +84,11 @@ namespace GeoIntegral.Views
                 var material = materiales.Find(m => m.Id == idMaterial);
 
                 double costoTotal = terreno.Volumen * material.CostoUnidad;
-                lblCostoTotal.Text = "Costo Total: $" + costoTotal.ToString("N2");
+                lblCostoTotal.Text = "$" + costoTotal.ToString("N2");
             }
             catch
             {
-                lblCostoTotal.Text = "Costo Total: --";
+                lblCostoTotal.Text = "Calculando...";
             }
         }
 
@@ -199,6 +199,11 @@ namespace GeoIntegral.Views
 
             MessageBox.Show(detalle, "Detalle Cotización",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void btnCerrar_App_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
