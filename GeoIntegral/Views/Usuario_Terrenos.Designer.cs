@@ -53,7 +53,15 @@
             this.txtY = new System.Windows.Forms.TextBox();
             this.txtX = new System.Windows.Forms.TextBox();
             this.gbResultados = new System.Windows.Forms.GroupBox();
-            this.picGrafica = new System.Windows.Forms.PictureBox();
+            this.glControl = new OpenTK.GLControl();
+            // glControl
+            this.glControl.BackColor = System.Drawing.Color.Black;
+            this.glControl.Location = new System.Drawing.Point(290, 31);
+            this.glControl.Name = "glControl";
+            this.glControl.Size = new System.Drawing.Size(634, 463);
+            this.glControl.TabIndex = 4;
+            this.glControl.VSync = false;
+            this.gbResultados.Controls.Add(this.glControl);
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCalcular = new System.Windows.Forms.Button();
             this.lblVolumen = new System.Windows.Forms.Label();
@@ -64,7 +72,6 @@
             this.gbPuntos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPuntos)).BeginInit();
             this.gbResultados.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picGrafica)).BeginInit();
             this.SuspendLayout();
             // 
             // gbDatos
@@ -306,7 +313,6 @@
             // 
             // gbResultados
             // 
-            this.gbResultados.Controls.Add(this.picGrafica);
             this.gbResultados.Controls.Add(this.btnGuardar);
             this.gbResultados.Controls.Add(this.btnCalcular);
             this.gbResultados.Controls.Add(this.lblVolumen);
@@ -320,15 +326,6 @@
             this.gbResultados.TabIndex = 3;
             this.gbResultados.TabStop = false;
             this.gbResultados.Text = "Resultados";
-            // 
-            // picGrafica
-            // 
-            this.picGrafica.Location = new System.Drawing.Point(290, 31);
-            this.picGrafica.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.picGrafica.Name = "picGrafica";
-            this.picGrafica.Size = new System.Drawing.Size(634, 463);
-            this.picGrafica.TabIndex = 4;
-            this.picGrafica.TabStop = false;
             // 
             // btnGuardar
             // 
@@ -421,7 +418,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvPuntos)).EndInit();
             this.gbResultados.ResumeLayout(false);
             this.gbResultados.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picGrafica)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -449,7 +445,6 @@
         private System.Windows.Forms.DataGridView dgvPuntos;
         private System.Windows.Forms.GroupBox gbPuntos;
         private System.Windows.Forms.GroupBox gbResultados;
-        private System.Windows.Forms.PictureBox picGrafica;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnCalcular;
         private System.Windows.Forms.Label lblVolumen;
@@ -458,5 +453,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColY;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColZ;
         private Guna.UI2.WinForms.Guna2Button btnCerrar_App;
+        private OpenTK.GLControl glControl;
     }
 }

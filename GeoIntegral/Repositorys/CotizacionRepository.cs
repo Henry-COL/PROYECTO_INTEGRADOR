@@ -60,5 +60,35 @@ namespace GeoIntegral.Repositorys
         {
             return ObtenerTodas().FirstOrDefault(c => c.IdCotizacion == id);
         }
+
+        public bool CambiarEstado(int idCotizacion, string nuevoEstado)
+        {
+            try
+            {
+                var lineas = File.ReadAllLines(rutaCotizaciones).ToList();
+
+                for (int i = 1; i < lineas.Count; i++)
+                {
+                    if (string.IsNullOrWhiteSpace(lineas[i])) continue;
+                    string[] d = lineas[i].Split(';');
+                    if (d.Length < 7) continue;
+
+                    if (int.Parse(d[0]) == idCotizacion)
+                    {
+                        d[6] = nuevoEstado;
+                        lineas[i] = string.Join(";", d);
+                        break;
+                    }
+                }
+
+                File.WriteAllLines(rutaCotizaciones, lineas);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cambiar estado cotización: " + ex.Message);
+                return false;
+            }
+        }
     }
 }

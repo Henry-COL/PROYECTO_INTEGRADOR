@@ -1,6 +1,5 @@
 ﻿using GeoIntegral.Models;
 using GeoIntegral.Repositorys;
-using MathNet.Numerics.Integration;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -52,11 +51,21 @@ namespace GeoIntegral.Controller
             double yMin = puntos.Min(p => p.Y);
             double yMax = puntos.Max(p => p.Y);
 
-            double volumen = GaussLegendreRule.Integrate(
-                x => GaussLegendreRule.Integrate(
-                    y => ObtenerZ(x, y),
-                    yMin, yMax, 64),
-                xMin, xMax, 64);
+            int n = 50;
+            double dx = (xMax - xMin) / n;
+            double dy = (yMax - yMin) / n;
+            double volumen = 0;
+
+            for (int i = 0; i < n; i++)
+            {
+                for (int j = 0; j < n; j++)
+                {
+                    double x = xMin + (i + 0.5) * dx;
+                    double y = yMin + (j + 0.5) * dy;
+                    double z = ObtenerZ(x, y);
+                    volumen += z * dx * dy;
+                }
+            }
 
             return Math.Abs(volumen);
         }
@@ -78,6 +87,7 @@ namespace GeoIntegral.Controller
                 sumaPesos += peso;
                 sumaZPeso += peso * p.Z;
             }
+
             return sumaZPeso / sumaPesos;
         }
 
@@ -113,6 +123,11 @@ namespace GeoIntegral.Controller
         public List<PuntoTerreno> ObtenerCoordenadas(int idTerreno)
         {
             return repo.ObtenerCoordenadas(idTerreno);
+        }
+
+        public double ObtenerZPublico(double x, double y)
+        {
+            return ObtenerZ(x, y);
         }
     }
 }

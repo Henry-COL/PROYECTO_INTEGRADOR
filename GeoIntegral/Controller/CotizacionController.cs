@@ -35,5 +35,10 @@ namespace GeoIntegral.Controller
         {
             return repo.ObtenerPorId(id);
         }
+
+        public bool CambiarEstado(int idCotizacion, string nuevoEstado)
+        {
+            return repo.CambiarEstado(idCotizacion, nuevoEstado);
+        }
     }
 }

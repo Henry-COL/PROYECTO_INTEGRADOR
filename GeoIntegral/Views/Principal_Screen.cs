@@ -182,7 +182,8 @@ namespace GeoIntegral.Views
 
         private void btnLista_Facturas_Click(object sender, EventArgs e)
         {
-            CargarVentana(new Usuario_Facturas(Panel_Ventanas.ClientSize), sender as Control);
+            bool esAdmin = usuarioSesion != null && usuarioSesion.Rol == RolUsuario.Administrador;
+            CargarVentana(new Usuario_Facturas(Panel_Ventanas.ClientSize, esAdmin), sender as Control);
         }
         //><><>< Fin Botones ><><><>//
     }
