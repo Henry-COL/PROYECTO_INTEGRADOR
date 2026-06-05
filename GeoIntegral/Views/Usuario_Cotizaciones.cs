@@ -3,6 +3,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using GeoIntegral.Controller;
 using GeoIntegral.Models;
+using HelixToolkit.Maths;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace GeoIntegral.Views
@@ -20,11 +21,13 @@ namespace GeoIntegral.Views
             InitializeComponent();
             this.Size = tamano;
 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView1.ReadOnly = true;
+            dtgCotizaciones.AllowUserToAddRows = false;
+            dtgCotizaciones.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dtgCotizaciones.ReadOnly = true;
+            EstilarTabla();
 
-            lblCostoTotal.Text = "Costo Total: --";
+            lblCostoTotal.Text = "$ 0.00";
+            lblCostoTotal.ForeColor = System.Drawing.Color.White;
 
             cmbMateriales.SelectedIndexChanged += new EventHandler(ActualizarCostoTotal);
             comboBox1.SelectedIndexChanged += new EventHandler(ActualizarCostoTotal);
@@ -66,7 +69,8 @@ namespace GeoIntegral.Views
         {
             if (comboBox1.SelectedItem == null || cmbMateriales.SelectedItem == null)
             {
-                lblCostoTotal.Text = "Costo Total: --";
+                lblCostoTotal.Text = "Calculando...";
+                lblCostoTotal.ForeColor = System.Drawing.Color.White;
                 return;
             }
 
@@ -85,17 +89,19 @@ namespace GeoIntegral.Views
                 var material = materiales.Find(m => m.Id == idMaterial);
 
                 double costoTotal = terreno.Volumen * material.CostoUnidad;
-                lblCostoTotal.Text = "$" + costoTotal.ToString("N2");
+                lblCostoTotal.Text = "$ " + costoTotal.ToString("N2");
+                lblCostoTotal.ForeColor = System.Drawing.Color.Khaki;
             }
             catch
             {
                 lblCostoTotal.Text = "Calculando...";
+                lblCostoTotal.ForeColor = System.Drawing.Color.White;
             }
         }
 
         private void CargarCotizaciones()
         {
-            dataGridView1.Rows.Clear();
+            dtgCotizaciones.Rows.Clear();
             var cotizaciones = cotizacionController.ObtenerTodas();
             var clientes = clienteController.ObtenerTodosLosClientes();
             var terrenos = terrenoController.ObtenerTodosLosTerrenos();
@@ -108,7 +114,7 @@ namespace GeoIntegral.Views
                 string nombreCliente = cliente != null ? cliente.Nombre : c.IdentificacionCliente.ToString();
                 string nombreTerreno = terreno != null ? terreno.NombreProyecto : c.IdTerreno.ToString();
 
-                dataGridView1.Rows.Add(
+                dtgCotizaciones.Rows.Add(
                     c.IdCotizacion,
                     nombreCliente,
                     nombreTerreno,
@@ -119,6 +125,46 @@ namespace GeoIntegral.Views
                 );
             }
         }
+
+        private void EstilarTabla()
+        {
+            dtgCotizaciones.BackgroundColor = System.Drawing.Color.FromArgb(15, 23, 33);
+            dtgCotizaciones.GridColor = System.Drawing.Color.FromArgb(30, 45, 60);
+            dtgCotizaciones.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dtgCotizaciones.RowHeadersVisible = false;
+            dtgCotizaciones.AllowUserToAddRows = false;
+            dtgCotizaciones.AllowUserToResizeRows = false;
+            dtgCotizaciones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            dtgCotizaciones.ReadOnly = true;
+            dtgCotizaciones.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dtgCotizaciones.EnableHeadersVisualStyles = false;
+
+            // Encabezado
+            dtgCotizaciones.ColumnHeadersDefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(20, 32, 46);
+            dtgCotizaciones.ColumnHeadersDefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(180, 210, 230);
+            dtgCotizaciones.ColumnHeadersDefaultCellStyle.Font = new System.Drawing.Font("Segoe UI", 10f, System.Drawing.FontStyle.Bold);
+            dtgCotizaciones.ColumnHeadersDefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dtgCotizaciones.ColumnHeadersHeight = 38;
+            dtgCotizaciones.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+
+            // Filas normales
+            dtgCotizaciones.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(22, 34, 48);
+            dtgCotizaciones.DefaultCellStyle.ForeColor = System.Drawing.Color.White;
+            dtgCotizaciones.DefaultCellStyle.Font = new System.Drawing.Font("Segoe UI", 9.5f);
+            dtgCotizaciones.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+
+            // Fila seleccionada
+            dtgCotizaciones.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(7, 16, 30);
+            dtgCotizaciones.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White;
+
+            // Filas alternadas
+            dtgCotizaciones.AlternatingRowsDefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(18, 28, 40);
+            dtgCotizaciones.AlternatingRowsDefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(26, 95, 80);
+            dtgCotizaciones.AlternatingRowsDefaultCellStyle.SelectionForeColor = System.Drawing.Color.White;
+
+            dtgCotizaciones.RowTemplate.Height = 32;
+        }
+
 
         private void btnGenerarCotizacion_Click(object sender, EventArgs e)
         {
@@ -170,14 +216,14 @@ namespace GeoIntegral.Views
 
         private void btnVerDetalle_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count == 0)
+            if (dtgCotizaciones.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Seleccione una cotización de la tabla.",
                     "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            int id = int.Parse(dataGridView1.SelectedRows[0].Cells["IdCotizacion"].Value.ToString());
+            int id = int.Parse(dtgCotizaciones.SelectedRows[0].Cells["IdCotizacion"].Value.ToString());
             var cotizacion = cotizacionController.ObtenerPorId(id);
             var clientes = clienteController.ObtenerTodosLosClientes();
             var terrenos = terrenoController.ObtenerTodosLosTerrenos();
