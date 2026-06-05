@@ -236,12 +236,6 @@
     <Compile Include="Views\Recuperar_Screen.Designer.cs">
       <DependentUpon>Recuperar_Screen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Registrar_Cliente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\Registrar_Cliente.Designer.cs">
-      <DependentUpon>Registrar_Cliente.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\Registrar_Screen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -310,9 +304,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Recuperar_Screen.resx">
       <DependentUpon>Recuperar_Screen.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\Registrar_Cliente.resx">
-      <DependentUpon>Registrar_Cliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Registrar_Screen.resx">
       <DependentUpon>Registrar_Screen.cs</DependentUpon>

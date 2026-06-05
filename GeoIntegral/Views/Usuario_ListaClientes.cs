@@ -3,6 +3,7 @@ using GeoIntegral.Models;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GeoIntegral.Views
@@ -17,6 +18,7 @@ namespace GeoIntegral.Views
         {
             InitializeComponent();
             this.Size = tamano;
+            btnRegistrarCliente.Click += new EventHandler(btnRegistrarCliente_Click);
             dgvClientes.AllowUserToAddRows = false;
             dgvClientes.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvClientes.ReadOnly = true;
@@ -92,6 +94,105 @@ namespace GeoIntegral.Views
                     CargarClientes();
                 }
             }
+        }
+
+        private void btnRegistrarCliente_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Limpiar mensajes
+                lblMensaje_Usuario.Visible = false;
+                lblMensaje_Identificacion.Visible = false;
+                lblMensaje_Gmail.Visible = false;
+                lblMensaje_Telefono.Visible = false;
+
+                bool validar = true;
+
+                // Validar campos vacíos
+                if (txtNombre.Text == "")
+                {
+                    lblMensaje_Usuario.Visible = true;
+                    validar = false;
+                }
+                if (txtIndentificacion.Text == "")
+                {
+                    lblMensaje_Identificacion.Visible = true;
+                    validar = false;
+                }
+                if (txtGmail.Text == "")
+                {
+                    lblMensaje_Gmail.Visible = true;
+                    validar = false;
+                }
+                if (txtTelefono.Text == "")
+                {
+                    lblMensaje_Telefono.Visible = true;
+                    validar = false;
+                }
+
+                if (!validar) return;
+
+                // Validar que la identificación sea numérica
+                if (!long.TryParse(txtIndentificacion.Text, out long identificacion))
+                {
+                    lblMensaje_Identificacion.Text = "Solo números*";
+                    lblMensaje_Identificacion.Visible = true;
+                    return;
+                }
+
+                // Validar que el teléfono sea numérico
+                if (!long.TryParse(txtTelefono.Text, out long _))
+                {
+                    lblMensaje_Telefono.Text = "Solo números*";
+                    lblMensaje_Telefono.Visible = true;
+                    return;
+                }
+
+                // Verificar que la identificación no esté duplicada
+                ClienteController control = new ClienteController();
+                if (control.ClienteExiste(identificacion))
+                {
+                    lblMensaje_Identificacion.Text = "Ya existe un cliente con esa identificación*";
+                    lblMensaje_Identificacion.Visible = true;
+                    return;
+                }
+
+                // Registrar cliente
+                Cliente clienteParaRegistrar = new Cliente(
+                    identificacion,
+                    txtNombre.Text,
+                    txtTelefono.Text,
+                    txtGmail.Text
+                );
+
+                if (control.RegistrarCliente(clienteParaRegistrar))
+                {
+                    MessageBox.Show("¡Cliente registrado con éxito!", "GeoIntegral",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    // Limpiar campos
+                    txtNombre.Text = "";
+                    txtIndentificacion.Text = "";
+                    txtGmail.Text = "";
+                    txtTelefono.Text = "";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al registrar cliente: " + ex.Message);
+            }
+        }
+
+        private async void btnLimpiar_Campos_Click(object sender, EventArgs e)
+        {
+            txtNombre.Text = "";
+            txtIndentificacion.Text = "";
+            txtGmail.Text = "";
+            txtTelefono.Text = "";
+
+            lblMensaje_Limpiar_Campos.Visible = true;
+            await Task.Delay(1000);
+            lblMensaje_Limpiar_Campos.Visible = false;
         }
     }
 }
