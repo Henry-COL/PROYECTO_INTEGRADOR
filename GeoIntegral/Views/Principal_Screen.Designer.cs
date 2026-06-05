@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal_Screen));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnCerrar_App_Principal = new Guna.UI2.WinForms.Guna2Button();
             this.btnMinimizar = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Cerrar_Sesion = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
@@ -47,34 +48,33 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnAdmin_Menu = new Guna.UI2.WinForms.Guna2Button();
             this.btnMenuMateriales = new Guna.UI2.WinForms.Guna2Button();
-            this.btnMenuListaClientes = new Guna.UI2.WinForms.Guna2Button();
-            this.btnMenuRegistrarClientes = new Guna.UI2.WinForms.Guna2Button();
+            this.btnLista_Facturas = new Guna.UI2.WinForms.Guna2Button();
+            this.btnMenu_Registro_Clientes = new Guna.UI2.WinForms.Guna2Button();
             this.Panel_Menu = new System.Windows.Forms.Panel();
-            this.btnCerrar_App_Principal = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.guna2Panel8 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label14 = new System.Windows.Forms.Label();
             this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.guna2Panel7 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.guna2Panel8 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label14 = new System.Windows.Forms.Label();
+            this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -82,18 +82,18 @@
             this.guna2Panel1.SuspendLayout();
             this.Admin_Panel.SuspendLayout();
             this.Panel_Menu.SuspendLayout();
-            this.guna2Panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
-            this.guna2Panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
-            this.guna2Panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
+            this.guna2Panel8.SuspendLayout();
             this.guna2Panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
+            this.guna2Panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             this.guna2Panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).BeginInit();
-            this.guna2Panel8.SuspendLayout();
+            this.guna2Panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            this.guna2Panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -110,6 +110,27 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1920, 83);
             this.panel1.TabIndex = 0;
+            // 
+            // btnCerrar_App_Principal
+            // 
+            this.btnCerrar_App_Principal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCerrar_App_Principal.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(32)))), ((int)(((byte)(87)))));
+            this.btnCerrar_App_Principal.BorderRadius = 8;
+            this.btnCerrar_App_Principal.BorderThickness = 2;
+            this.btnCerrar_App_Principal.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCerrar_App_Principal.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCerrar_App_Principal.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCerrar_App_Principal.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCerrar_App_Principal.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(22)))), ((int)(((byte)(54)))));
+            this.btnCerrar_App_Principal.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnCerrar_App_Principal.ForeColor = System.Drawing.Color.White;
+            this.btnCerrar_App_Principal.ImageSize = new System.Drawing.Size(60, 60);
+            this.btnCerrar_App_Principal.Location = new System.Drawing.Point(1848, 11);
+            this.btnCerrar_App_Principal.Name = "btnCerrar_App_Principal";
+            this.btnCerrar_App_Principal.Size = new System.Drawing.Size(60, 60);
+            this.btnCerrar_App_Principal.TabIndex = 50;
+            this.btnCerrar_App_Principal.Text = "X";
+            this.btnCerrar_App_Principal.Click += new System.EventHandler(this.btnCerrar_App_Principal_Click);
             // 
             // btnMinimizar
             // 
@@ -259,8 +280,8 @@
             this.guna2Panel1.Controls.Add(this.btnTerrenos);
             this.guna2Panel1.Controls.Add(this.Admin_Panel);
             this.guna2Panel1.Controls.Add(this.btnMenuMateriales);
-            this.guna2Panel1.Controls.Add(this.btnMenuListaClientes);
-            this.guna2Panel1.Controls.Add(this.btnMenuRegistrarClientes);
+            this.guna2Panel1.Controls.Add(this.btnLista_Facturas);
+            this.guna2Panel1.Controls.Add(this.btnMenu_Registro_Clientes);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(16)))), ((int)(((byte)(30)))));
             this.guna2Panel1.Location = new System.Drawing.Point(0, 83);
@@ -411,54 +432,54 @@
             this.btnMenuMateriales.Text = "Materiales";
             this.btnMenuMateriales.Click += new System.EventHandler(this.btnMenuMateriales_Click);
             // 
-            // btnMenuListaClientes
+            // btnLista_Facturas
             // 
-            this.btnMenuListaClientes.BackColor = System.Drawing.Color.Transparent;
-            this.btnMenuListaClientes.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(41)))), ((int)(((byte)(76)))));
-            this.btnMenuListaClientes.BorderRadius = 6;
-            this.btnMenuListaClientes.BorderThickness = 3;
-            this.btnMenuListaClientes.DisabledState.BorderColor = System.Drawing.Color.White;
-            this.btnMenuListaClientes.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(33)))), ((int)(((byte)(61)))));
-            this.btnMenuListaClientes.DisabledState.ForeColor = System.Drawing.Color.White;
-            this.btnMenuListaClientes.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(24)))), ((int)(((byte)(46)))));
-            this.btnMenuListaClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMenuListaClientes.ForeColor = System.Drawing.Color.White;
-            this.btnMenuListaClientes.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(24)))), ((int)(((byte)(46)))));
-            this.btnMenuListaClientes.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(41)))), ((int)(((byte)(76)))));
-            this.btnMenuListaClientes.Location = new System.Drawing.Point(27, 125);
-            this.btnMenuListaClientes.Name = "btnMenuListaClientes";
-            this.btnMenuListaClientes.Size = new System.Drawing.Size(220, 60);
-            this.btnMenuListaClientes.TabIndex = 1;
-            this.btnMenuListaClientes.Text = "Clientes";
-            this.btnMenuListaClientes.Click += new System.EventHandler(this.btnMenuListaClientes_Click);
+            this.btnLista_Facturas.BackColor = System.Drawing.Color.Transparent;
+            this.btnLista_Facturas.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(41)))), ((int)(((byte)(76)))));
+            this.btnLista_Facturas.BorderRadius = 6;
+            this.btnLista_Facturas.BorderThickness = 3;
+            this.btnLista_Facturas.DisabledState.BorderColor = System.Drawing.Color.White;
+            this.btnLista_Facturas.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(33)))), ((int)(((byte)(61)))));
+            this.btnLista_Facturas.DisabledState.ForeColor = System.Drawing.Color.White;
+            this.btnLista_Facturas.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(24)))), ((int)(((byte)(46)))));
+            this.btnLista_Facturas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLista_Facturas.ForeColor = System.Drawing.Color.White;
+            this.btnLista_Facturas.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(24)))), ((int)(((byte)(46)))));
+            this.btnLista_Facturas.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(41)))), ((int)(((byte)(76)))));
+            this.btnLista_Facturas.Location = new System.Drawing.Point(27, 125);
+            this.btnLista_Facturas.Name = "btnLista_Facturas";
+            this.btnLista_Facturas.Size = new System.Drawing.Size(220, 60);
+            this.btnLista_Facturas.TabIndex = 1;
+            this.btnLista_Facturas.Text = "Facturas";
+            this.btnLista_Facturas.Click += new System.EventHandler(this.btnLista_Facturas_Click);
             // 
-            // btnMenuRegistrarClientes
+            // btnMenu_Registro_Clientes
             // 
-            this.btnMenuRegistrarClientes.BackColor = System.Drawing.Color.Transparent;
-            this.btnMenuRegistrarClientes.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(41)))), ((int)(((byte)(76)))));
-            this.btnMenuRegistrarClientes.BorderRadius = 6;
-            this.btnMenuRegistrarClientes.BorderThickness = 3;
-            this.btnMenuRegistrarClientes.DisabledState.BorderColor = System.Drawing.Color.White;
-            this.btnMenuRegistrarClientes.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(33)))), ((int)(((byte)(61)))));
-            this.btnMenuRegistrarClientes.DisabledState.ForeColor = System.Drawing.Color.White;
-            this.btnMenuRegistrarClientes.DisabledState.Image = global::GeoIntegral.Properties.Resources.App_Registrar_Cliente;
-            this.btnMenuRegistrarClientes.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(24)))), ((int)(((byte)(46)))));
-            this.btnMenuRegistrarClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.btnMenuRegistrarClientes.ForeColor = System.Drawing.Color.White;
-            this.btnMenuRegistrarClientes.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(24)))), ((int)(((byte)(46)))));
-            this.btnMenuRegistrarClientes.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(41)))), ((int)(((byte)(76)))));
-            this.btnMenuRegistrarClientes.HoverState.ForeColor = System.Drawing.Color.SteelBlue;
-            this.btnMenuRegistrarClientes.Image = global::GeoIntegral.Properties.Resources.App_Registrar_Cliente;
-            this.btnMenuRegistrarClientes.ImageOffset = new System.Drawing.Point(-2, 0);
-            this.btnMenuRegistrarClientes.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnMenuRegistrarClientes.Location = new System.Drawing.Point(27, 40);
-            this.btnMenuRegistrarClientes.Name = "btnMenuRegistrarClientes";
-            this.btnMenuRegistrarClientes.PressedColor = System.Drawing.Color.Empty;
-            this.btnMenuRegistrarClientes.Size = new System.Drawing.Size(220, 60);
-            this.btnMenuRegistrarClientes.TabIndex = 0;
-            this.btnMenuRegistrarClientes.Text = "Registrar Clientes";
-            this.btnMenuRegistrarClientes.TextOffset = new System.Drawing.Point(-1, 0);
-            this.btnMenuRegistrarClientes.Click += new System.EventHandler(this.btnMenuRegistrarClientes_Click);
+            this.btnMenu_Registro_Clientes.BackColor = System.Drawing.Color.Transparent;
+            this.btnMenu_Registro_Clientes.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(41)))), ((int)(((byte)(76)))));
+            this.btnMenu_Registro_Clientes.BorderRadius = 6;
+            this.btnMenu_Registro_Clientes.BorderThickness = 3;
+            this.btnMenu_Registro_Clientes.DisabledState.BorderColor = System.Drawing.Color.White;
+            this.btnMenu_Registro_Clientes.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(33)))), ((int)(((byte)(61)))));
+            this.btnMenu_Registro_Clientes.DisabledState.ForeColor = System.Drawing.Color.White;
+            this.btnMenu_Registro_Clientes.DisabledState.Image = global::GeoIntegral.Properties.Resources.App_Registrar_Cliente;
+            this.btnMenu_Registro_Clientes.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(24)))), ((int)(((byte)(46)))));
+            this.btnMenu_Registro_Clientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.btnMenu_Registro_Clientes.ForeColor = System.Drawing.Color.White;
+            this.btnMenu_Registro_Clientes.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(24)))), ((int)(((byte)(46)))));
+            this.btnMenu_Registro_Clientes.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(41)))), ((int)(((byte)(76)))));
+            this.btnMenu_Registro_Clientes.HoverState.ForeColor = System.Drawing.Color.SteelBlue;
+            this.btnMenu_Registro_Clientes.Image = global::GeoIntegral.Properties.Resources.App_Registrar_Cliente;
+            this.btnMenu_Registro_Clientes.ImageOffset = new System.Drawing.Point(-2, 0);
+            this.btnMenu_Registro_Clientes.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnMenu_Registro_Clientes.Location = new System.Drawing.Point(27, 40);
+            this.btnMenu_Registro_Clientes.Name = "btnMenu_Registro_Clientes";
+            this.btnMenu_Registro_Clientes.PressedColor = System.Drawing.Color.Empty;
+            this.btnMenu_Registro_Clientes.Size = new System.Drawing.Size(220, 60);
+            this.btnMenu_Registro_Clientes.TabIndex = 0;
+            this.btnMenu_Registro_Clientes.Text = "Registro Clientes";
+            this.btnMenu_Registro_Clientes.TextOffset = new System.Drawing.Point(-1, 0);
+            this.btnMenu_Registro_Clientes.Click += new System.EventHandler(this.btnMenu_Registro_Clientes_Click);
             // 
             // Panel_Menu
             // 
@@ -478,195 +499,32 @@
             this.Panel_Menu.Size = new System.Drawing.Size(1920, 1080);
             this.Panel_Menu.TabIndex = 1;
             // 
-            // btnCerrar_App_Principal
+            // guna2Panel8
             // 
-            this.btnCerrar_App_Principal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCerrar_App_Principal.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(32)))), ((int)(((byte)(87)))));
-            this.btnCerrar_App_Principal.BorderRadius = 8;
-            this.btnCerrar_App_Principal.BorderThickness = 2;
-            this.btnCerrar_App_Principal.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnCerrar_App_Principal.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnCerrar_App_Principal.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnCerrar_App_Principal.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnCerrar_App_Principal.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(22)))), ((int)(((byte)(54)))));
-            this.btnCerrar_App_Principal.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnCerrar_App_Principal.ForeColor = System.Drawing.Color.White;
-            this.btnCerrar_App_Principal.ImageSize = new System.Drawing.Size(60, 60);
-            this.btnCerrar_App_Principal.Location = new System.Drawing.Point(1848, 11);
-            this.btnCerrar_App_Principal.Name = "btnCerrar_App_Principal";
-            this.btnCerrar_App_Principal.Size = new System.Drawing.Size(60, 60);
-            this.btnCerrar_App_Principal.TabIndex = 50;
-            this.btnCerrar_App_Principal.Text = "X";
-            this.btnCerrar_App_Principal.Click += new System.EventHandler(this.btnCerrar_App_Principal_Click);
+            this.guna2Panel8.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(41)))), ((int)(((byte)(76)))));
+            this.guna2Panel8.BorderRadius = 8;
+            this.guna2Panel8.BorderThickness = 5;
+            this.guna2Panel8.Controls.Add(this.label14);
+            this.guna2Panel8.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(25)))), ((int)(((byte)(46)))));
+            this.guna2Panel8.Location = new System.Drawing.Point(339, 989);
+            this.guna2Panel8.Name = "guna2Panel8";
+            this.guna2Panel8.Size = new System.Drawing.Size(1304, 70);
+            this.guna2Panel8.TabIndex = 56;
             // 
-            // guna2Panel3
+            // label14
             // 
-            this.guna2Panel3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Panel3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(41)))), ((int)(((byte)(76)))));
-            this.guna2Panel3.BorderRadius = 8;
-            this.guna2Panel3.BorderThickness = 5;
-            this.guna2Panel3.Controls.Add(this.label4);
-            this.guna2Panel3.Controls.Add(this.guna2PictureBox1);
-            this.guna2Panel3.Controls.Add(this.label2);
-            this.guna2Panel3.Controls.Add(this.label3);
-            this.guna2Panel3.Controls.Add(this.pictureBox3);
-            this.guna2Panel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(25)))), ((int)(((byte)(46)))));
-            this.guna2Panel3.Location = new System.Drawing.Point(295, 102);
-            this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(1605, 369);
-            this.guna2Panel3.TabIndex = 54;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Image = global::GeoIntegral.Properties.Resources.GeoIntegral_LogoTipo;
-            this.pictureBox3.Location = new System.Drawing.Point(3, 24);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(513, 205);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 44;
-            this.pictureBox3.TabStop = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label3.Location = new System.Drawing.Point(22, 188);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(505, 60);
-            this.label3.TabIndex = 46;
-            this.label3.Text = "Herramienta especializada en el cálculo de áreas y volúmenes\r\nutilizando integral" +
-    "es dobles, con representación\r\ngráfica en los ejes X, Y y Z.";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label2.Location = new System.Drawing.Point(22, 46);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(112, 20);
-            this.label2.TabIndex = 45;
-            this.label2.Text = "Bienvenido a";
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.BorderRadius = 1;
-            this.guna2PictureBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(117)))), ((int)(((byte)(212)))));
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(27, 316);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(4, 35);
-            this.guna2PictureBox1.TabIndex = 48;
-            this.guna2PictureBox1.TabStop = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.SystemColors.Info;
-            this.label4.Location = new System.Drawing.Point(38, 321);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(515, 25);
-            this.label4.TabIndex = 49;
-            this.label4.Text = "\"Matemáticas que transforman ideas en soluciones.\"";
-            // 
-            // guna2Panel4
-            // 
-            this.guna2Panel4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Panel4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(41)))), ((int)(((byte)(76)))));
-            this.guna2Panel4.BorderRadius = 8;
-            this.guna2Panel4.BorderThickness = 5;
-            this.guna2Panel4.Controls.Add(this.guna2PictureBox2);
-            this.guna2Panel4.Controls.Add(this.label6);
-            this.guna2Panel4.Controls.Add(this.label7);
-            this.guna2Panel4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(25)))), ((int)(((byte)(46)))));
-            this.guna2Panel4.Location = new System.Drawing.Point(298, 492);
-            this.guna2Panel4.Name = "guna2Panel4";
-            this.guna2Panel4.Size = new System.Drawing.Size(391, 369);
-            this.guna2Panel4.TabIndex = 55;
-            // 
-            // guna2PictureBox2
-            // 
-            this.guna2PictureBox2.BorderRadius = 1;
-            this.guna2PictureBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(117)))), ((int)(((byte)(212)))));
-            this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(27, 316);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(4, 35);
-            this.guna2PictureBox2.TabIndex = 48;
-            this.guna2PictureBox2.TabStop = false;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label6.Location = new System.Drawing.Point(22, 46);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(112, 20);
-            this.label6.TabIndex = 45;
-            this.label6.Text = "Bienvenido a";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label7.Location = new System.Drawing.Point(37, 323);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(108, 20);
-            this.label7.TabIndex = 46;
-            this.label7.Text = "Menu rapido";
-            // 
-            // guna2Panel5
-            // 
-            this.guna2Panel5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Panel5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(41)))), ((int)(((byte)(76)))));
-            this.guna2Panel5.BorderRadius = 8;
-            this.guna2Panel5.BorderThickness = 5;
-            this.guna2Panel5.Controls.Add(this.guna2PictureBox3);
-            this.guna2Panel5.Controls.Add(this.label5);
-            this.guna2Panel5.Controls.Add(this.label8);
-            this.guna2Panel5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(25)))), ((int)(((byte)(46)))));
-            this.guna2Panel5.Location = new System.Drawing.Point(702, 492);
-            this.guna2Panel5.Name = "guna2Panel5";
-            this.guna2Panel5.Size = new System.Drawing.Size(391, 369);
-            this.guna2Panel5.TabIndex = 56;
-            // 
-            // guna2PictureBox3
-            // 
-            this.guna2PictureBox3.BorderRadius = 1;
-            this.guna2PictureBox3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(117)))), ((int)(((byte)(212)))));
-            this.guna2PictureBox3.ImageRotate = 0F;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(27, 316);
-            this.guna2PictureBox3.Name = "guna2PictureBox3";
-            this.guna2PictureBox3.Size = new System.Drawing.Size(4, 35);
-            this.guna2PictureBox3.TabIndex = 48;
-            this.guna2PictureBox3.TabStop = false;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label5.Location = new System.Drawing.Point(22, 46);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(112, 20);
-            this.label5.TabIndex = 45;
-            this.label5.Text = "Bienvenido a";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label8.Location = new System.Drawing.Point(37, 323);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(108, 20);
-            this.label8.TabIndex = 46;
-            this.label8.Text = "Menu rapido";
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label14.Location = new System.Drawing.Point(25, 13);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(1255, 40);
+            this.label14.TabIndex = 59;
+            this.label14.Text = "Para tener el mejor uso de la App, se ha predeterminado el modo pantalla completa" +
+    ". Presione ESC para minimizar la pantalla ó oprime el boton de minimizar\r\nubicad" +
+    "o en la parte superior con simbolo -.\r\n";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // guna2Panel6
             // 
@@ -716,6 +574,54 @@
             this.label10.TabIndex = 46;
             this.label10.Text = "Menu rapido";
             // 
+            // guna2Panel5
+            // 
+            this.guna2Panel5.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(41)))), ((int)(((byte)(76)))));
+            this.guna2Panel5.BorderRadius = 8;
+            this.guna2Panel5.BorderThickness = 5;
+            this.guna2Panel5.Controls.Add(this.guna2PictureBox3);
+            this.guna2Panel5.Controls.Add(this.label5);
+            this.guna2Panel5.Controls.Add(this.label8);
+            this.guna2Panel5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(25)))), ((int)(((byte)(46)))));
+            this.guna2Panel5.Location = new System.Drawing.Point(702, 492);
+            this.guna2Panel5.Name = "guna2Panel5";
+            this.guna2Panel5.Size = new System.Drawing.Size(391, 369);
+            this.guna2Panel5.TabIndex = 56;
+            // 
+            // guna2PictureBox3
+            // 
+            this.guna2PictureBox3.BorderRadius = 1;
+            this.guna2PictureBox3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(117)))), ((int)(((byte)(212)))));
+            this.guna2PictureBox3.ImageRotate = 0F;
+            this.guna2PictureBox3.Location = new System.Drawing.Point(27, 316);
+            this.guna2PictureBox3.Name = "guna2PictureBox3";
+            this.guna2PictureBox3.Size = new System.Drawing.Size(4, 35);
+            this.guna2PictureBox3.TabIndex = 48;
+            this.guna2PictureBox3.TabStop = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label5.Location = new System.Drawing.Point(22, 46);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(112, 20);
+            this.label5.TabIndex = 45;
+            this.label5.Text = "Bienvenido a";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label8.Location = new System.Drawing.Point(37, 323);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(108, 20);
+            this.label8.TabIndex = 46;
+            this.label8.Text = "Menu rapido";
+            // 
             // guna2Panel7
             // 
             this.guna2Panel7.BackColor = System.Drawing.Color.Transparent;
@@ -764,32 +670,126 @@
             this.label12.TabIndex = 46;
             this.label12.Text = "Menu rapido";
             // 
-            // guna2Panel8
+            // guna2Panel4
             // 
-            this.guna2Panel8.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Panel8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(41)))), ((int)(((byte)(76)))));
-            this.guna2Panel8.BorderRadius = 8;
-            this.guna2Panel8.BorderThickness = 5;
-            this.guna2Panel8.Controls.Add(this.label14);
-            this.guna2Panel8.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(25)))), ((int)(((byte)(46)))));
-            this.guna2Panel8.Location = new System.Drawing.Point(339, 989);
-            this.guna2Panel8.Name = "guna2Panel8";
-            this.guna2Panel8.Size = new System.Drawing.Size(1304, 70);
-            this.guna2Panel8.TabIndex = 56;
+            this.guna2Panel4.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(41)))), ((int)(((byte)(76)))));
+            this.guna2Panel4.BorderRadius = 8;
+            this.guna2Panel4.BorderThickness = 5;
+            this.guna2Panel4.Controls.Add(this.guna2PictureBox2);
+            this.guna2Panel4.Controls.Add(this.label6);
+            this.guna2Panel4.Controls.Add(this.label7);
+            this.guna2Panel4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(25)))), ((int)(((byte)(46)))));
+            this.guna2Panel4.Location = new System.Drawing.Point(298, 492);
+            this.guna2Panel4.Name = "guna2Panel4";
+            this.guna2Panel4.Size = new System.Drawing.Size(391, 369);
+            this.guna2Panel4.TabIndex = 55;
             // 
-            // label14
+            // guna2PictureBox2
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label14.Location = new System.Drawing.Point(25, 13);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(1255, 40);
-            this.label14.TabIndex = 59;
-            this.label14.Text = "Para tener el mejor uso de la App, se ha predeterminado el modo pantalla completa" +
-    ". Presione ESC para minimizar la pantalla ó oprime el boton de minimizar\r\nubicad" +
-    "o en la parte superior con simbolo -.\r\n";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.guna2PictureBox2.BorderRadius = 1;
+            this.guna2PictureBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(117)))), ((int)(((byte)(212)))));
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(27, 316);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(4, 35);
+            this.guna2PictureBox2.TabIndex = 48;
+            this.guna2PictureBox2.TabStop = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label6.Location = new System.Drawing.Point(22, 46);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(112, 20);
+            this.label6.TabIndex = 45;
+            this.label6.Text = "Bienvenido a";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label7.Location = new System.Drawing.Point(37, 323);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(108, 20);
+            this.label7.TabIndex = 46;
+            this.label7.Text = "Menu rapido";
+            // 
+            // guna2Panel3
+            // 
+            this.guna2Panel3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(41)))), ((int)(((byte)(76)))));
+            this.guna2Panel3.BorderRadius = 8;
+            this.guna2Panel3.BorderThickness = 5;
+            this.guna2Panel3.Controls.Add(this.label4);
+            this.guna2Panel3.Controls.Add(this.guna2PictureBox1);
+            this.guna2Panel3.Controls.Add(this.label2);
+            this.guna2Panel3.Controls.Add(this.label3);
+            this.guna2Panel3.Controls.Add(this.pictureBox3);
+            this.guna2Panel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(25)))), ((int)(((byte)(46)))));
+            this.guna2Panel3.Location = new System.Drawing.Point(295, 102);
+            this.guna2Panel3.Name = "guna2Panel3";
+            this.guna2Panel3.Size = new System.Drawing.Size(1605, 369);
+            this.guna2Panel3.TabIndex = 54;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.SystemColors.Info;
+            this.label4.Location = new System.Drawing.Point(38, 321);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(515, 25);
+            this.label4.TabIndex = 49;
+            this.label4.Text = "\"Matemáticas que transforman ideas en soluciones.\"";
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.BorderRadius = 1;
+            this.guna2PictureBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(117)))), ((int)(((byte)(212)))));
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(27, 316);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(4, 35);
+            this.guna2PictureBox1.TabIndex = 48;
+            this.guna2PictureBox1.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label2.Location = new System.Drawing.Point(22, 46);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(112, 20);
+            this.label2.TabIndex = 45;
+            this.label2.Text = "Bienvenido a";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label3.Location = new System.Drawing.Point(22, 188);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(505, 60);
+            this.label3.TabIndex = 46;
+            this.label3.Text = "Herramienta especializada en el cálculo de áreas y volúmenes\r\nutilizando integral" +
+    "es dobles, con representación\r\ngráfica en los ejes X, Y y Z.";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Image = global::GeoIntegral.Properties.Resources.GeoIntegral_LogoTipo;
+            this.pictureBox3.Location = new System.Drawing.Point(3, 24);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(513, 205);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 44;
+            this.pictureBox3.TabStop = false;
             // 
             // Principal_Screen
             // 
@@ -813,24 +813,24 @@
             this.Admin_Panel.ResumeLayout(false);
             this.Admin_Panel.PerformLayout();
             this.Panel_Menu.ResumeLayout(false);
-            this.guna2Panel3.ResumeLayout(false);
-            this.guna2Panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
-            this.guna2Panel4.ResumeLayout(false);
-            this.guna2Panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
-            this.guna2Panel5.ResumeLayout(false);
-            this.guna2Panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
+            this.guna2Panel8.ResumeLayout(false);
+            this.guna2Panel8.PerformLayout();
             this.guna2Panel6.ResumeLayout(false);
             this.guna2Panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
+            this.guna2Panel5.ResumeLayout(false);
+            this.guna2Panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
             this.guna2Panel7.ResumeLayout(false);
             this.guna2Panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).EndInit();
-            this.guna2Panel8.ResumeLayout(false);
-            this.guna2Panel8.PerformLayout();
+            this.guna2Panel4.ResumeLayout(false);
+            this.guna2Panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            this.guna2Panel3.ResumeLayout(false);
+            this.guna2Panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -849,8 +849,8 @@
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Button btnAdmin_Menu;
         private Guna.UI2.WinForms.Guna2Button btnMenuMateriales;
-        private Guna.UI2.WinForms.Guna2Button btnMenuListaClientes;
-        private Guna.UI2.WinForms.Guna2Button btnMenuRegistrarClientes;
+        private Guna.UI2.WinForms.Guna2Button btnLista_Facturas;
+        private Guna.UI2.WinForms.Guna2Button btnMenu_Registro_Clientes;
         private System.Windows.Forms.Panel Panel_Menu;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2Button btnConfiguracion_Perfil;

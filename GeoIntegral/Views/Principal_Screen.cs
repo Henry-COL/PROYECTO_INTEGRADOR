@@ -94,7 +94,7 @@ namespace GeoIntegral.Views
             }
         }
 
-        //><><>< Botones ><><><>//
+        //><><>< Botones menú ><><><>//
 
         // -- Admin --
         private void btnAdmin_Menu_Click(object sender, EventArgs e)
@@ -109,15 +109,9 @@ namespace GeoIntegral.Views
             CargarVentana(new Admin_Notificaciones(Panel_Ventanas.ClientSize), sender as Control);
         }
 
-        // -- Usuario --
-        private void btnMenuRegistrarClientes_Click(object sender, EventArgs e)
-        {
-            CargarVentana(new Registrar_Cliente(Panel_Ventanas.ClientSize), sender as Control);
-        }
-
         private void btnMenuListaClientes_Click(object sender, EventArgs e)
         {
-            CargarVentana(new Usuario_ListaClientes(Panel_Ventanas.ClientSize), sender as Control);
+            //CargarVentana(new Registrar_Cliente(Panel_Ventanas.ClientSize), sender as Control);
         }
 
         private void btnMenuMateriales_Click(object sender, EventArgs e)
@@ -181,6 +175,15 @@ namespace GeoIntegral.Views
             Application.Exit();
         }
 
+        private void btnMenu_Registro_Clientes_Click(object sender, EventArgs e)
+        {
+            CargarVentana(new Usuario_ListaClientes(Panel_Ventanas.ClientSize), sender as Control);
+        }
+
+        private void btnLista_Facturas_Click(object sender, EventArgs e)
+        {
+            CargarVentana(new Usuario_Facturas(Panel_Ventanas.ClientSize), sender as Control);
+        }
         //><><>< Fin Botones ><><><>//
     }
 }

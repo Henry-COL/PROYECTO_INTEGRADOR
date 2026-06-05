@@ -133,6 +133,26 @@ namespace GeoIntegral.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap App_Gmail {
+            get {
+                object obj = ResourceManager.GetObject("App_Gmail", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap App_Identificacion {
+            get {
+                object obj = ResourceManager.GetObject("App_Identificacion", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap App_Login_Wallpaper {
             get {
                 object obj = ResourceManager.GetObject("App_Login_Wallpaper", resourceCulture);
@@ -216,6 +236,16 @@ namespace GeoIntegral.Properties {
         internal static System.Drawing.Bitmap App_Registrar_Wallpaper {
             get {
                 object obj = ResourceManager.GetObject("App_Registrar_Wallpaper", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap App_Telefono {
+            get {
+                object obj = ResourceManager.GetObject("App_Telefono", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

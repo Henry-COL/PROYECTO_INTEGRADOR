@@ -29,11 +29,19 @@
             private void InitializeComponent()
             {
             this.gbDatosCotizacion = new System.Windows.Forms.GroupBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnGenerarCotizacion = new Guna.UI2.WinForms.Guna2Button();
+            this.lblCostoTotal = new System.Windows.Forms.Label();
+            this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.cmbMateriales = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.comboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cmbClientes = new Guna.UI2.WinForms.Guna2ComboBox();
             this.lblMaterial = new System.Windows.Forms.Label();
             this.lblTerreno = new System.Windows.Forms.Label();
             this.lblCliente = new System.Windows.Forms.Label();
-            this.btnGenerarCotizacion = new Guna.UI2.WinForms.Guna2Button();
-            this.lblCostoTotal = new System.Windows.Forms.Label();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.gbListaCotizaciones = new System.Windows.Forms.GroupBox();
             this.dtgCotizaciones = new System.Windows.Forms.DataGridView();
             this.IdCotizacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,28 +53,20 @@
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnCerrar_App = new Guna.UI2.WinForms.Guna2Button();
-            this.cmbClientes = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.comboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.cmbMateriales = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.btnVerDetalle = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnVerDetalle = new Guna.UI2.WinForms.Guna2Button();
+            this.btnCerrar_App = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.gbDatosCotizacion.SuspendLayout();
-            this.gbListaCotizaciones.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgCotizaciones)).BeginInit();
-            this.guna2Panel2.SuspendLayout();
-            this.guna2Panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
+            this.gbListaCotizaciones.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgCotizaciones)).BeginInit();
+            this.guna2Panel2.SuspendLayout();
+            this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbDatosCotizacion
@@ -87,47 +87,34 @@
             this.gbDatosCotizacion.Controls.Add(this.guna2PictureBox3);
             this.gbDatosCotizacion.Font = new System.Drawing.Font("Poppins", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbDatosCotizacion.ForeColor = System.Drawing.SystemColors.Control;
-            this.gbDatosCotizacion.Location = new System.Drawing.Point(18, 22);
+            this.gbDatosCotizacion.Location = new System.Drawing.Point(24, 22);
             this.gbDatosCotizacion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gbDatosCotizacion.Name = "gbDatosCotizacion";
             this.gbDatosCotizacion.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.gbDatosCotizacion.Size = new System.Drawing.Size(893, 289);
+            this.gbDatosCotizacion.Size = new System.Drawing.Size(887, 289);
             this.gbDatosCotizacion.TabIndex = 0;
             this.gbDatosCotizacion.TabStop = false;
             this.gbDatosCotizacion.Text = "Datos Cotización";
             // 
-            // lblMaterial
+            // groupBox1
             // 
-            this.lblMaterial.AutoSize = true;
-            this.lblMaterial.Font = new System.Drawing.Font("Poppins", 8F);
-            this.lblMaterial.Location = new System.Drawing.Point(74, 203);
-            this.lblMaterial.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblMaterial.Name = "lblMaterial";
-            this.lblMaterial.Size = new System.Drawing.Size(81, 28);
-            this.lblMaterial.TabIndex = 5;
-            this.lblMaterial.Text = "Material:";
-            // 
-            // lblTerreno
-            // 
-            this.lblTerreno.AutoSize = true;
-            this.lblTerreno.Font = new System.Drawing.Font("Poppins", 8F);
-            this.lblTerreno.Location = new System.Drawing.Point(72, 118);
-            this.lblTerreno.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblTerreno.Name = "lblTerreno";
-            this.lblTerreno.Size = new System.Drawing.Size(76, 28);
-            this.lblTerreno.TabIndex = 3;
-            this.lblTerreno.Text = "Terreno:";
-            // 
-            // lblCliente
-            // 
-            this.lblCliente.AutoSize = true;
-            this.lblCliente.Font = new System.Drawing.Font("Poppins", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCliente.Location = new System.Drawing.Point(72, 34);
-            this.lblCliente.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblCliente.Name = "lblCliente";
-            this.lblCliente.Size = new System.Drawing.Size(71, 28);
-            this.lblCliente.TabIndex = 1;
-            this.lblCliente.Text = "Cliente:";
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.btnGenerarCotizacion);
+            this.groupBox1.Controls.Add(this.lblCostoTotal);
+            this.groupBox1.Controls.Add(this.guna2PictureBox4);
+            this.groupBox1.Font = new System.Drawing.Font("Poppins", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.Control;
+            this.groupBox1.Location = new System.Drawing.Point(483, 62);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox1.Size = new System.Drawing.Size(374, 186);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Costo total estimado";
             // 
             // btnGenerarCotizacion
             // 
@@ -163,6 +150,141 @@
             this.lblCostoTotal.Text = "$ 200,000.00";
             this.lblCostoTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // guna2PictureBox4
+            // 
+            this.guna2PictureBox4.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox4.Image = global::GeoIntegral.Properties.Resources.App_Costo_Total;
+            this.guna2PictureBox4.ImageRotate = 0F;
+            this.guna2PictureBox4.Location = new System.Drawing.Point(9, 16);
+            this.guna2PictureBox4.Name = "guna2PictureBox4";
+            this.guna2PictureBox4.Size = new System.Drawing.Size(107, 97);
+            this.guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox4.TabIndex = 11;
+            this.guna2PictureBox4.TabStop = false;
+            // 
+            // cmbMateriales
+            // 
+            this.cmbMateriales.BackColor = System.Drawing.Color.Transparent;
+            this.cmbMateriales.BorderColor = System.Drawing.Color.Silver;
+            this.cmbMateriales.BorderRadius = 4;
+            this.cmbMateriales.BorderThickness = 4;
+            this.cmbMateriales.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbMateriales.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbMateriales.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbMateriales.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbMateriales.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmbMateriales.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbMateriales.ItemHeight = 30;
+            this.cmbMateriales.Location = new System.Drawing.Point(76, 226);
+            this.cmbMateriales.Name = "cmbMateriales";
+            this.cmbMateriales.Size = new System.Drawing.Size(379, 36);
+            this.cmbMateriales.TabIndex = 7;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.Color.Transparent;
+            this.comboBox1.BorderColor = System.Drawing.Color.Silver;
+            this.comboBox1.BorderRadius = 4;
+            this.comboBox1.BorderThickness = 4;
+            this.comboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.comboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.comboBox1.ItemHeight = 30;
+            this.comboBox1.Location = new System.Drawing.Point(77, 141);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(379, 36);
+            this.comboBox1.TabIndex = 6;
+            // 
+            // cmbClientes
+            // 
+            this.cmbClientes.BackColor = System.Drawing.Color.Transparent;
+            this.cmbClientes.BorderColor = System.Drawing.Color.Silver;
+            this.cmbClientes.BorderRadius = 4;
+            this.cmbClientes.BorderThickness = 4;
+            this.cmbClientes.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbClientes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbClientes.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbClientes.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbClientes.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmbClientes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbClientes.ItemHeight = 30;
+            this.cmbClientes.Location = new System.Drawing.Point(77, 58);
+            this.cmbClientes.Name = "cmbClientes";
+            this.cmbClientes.Size = new System.Drawing.Size(379, 36);
+            this.cmbClientes.TabIndex = 1;
+            // 
+            // lblMaterial
+            // 
+            this.lblMaterial.AutoSize = true;
+            this.lblMaterial.Font = new System.Drawing.Font("Poppins", 8F);
+            this.lblMaterial.Location = new System.Drawing.Point(74, 203);
+            this.lblMaterial.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblMaterial.Name = "lblMaterial";
+            this.lblMaterial.Size = new System.Drawing.Size(81, 28);
+            this.lblMaterial.TabIndex = 5;
+            this.lblMaterial.Text = "Material:";
+            // 
+            // lblTerreno
+            // 
+            this.lblTerreno.AutoSize = true;
+            this.lblTerreno.Font = new System.Drawing.Font("Poppins", 8F);
+            this.lblTerreno.Location = new System.Drawing.Point(72, 118);
+            this.lblTerreno.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTerreno.Name = "lblTerreno";
+            this.lblTerreno.Size = new System.Drawing.Size(76, 28);
+            this.lblTerreno.TabIndex = 3;
+            this.lblTerreno.Text = "Terreno:";
+            // 
+            // lblCliente
+            // 
+            this.lblCliente.AutoSize = true;
+            this.lblCliente.Font = new System.Drawing.Font("Poppins", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCliente.Location = new System.Drawing.Point(72, 34);
+            this.lblCliente.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCliente.Name = "lblCliente";
+            this.lblCliente.Size = new System.Drawing.Size(71, 28);
+            this.lblCliente.TabIndex = 1;
+            this.lblCliente.Text = "Cliente:";
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.Image = global::GeoIntegral.Properties.Resources.App_Cliente;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(-4, 30);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(89, 88);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 8;
+            this.guna2PictureBox1.TabStop = false;
+            // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox2.Image = global::GeoIntegral.Properties.Resources.App_Terreno;
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(-11, 106);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(107, 97);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox2.TabIndex = 9;
+            this.guna2PictureBox2.TabStop = false;
+            // 
+            // guna2PictureBox3
+            // 
+            this.guna2PictureBox3.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox3.Image = global::GeoIntegral.Properties.Resources.App_Material;
+            this.guna2PictureBox3.ImageRotate = 0F;
+            this.guna2PictureBox3.Location = new System.Drawing.Point(-9, 191);
+            this.guna2PictureBox3.Name = "guna2PictureBox3";
+            this.guna2PictureBox3.Size = new System.Drawing.Size(107, 97);
+            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox3.TabIndex = 10;
+            this.guna2PictureBox3.TabStop = false;
+            // 
             // gbListaCotizaciones
             // 
             this.gbListaCotizaciones.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -170,11 +292,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gbListaCotizaciones.Controls.Add(this.dtgCotizaciones);
             this.gbListaCotizaciones.ForeColor = System.Drawing.SystemColors.Control;
-            this.gbListaCotizaciones.Location = new System.Drawing.Point(11, 5);
+            this.gbListaCotizaciones.Location = new System.Drawing.Point(29, 20);
             this.gbListaCotizaciones.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gbListaCotizaciones.Name = "gbListaCotizaciones";
             this.gbListaCotizaciones.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.gbListaCotizaciones.Size = new System.Drawing.Size(1589, 465);
+            this.gbListaCotizaciones.Size = new System.Drawing.Size(1559, 450);
             this.gbListaCotizaciones.TabIndex = 1;
             this.gbListaCotizaciones.TabStop = false;
             this.gbListaCotizaciones.Text = "Lista de Cotizaciones";
@@ -200,7 +322,7 @@
             this.dtgCotizaciones.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dtgCotizaciones.Name = "dtgCotizaciones";
             this.dtgCotizaciones.RowHeadersWidth = 62;
-            this.dtgCotizaciones.Size = new System.Drawing.Size(1561, 426);
+            this.dtgCotizaciones.Size = new System.Drawing.Size(1531, 411);
             this.dtgCotizaciones.TabIndex = 0;
             // 
             // IdCotizacion
@@ -250,7 +372,9 @@
             this.guna2Panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2Panel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(32)))), ((int)(((byte)(61)))));
             this.guna2Panel2.BorderRadius = 8;
+            this.guna2Panel2.BorderThickness = 8;
             this.guna2Panel2.Controls.Add(this.gbDatosCotizacion);
             this.guna2Panel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(25)))), ((int)(((byte)(46)))));
             this.guna2Panel2.Location = new System.Drawing.Point(12, 630);
@@ -264,7 +388,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(32)))), ((int)(((byte)(61)))));
             this.guna2Panel1.BorderRadius = 8;
+            this.guna2Panel1.BorderThickness = 8;
             this.guna2Panel1.Controls.Add(this.label1);
             this.guna2Panel1.Controls.Add(this.btnVerDetalle);
             this.guna2Panel1.Controls.Add(this.gbListaCotizaciones);
@@ -273,6 +399,38 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1616, 538);
             this.guna2Panel1.TabIndex = 22;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Poppins", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(716, 488);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(533, 28);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Selecciona a un usuario de la tabla para visualizar su cotizacón. *";
+            // 
+            // btnVerDetalle
+            // 
+            this.btnVerDetalle.BorderColor = System.Drawing.Color.DarkOrange;
+            this.btnVerDetalle.BorderRadius = 8;
+            this.btnVerDetalle.BorderThickness = 6;
+            this.btnVerDetalle.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnVerDetalle.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnVerDetalle.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnVerDetalle.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnVerDetalle.FillColor = System.Drawing.Color.Orange;
+            this.btnVerDetalle.Font = new System.Drawing.Font("Poppins", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerDetalle.ForeColor = System.Drawing.Color.White;
+            this.btnVerDetalle.Location = new System.Drawing.Point(1256, 478);
+            this.btnVerDetalle.Name = "btnVerDetalle";
+            this.btnVerDetalle.Size = new System.Drawing.Size(332, 46);
+            this.btnVerDetalle.TabIndex = 12;
+            this.btnVerDetalle.Text = "Ver detalles de cotización";
+            this.btnVerDetalle.TextOffset = new System.Drawing.Point(0, 2);
+            this.btnVerDetalle.Click += new System.EventHandler(this.btnVerDetalle_Click);
             // 
             // btnCerrar_App
             // 
@@ -298,60 +456,6 @@
             this.btnCerrar_App.Text = "Volver al inicio";
             this.btnCerrar_App.Click += new System.EventHandler(this.btnCerrar_App_Click);
             // 
-            // cmbClientes
-            // 
-            this.cmbClientes.BackColor = System.Drawing.Color.Transparent;
-            this.cmbClientes.BorderColor = System.Drawing.Color.Silver;
-            this.cmbClientes.BorderRadius = 4;
-            this.cmbClientes.BorderThickness = 4;
-            this.cmbClientes.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbClientes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbClientes.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbClientes.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbClientes.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cmbClientes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cmbClientes.ItemHeight = 30;
-            this.cmbClientes.Location = new System.Drawing.Point(77, 58);
-            this.cmbClientes.Name = "cmbClientes";
-            this.cmbClientes.Size = new System.Drawing.Size(379, 36);
-            this.cmbClientes.TabIndex = 1;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.comboBox1.BorderColor = System.Drawing.Color.Silver;
-            this.comboBox1.BorderRadius = 4;
-            this.comboBox1.BorderThickness = 4;
-            this.comboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.comboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.comboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.comboBox1.ItemHeight = 30;
-            this.comboBox1.Location = new System.Drawing.Point(77, 141);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(379, 36);
-            this.comboBox1.TabIndex = 6;
-            // 
-            // cmbMateriales
-            // 
-            this.cmbMateriales.BackColor = System.Drawing.Color.Transparent;
-            this.cmbMateriales.BorderColor = System.Drawing.Color.Silver;
-            this.cmbMateriales.BorderRadius = 4;
-            this.cmbMateriales.BorderThickness = 4;
-            this.cmbMateriales.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbMateriales.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbMateriales.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbMateriales.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbMateriales.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cmbMateriales.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cmbMateriales.ItemHeight = 30;
-            this.cmbMateriales.Location = new System.Drawing.Point(76, 226);
-            this.cmbMateriales.Name = "cmbMateriales";
-            this.cmbMateriales.Size = new System.Drawing.Size(379, 36);
-            this.cmbMateriales.TabIndex = 7;
-            // 
             // guna2Panel3
             // 
             this.guna2Panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
@@ -363,106 +467,6 @@
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.Size = new System.Drawing.Size(498, 341);
             this.guna2Panel3.TabIndex = 22;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.btnGenerarCotizacion);
-            this.groupBox1.Controls.Add(this.lblCostoTotal);
-            this.groupBox1.Controls.Add(this.guna2PictureBox4);
-            this.groupBox1.Font = new System.Drawing.Font("Poppins", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.SystemColors.Control;
-            this.groupBox1.Location = new System.Drawing.Point(483, 62);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox1.Size = new System.Drawing.Size(380, 186);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Costo total estimado";
-            // 
-            // guna2PictureBox4
-            // 
-            this.guna2PictureBox4.FillColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox4.Image = global::GeoIntegral.Properties.Resources.App_Costo_Total;
-            this.guna2PictureBox4.ImageRotate = 0F;
-            this.guna2PictureBox4.Location = new System.Drawing.Point(9, 16);
-            this.guna2PictureBox4.Name = "guna2PictureBox4";
-            this.guna2PictureBox4.Size = new System.Drawing.Size(107, 97);
-            this.guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox4.TabIndex = 11;
-            this.guna2PictureBox4.TabStop = false;
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.Image = global::GeoIntegral.Properties.Resources.App_Cliente;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(-4, 30);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(89, 88);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 8;
-            this.guna2PictureBox1.TabStop = false;
-            // 
-            // guna2PictureBox2
-            // 
-            this.guna2PictureBox2.FillColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox2.Image = global::GeoIntegral.Properties.Resources.App_Terreno;
-            this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(-11, 106);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(107, 97);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox2.TabIndex = 9;
-            this.guna2PictureBox2.TabStop = false;
-            // 
-            // guna2PictureBox3
-            // 
-            this.guna2PictureBox3.FillColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox3.Image = global::GeoIntegral.Properties.Resources.App_Material;
-            this.guna2PictureBox3.ImageRotate = 0F;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(-9, 191);
-            this.guna2PictureBox3.Name = "guna2PictureBox3";
-            this.guna2PictureBox3.Size = new System.Drawing.Size(107, 97);
-            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox3.TabIndex = 10;
-            this.guna2PictureBox3.TabStop = false;
-            // 
-            // btnVerDetalle
-            // 
-            this.btnVerDetalle.BorderColor = System.Drawing.Color.DarkOrange;
-            this.btnVerDetalle.BorderRadius = 8;
-            this.btnVerDetalle.BorderThickness = 6;
-            this.btnVerDetalle.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnVerDetalle.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnVerDetalle.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnVerDetalle.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnVerDetalle.FillColor = System.Drawing.Color.Orange;
-            this.btnVerDetalle.Font = new System.Drawing.Font("Poppins", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVerDetalle.ForeColor = System.Drawing.Color.White;
-            this.btnVerDetalle.Location = new System.Drawing.Point(1268, 479);
-            this.btnVerDetalle.Name = "btnVerDetalle";
-            this.btnVerDetalle.Size = new System.Drawing.Size(332, 46);
-            this.btnVerDetalle.TabIndex = 12;
-            this.btnVerDetalle.Text = "Ver detalles de cotización";
-            this.btnVerDetalle.TextOffset = new System.Drawing.Point(0, 2);
-            this.btnVerDetalle.Click += new System.EventHandler(this.btnVerDetalle_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Poppins", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(728, 489);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(533, 28);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Selecciona a un usuario de la tabla para visualizar su cotizacón. *";
             // 
             // Usuario_Cotizaciones
             // 
@@ -480,17 +484,17 @@
             this.Text = "cmbTerrenos";
             this.gbDatosCotizacion.ResumeLayout(false);
             this.gbDatosCotizacion.PerformLayout();
-            this.gbListaCotizaciones.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgCotizaciones)).EndInit();
-            this.guna2Panel2.ResumeLayout(false);
-            this.guna2Panel1.ResumeLayout(false);
-            this.guna2Panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
+            this.gbListaCotizaciones.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgCotizaciones)).EndInit();
+            this.guna2Panel2.ResumeLayout(false);
+            this.guna2Panel1.ResumeLayout(false);
+            this.guna2Panel1.PerformLayout();
             this.ResumeLayout(false);
 
             }

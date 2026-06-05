@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnCerrar_App = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.grp = new System.Windows.Forms.GroupBox();
             this.dgvListaUsuarios = new System.Windows.Forms.DataGridView();
@@ -36,19 +37,14 @@
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.cmbFiltro = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btnFiltrar_Busqueda = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.cmbUsuario = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btnCambiar_Estado = new Guna.UI2.WinForms.Guna2Button();
-            this.btnCerrar_App = new Guna.UI2.WinForms.Guna2Button();
             this.panel2.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.grp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaUsuarios)).BeginInit();
-            this.guna2Panel2.SuspendLayout();
-            this.guna2Panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -56,13 +52,35 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(10)))), ((int)(((byte)(30)))));
             this.panel2.Controls.Add(this.btnCerrar_App);
             this.panel2.Controls.Add(this.guna2Panel1);
-            this.panel2.Controls.Add(this.guna2Panel2);
-            this.panel2.Controls.Add(this.guna2Panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1640, 997);
             this.panel2.TabIndex = 5;
+            // 
+            // btnCerrar_App
+            // 
+            this.btnCerrar_App.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCerrar_App.BackColor = System.Drawing.Color.Transparent;
+            this.btnCerrar_App.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(22)))), ((int)(((byte)(54)))));
+            this.btnCerrar_App.BorderRadius = 8;
+            this.btnCerrar_App.BorderThickness = 3;
+            this.btnCerrar_App.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCerrar_App.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCerrar_App.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCerrar_App.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCerrar_App.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(32)))), ((int)(((byte)(87)))));
+            this.btnCerrar_App.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.btnCerrar_App.ForeColor = System.Drawing.Color.White;
+            this.btnCerrar_App.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnCerrar_App.HoverState.FillColor = System.Drawing.Color.Maroon;
+            this.btnCerrar_App.Location = new System.Drawing.Point(1440, 12);
+            this.btnCerrar_App.Name = "btnCerrar_App";
+            this.btnCerrar_App.PressedColor = System.Drawing.Color.Empty;
+            this.btnCerrar_App.Size = new System.Drawing.Size(188, 45);
+            this.btnCerrar_App.TabIndex = 48;
+            this.btnCerrar_App.Text = "Volver al inicio";
+            this.btnCerrar_App.Click += new System.EventHandler(this.btnCerrar_App_Click);
             // 
             // guna2Panel1
             // 
@@ -70,12 +88,18 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(32)))), ((int)(((byte)(61)))));
             this.guna2Panel1.BorderRadius = 8;
+            this.guna2Panel1.BorderThickness = 8;
+            this.guna2Panel1.Controls.Add(this.cmbFiltro);
+            this.guna2Panel1.Controls.Add(this.btnFiltrar_Busqueda);
+            this.guna2Panel1.Controls.Add(this.cmbUsuario);
+            this.guna2Panel1.Controls.Add(this.btnCambiar_Estado);
             this.guna2Panel1.Controls.Add(this.grp);
             this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(25)))), ((int)(((byte)(46)))));
-            this.guna2Panel1.Location = new System.Drawing.Point(13, 65);
+            this.guna2Panel1.Location = new System.Drawing.Point(21, 70);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1615, 833);
+            this.guna2Panel1.Size = new System.Drawing.Size(1597, 894);
             this.guna2Panel1.TabIndex = 19;
             // 
             // grp
@@ -86,9 +110,9 @@
             this.grp.Controls.Add(this.dgvListaUsuarios);
             this.grp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grp.ForeColor = System.Drawing.SystemColors.Window;
-            this.grp.Location = new System.Drawing.Point(16, 10);
+            this.grp.Location = new System.Drawing.Point(25, 28);
             this.grp.Name = "grp";
-            this.grp.Size = new System.Drawing.Size(1583, 809);
+            this.grp.Size = new System.Drawing.Size(1543, 783);
             this.grp.TabIndex = 18;
             this.grp.TabStop = false;
             this.grp.Text = "Lista de usuarios: Información";
@@ -113,7 +137,7 @@
             this.dgvListaUsuarios.MultiSelect = false;
             this.dgvListaUsuarios.Name = "dgvListaUsuarios";
             this.dgvListaUsuarios.RowHeadersWidth = 62;
-            this.dgvListaUsuarios.Size = new System.Drawing.Size(1555, 757);
+            this.dgvListaUsuarios.Size = new System.Drawing.Size(1515, 731);
             this.dgvListaUsuarios.TabIndex = 2;
             // 
             // dataGridViewTextBoxColumn1
@@ -140,19 +164,6 @@
             this.dataGridViewTextBoxColumn4.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             // 
-            // guna2Panel2
-            // 
-            this.guna2Panel2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.guna2Panel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Panel2.BorderRadius = 8;
-            this.guna2Panel2.Controls.Add(this.cmbFiltro);
-            this.guna2Panel2.Controls.Add(this.btnFiltrar_Busqueda);
-            this.guna2Panel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(25)))), ((int)(((byte)(46)))));
-            this.guna2Panel2.Location = new System.Drawing.Point(346, 909);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(402, 72);
-            this.guna2Panel2.TabIndex = 20;
-            // 
             // cmbFiltro
             // 
             this.cmbFiltro.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
@@ -170,7 +181,7 @@
             "Todos",
             "Activo",
             "Inactivo"});
-            this.cmbFiltro.Location = new System.Drawing.Point(234, 18);
+            this.cmbFiltro.Location = new System.Drawing.Point(894, 831);
             this.cmbFiltro.MaxDropDownItems = 3;
             this.cmbFiltro.Name = "cmbFiltro";
             this.cmbFiltro.Size = new System.Drawing.Size(153, 36);
@@ -191,24 +202,11 @@
             this.btnFiltrar_Busqueda.Font = new System.Drawing.Font("Poppins Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFiltrar_Busqueda.ForeColor = System.Drawing.Color.White;
             this.btnFiltrar_Busqueda.HoverState.FillColor = System.Drawing.Color.ForestGreen;
-            this.btnFiltrar_Busqueda.Location = new System.Drawing.Point(16, 16);
+            this.btnFiltrar_Busqueda.Location = new System.Drawing.Point(675, 829);
             this.btnFiltrar_Busqueda.Name = "btnFiltrar_Busqueda";
             this.btnFiltrar_Busqueda.Size = new System.Drawing.Size(212, 39);
             this.btnFiltrar_Busqueda.TabIndex = 0;
             this.btnFiltrar_Busqueda.Text = "Filtrar busqueda";
-            // 
-            // guna2Panel3
-            // 
-            this.guna2Panel3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.guna2Panel3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Panel3.BorderRadius = 8;
-            this.guna2Panel3.Controls.Add(this.cmbUsuario);
-            this.guna2Panel3.Controls.Add(this.btnCambiar_Estado);
-            this.guna2Panel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(25)))), ((int)(((byte)(46)))));
-            this.guna2Panel3.Location = new System.Drawing.Point(763, 909);
-            this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(537, 72);
-            this.guna2Panel3.TabIndex = 21;
             // 
             // cmbUsuario
             // 
@@ -222,13 +220,14 @@
             this.cmbUsuario.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cmbUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cmbUsuario.ItemHeight = 30;
-            this.cmbUsuario.Location = new System.Drawing.Point(233, 18);
+            this.cmbUsuario.Location = new System.Drawing.Point(1280, 830);
             this.cmbUsuario.Name = "cmbUsuario";
             this.cmbUsuario.Size = new System.Drawing.Size(289, 36);
             this.cmbUsuario.TabIndex = 7;
             // 
             // btnCambiar_Estado
             // 
+            this.btnCambiar_Estado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnCambiar_Estado.BorderColor = System.Drawing.Color.Teal;
             this.btnCambiar_Estado.BorderRadius = 8;
             this.btnCambiar_Estado.BorderThickness = 3;
@@ -240,35 +239,11 @@
             this.btnCambiar_Estado.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold);
             this.btnCambiar_Estado.ForeColor = System.Drawing.Color.White;
             this.btnCambiar_Estado.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnCambiar_Estado.Location = new System.Drawing.Point(15, 16);
+            this.btnCambiar_Estado.Location = new System.Drawing.Point(1062, 828);
             this.btnCambiar_Estado.Name = "btnCambiar_Estado";
             this.btnCambiar_Estado.Size = new System.Drawing.Size(212, 39);
             this.btnCambiar_Estado.TabIndex = 6;
             this.btnCambiar_Estado.Text = "Cambiar estado";
-            // 
-            // btnCerrar_App
-            // 
-            this.btnCerrar_App.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCerrar_App.BackColor = System.Drawing.Color.Transparent;
-            this.btnCerrar_App.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(22)))), ((int)(((byte)(54)))));
-            this.btnCerrar_App.BorderRadius = 8;
-            this.btnCerrar_App.BorderThickness = 3;
-            this.btnCerrar_App.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnCerrar_App.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnCerrar_App.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnCerrar_App.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnCerrar_App.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(32)))), ((int)(((byte)(87)))));
-            this.btnCerrar_App.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.btnCerrar_App.ForeColor = System.Drawing.Color.White;
-            this.btnCerrar_App.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnCerrar_App.HoverState.FillColor = System.Drawing.Color.Maroon;
-            this.btnCerrar_App.Location = new System.Drawing.Point(1440, 12);
-            this.btnCerrar_App.Name = "btnCerrar_App";
-            this.btnCerrar_App.PressedColor = System.Drawing.Color.Empty;
-            this.btnCerrar_App.Size = new System.Drawing.Size(188, 45);
-            this.btnCerrar_App.TabIndex = 48;
-            this.btnCerrar_App.Text = "Volver al inicio";
-            this.btnCerrar_App.Click += new System.EventHandler(this.btnCerrar_App_Click);
             // 
             // Admin_Usuarios
             // 
@@ -284,8 +259,6 @@
             this.guna2Panel1.ResumeLayout(false);
             this.grp.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaUsuarios)).EndInit();
-            this.guna2Panel2.ResumeLayout(false);
-            this.guna2Panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -300,10 +273,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2ComboBox cmbFiltro;
         private Guna.UI2.WinForms.Guna2Button btnFiltrar_Busqueda;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
         private Guna.UI2.WinForms.Guna2ComboBox cmbUsuario;
         private Guna.UI2.WinForms.Guna2Button btnCambiar_Estado;
         private Guna.UI2.WinForms.Guna2Button btnCerrar_App;

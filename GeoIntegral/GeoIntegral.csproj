@@ -344,6 +344,8 @@
     <Content Include="Multimedia\App_Costo_Total.png" />
     <Content Include="Multimedia\App_CuentaEmpresa_Imagen.png" />
     <Content Include="Multimedia\App_CuentaPersonal_Imagen.png" />
+    <Content Include="Multimedia\App_Gmail.png" />
+    <Content Include="Multimedia\App_Identificacion.png" />
     <Content Include="Multimedia\App_Login_Wallpaper.png" />
     <Content Include="Multimedia\App_Login_Wallpaper_.png" />
     <Content Include="Multimedia\App_Material.png" />
@@ -353,6 +355,7 @@
     <Content Include="Multimedia\App_Registrar_Cliente.png" />
     <Content Include="Multimedia\App_Registrar_Cliente_Wallpaper.png" />
     <Content Include="Multimedia\App_Registrar_Wallpaper.png" />
+    <Content Include="Multimedia\App_Telefono.png" />
     <Content Include="Multimedia\App_Terreno.png" />
     <Content Include="Multimedia\App_TipoCuenta_Wallpaper.png" />
     <Content Include="Multimedia\App_Wallpaper_Principal.png" />

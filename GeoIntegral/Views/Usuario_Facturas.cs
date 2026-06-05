@@ -14,7 +14,7 @@ namespace GeoIntegral.Views
     {
         public event EventHandler VentanaCerrada;
 
-        public Usuario_Facturas()
+        public Usuario_Facturas(Size size)
         {
             InitializeComponent();
         }
