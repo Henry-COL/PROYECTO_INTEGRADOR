@@ -3,23 +3,43 @@
   "WorkspaceRootPath": "C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\controller\\terrenocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|solutionrelative:controller\\terrenocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\views\\usuario_facturas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|solutionrelative:views\\usuario_facturas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\views\\usuario_terrenos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|solutionrelative:views\\usuario_terrenos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|c:\\users\\david esper\\documents\\github\\proyecto_integrador\\geointegral\\views\\usuario_listaclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|solutionrelative:views\\usuario_listaclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\views\\usuario_terrenos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|solutionrelative:views\\usuario_terrenos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\views\\usuario_facturas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|solutionrelative:views\\usuario_facturas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|c:\\users\\david esper\\documents\\github\\proyecto_integrador\\geointegral\\views\\usuario_terrenos.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|solutionrelative:views\\usuario_terrenos.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\controller\\administradorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|solutionrelative:controller\\administradorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|c:\\users\\david esper\\documents\\github\\proyecto_integrador\\geointegral\\models\\puntoterreno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|c:\\users\\david esper\\documents\\github\\proyecto_integrador\\geointegral\\controller\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|solutionrelative:controller\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|c:\\users\\david esper\\documents\\github\\proyecto_integrador\\geointegral\\controller\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|solutionrelative:controller\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\repositorys\\clienterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|solutionrelative:repositorys\\clienterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\main_program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|solutionrelative:main_program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\controller\\cotizacioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|solutionrelative:controller\\cotizacioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\models\\puntoterreno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|solutionrelative:models\\puntoterreno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -27,48 +47,24 @@
       "RelativeMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|solutionrelative:models\\terreno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\views\\principal_screen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|solutionrelative:views\\principal_screen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\views\\usuario_facturas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|solutionrelative:views\\usuario_facturas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\views\\usuario_facturas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|solutionrelative:views\\usuario_facturas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\controller\\facturacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|solutionrelative:controller\\facturacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\views\\login_screen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|solutionrelative:views\\login_screen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\repositorys\\cotizacionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|solutionrelative:repositorys\\cotizacionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\models\\cotizacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|solutionrelative:models\\cotizacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\controller\\cotizacioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|solutionrelative:controller\\cotizacioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\models\\factura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|solutionrelative:models\\factura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\views\\usuario_facturas.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|solutionrelative:views\\usuario_facturas.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\controller\\terrenocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|solutionrelative:controller\\terrenocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\views\\login_screen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|solutionrelative:views\\login_screen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\repositorys\\terrenorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|solutionrelative:repositorys\\terrenorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\views\\icerrable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|solutionrelative:views\\icerrable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35D13296-5344-4938-9991-C95F298BD49F}|GeoIntegral.csproj|solutionrelative:models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -78,7 +74,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -97,59 +93,128 @@
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Usuario_ListaClientes.cs",
+              "DocumentMoniker": "C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Usuario_ListaClientes.cs",
+              "RelativeDocumentMoniker": "Views\\Usuario_ListaClientes.cs",
+              "ToolTip": "C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Usuario_ListaClientes.cs",
+              "RelativeToolTip": "Views\\Usuario_ListaClientes.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-07T15:43:19.373Z",
+              "EditorCaption": ""
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Usuario_Terrenos.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Usuario_Terrenos.Designer.cs",
-              "RelativeDocumentMoniker": "Views\\Usuario_Terrenos.Designer.cs",
-              "ToolTip": "C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Usuario_Terrenos.Designer.cs",
-              "RelativeToolTip": "Views\\Usuario_Terrenos.Designer.cs",
-              "ViewState": "AgIAALcBAAAAAAAAAAAAAMcBAAArAAAAAAAAAA==",
+              "Title": "AdministradorController.cs",
+              "DocumentMoniker": "C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Controller\\AdministradorController.cs",
+              "RelativeDocumentMoniker": "Controller\\AdministradorController.cs",
+              "ToolTip": "C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Controller\\AdministradorController.cs",
+              "RelativeToolTip": "Controller\\AdministradorController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T17:27:59.395Z",
+              "WhenOpened": "2026-06-06T19:31:33.048Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "TerrenoController.cs",
-              "DocumentMoniker": "C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Controller\\TerrenoController.cs",
-              "RelativeDocumentMoniker": "Controller\\TerrenoController.cs",
-              "ToolTip": "C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Controller\\TerrenoController.cs",
-              "RelativeToolTip": "Controller\\TerrenoController.cs",
-              "ViewState": "AgIAAHEAAAAAAAAAAAAAwH8AAAA5AAAAAAAAAA==",
+              "Title": "Usuario_Facturas.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Usuario_Facturas.cs",
+              "RelativeDocumentMoniker": "Views\\Usuario_Facturas.cs",
+              "ToolTip": "C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Usuario_Facturas.cs [Dise\u00F1o]*",
+              "RelativeToolTip": "Views\\Usuario_Facturas.cs [Dise\u00F1o]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T17:16:35.412Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Usuario_Terrenos.cs",
-              "DocumentMoniker": "C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Usuario_Terrenos.cs",
-              "RelativeDocumentMoniker": "Views\\Usuario_Terrenos.cs",
-              "ToolTip": "C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Usuario_Terrenos.cs",
-              "RelativeToolTip": "Views\\Usuario_Terrenos.cs",
-              "ViewState": "AgIAAGkBAAAAAAAAAAAAwH4BAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T17:16:17.666Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Usuario_Terrenos.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Usuario_Terrenos.cs",
-              "RelativeDocumentMoniker": "Views\\Usuario_Terrenos.cs",
-              "ToolTip": "C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Usuario_Terrenos.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Views\\Usuario_Terrenos.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T17:16:15.391Z",
+              "WhenOpened": "2026-06-05T17:06:17.964Z",
               "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Usuario_Facturas.cs",
+              "DocumentMoniker": "C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Usuario_Facturas.cs",
+              "RelativeDocumentMoniker": "Views\\Usuario_Facturas.cs",
+              "ToolTip": "C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Usuario_Facturas.cs*",
+              "RelativeToolTip": "Views\\Usuario_Facturas.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0BAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-05T17:06:04.407Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "UsuarioController.cs",
+              "DocumentMoniker": "C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Controller\\UsuarioController.cs",
+              "RelativeDocumentMoniker": "Controller\\UsuarioController.cs",
+              "ToolTip": "C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Controller\\UsuarioController.cs",
+              "RelativeToolTip": "Controller\\UsuarioController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-07T15:01:02.159Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ClienteController.cs",
+              "DocumentMoniker": "C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Controller\\ClienteController.cs",
+              "RelativeDocumentMoniker": "Controller\\ClienteController.cs",
+              "ToolTip": "C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Controller\\ClienteController.cs",
+              "RelativeToolTip": "Controller\\ClienteController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-06T19:31:34.871Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Main_Program.cs",
+              "DocumentMoniker": "C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Main_Program.cs",
+              "RelativeDocumentMoniker": "Main_Program.cs",
+              "ToolTip": "C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Main_Program.cs",
+              "RelativeToolTip": "Main_Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-06T16:49:03.738Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ClienteRepository.cs",
+              "DocumentMoniker": "C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Repositorys\\ClienteRepository.cs",
+              "RelativeDocumentMoniker": "Repositorys\\ClienteRepository.cs",
+              "ToolTip": "C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Repositorys\\ClienteRepository.cs",
+              "RelativeToolTip": "Repositorys\\ClienteRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-06T17:14:02.33Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CotizacionController.cs",
+              "DocumentMoniker": "C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Controller\\CotizacionController.cs",
+              "RelativeDocumentMoniker": "Controller\\CotizacionController.cs",
+              "ToolTip": "C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Controller\\CotizacionController.cs",
+              "RelativeToolTip": "Controller\\CotizacionController.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAxwCIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-06T16:47:51.39Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "PuntoTerreno.cs",
               "DocumentMoniker": "C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Models\\PuntoTerreno.cs",
               "RelativeDocumentMoniker": "Models\\PuntoTerreno.cs",
@@ -157,161 +222,85 @@
               "RelativeToolTip": "Models\\PuntoTerreno.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T17:17:17.877Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Terreno.cs",
-              "DocumentMoniker": "C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Models\\Terreno.cs",
-              "RelativeDocumentMoniker": "Models\\Terreno.cs",
-              "ToolTip": "C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Models\\Terreno.cs",
-              "RelativeToolTip": "Models\\Terreno.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T17:17:07.261Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Principal_Screen.cs",
-              "DocumentMoniker": "C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Principal_Screen.cs",
-              "RelativeDocumentMoniker": "Views\\Principal_Screen.cs",
-              "ToolTip": "C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Principal_Screen.cs",
-              "RelativeToolTip": "Views\\Principal_Screen.cs",
-              "ViewState": "AgIAAKwAAAAAAAAAAAA3wLoAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T17:13:44.187Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "FacturaController.cs",
-              "DocumentMoniker": "C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Controller\\FacturaController.cs",
-              "RelativeDocumentMoniker": "Controller\\FacturaController.cs",
-              "ToolTip": "C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Controller\\FacturaController.cs",
-              "RelativeToolTip": "Controller\\FacturaController.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAA1wC0AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T17:09:48.269Z",
+              "WhenOpened": "2026-06-06T16:47:40.797Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "Login_Screen.cs",
-              "DocumentMoniker": "C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Login_Screen.cs",
-              "RelativeDocumentMoniker": "Views\\Login_Screen.cs",
-              "ToolTip": "C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Login_Screen.cs",
-              "RelativeToolTip": "Views\\Login_Screen.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAdAAAAAAAAAA==",
+              "Title": "Terreno.cs",
+              "DocumentMoniker": "C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Models\\Terreno.cs",
+              "RelativeDocumentMoniker": "Models\\Terreno.cs",
+              "ToolTip": "C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Models\\Terreno.cs",
+              "RelativeToolTip": "Models\\Terreno.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T17:08:12.453Z",
+              "WhenOpened": "2026-06-06T16:47:30.958Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Usuario_Facturas.cs",
-              "DocumentMoniker": "C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Usuario_Facturas.cs",
-              "RelativeDocumentMoniker": "Views\\Usuario_Facturas.cs",
-              "ToolTip": "C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Usuario_Facturas.cs",
-              "RelativeToolTip": "Views\\Usuario_Facturas.cs",
-              "ViewState": "AgIAAAUBAAAAAAAAAAAAABsBAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T17:06:04.407Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Usuario_Facturas.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Usuario_Facturas.cs",
-              "RelativeDocumentMoniker": "Views\\Usuario_Facturas.cs",
-              "ToolTip": "C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Usuario_Facturas.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Views\\Usuario_Facturas.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T17:06:17.964Z",
-              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "CotizacionRepository.cs",
-              "DocumentMoniker": "C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Repositorys\\CotizacionRepository.cs",
-              "RelativeDocumentMoniker": "Repositorys\\CotizacionRepository.cs",
-              "ToolTip": "C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Repositorys\\CotizacionRepository.cs",
-              "RelativeToolTip": "Repositorys\\CotizacionRepository.cs",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAkwFsAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T17:11:39.548Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
               "Title": "Cotizacion.cs",
               "DocumentMoniker": "C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Models\\Cotizacion.cs",
               "RelativeDocumentMoniker": "Models\\Cotizacion.cs",
               "ToolTip": "C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Models\\Cotizacion.cs",
               "RelativeToolTip": "Models\\Cotizacion.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAmwBgAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T17:12:16.921Z",
+              "WhenOpened": "2026-06-06T16:47:24.726Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Factura.cs",
+              "DocumentMoniker": "C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Models\\Factura.cs",
+              "RelativeDocumentMoniker": "Models\\Factura.cs",
+              "ToolTip": "C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Models\\Factura.cs",
+              "RelativeToolTip": "Models\\Factura.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-06T16:47:15.19Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
-              "Title": "CotizacionController.cs",
-              "DocumentMoniker": "C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Controller\\CotizacionController.cs",
-              "RelativeDocumentMoniker": "Controller\\CotizacionController.cs",
-              "ToolTip": "C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Controller\\CotizacionController.cs",
-              "RelativeToolTip": "Controller\\CotizacionController.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAwCQAAAAJAAAAAAAAAA==",
+              "Title": "TerrenoController.cs",
+              "DocumentMoniker": "C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Controller\\TerrenoController.cs",
+              "RelativeDocumentMoniker": "Controller\\TerrenoController.cs",
+              "ToolTip": "C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Controller\\TerrenoController.cs",
+              "RelativeToolTip": "Controller\\TerrenoController.cs",
+              "ViewState": "AgIAAGgAAAAAAAAAAAAAAIUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T17:10:49.099Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Usuario_Facturas.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Usuario_Facturas.Designer.cs",
-              "RelativeDocumentMoniker": "Views\\Usuario_Facturas.Designer.cs",
-              "ToolTip": "C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Usuario_Facturas.Designer.cs",
-              "RelativeToolTip": "Views\\Usuario_Facturas.Designer.cs",
-              "ViewState": "AgIAAGcBAAAAAAAAAAAkwH0BAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T17:08:03.901Z",
+              "WhenOpened": "2026-06-06T16:45:10.442Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 15,
-              "Title": "Login_Screen.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Login_Screen.cs",
-              "RelativeDocumentMoniker": "Views\\Login_Screen.cs",
-              "ToolTip": "C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\Login_Screen.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Views\\Login_Screen.cs [Dise\u00F1o]",
+              "Title": "Cliente.cs",
+              "DocumentMoniker": "C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Models\\Cliente.cs",
+              "RelativeDocumentMoniker": "Models\\Cliente.cs",
+              "ToolTip": "C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Models\\Cliente.cs",
+              "RelativeToolTip": "Models\\Cliente.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T17:08:10.205Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2026-06-06T16:27:07.062Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "ICerrable.cs",
-              "DocumentMoniker": "C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\ICerrable.cs",
-              "RelativeDocumentMoniker": "Views\\ICerrable.cs",
-              "ToolTip": "C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Views\\ICerrable.cs",
-              "RelativeToolTip": "Views\\ICerrable.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 14,
+              "Title": "TerrenoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Repositorys\\TerrenoRepository.cs",
+              "RelativeDocumentMoniker": "Repositorys\\TerrenoRepository.cs",
+              "ToolTip": "C:\\Users\\David Esper\\Documents\\GitHub\\PROYECTO_INTEGRADOR\\GeoIntegral\\Repositorys\\TerrenoRepository.cs",
+              "RelativeToolTip": "Repositorys\\TerrenoRepository.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAowA4AAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T17:08:08.287Z",
+              "WhenOpened": "2026-06-05T17:47:35.013Z",
               "EditorCaption": ""
             }
           ]

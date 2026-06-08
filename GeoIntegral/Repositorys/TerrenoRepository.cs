@@ -44,12 +44,12 @@ namespace GeoIntegral.Repositorys
                 if (!Directory.Exists(dir)) Directory.CreateDirectory(dir);
 
                 if (!File.Exists(rutaTerrenos))
-                    File.WriteAllText(rutaTerrenos, $"IdTerreno;FechaRegistro;NombreProyecto;VolumenCalculado;Observaciones{Environment.NewLine}");
+                    File.WriteAllText(rutaTerrenos, $"IdTerreno;FechaRegistro;NombreProyecto;VolumenCalculado;AreaCalculada;Observaciones{Environment.NewLine}");
 
                 if (!File.Exists(rutaCoordenadas))
                     File.WriteAllText(rutaCoordenadas, $"IdTerreno;EjeX;EjeY;EjeZ{Environment.NewLine}");
 
-                string lineaTerreno = $"{terreno.Id};{terreno.FechaRegistro};{terreno.NombreProyecto};{terreno.Volumen};{terreno.Observaciones}{Environment.NewLine}";
+                string lineaTerreno = $"{terreno.Id};{terreno.FechaRegistro};{terreno.NombreProyecto};{terreno.Volumen};{terreno.Area};{terreno.Observaciones}{Environment.NewLine}";
                 File.AppendAllText(rutaTerrenos, lineaTerreno);
 
                 foreach (var p in terreno.Puntos)
@@ -76,10 +76,13 @@ namespace GeoIntegral.Repositorys
             {
                 if (string.IsNullOrWhiteSpace(linea)) continue;
                 string[] d = linea.Split(';');
+                if (d.Length < 6) continue;
+
                 var terreno = new Terreno(int.Parse(d[0]), d[2]);
                 terreno.FechaRegistro = d[1];
                 terreno.Volumen = double.Parse(d[3]);
-                terreno.Observaciones = d[4];
+                terreno.Area = double.Parse(d[4]);
+                terreno.Observaciones = d[5];
                 lista.Add(terreno);
             }
             return lista;

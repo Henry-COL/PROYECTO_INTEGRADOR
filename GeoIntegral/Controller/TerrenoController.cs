@@ -91,6 +91,11 @@ namespace GeoIntegral.Controller
             return sumaZPeso / sumaPesos;
         }
 
+        public double ObtenerZPublico(double x, double y)
+        {
+            return ObtenerZ(x, y);
+        }
+
         public bool GuardarTerreno(string nombreProyecto, string observaciones)
         {
             try
@@ -98,6 +103,7 @@ namespace GeoIntegral.Controller
                 var terreno = new Terreno(repo.GenerarNuevoId(), nombreProyecto);
                 terreno.FechaRegistro = DateTime.Now.ToString("yyyy-MM-dd");
                 terreno.Volumen = CalcularVolumen();
+                terreno.Area = CalcularArea();
                 terreno.Observaciones = observaciones;
                 terreno.Puntos = new List<PuntoTerreno>(puntos);
 
@@ -123,11 +129,6 @@ namespace GeoIntegral.Controller
         public List<PuntoTerreno> ObtenerCoordenadas(int idTerreno)
         {
             return repo.ObtenerCoordenadas(idTerreno);
-        }
-
-        public double ObtenerZPublico(double x, double y)
-        {
-            return ObtenerZ(x, y);
         }
     }
 }

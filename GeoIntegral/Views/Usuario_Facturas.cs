@@ -33,6 +33,7 @@ namespace GeoIntegral.Views
             btnConvertir.Click += btnConvertir_Click;
             btnCambiarEstado.Click += btnCambiarEstado_Click;
             btnEliminar.Click += btnEliminar_Click;
+            
 
             CargarFiltroClientes();
             CargarFacturas();
@@ -280,5 +281,6 @@ namespace GeoIntegral.Views
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
     }
 }
