@@ -344,13 +344,17 @@
   <ItemGroup>
     <Content Include="Multimedia\App_Admin_Menu1.png" />
     <Content Include="Multimedia\App_Admin_Menu2.png" />
+    <Content Include="Multimedia\App_Borrar.png" />
+    <Content Include="Multimedia\App_Buscar.png" />
     <Content Include="Multimedia\App_Cerrar_Sesion.png" />
     <Content Include="Multimedia\App_Cliente.png" />
     <Content Include="Multimedia\App_Costo_Total.png" />
     <Content Include="Multimedia\App_CuentaEmpresa_Imagen.png" />
     <Content Include="Multimedia\App_CuentaPersonal_Imagen.png" />
+    <Content Include="Multimedia\App_Detalles.png" />
     <Content Include="Multimedia\App_Gmail.png" />
     <Content Include="Multimedia\App_Identificacion.png" />
+    <Content Include="Multimedia\App_Limpiar.png" />
     <Content Include="Multimedia\App_Login_Wallpaper.png" />
     <Content Include="Multimedia\App_Login_Wallpaper_.png" />
     <Content Include="Multimedia\App_Material.png" />

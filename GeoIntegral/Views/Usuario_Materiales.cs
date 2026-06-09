@@ -21,10 +21,7 @@ namespace GeoIntegral.Views
             dgvMateriales.Columns["ID"].Visible = false;
 
             lblMensaje_Nombre.Visible = false;
-            lblMensaje_Costo.Visible = false;
             lblMensaje_Nombre.ForeColor = System.Drawing.Color.Red;
-            lblMensaje_Costo.ForeColor = System.Drawing.Color.Red;
-
             btnGuardarMaterial.Click += new EventHandler(btnGuardarMaterial_Click);
             btnLimpiarCampos.Click += new EventHandler(btnLimpiarCampos_Click);
             btnEliminarMaterial.Click += new EventHandler(btnEliminarMaterial_Click);
@@ -47,15 +44,13 @@ namespace GeoIntegral.Views
         private void LimpiarCampos()
         {
             txtNombreMaterial.Text = "";
-            txtCostoUnidad.Text = "";
+            numCostoUnidad.Value = 100000;
             lblMensaje_Nombre.Visible = false;
-            lblMensaje_Costo.Visible = false;
         }
 
         private void btnGuardarMaterial_Click(object sender, EventArgs e)
         {
             lblMensaje_Nombre.Visible = false;
-            lblMensaje_Costo.Visible = false;
 
             bool validar = true;
 
@@ -65,21 +60,9 @@ namespace GeoIntegral.Views
                 lblMensaje_Nombre.Visible = true;
                 validar = false;
             }
-            if (txtCostoUnidad.Text.Trim() == "")
-            {
-                lblMensaje_Costo.Text = "Campo obligatorio*";
-                lblMensaje_Costo.Visible = true;
-                validar = false;
-            }
 
             if (!validar) return;
 
-            if (!double.TryParse(txtCostoUnidad.Text, out double costo) || costo <= 0)
-            {
-                lblMensaje_Costo.Text = "Ingrese un valor numérico válido*";
-                lblMensaje_Costo.Visible = true;
-                return;
-            }
 
             if (materialController.MaterialExiste(txtNombreMaterial.Text.Trim()))
             {
@@ -90,8 +73,7 @@ namespace GeoIntegral.Views
 
             Material nuevoMaterial = new Material(
                 materialController.GenerarNuevoId(),
-                txtNombreMaterial.Text.Trim(),
-                costo
+                txtNombreMaterial.Text.Trim(), double.Parse(numCostoUnidad.Text.Trim())
             );
 
             if (materialController.RegistrarMaterial(nuevoMaterial))

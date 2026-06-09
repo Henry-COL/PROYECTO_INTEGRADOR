@@ -47,6 +47,7 @@
             this.lblCrear_Cuenta = new System.Windows.Forms.Label();
             this.lblRecuperar_Contrasena = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.guna2HtmlToolTip1 = new Guna.UI2.WinForms.Guna2HtmlToolTip();
             this.panel2.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -64,6 +65,7 @@
             // 
             this.btnCerrar_App.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(24)))), ((int)(((byte)(42)))));
             this.btnCerrar_App.BorderRadius = 8;
+            this.btnCerrar_App.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCerrar_App.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnCerrar_App.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnCerrar_App.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -77,6 +79,7 @@
             this.btnCerrar_App.Size = new System.Drawing.Size(69, 45);
             this.btnCerrar_App.TabIndex = 0;
             this.btnCerrar_App.Text = "X";
+            this.guna2HtmlToolTip1.SetToolTip(this.btnCerrar_App, "Cerrar ventana.");
             this.btnCerrar_App.Click += new System.EventHandler(this.btnCerrar_App_Click);
             // 
             // panel1
@@ -173,6 +176,7 @@
             this.btnIniciar_Sesion.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(99)))), ((int)(((byte)(56)))));
             this.btnIniciar_Sesion.BorderRadius = 7;
             this.btnIniciar_Sesion.BorderThickness = 3;
+            this.btnIniciar_Sesion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnIniciar_Sesion.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnIniciar_Sesion.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnIniciar_Sesion.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -297,6 +301,11 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
+            // guna2HtmlToolTip1
+            // 
+            this.guna2HtmlToolTip1.AllowLinksHandling = true;
+            this.guna2HtmlToolTip1.MaximumSize = new System.Drawing.Size(0, 0);
+            // 
             // Login_Screen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -340,5 +349,6 @@
         private System.Windows.Forms.Panel panel2;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Label label3;
+        private Guna.UI2.WinForms.Guna2HtmlToolTip guna2HtmlToolTip1;
     }
 }

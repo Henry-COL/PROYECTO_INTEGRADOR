@@ -83,6 +83,26 @@ namespace GeoIntegral.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap App_Borrar {
+            get {
+                object obj = ResourceManager.GetObject("App_Borrar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap App_Buscar {
+            get {
+                object obj = ResourceManager.GetObject("App_Buscar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap App_Cerrar_Sesion {
             get {
                 object obj = ResourceManager.GetObject("App_Cerrar_Sesion", resourceCulture);
@@ -133,6 +153,16 @@ namespace GeoIntegral.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap App_Detalles {
+            get {
+                object obj = ResourceManager.GetObject("App_Detalles", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap App_Gmail {
             get {
                 object obj = ResourceManager.GetObject("App_Gmail", resourceCulture);
@@ -146,6 +176,16 @@ namespace GeoIntegral.Properties {
         internal static System.Drawing.Bitmap App_Identificacion {
             get {
                 object obj = ResourceManager.GetObject("App_Identificacion", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap App_Limpiar {
+            get {
+                object obj = ResourceManager.GetObject("App_Limpiar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -196,3 +196,14 @@ C:\Users\David Esper\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\
 C:\Users\David Esper\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\OpenTK.xml
 C:\Users\David Esper\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\OpenTK.GLControl.pdb
 C:\Users\David Esper\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\OpenTK.GLControl.xml
+C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\DiscordRPC.dll
+C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\OpenTK.dll
+C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\OpenTK.GLControl.dll
+C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\DiscordRPC.pdb
+C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\DiscordRPC.xml
+C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\OpenTK.pdb
+C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\OpenTK.xml
+C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\OpenTK.GLControl.pdb
+C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\OpenTK.GLControl.xml

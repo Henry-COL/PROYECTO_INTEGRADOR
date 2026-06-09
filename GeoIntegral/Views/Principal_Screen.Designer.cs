@@ -31,69 +31,70 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal_Screen));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnCerrar_App_Principal = new Guna.UI2.WinForms.Guna2Button();
-            this.btnMinimizar = new Guna.UI2.WinForms.Guna2Button();
-            this.btn_Cerrar_Sesion = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnConfiguracion_Perfil = new Guna.UI2.WinForms.Guna2Button();
             this.lblNombre_Usuario = new System.Windows.Forms.Label();
             this.lblTipo_Usuario = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.Panel_Ventanas = new System.Windows.Forms.Panel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnCotizaciones = new Guna.UI2.WinForms.Guna2Button();
             this.btnTerrenos = new Guna.UI2.WinForms.Guna2Button();
             this.Admin_Panel = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnAdmin_Menu2 = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnAdmin_Menu = new Guna.UI2.WinForms.Guna2Button();
             this.btnMenuMateriales = new Guna.UI2.WinForms.Guna2Button();
             this.btnLista_Facturas = new Guna.UI2.WinForms.Guna2Button();
-            this.btnMenu_Registro_Clientes = new Guna.UI2.WinForms.Guna2Button();
             this.Panel_Menu = new System.Windows.Forms.Panel();
             this.guna2Panel8 = new Guna.UI2.WinForms.Guna2Panel();
             this.label14 = new System.Windows.Forms.Label();
             this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.guna2Panel7 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.guna2HtmlToolTip1 = new Guna.UI2.WinForms.Guna2HtmlToolTip();
+            this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.btnAdmin_Menu2 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAdmin_Menu = new Guna.UI2.WinForms.Guna2Button();
+            this.btnMenu_Registro_Clientes = new Guna.UI2.WinForms.Guna2Button();
+            this.btnMinimizar = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_Cerrar_Sesion = new Guna.UI2.WinForms.Guna2Button();
+            this.btnConfiguracion_Perfil = new Guna.UI2.WinForms.Guna2Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             this.Admin_Panel.SuspendLayout();
             this.Panel_Menu.SuspendLayout();
             this.guna2Panel8.SuspendLayout();
             this.guna2Panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
             this.guna2Panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             this.guna2Panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).BeginInit();
             this.guna2Panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.guna2Panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -117,6 +118,7 @@
             this.btnCerrar_App_Principal.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(32)))), ((int)(((byte)(87)))));
             this.btnCerrar_App_Principal.BorderRadius = 8;
             this.btnCerrar_App_Principal.BorderThickness = 2;
+            this.btnCerrar_App_Principal.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCerrar_App_Principal.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnCerrar_App_Principal.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnCerrar_App_Principal.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -130,52 +132,8 @@
             this.btnCerrar_App_Principal.Size = new System.Drawing.Size(60, 60);
             this.btnCerrar_App_Principal.TabIndex = 50;
             this.btnCerrar_App_Principal.Text = "X";
+            this.guna2HtmlToolTip1.SetToolTip(this.btnCerrar_App_Principal, "Cerrar todo.");
             this.btnCerrar_App_Principal.Click += new System.EventHandler(this.btnCerrar_App_Principal_Click);
-            // 
-            // btnMinimizar
-            // 
-            this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMinimizar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(32)))), ((int)(((byte)(87)))));
-            this.btnMinimizar.BorderRadius = 8;
-            this.btnMinimizar.BorderThickness = 2;
-            this.btnMinimizar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnMinimizar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnMinimizar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnMinimizar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnMinimizar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(22)))), ((int)(((byte)(54)))));
-            this.btnMinimizar.Font = new System.Drawing.Font("Segoe UI", 27F);
-            this.btnMinimizar.ForeColor = System.Drawing.Color.White;
-            this.btnMinimizar.Image = global::GeoIntegral.Properties.Resources.App_Minimizar;
-            this.btnMinimizar.ImageOffset = new System.Drawing.Point(0, 3);
-            this.btnMinimizar.ImageSize = new System.Drawing.Size(60, 60);
-            this.btnMinimizar.Location = new System.Drawing.Point(1481, 12);
-            this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(60, 60);
-            this.btnMinimizar.TabIndex = 0;
-            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
-            // 
-            // btn_Cerrar_Sesion
-            // 
-            this.btn_Cerrar_Sesion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Cerrar_Sesion.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Cerrar_Sesion.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(32)))), ((int)(((byte)(87)))));
-            this.btn_Cerrar_Sesion.BorderRadius = 6;
-            this.btn_Cerrar_Sesion.BorderThickness = 2;
-            this.btn_Cerrar_Sesion.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Cerrar_Sesion.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Cerrar_Sesion.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_Cerrar_Sesion.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_Cerrar_Sesion.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(22)))), ((int)(((byte)(54)))));
-            this.btn_Cerrar_Sesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Cerrar_Sesion.ForeColor = System.Drawing.Color.White;
-            this.btn_Cerrar_Sesion.HoverState.FillColor = System.Drawing.Color.Firebrick;
-            this.btn_Cerrar_Sesion.Image = global::GeoIntegral.Properties.Resources.App_Cerrar_Sesion;
-            this.btn_Cerrar_Sesion.ImageSize = new System.Drawing.Size(60, 55);
-            this.btn_Cerrar_Sesion.Location = new System.Drawing.Point(1547, 11);
-            this.btn_Cerrar_Sesion.Name = "btn_Cerrar_Sesion";
-            this.btn_Cerrar_Sesion.Size = new System.Drawing.Size(68, 60);
-            this.btn_Cerrar_Sesion.TabIndex = 43;
-            this.btn_Cerrar_Sesion.Click += new System.EventHandler(this.btn_Cerrar_Sesion_Click);
             // 
             // guna2Panel2
             // 
@@ -192,27 +150,6 @@
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(218, 60);
             this.guna2Panel2.TabIndex = 37;
-            // 
-            // btnConfiguracion_Perfil
-            // 
-            this.btnConfiguracion_Perfil.BackColor = System.Drawing.Color.Transparent;
-            this.btnConfiguracion_Perfil.BorderColor = System.Drawing.Color.Empty;
-            this.btnConfiguracion_Perfil.BorderRadius = 6;
-            this.btnConfiguracion_Perfil.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnConfiguracion_Perfil.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnConfiguracion_Perfil.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnConfiguracion_Perfil.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnConfiguracion_Perfil.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(32)))), ((int)(((byte)(87)))));
-            this.btnConfiguracion_Perfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfiguracion_Perfil.ForeColor = System.Drawing.Color.White;
-            this.btnConfiguracion_Perfil.HoverState.FillColor = System.Drawing.Color.Green;
-            this.btnConfiguracion_Perfil.Image = global::GeoIntegral.Properties.Resources.App_Perfil;
-            this.btnConfiguracion_Perfil.ImageSize = new System.Drawing.Size(55, 35);
-            this.btnConfiguracion_Perfil.Location = new System.Drawing.Point(9, 6);
-            this.btnConfiguracion_Perfil.Name = "btnConfiguracion_Perfil";
-            this.btnConfiguracion_Perfil.Size = new System.Drawing.Size(54, 48);
-            this.btnConfiguracion_Perfil.TabIndex = 42;
-            this.btnConfiguracion_Perfil.Click += new System.EventHandler(this.btnConfiguracion_Perfil_Click);
             // 
             // lblNombre_Usuario
             // 
@@ -241,28 +178,6 @@
             this.lblTipo_Usuario.Text = "Administrador";
             this.lblTipo_Usuario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::GeoIntegral.Properties.Resources.GeoIntegral_Logo;
-            this.pictureBox1.Location = new System.Drawing.Point(16, 18);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(51, 45);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 33;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = global::GeoIntegral.Properties.Resources.GeoIntegral_LogoTipo;
-            this.pictureBox2.Location = new System.Drawing.Point(64, 22);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(188, 43);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 34;
-            this.pictureBox2.TabStop = false;
-            // 
             // Panel_Ventanas
             // 
             this.Panel_Ventanas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(24)))), ((int)(((byte)(46)))));
@@ -283,7 +198,7 @@
             this.guna2Panel1.Controls.Add(this.btnLista_Facturas);
             this.guna2Panel1.Controls.Add(this.btnMenu_Registro_Clientes);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(16)))), ((int)(((byte)(30)))));
+            this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(15)))), ((int)(((byte)(26)))));
             this.guna2Panel1.Location = new System.Drawing.Point(0, 83);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(280, 997);
@@ -295,6 +210,7 @@
             this.btnCotizaciones.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(41)))), ((int)(((byte)(76)))));
             this.btnCotizaciones.BorderRadius = 6;
             this.btnCotizaciones.BorderThickness = 3;
+            this.btnCotizaciones.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCotizaciones.DisabledState.BorderColor = System.Drawing.Color.White;
             this.btnCotizaciones.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(33)))), ((int)(((byte)(61)))));
             this.btnCotizaciones.DisabledState.ForeColor = System.Drawing.Color.White;
@@ -316,6 +232,7 @@
             this.btnTerrenos.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(41)))), ((int)(((byte)(76)))));
             this.btnTerrenos.BorderRadius = 6;
             this.btnTerrenos.BorderThickness = 3;
+            this.btnTerrenos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTerrenos.DisabledState.BorderColor = System.Drawing.Color.White;
             this.btnTerrenos.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(33)))), ((int)(((byte)(61)))));
             this.btnTerrenos.DisabledState.ForeColor = System.Drawing.Color.White;
@@ -345,33 +262,6 @@
             this.Admin_Panel.TabIndex = 39;
             this.Admin_Panel.Visible = false;
             // 
-            // btnAdmin_Menu2
-            // 
-            this.btnAdmin_Menu2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(32)))), ((int)(((byte)(87)))));
-            this.btnAdmin_Menu2.BorderRadius = 6;
-            this.btnAdmin_Menu2.BorderThickness = 3;
-            this.btnAdmin_Menu2.DisabledState.BorderColor = System.Drawing.Color.White;
-            this.btnAdmin_Menu2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(32)))), ((int)(((byte)(87)))));
-            this.btnAdmin_Menu2.DisabledState.ForeColor = System.Drawing.Color.White;
-            this.btnAdmin_Menu2.DisabledState.Image = global::GeoIntegral.Properties.Resources.App_Admin_Menu2;
-            this.btnAdmin_Menu2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(22)))), ((int)(((byte)(54)))));
-            this.btnAdmin_Menu2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.btnAdmin_Menu2.ForeColor = System.Drawing.Color.White;
-            this.btnAdmin_Menu2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(22)))), ((int)(((byte)(54)))));
-            this.btnAdmin_Menu2.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(32)))), ((int)(((byte)(87)))));
-            this.btnAdmin_Menu2.HoverState.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.btnAdmin_Menu2.Image = global::GeoIntegral.Properties.Resources.App_Admin_Menu2;
-            this.btnAdmin_Menu2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnAdmin_Menu2.ImageOffset = new System.Drawing.Point(-15, 0);
-            this.btnAdmin_Menu2.ImageSize = new System.Drawing.Size(70, 45);
-            this.btnAdmin_Menu2.Location = new System.Drawing.Point(16, 52);
-            this.btnAdmin_Menu2.Name = "btnAdmin_Menu2";
-            this.btnAdmin_Menu2.Size = new System.Drawing.Size(248, 60);
-            this.btnAdmin_Menu2.TabIndex = 6;
-            this.btnAdmin_Menu2.Text = "Notificaciones";
-            this.btnAdmin_Menu2.TextOffset = new System.Drawing.Point(11, 0);
-            this.btnAdmin_Menu2.Click += new System.EventHandler(this.btnAdmin_Menu2_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -383,40 +273,13 @@
             this.label1.TabIndex = 37;
             this.label1.Text = "Admin Panel";
             // 
-            // btnAdmin_Menu
-            // 
-            this.btnAdmin_Menu.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(32)))), ((int)(((byte)(87)))));
-            this.btnAdmin_Menu.BorderRadius = 6;
-            this.btnAdmin_Menu.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            this.btnAdmin_Menu.BorderThickness = 3;
-            this.btnAdmin_Menu.DisabledState.BorderColor = System.Drawing.Color.White;
-            this.btnAdmin_Menu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(32)))), ((int)(((byte)(87)))));
-            this.btnAdmin_Menu.DisabledState.ForeColor = System.Drawing.Color.White;
-            this.btnAdmin_Menu.DisabledState.Image = global::GeoIntegral.Properties.Resources.App_Admin_Menu1;
-            this.btnAdmin_Menu.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(22)))), ((int)(((byte)(54)))));
-            this.btnAdmin_Menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdmin_Menu.ForeColor = System.Drawing.Color.White;
-            this.btnAdmin_Menu.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(22)))), ((int)(((byte)(54)))));
-            this.btnAdmin_Menu.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(32)))), ((int)(((byte)(87)))));
-            this.btnAdmin_Menu.HoverState.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.btnAdmin_Menu.Image = global::GeoIntegral.Properties.Resources.App_Admin_Menu1;
-            this.btnAdmin_Menu.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnAdmin_Menu.ImageOffset = new System.Drawing.Point(-15, 0);
-            this.btnAdmin_Menu.ImageSize = new System.Drawing.Size(70, 45);
-            this.btnAdmin_Menu.Location = new System.Drawing.Point(15, 129);
-            this.btnAdmin_Menu.Name = "btnAdmin_Menu";
-            this.btnAdmin_Menu.Size = new System.Drawing.Size(249, 60);
-            this.btnAdmin_Menu.TabIndex = 5;
-            this.btnAdmin_Menu.Text = "Lista Usuarios";
-            this.btnAdmin_Menu.TextOffset = new System.Drawing.Point(11, 0);
-            this.btnAdmin_Menu.Click += new System.EventHandler(this.btnAdmin_Menu_Click);
-            // 
             // btnMenuMateriales
             // 
             this.btnMenuMateriales.BackColor = System.Drawing.Color.Transparent;
             this.btnMenuMateriales.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(41)))), ((int)(((byte)(76)))));
             this.btnMenuMateriales.BorderRadius = 6;
             this.btnMenuMateriales.BorderThickness = 3;
+            this.btnMenuMateriales.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMenuMateriales.DisabledState.BorderColor = System.Drawing.Color.White;
             this.btnMenuMateriales.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(33)))), ((int)(((byte)(61)))));
             this.btnMenuMateriales.DisabledState.ForeColor = System.Drawing.Color.White;
@@ -438,6 +301,7 @@
             this.btnLista_Facturas.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(41)))), ((int)(((byte)(76)))));
             this.btnLista_Facturas.BorderRadius = 6;
             this.btnLista_Facturas.BorderThickness = 3;
+            this.btnLista_Facturas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLista_Facturas.DisabledState.BorderColor = System.Drawing.Color.White;
             this.btnLista_Facturas.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(33)))), ((int)(((byte)(61)))));
             this.btnLista_Facturas.DisabledState.ForeColor = System.Drawing.Color.White;
@@ -452,34 +316,6 @@
             this.btnLista_Facturas.TabIndex = 1;
             this.btnLista_Facturas.Text = "Facturas";
             this.btnLista_Facturas.Click += new System.EventHandler(this.btnLista_Facturas_Click);
-            // 
-            // btnMenu_Registro_Clientes
-            // 
-            this.btnMenu_Registro_Clientes.BackColor = System.Drawing.Color.Transparent;
-            this.btnMenu_Registro_Clientes.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(41)))), ((int)(((byte)(76)))));
-            this.btnMenu_Registro_Clientes.BorderRadius = 6;
-            this.btnMenu_Registro_Clientes.BorderThickness = 3;
-            this.btnMenu_Registro_Clientes.DisabledState.BorderColor = System.Drawing.Color.White;
-            this.btnMenu_Registro_Clientes.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(33)))), ((int)(((byte)(61)))));
-            this.btnMenu_Registro_Clientes.DisabledState.ForeColor = System.Drawing.Color.White;
-            this.btnMenu_Registro_Clientes.DisabledState.Image = global::GeoIntegral.Properties.Resources.App_Registrar_Cliente;
-            this.btnMenu_Registro_Clientes.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(24)))), ((int)(((byte)(46)))));
-            this.btnMenu_Registro_Clientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.btnMenu_Registro_Clientes.ForeColor = System.Drawing.Color.White;
-            this.btnMenu_Registro_Clientes.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(24)))), ((int)(((byte)(46)))));
-            this.btnMenu_Registro_Clientes.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(41)))), ((int)(((byte)(76)))));
-            this.btnMenu_Registro_Clientes.HoverState.ForeColor = System.Drawing.Color.SteelBlue;
-            this.btnMenu_Registro_Clientes.Image = global::GeoIntegral.Properties.Resources.App_Registrar_Cliente;
-            this.btnMenu_Registro_Clientes.ImageOffset = new System.Drawing.Point(-2, 0);
-            this.btnMenu_Registro_Clientes.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnMenu_Registro_Clientes.Location = new System.Drawing.Point(27, 40);
-            this.btnMenu_Registro_Clientes.Name = "btnMenu_Registro_Clientes";
-            this.btnMenu_Registro_Clientes.PressedColor = System.Drawing.Color.Empty;
-            this.btnMenu_Registro_Clientes.Size = new System.Drawing.Size(220, 60);
-            this.btnMenu_Registro_Clientes.TabIndex = 0;
-            this.btnMenu_Registro_Clientes.Text = "Registro Clientes";
-            this.btnMenu_Registro_Clientes.TextOffset = new System.Drawing.Point(-1, 0);
-            this.btnMenu_Registro_Clientes.Click += new System.EventHandler(this.btnMenu_Registro_Clientes_Click);
             // 
             // Panel_Menu
             // 
@@ -541,17 +377,6 @@
             this.guna2Panel6.Size = new System.Drawing.Size(391, 369);
             this.guna2Panel6.TabIndex = 58;
             // 
-            // guna2PictureBox4
-            // 
-            this.guna2PictureBox4.BorderRadius = 1;
-            this.guna2PictureBox4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(117)))), ((int)(((byte)(212)))));
-            this.guna2PictureBox4.ImageRotate = 0F;
-            this.guna2PictureBox4.Location = new System.Drawing.Point(27, 316);
-            this.guna2PictureBox4.Name = "guna2PictureBox4";
-            this.guna2PictureBox4.Size = new System.Drawing.Size(4, 35);
-            this.guna2PictureBox4.TabIndex = 48;
-            this.guna2PictureBox4.TabStop = false;
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -588,17 +413,6 @@
             this.guna2Panel5.Name = "guna2Panel5";
             this.guna2Panel5.Size = new System.Drawing.Size(391, 369);
             this.guna2Panel5.TabIndex = 56;
-            // 
-            // guna2PictureBox3
-            // 
-            this.guna2PictureBox3.BorderRadius = 1;
-            this.guna2PictureBox3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(117)))), ((int)(((byte)(212)))));
-            this.guna2PictureBox3.ImageRotate = 0F;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(27, 316);
-            this.guna2PictureBox3.Name = "guna2PictureBox3";
-            this.guna2PictureBox3.Size = new System.Drawing.Size(4, 35);
-            this.guna2PictureBox3.TabIndex = 48;
-            this.guna2PictureBox3.TabStop = false;
             // 
             // label5
             // 
@@ -637,17 +451,6 @@
             this.guna2Panel7.Size = new System.Drawing.Size(391, 369);
             this.guna2Panel7.TabIndex = 57;
             // 
-            // guna2PictureBox5
-            // 
-            this.guna2PictureBox5.BorderRadius = 1;
-            this.guna2PictureBox5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(117)))), ((int)(((byte)(212)))));
-            this.guna2PictureBox5.ImageRotate = 0F;
-            this.guna2PictureBox5.Location = new System.Drawing.Point(27, 316);
-            this.guna2PictureBox5.Name = "guna2PictureBox5";
-            this.guna2PictureBox5.Size = new System.Drawing.Size(4, 35);
-            this.guna2PictureBox5.TabIndex = 48;
-            this.guna2PictureBox5.TabStop = false;
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -684,17 +487,6 @@
             this.guna2Panel4.Name = "guna2Panel4";
             this.guna2Panel4.Size = new System.Drawing.Size(391, 369);
             this.guna2Panel4.TabIndex = 55;
-            // 
-            // guna2PictureBox2
-            // 
-            this.guna2PictureBox2.BorderRadius = 1;
-            this.guna2PictureBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(117)))), ((int)(((byte)(212)))));
-            this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(27, 316);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(4, 35);
-            this.guna2PictureBox2.TabIndex = 48;
-            this.guna2PictureBox2.TabStop = false;
             // 
             // label6
             // 
@@ -746,17 +538,6 @@
             this.label4.TabIndex = 49;
             this.label4.Text = "\"Matemáticas que transforman ideas en soluciones.\"";
             // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.BorderRadius = 1;
-            this.guna2PictureBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(117)))), ((int)(((byte)(212)))));
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(27, 316);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(4, 35);
-            this.guna2PictureBox1.TabIndex = 48;
-            this.guna2PictureBox1.TabStop = false;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -780,6 +561,66 @@
             this.label3.Text = "Herramienta especializada en el cálculo de áreas y volúmenes\r\nutilizando integral" +
     "es dobles, con representación\r\ngráfica en los ejes X, Y y Z.";
             // 
+            // guna2HtmlToolTip1
+            // 
+            this.guna2HtmlToolTip1.AllowLinksHandling = true;
+            this.guna2HtmlToolTip1.MaximumSize = new System.Drawing.Size(0, 0);
+            // 
+            // guna2PictureBox4
+            // 
+            this.guna2PictureBox4.BorderRadius = 1;
+            this.guna2PictureBox4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(117)))), ((int)(((byte)(212)))));
+            this.guna2PictureBox4.ImageRotate = 0F;
+            this.guna2PictureBox4.Location = new System.Drawing.Point(27, 316);
+            this.guna2PictureBox4.Name = "guna2PictureBox4";
+            this.guna2PictureBox4.Size = new System.Drawing.Size(4, 35);
+            this.guna2PictureBox4.TabIndex = 48;
+            this.guna2PictureBox4.TabStop = false;
+            // 
+            // guna2PictureBox3
+            // 
+            this.guna2PictureBox3.BorderRadius = 1;
+            this.guna2PictureBox3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(117)))), ((int)(((byte)(212)))));
+            this.guna2PictureBox3.ImageRotate = 0F;
+            this.guna2PictureBox3.Location = new System.Drawing.Point(27, 316);
+            this.guna2PictureBox3.Name = "guna2PictureBox3";
+            this.guna2PictureBox3.Size = new System.Drawing.Size(4, 35);
+            this.guna2PictureBox3.TabIndex = 48;
+            this.guna2PictureBox3.TabStop = false;
+            // 
+            // guna2PictureBox5
+            // 
+            this.guna2PictureBox5.BorderRadius = 1;
+            this.guna2PictureBox5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(117)))), ((int)(((byte)(212)))));
+            this.guna2PictureBox5.ImageRotate = 0F;
+            this.guna2PictureBox5.Location = new System.Drawing.Point(27, 316);
+            this.guna2PictureBox5.Name = "guna2PictureBox5";
+            this.guna2PictureBox5.Size = new System.Drawing.Size(4, 35);
+            this.guna2PictureBox5.TabIndex = 48;
+            this.guna2PictureBox5.TabStop = false;
+            // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.BorderRadius = 1;
+            this.guna2PictureBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(117)))), ((int)(((byte)(212)))));
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(27, 316);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(4, 35);
+            this.guna2PictureBox2.TabIndex = 48;
+            this.guna2PictureBox2.TabStop = false;
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.BorderRadius = 1;
+            this.guna2PictureBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(117)))), ((int)(((byte)(212)))));
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(27, 316);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(4, 35);
+            this.guna2PictureBox1.TabIndex = 48;
+            this.guna2PictureBox1.TabStop = false;
+            // 
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
@@ -790,6 +631,186 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 44;
             this.pictureBox3.TabStop = false;
+            // 
+            // btnAdmin_Menu2
+            // 
+            this.btnAdmin_Menu2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(32)))), ((int)(((byte)(87)))));
+            this.btnAdmin_Menu2.BorderRadius = 6;
+            this.btnAdmin_Menu2.BorderThickness = 3;
+            this.btnAdmin_Menu2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdmin_Menu2.DisabledState.BorderColor = System.Drawing.Color.White;
+            this.btnAdmin_Menu2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(32)))), ((int)(((byte)(87)))));
+            this.btnAdmin_Menu2.DisabledState.ForeColor = System.Drawing.Color.White;
+            this.btnAdmin_Menu2.DisabledState.Image = global::GeoIntegral.Properties.Resources.App_Admin_Menu2;
+            this.btnAdmin_Menu2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(22)))), ((int)(((byte)(54)))));
+            this.btnAdmin_Menu2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.btnAdmin_Menu2.ForeColor = System.Drawing.Color.White;
+            this.btnAdmin_Menu2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(22)))), ((int)(((byte)(54)))));
+            this.btnAdmin_Menu2.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(32)))), ((int)(((byte)(87)))));
+            this.btnAdmin_Menu2.HoverState.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btnAdmin_Menu2.Image = global::GeoIntegral.Properties.Resources.App_Admin_Menu2;
+            this.btnAdmin_Menu2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnAdmin_Menu2.ImageOffset = new System.Drawing.Point(-15, 0);
+            this.btnAdmin_Menu2.ImageSize = new System.Drawing.Size(70, 45);
+            this.btnAdmin_Menu2.Location = new System.Drawing.Point(16, 52);
+            this.btnAdmin_Menu2.Name = "btnAdmin_Menu2";
+            this.btnAdmin_Menu2.Size = new System.Drawing.Size(248, 60);
+            this.btnAdmin_Menu2.TabIndex = 6;
+            this.btnAdmin_Menu2.Text = "Notificaciones";
+            this.btnAdmin_Menu2.TextOffset = new System.Drawing.Point(11, 0);
+            this.btnAdmin_Menu2.Click += new System.EventHandler(this.btnAdmin_Menu2_Click);
+            // 
+            // btnAdmin_Menu
+            // 
+            this.btnAdmin_Menu.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(32)))), ((int)(((byte)(87)))));
+            this.btnAdmin_Menu.BorderRadius = 6;
+            this.btnAdmin_Menu.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.btnAdmin_Menu.BorderThickness = 3;
+            this.btnAdmin_Menu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdmin_Menu.DisabledState.BorderColor = System.Drawing.Color.White;
+            this.btnAdmin_Menu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(32)))), ((int)(((byte)(87)))));
+            this.btnAdmin_Menu.DisabledState.ForeColor = System.Drawing.Color.White;
+            this.btnAdmin_Menu.DisabledState.Image = global::GeoIntegral.Properties.Resources.App_Admin_Menu1;
+            this.btnAdmin_Menu.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(22)))), ((int)(((byte)(54)))));
+            this.btnAdmin_Menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdmin_Menu.ForeColor = System.Drawing.Color.White;
+            this.btnAdmin_Menu.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(22)))), ((int)(((byte)(54)))));
+            this.btnAdmin_Menu.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(32)))), ((int)(((byte)(87)))));
+            this.btnAdmin_Menu.HoverState.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btnAdmin_Menu.Image = global::GeoIntegral.Properties.Resources.App_Admin_Menu1;
+            this.btnAdmin_Menu.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnAdmin_Menu.ImageOffset = new System.Drawing.Point(-15, 0);
+            this.btnAdmin_Menu.ImageSize = new System.Drawing.Size(70, 45);
+            this.btnAdmin_Menu.Location = new System.Drawing.Point(15, 129);
+            this.btnAdmin_Menu.Name = "btnAdmin_Menu";
+            this.btnAdmin_Menu.Size = new System.Drawing.Size(249, 60);
+            this.btnAdmin_Menu.TabIndex = 5;
+            this.btnAdmin_Menu.Text = "Lista Usuarios";
+            this.btnAdmin_Menu.TextOffset = new System.Drawing.Point(11, 0);
+            this.btnAdmin_Menu.Click += new System.EventHandler(this.btnAdmin_Menu_Click);
+            // 
+            // btnMenu_Registro_Clientes
+            // 
+            this.btnMenu_Registro_Clientes.BackColor = System.Drawing.Color.Transparent;
+            this.btnMenu_Registro_Clientes.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(41)))), ((int)(((byte)(76)))));
+            this.btnMenu_Registro_Clientes.BorderRadius = 6;
+            this.btnMenu_Registro_Clientes.BorderThickness = 3;
+            this.btnMenu_Registro_Clientes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMenu_Registro_Clientes.DisabledState.BorderColor = System.Drawing.Color.White;
+            this.btnMenu_Registro_Clientes.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(33)))), ((int)(((byte)(61)))));
+            this.btnMenu_Registro_Clientes.DisabledState.ForeColor = System.Drawing.Color.White;
+            this.btnMenu_Registro_Clientes.DisabledState.Image = global::GeoIntegral.Properties.Resources.App_Registrar_Cliente;
+            this.btnMenu_Registro_Clientes.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(24)))), ((int)(((byte)(46)))));
+            this.btnMenu_Registro_Clientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.btnMenu_Registro_Clientes.ForeColor = System.Drawing.Color.White;
+            this.btnMenu_Registro_Clientes.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(24)))), ((int)(((byte)(46)))));
+            this.btnMenu_Registro_Clientes.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(41)))), ((int)(((byte)(76)))));
+            this.btnMenu_Registro_Clientes.HoverState.ForeColor = System.Drawing.Color.SteelBlue;
+            this.btnMenu_Registro_Clientes.Image = global::GeoIntegral.Properties.Resources.App_Registrar_Cliente;
+            this.btnMenu_Registro_Clientes.ImageOffset = new System.Drawing.Point(-2, 0);
+            this.btnMenu_Registro_Clientes.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnMenu_Registro_Clientes.Location = new System.Drawing.Point(27, 40);
+            this.btnMenu_Registro_Clientes.Name = "btnMenu_Registro_Clientes";
+            this.btnMenu_Registro_Clientes.PressedColor = System.Drawing.Color.Empty;
+            this.btnMenu_Registro_Clientes.Size = new System.Drawing.Size(220, 60);
+            this.btnMenu_Registro_Clientes.TabIndex = 0;
+            this.btnMenu_Registro_Clientes.Text = "Registro Clientes";
+            this.btnMenu_Registro_Clientes.TextOffset = new System.Drawing.Point(-1, 0);
+            this.btnMenu_Registro_Clientes.Click += new System.EventHandler(this.btnMenu_Registro_Clientes_Click);
+            // 
+            // btnMinimizar
+            // 
+            this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMinimizar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(32)))), ((int)(((byte)(87)))));
+            this.btnMinimizar.BorderRadius = 8;
+            this.btnMinimizar.BorderThickness = 2;
+            this.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMinimizar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnMinimizar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnMinimizar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnMinimizar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnMinimizar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(22)))), ((int)(((byte)(54)))));
+            this.btnMinimizar.Font = new System.Drawing.Font("Segoe UI", 27F);
+            this.btnMinimizar.ForeColor = System.Drawing.Color.White;
+            this.btnMinimizar.Image = global::GeoIntegral.Properties.Resources.App_Minimizar;
+            this.btnMinimizar.ImageOffset = new System.Drawing.Point(0, 3);
+            this.btnMinimizar.ImageSize = new System.Drawing.Size(60, 60);
+            this.btnMinimizar.Location = new System.Drawing.Point(1481, 12);
+            this.btnMinimizar.Name = "btnMinimizar";
+            this.btnMinimizar.Size = new System.Drawing.Size(60, 60);
+            this.btnMinimizar.TabIndex = 0;
+            this.guna2HtmlToolTip1.SetToolTip(this.btnMinimizar, "Minimizar.");
+            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
+            // 
+            // btn_Cerrar_Sesion
+            // 
+            this.btn_Cerrar_Sesion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Cerrar_Sesion.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Cerrar_Sesion.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(32)))), ((int)(((byte)(87)))));
+            this.btn_Cerrar_Sesion.BorderRadius = 6;
+            this.btn_Cerrar_Sesion.BorderThickness = 2;
+            this.btn_Cerrar_Sesion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Cerrar_Sesion.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Cerrar_Sesion.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Cerrar_Sesion.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Cerrar_Sesion.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Cerrar_Sesion.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(22)))), ((int)(((byte)(54)))));
+            this.btn_Cerrar_Sesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Cerrar_Sesion.ForeColor = System.Drawing.Color.White;
+            this.btn_Cerrar_Sesion.HoverState.FillColor = System.Drawing.Color.Firebrick;
+            this.btn_Cerrar_Sesion.Image = global::GeoIntegral.Properties.Resources.App_Cerrar_Sesion;
+            this.btn_Cerrar_Sesion.ImageSize = new System.Drawing.Size(60, 55);
+            this.btn_Cerrar_Sesion.Location = new System.Drawing.Point(1547, 11);
+            this.btn_Cerrar_Sesion.Name = "btn_Cerrar_Sesion";
+            this.btn_Cerrar_Sesion.Size = new System.Drawing.Size(68, 60);
+            this.btn_Cerrar_Sesion.TabIndex = 43;
+            this.guna2HtmlToolTip1.SetToolTip(this.btn_Cerrar_Sesion, "Cerrar sesión.");
+            this.btn_Cerrar_Sesion.Click += new System.EventHandler(this.btn_Cerrar_Sesion_Click);
+            // 
+            // btnConfiguracion_Perfil
+            // 
+            this.btnConfiguracion_Perfil.BackColor = System.Drawing.Color.Transparent;
+            this.btnConfiguracion_Perfil.BorderColor = System.Drawing.Color.Empty;
+            this.btnConfiguracion_Perfil.BorderRadius = 6;
+            this.btnConfiguracion_Perfil.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConfiguracion_Perfil.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnConfiguracion_Perfil.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnConfiguracion_Perfil.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnConfiguracion_Perfil.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnConfiguracion_Perfil.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(32)))), ((int)(((byte)(87)))));
+            this.btnConfiguracion_Perfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfiguracion_Perfil.ForeColor = System.Drawing.Color.White;
+            this.btnConfiguracion_Perfil.HoverState.FillColor = System.Drawing.Color.Green;
+            this.btnConfiguracion_Perfil.Image = global::GeoIntegral.Properties.Resources.App_Perfil;
+            this.btnConfiguracion_Perfil.ImageSize = new System.Drawing.Size(55, 35);
+            this.btnConfiguracion_Perfil.Location = new System.Drawing.Point(9, 6);
+            this.btnConfiguracion_Perfil.Name = "btnConfiguracion_Perfil";
+            this.btnConfiguracion_Perfil.Size = new System.Drawing.Size(54, 48);
+            this.btnConfiguracion_Perfil.TabIndex = 42;
+            this.guna2HtmlToolTip1.SetToolTip(this.btnConfiguracion_Perfil, "Perfil.");
+            this.btnConfiguracion_Perfil.Click += new System.EventHandler(this.btnConfiguracion_Perfil_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::GeoIntegral.Properties.Resources.GeoIntegral_Logo;
+            this.pictureBox1.Location = new System.Drawing.Point(16, 18);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(51, 45);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 33;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = global::GeoIntegral.Properties.Resources.GeoIntegral_LogoTipo;
+            this.pictureBox2.Location = new System.Drawing.Point(64, 22);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(188, 43);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 34;
+            this.pictureBox2.TabStop = false;
             // 
             // Principal_Screen
             // 
@@ -807,8 +828,6 @@
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormPrincipal_KeyDown);
             this.panel1.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             this.Admin_Panel.ResumeLayout(false);
             this.Admin_Panel.PerformLayout();
@@ -817,20 +836,22 @@
             this.guna2Panel8.PerformLayout();
             this.guna2Panel6.ResumeLayout(false);
             this.guna2Panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
             this.guna2Panel5.ResumeLayout(false);
             this.guna2Panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
             this.guna2Panel7.ResumeLayout(false);
             this.guna2Panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).EndInit();
             this.guna2Panel4.ResumeLayout(false);
             this.guna2Panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -883,5 +904,6 @@
         private System.Windows.Forms.Label label7;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel8;
         private System.Windows.Forms.Label label14;
+        private Guna.UI2.WinForms.Guna2HtmlToolTip guna2HtmlToolTip1;
     }
 }
