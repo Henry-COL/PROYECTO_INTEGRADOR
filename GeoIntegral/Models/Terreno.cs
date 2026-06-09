@@ -8,6 +8,7 @@ namespace GeoIntegral.Models
         public string FechaRegistro { get; set; }
         public string NombreProyecto { get; set; }
         public double Volumen { get; set; }
+        public double Area { get; set; }
         public string Observaciones { get; set; }
         public List<PuntoTerreno> Puntos { get; set; }
 

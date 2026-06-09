@@ -48,6 +48,9 @@
     <Reference Include="BCrypt-Net-Next, Version=4.2.0.0, Culture=neutral, PublicKeyToken=1e11be04b6288443, processorArchitecture=MSIL">
       <HintPath>packages\BCrypt.Net-Next.4.2.0\lib\net48\BCrypt-Net-Next.dll</HintPath>
     </Reference>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
     <Reference Include="CommunityToolkit.Common, Version=8.3.0.0, Culture=neutral, PublicKeyToken=4aff67a105548ee2, processorArchitecture=MSIL">
       <HintPath>packages\CommunityToolkit.Common.8.3.2\lib\netstandard2.0\CommunityToolkit.Common.dll</HintPath>
     </Reference>
@@ -57,23 +60,8 @@
     <Reference Include="CommunityToolkit.Mvvm, Version=8.3.0.0, Culture=neutral, PublicKeyToken=4aff67a105548ee2, processorArchitecture=MSIL">
       <HintPath>packages\CommunityToolkit.Mvvm.8.3.2\lib\netstandard2.0\CommunityToolkit.Mvvm.dll</HintPath>
     </Reference>
-    <Reference Include="DiscordRPC, Version=1.6.1.70, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\DiscordRichPresence.1.6.1.70\lib\net45\DiscordRPC.dll</HintPath>
-    </Reference>
     <Reference Include="Guna.UI2">
       <HintPath>..\..\HENZO\Corte_2\EjerciciosPractica\EjerciciosClase\app_inventario\packages\Guna.UI2.WinForms.2.0.4.7\lib\net45\Guna.UI2.dll</HintPath>
-    </Reference>
-    <Reference Include="HelixToolkit, Version=3.1.2.0, Culture=neutral, PublicKeyToken=52aa3500039caf0d, processorArchitecture=MSIL">
-      <HintPath>packages\HelixToolkit.3.1.2\lib\net48\HelixToolkit.dll</HintPath>
-    </Reference>
-    <Reference Include="HelixToolkit.Geometry, Version=3.1.2.0, Culture=neutral, PublicKeyToken=52aa3500039caf0d, processorArchitecture=MSIL">
-      <HintPath>packages\HelixToolkit.Geometry.3.1.2\lib\net48\HelixToolkit.Geometry.dll</HintPath>
-    </Reference>
-    <Reference Include="HelixToolkit.Maths, Version=3.1.2.0, Culture=neutral, PublicKeyToken=52aa3500039caf0d, processorArchitecture=MSIL">
-      <HintPath>packages\HelixToolkit.Maths.3.1.2\lib\net48\HelixToolkit.Maths.dll</HintPath>
-    </Reference>
-    <Reference Include="HelixToolkit.Wpf, Version=3.1.2.0, Culture=neutral, PublicKeyToken=52aa3500039caf0d, processorArchitecture=MSIL">
-      <HintPath>packages\HelixToolkit.Wpf.3.1.2\lib\net48\HelixToolkit.Wpf.dll</HintPath>
     </Reference>
     <Reference Include="MathNet.Numerics, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\MathNet.Numerics.5.0.0\lib\net48\MathNet.Numerics.dll</HintPath>

@@ -47,6 +47,8 @@ namespace GeoIntegral.Views
             btnLimpiarPuntos.Click += btnLimpiarPuntos_Click;
             btnCalcular.Click += btnCalcular_Click;
             btnGuardar.Click += btnGuardar_Click;
+           
+            CargarProyectosGuardados();
 
             glControl.Load += GlControl_Load;
             glControl.Paint += GlControl_Paint;
@@ -107,22 +109,26 @@ namespace GeoIntegral.Views
 
         private void DibujarEjes()
         {
+            // ejes en la esquina inferior izquierda de la superficie
+            float orig = -0.5f;
+            float len = 0.5f;
+
             GL.LineWidth(2f);
             GL.Begin(PrimitiveType.Lines);
-            GL.Color3(1f, 0f, 0f); GL.Vertex3(0, 0, 0); GL.Vertex3(1, 0, 0);
-            GL.Color3(0f, 1f, 0f); GL.Vertex3(0, 0, 0); GL.Vertex3(0, 1, 0);
-            GL.Color3(0f, 0f, 1f); GL.Vertex3(0, 0, 0); GL.Vertex3(0, 0, 1);
+            GL.Color3(1f, 0.3f, 0.3f); GL.Vertex3(orig, orig, orig); GL.Vertex3(orig + len, orig, orig); // X rojo
+            GL.Color3(0.3f, 1f, 0.3f); GL.Vertex3(orig, orig, orig); GL.Vertex3(orig, orig + len, orig); // Y verde
+            GL.Color3(0.3f, 0.5f, 1f); GL.Vertex3(orig, orig, orig); GL.Vertex3(orig, orig, orig + len); // Z azul
             GL.End();
         }
 
         private void DibujarSuperficie()
         {
-            // superficie con quads coloreados por altura
+            // 1 — superficie rellena con iluminación suave
+            GL.PolygonMode(MaterialFace.FrontAndBack, PolygonMode.Fill);
             GL.Begin(PrimitiveType.Quads);
             foreach (var c in celdas)
             {
                 float t = c.t;
-                // gradiente: azul(bajo) → verde → rojo(alto)
                 float r = t > 0.5f ? (t - 0.5f) * 2f : 0f;
                 float g = t < 0.5f ? t * 2f : (1f - t) * 2f;
                 float b = t < 0.5f ? 1f - t * 2f : 0f;
@@ -131,15 +137,27 @@ namespace GeoIntegral.Views
             }
             GL.End();
 
-            // puntos originales encima
-            GL.PointSize(8f);
+            // 2 — malla encima con transparencia para dar efecto de rejilla
+            GL.PolygonMode(MaterialFace.FrontAndBack, PolygonMode.Line);
+            GL.LineWidth(0.4f);
+            GL.Begin(PrimitiveType.Quads);
+            GL.Color3(0f, 0f, 0f);
+            foreach (var c in celdas)
+                GL.Vertex3(c.x, c.y, c.z);
+            GL.End();
+
+            // restaurar modo fill
+            GL.PolygonMode(MaterialFace.FrontAndBack, PolygonMode.Fill);
+
+            // 3 — puntos originales sobre la superficie
+            GL.PointSize(10f);
             GL.Begin(PrimitiveType.Points);
             GL.Color3(1f, 1f, 0f);
             foreach (var p in puntosGL)
                 GL.Vertex3(p.x, p.y, p.z);
             GL.End();
 
-            // ejes
+            // 4 — ejes en esquina
             DibujarEjes();
         }
 
@@ -343,6 +361,65 @@ namespace GeoIntegral.Views
                 MessageBox.Show("Error al calcular: " + ex.Message);
             }
         }
+
+        private void CargarProyectosGuardados()
+        {
+            cmbProyectos.Items.Clear();
+            var terrenos = terrenoController.ObtenerTodosLosTerrenos();
+
+            if (terrenos.Count == 0)
+            {
+                cmbProyectos.Items.Add("Sin proyectos guardados");
+                cmbProyectos.SelectedIndex = 0;
+                return;
+            }
+
+            foreach (var t in terrenos)
+                cmbProyectos.Items.Add(t.Id + " - " + t.NombreProyecto + " (" + t.FechaRegistro + ")");
+
+            cmbProyectos.SelectedIndex = 0;
+        }
+
+        private void btnVerTerreno_Click(object sender, EventArgs e)
+{
+    if (cmbProyectos.Items.Count == 0 ||
+        cmbProyectos.SelectedItem.ToString() == "Sin proyectos guardados")
+    {
+        MessageBox.Show("No hay proyectos guardados para visualizar.",
+            "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        return;
+    }
+
+    int idTerreno = int.Parse(cmbProyectos.SelectedItem.ToString().Split('-')[0].Trim());
+    var terreno = terrenoController.ObtenerTerrenoPorId(idTerreno);
+    var puntos = terrenoController.ObtenerCoordenadas(idTerreno);
+
+    if (puntos.Count == 0)
+    {
+        MessageBox.Show("Este terreno no tiene coordenadas registradas.",
+            "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        return;
+    }
+
+    terrenoController.LimpiarPuntos();
+    foreach (var p in puntos)
+        terrenoController.AgregarPunto(p.X, p.Y, p.Z);
+
+    lblArea.Text = "Área: " + terreno.Area + " m²";
+    lblVolumen.Text = "Volumen: " + terreno.Volumen + " m³";
+
+    calculado = true;
+    PrepararDatosGL();
+    glControl.Invalidate();
+
+    MessageBox.Show(
+        "Terreno: " + terreno.NombreProyecto +
+        "\nFecha: " + terreno.FechaRegistro +
+        "\nÁrea: " + terreno.Area + " m²" +
+        "\nVolumen: " + terreno.Volumen + " m³" +
+        "\nObservaciones: " + terreno.Observaciones,
+        "Detalle del Proyecto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+}
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {

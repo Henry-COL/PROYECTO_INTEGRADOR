@@ -54,24 +54,21 @@
             this.txtX = new System.Windows.Forms.TextBox();
             this.gbResultados = new System.Windows.Forms.GroupBox();
             this.glControl = new OpenTK.GLControl();
-            // glControl
-            this.glControl.BackColor = System.Drawing.Color.Black;
-            this.glControl.Location = new System.Drawing.Point(290, 31);
-            this.glControl.Name = "glControl";
-            this.glControl.Size = new System.Drawing.Size(634, 463);
-            this.glControl.TabIndex = 4;
-            this.glControl.VSync = false;
-            this.gbResultados.Controls.Add(this.glControl);
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCalcular = new System.Windows.Forms.Button();
             this.lblVolumen = new System.Windows.Forms.Label();
             this.lblArea = new System.Windows.Forms.Label();
             this.btnCerrar_App = new Guna.UI2.WinForms.Guna2Button();
+            this.gbProyectos = new System.Windows.Forms.GroupBox();
+            this.cmbProyectos = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnVerTerreno = new System.Windows.Forms.Button();
             this.gbDatos.SuspendLayout();
             this.gbCoordenadas.SuspendLayout();
             this.gbPuntos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPuntos)).BeginInit();
             this.gbResultados.SuspendLayout();
+            this.gbProyectos.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbDatos
@@ -82,11 +79,9 @@
             this.gbDatos.Controls.Add(this.lblNombreProyecto);
             this.gbDatos.Controls.Add(this.txtNombreProyecto);
             this.gbDatos.ForeColor = System.Drawing.SystemColors.Control;
-            this.gbDatos.Location = new System.Drawing.Point(20, 20);
-            this.gbDatos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gbDatos.Location = new System.Drawing.Point(13, 13);
             this.gbDatos.Name = "gbDatos";
-            this.gbDatos.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.gbDatos.Size = new System.Drawing.Size(1341, 125);
+            this.gbDatos.Size = new System.Drawing.Size(894, 81);
             this.gbDatos.TabIndex = 0;
             this.gbDatos.TabStop = false;
             this.gbDatos.Text = "Datos";
@@ -94,47 +89,42 @@
             // lblMensaje_Proyecto
             // 
             this.lblMensaje_Proyecto.AutoSize = true;
-            this.lblMensaje_Proyecto.Location = new System.Drawing.Point(330, 40);
-            this.lblMensaje_Proyecto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblMensaje_Proyecto.Location = new System.Drawing.Point(220, 26);
             this.lblMensaje_Proyecto.Name = "lblMensaje_Proyecto";
-            this.lblMensaje_Proyecto.Size = new System.Drawing.Size(110, 20);
+            this.lblMensaje_Proyecto.Size = new System.Drawing.Size(74, 13);
             this.lblMensaje_Proyecto.TabIndex = 4;
             this.lblMensaje_Proyecto.Text = "Error Proyecto";
             // 
             // lblObservaciones
             // 
             this.lblObservaciones.AutoSize = true;
-            this.lblObservaciones.Location = new System.Drawing.Point(717, 40);
-            this.lblObservaciones.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblObservaciones.Location = new System.Drawing.Point(478, 26);
             this.lblObservaciones.Name = "lblObservaciones";
-            this.lblObservaciones.Size = new System.Drawing.Size(118, 20);
+            this.lblObservaciones.Size = new System.Drawing.Size(81, 13);
             this.lblObservaciones.TabIndex = 3;
             this.lblObservaciones.Text = "Observaciones:";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(722, 65);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBox1.Location = new System.Drawing.Point(481, 42);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(466, 26);
+            this.textBox1.Size = new System.Drawing.Size(312, 20);
             this.textBox1.TabIndex = 2;
             // 
             // lblNombreProyecto
             // 
             this.lblNombreProyecto.AutoSize = true;
-            this.lblNombreProyecto.Location = new System.Drawing.Point(9, 40);
-            this.lblNombreProyecto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNombreProyecto.Location = new System.Drawing.Point(6, 26);
             this.lblNombreProyecto.Name = "lblNombreProyecto";
-            this.lblNombreProyecto.Size = new System.Drawing.Size(135, 20);
+            this.lblNombreProyecto.Size = new System.Drawing.Size(92, 13);
             this.lblNombreProyecto.TabIndex = 1;
             this.lblNombreProyecto.Text = "Nombre Proyecto:";
             // 
             // txtNombreProyecto
             // 
-            this.txtNombreProyecto.Location = new System.Drawing.Point(9, 65);
-            this.txtNombreProyecto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtNombreProyecto.Location = new System.Drawing.Point(6, 42);
             this.txtNombreProyecto.Name = "txtNombreProyecto";
-            this.txtNombreProyecto.Size = new System.Drawing.Size(430, 26);
+            this.txtNombreProyecto.Size = new System.Drawing.Size(288, 20);
             this.txtNombreProyecto.TabIndex = 0;
             // 
             // contextMenuStrip1
@@ -157,11 +147,9 @@
             this.gbCoordenadas.Controls.Add(this.txtY);
             this.gbCoordenadas.Controls.Add(this.txtX);
             this.gbCoordenadas.ForeColor = System.Drawing.SystemColors.Control;
-            this.gbCoordenadas.Location = new System.Drawing.Point(20, 155);
-            this.gbCoordenadas.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gbCoordenadas.Location = new System.Drawing.Point(13, 101);
             this.gbCoordenadas.Name = "gbCoordenadas";
-            this.gbCoordenadas.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.gbCoordenadas.Size = new System.Drawing.Size(792, 351);
+            this.gbCoordenadas.Size = new System.Drawing.Size(528, 228);
             this.gbCoordenadas.TabIndex = 2;
             this.gbCoordenadas.TabStop = false;
             this.gbCoordenadas.Text = "Coordenadas";
@@ -169,11 +157,9 @@
             // gbPuntos
             // 
             this.gbPuntos.Controls.Add(this.dgvPuntos);
-            this.gbPuntos.Location = new System.Drawing.Point(238, 29);
-            this.gbPuntos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gbPuntos.Location = new System.Drawing.Point(159, 19);
             this.gbPuntos.Name = "gbPuntos";
-            this.gbPuntos.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.gbPuntos.Size = new System.Drawing.Size(543, 303);
+            this.gbPuntos.Size = new System.Drawing.Size(362, 197);
             this.gbPuntos.TabIndex = 11;
             this.gbPuntos.TabStop = false;
             this.gbPuntos.Text = "Puntos";
@@ -186,11 +172,10 @@
             this.ColX,
             this.ColY,
             this.ColZ});
-            this.dgvPuntos.Location = new System.Drawing.Point(9, 46);
-            this.dgvPuntos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dgvPuntos.Location = new System.Drawing.Point(6, 30);
             this.dgvPuntos.Name = "dgvPuntos";
             this.dgvPuntos.RowHeadersWidth = 62;
-            this.dgvPuntos.Size = new System.Drawing.Size(525, 231);
+            this.dgvPuntos.Size = new System.Drawing.Size(350, 150);
             this.dgvPuntos.TabIndex = 10;
             // 
             // ColX
@@ -214,10 +199,9 @@
             // btnLimpiarPuntos
             // 
             this.btnLimpiarPuntos.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnLimpiarPuntos.Location = new System.Drawing.Point(44, 271);
-            this.btnLimpiarPuntos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnLimpiarPuntos.Location = new System.Drawing.Point(29, 176);
             this.btnLimpiarPuntos.Name = "btnLimpiarPuntos";
-            this.btnLimpiarPuntos.Size = new System.Drawing.Size(154, 35);
+            this.btnLimpiarPuntos.Size = new System.Drawing.Size(103, 23);
             this.btnLimpiarPuntos.TabIndex = 9;
             this.btnLimpiarPuntos.Text = "Limpiar Puntos";
             this.btnLimpiarPuntos.UseVisualStyleBackColor = true;
@@ -226,10 +210,9 @@
             // btnEliminarPunto
             // 
             this.btnEliminarPunto.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnEliminarPunto.Location = new System.Drawing.Point(44, 225);
-            this.btnEliminarPunto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnEliminarPunto.Location = new System.Drawing.Point(29, 146);
             this.btnEliminarPunto.Name = "btnEliminarPunto";
-            this.btnEliminarPunto.Size = new System.Drawing.Size(154, 35);
+            this.btnEliminarPunto.Size = new System.Drawing.Size(103, 23);
             this.btnEliminarPunto.TabIndex = 8;
             this.btnEliminarPunto.Text = "Eliminar Punto";
             this.btnEliminarPunto.UseVisualStyleBackColor = true;
@@ -238,10 +221,9 @@
             // btnAgregarPunto
             // 
             this.btnAgregarPunto.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnAgregarPunto.Location = new System.Drawing.Point(44, 178);
-            this.btnAgregarPunto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnAgregarPunto.Location = new System.Drawing.Point(29, 116);
             this.btnAgregarPunto.Name = "btnAgregarPunto";
-            this.btnAgregarPunto.Size = new System.Drawing.Size(154, 35);
+            this.btnAgregarPunto.Size = new System.Drawing.Size(103, 23);
             this.btnAgregarPunto.TabIndex = 7;
             this.btnAgregarPunto.Text = "Agregar Punto";
             this.btnAgregarPunto.UseVisualStyleBackColor = true;
@@ -250,90 +232,91 @@
             // lblMensaje_Coordenadas
             // 
             this.lblMensaje_Coordenadas.AutoSize = true;
-            this.lblMensaje_Coordenadas.Location = new System.Drawing.Point(56, 122);
-            this.lblMensaje_Coordenadas.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblMensaje_Coordenadas.Location = new System.Drawing.Point(37, 79);
             this.lblMensaje_Coordenadas.Name = "lblMensaje_Coordenadas";
-            this.lblMensaje_Coordenadas.Size = new System.Drawing.Size(144, 20);
+            this.lblMensaje_Coordenadas.Size = new System.Drawing.Size(95, 13);
             this.lblMensaje_Coordenadas.TabIndex = 6;
             this.lblMensaje_Coordenadas.Text = "Error Coordenadas";
             // 
             // lblZ
             // 
             this.lblZ.AutoSize = true;
-            this.lblZ.Location = new System.Drawing.Point(159, 42);
-            this.lblZ.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblZ.Location = new System.Drawing.Point(106, 27);
             this.lblZ.Name = "lblZ";
-            this.lblZ.Size = new System.Drawing.Size(19, 20);
+            this.lblZ.Size = new System.Drawing.Size(14, 13);
             this.lblZ.TabIndex = 5;
             this.lblZ.Text = "Z";
             // 
             // lblY
             // 
             this.lblY.AutoSize = true;
-            this.lblY.Location = new System.Drawing.Point(84, 42);
-            this.lblY.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblY.Location = new System.Drawing.Point(56, 27);
             this.lblY.Name = "lblY";
-            this.lblY.Size = new System.Drawing.Size(20, 20);
+            this.lblY.Size = new System.Drawing.Size(14, 13);
             this.lblY.TabIndex = 4;
             this.lblY.Text = "Y";
             // 
             // lblX
             // 
             this.lblX.AutoSize = true;
-            this.lblX.Location = new System.Drawing.Point(9, 42);
-            this.lblX.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblX.Location = new System.Drawing.Point(6, 27);
             this.lblX.Name = "lblX";
-            this.lblX.Size = new System.Drawing.Size(20, 20);
+            this.lblX.Size = new System.Drawing.Size(14, 13);
             this.lblX.TabIndex = 3;
             this.lblX.Text = "X";
             // 
             // txtZ
             // 
-            this.txtZ.Location = new System.Drawing.Point(164, 66);
-            this.txtZ.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtZ.Location = new System.Drawing.Point(109, 43);
             this.txtZ.Name = "txtZ";
-            this.txtZ.Size = new System.Drawing.Size(64, 26);
+            this.txtZ.Size = new System.Drawing.Size(44, 20);
             this.txtZ.TabIndex = 2;
             // 
             // txtY
             // 
-            this.txtY.Location = new System.Drawing.Point(88, 66);
-            this.txtY.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtY.Location = new System.Drawing.Point(59, 43);
             this.txtY.Name = "txtY";
-            this.txtY.Size = new System.Drawing.Size(64, 26);
+            this.txtY.Size = new System.Drawing.Size(44, 20);
             this.txtY.TabIndex = 1;
             // 
             // txtX
             // 
-            this.txtX.Location = new System.Drawing.Point(14, 66);
-            this.txtX.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtX.Location = new System.Drawing.Point(9, 43);
             this.txtX.Name = "txtX";
-            this.txtX.Size = new System.Drawing.Size(64, 26);
+            this.txtX.Size = new System.Drawing.Size(44, 20);
             this.txtX.TabIndex = 0;
             // 
             // gbResultados
             // 
+            this.gbResultados.Controls.Add(this.glControl);
             this.gbResultados.Controls.Add(this.btnGuardar);
             this.gbResultados.Controls.Add(this.btnCalcular);
             this.gbResultados.Controls.Add(this.lblVolumen);
             this.gbResultados.Controls.Add(this.lblArea);
             this.gbResultados.ForeColor = System.Drawing.SystemColors.Control;
-            this.gbResultados.Location = new System.Drawing.Point(820, 154);
-            this.gbResultados.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gbResultados.Location = new System.Drawing.Point(547, 100);
             this.gbResultados.Name = "gbResultados";
-            this.gbResultados.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.gbResultados.Size = new System.Drawing.Size(952, 518);
+            this.gbResultados.Size = new System.Drawing.Size(635, 337);
             this.gbResultados.TabIndex = 3;
             this.gbResultados.TabStop = false;
             this.gbResultados.Text = "Resultados";
             // 
+            // glControl
+            // 
+            this.glControl.BackColor = System.Drawing.Color.Black;
+            this.glControl.Location = new System.Drawing.Point(193, 20);
+            this.glControl.Margin = new System.Windows.Forms.Padding(2);
+            this.glControl.Name = "glControl";
+            this.glControl.Size = new System.Drawing.Size(423, 301);
+            this.glControl.TabIndex = 4;
+            this.glControl.VSync = false;
+            // 
             // btnGuardar
             // 
             this.btnGuardar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnGuardar.Location = new System.Drawing.Point(9, 226);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnGuardar.Location = new System.Drawing.Point(6, 147);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(112, 35);
+            this.btnGuardar.Size = new System.Drawing.Size(75, 23);
             this.btnGuardar.TabIndex = 3;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
@@ -342,10 +325,9 @@
             // btnCalcular
             // 
             this.btnCalcular.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnCalcular.Location = new System.Drawing.Point(9, 180);
-            this.btnCalcular.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnCalcular.Location = new System.Drawing.Point(6, 117);
             this.btnCalcular.Name = "btnCalcular";
-            this.btnCalcular.Size = new System.Drawing.Size(112, 35);
+            this.btnCalcular.Size = new System.Drawing.Size(75, 23);
             this.btnCalcular.TabIndex = 2;
             this.btnCalcular.Text = "Calcular";
             this.btnCalcular.UseVisualStyleBackColor = true;
@@ -355,10 +337,9 @@
             // 
             this.lblVolumen.AutoSize = true;
             this.lblVolumen.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVolumen.Location = new System.Drawing.Point(9, 109);
-            this.lblVolumen.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblVolumen.Location = new System.Drawing.Point(6, 71);
             this.lblVolumen.Name = "lblVolumen";
-            this.lblVolumen.Size = new System.Drawing.Size(287, 37);
+            this.lblVolumen.Size = new System.Drawing.Size(192, 25);
             this.lblVolumen.TabIndex = 1;
             this.lblVolumen.Text = "VolumenCalculado";
             // 
@@ -366,10 +347,9 @@
             // 
             this.lblArea.AutoSize = true;
             this.lblArea.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblArea.Location = new System.Drawing.Point(9, 43);
-            this.lblArea.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblArea.Location = new System.Drawing.Point(6, 28);
             this.lblArea.Name = "lblArea";
-            this.lblArea.Size = new System.Drawing.Size(228, 37);
+            this.lblArea.Size = new System.Drawing.Size(153, 25);
             this.lblArea.TabIndex = 0;
             this.lblArea.Text = "AreaCalculada";
             // 
@@ -389,25 +369,67 @@
             this.btnCerrar_App.ForeColor = System.Drawing.Color.White;
             this.btnCerrar_App.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnCerrar_App.HoverState.FillColor = System.Drawing.Color.Maroon;
-            this.btnCerrar_App.Location = new System.Drawing.Point(1418, 12);
+            this.btnCerrar_App.Location = new System.Drawing.Point(945, 8);
+            this.btnCerrar_App.Margin = new System.Windows.Forms.Padding(2);
             this.btnCerrar_App.Name = "btnCerrar_App";
             this.btnCerrar_App.PressedColor = System.Drawing.Color.Empty;
-            this.btnCerrar_App.Size = new System.Drawing.Size(188, 45);
+            this.btnCerrar_App.Size = new System.Drawing.Size(125, 29);
             this.btnCerrar_App.TabIndex = 19;
             this.btnCerrar_App.Text = "Volver al inicio";
             // 
+            // gbProyectos
+            // 
+            this.gbProyectos.Controls.Add(this.btnVerTerreno);
+            this.gbProyectos.Controls.Add(this.label1);
+            this.gbProyectos.Controls.Add(this.cmbProyectos);
+            this.gbProyectos.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.gbProyectos.Location = new System.Drawing.Point(13, 346);
+            this.gbProyectos.Name = "gbProyectos";
+            this.gbProyectos.Size = new System.Drawing.Size(273, 141);
+            this.gbProyectos.TabIndex = 20;
+            this.gbProyectos.TabStop = false;
+            this.gbProyectos.Text = "Proyectos Guardados";
+            // 
+            // cmbProyectos
+            // 
+            this.cmbProyectos.FormattingEnabled = true;
+            this.cmbProyectos.Location = new System.Drawing.Point(6, 39);
+            this.cmbProyectos.Name = "cmbProyectos";
+            this.cmbProyectos.Size = new System.Drawing.Size(188, 21);
+            this.cmbProyectos.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(7, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(111, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Seleccionar Proyecto:";
+            // 
+            // btnVerTerreno
+            // 
+            this.btnVerTerreno.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnVerTerreno.Location = new System.Drawing.Point(165, 103);
+            this.btnVerTerreno.Name = "btnVerTerreno";
+            this.btnVerTerreno.Size = new System.Drawing.Size(97, 23);
+            this.btnVerTerreno.TabIndex = 2;
+            this.btnVerTerreno.Text = "Ver Terreno";
+            this.btnVerTerreno.UseVisualStyleBackColor = true;
+            this.btnVerTerreno.Click += new System.EventHandler(this.btnVerTerreno_Click);
+            // 
             // Usuario_Terrenos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(10)))), ((int)(((byte)(30)))));
-            this.ClientSize = new System.Drawing.Size(1618, 941);
+            this.ClientSize = new System.Drawing.Size(924, 512);
+            this.Controls.Add(this.gbProyectos);
             this.Controls.Add(this.btnCerrar_App);
             this.Controls.Add(this.gbResultados);
             this.Controls.Add(this.gbCoordenadas);
             this.Controls.Add(this.gbDatos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Usuario_Terrenos";
             this.Text = "Usuario_Terrenos";
             this.gbDatos.ResumeLayout(false);
@@ -418,6 +440,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvPuntos)).EndInit();
             this.gbResultados.ResumeLayout(false);
             this.gbResultados.PerformLayout();
+            this.gbProyectos.ResumeLayout(false);
+            this.gbProyectos.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -454,5 +478,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColZ;
         private Guna.UI2.WinForms.Guna2Button btnCerrar_App;
         private OpenTK.GLControl glControl;
+        private System.Windows.Forms.GroupBox gbProyectos;
+        private System.Windows.Forms.ComboBox cmbProyectos;
+        private System.Windows.Forms.Button btnVerTerreno;
+        private System.Windows.Forms.Label label1;
     }
 }
