@@ -11,7 +11,9 @@ namespace GeoIntegral.Views
 {
     public partial class Usuario_Terrenos : Form, ICerrable
     {
+        // evento para notificar al form principal que esta ventana se cerró
         public event EventHandler VentanaCerrada;
+
         private TerrenoController terrenoController = new TerrenoController();
         private bool calculado = false;
         private bool glIniciado = false;

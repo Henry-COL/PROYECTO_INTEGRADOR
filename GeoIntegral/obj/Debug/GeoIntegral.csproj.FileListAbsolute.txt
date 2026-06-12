@@ -8,13 +8,10 @@ C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\obj\Deb
 C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\obj\Debug\GeoIntegral.csproj.CoreCompileInputs.cache
 C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\obj\Debug\GeoIntegral.exe
 C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\obj\Debug\GeoIntegral.pdb
-<<<<<<< HEAD
 C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\Guna.UI2.dll
 C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\obj\Debug\GeoInteg.74D226CE.Up2Date
 C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\obj\Debug\GeoIntegral.Views.Recuperar_Screen.resources
 C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\obj\Debug\GeoIntegral.Views.Registrar_Screen.resources
-=======
->>>>>>> 738cc21701f16a01638194a5d12ec1c183ededfa
 C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\obj\Debug\GeoIntegral.Views.Principal_Screen.resources
 C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\BCrypt-Net-Next.dll
 C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\System.Buffers.dll
@@ -90,10 +87,6 @@ C:\Users\LENOVO\Desktop\Proyectos\PROYECTO_INTEGRADOR\GeoIntegral\obj\Debug\GeoI
 C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\CommunityToolkit.Common.dll
 C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\CommunityToolkit.Diagnostics.dll
 C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\CommunityToolkit.Mvvm.dll
-C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\HelixToolkit.dll
-C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\HelixToolkit.Geometry.dll
-C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\HelixToolkit.Maths.dll
-C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\HelixToolkit.Wpf.dll
 C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\MathNet.Numerics.dll
 C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
@@ -107,10 +100,6 @@ C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Deb
 C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\CommunityToolkit.Diagnostics.xml
 C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\CommunityToolkit.Mvvm.pdb
 C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\CommunityToolkit.Mvvm.xml
-C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\HelixToolkit.xml
-C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\HelixToolkit.Geometry.xml
-C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\HelixToolkit.Maths.xml
-C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\HelixToolkit.Wpf.xml
 C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\MathNet.Numerics.xml
 C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
 C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
@@ -123,3 +112,12 @@ C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\obj\Deb
 C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\obj\Debug\GeoIntegral.Views.Usuario_Materiales.resources
 C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\obj\Debug\GeoIntegral.Views.Usuario_Terrenos.resources
 C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\obj\Debug\GeoIntegral.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\OpenTK.dll
+C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\OpenTK.GLControl.dll
+C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\OpenTK.pdb
+C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\OpenTK.xml
+C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\OpenTK.GLControl.pdb
+C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\OpenTK.GLControl.xml

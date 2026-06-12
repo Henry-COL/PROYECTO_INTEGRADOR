@@ -18,6 +18,7 @@ namespace GeoIntegral.Views
         {
             InitializeComponent();
             this.Size = tamano;
+            EstilarTabla();
             btnRegistrarCliente.Click += new EventHandler(btnRegistrarCliente_Click);
             dgvClientes.AllowUserToAddRows = false;
             dgvClientes.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -28,6 +29,45 @@ namespace GeoIntegral.Views
             btnEliminar.Click += new EventHandler(btnEliminar_Click);
 
             CargarClientes();
+        }
+
+        private void EstilarTabla()
+        {
+            dgvClientes.BackgroundColor = System.Drawing.Color.FromArgb(15, 23, 33);
+            dgvClientes.GridColor = System.Drawing.Color.FromArgb(30, 45, 60);
+            dgvClientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dgvClientes.RowHeadersVisible = false;
+            dgvClientes.AllowUserToAddRows = false;
+            dgvClientes.AllowUserToResizeRows = false;
+            dgvClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            dgvClientes.ReadOnly = true;
+            dgvClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dgvClientes.EnableHeadersVisualStyles = false;
+
+            // Encabezado
+            dgvClientes.ColumnHeadersDefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(20, 32, 46);
+            dgvClientes.ColumnHeadersDefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(180, 210, 230);
+            dgvClientes.ColumnHeadersDefaultCellStyle.Font = new System.Drawing.Font("Segoe UI", 10f, System.Drawing.FontStyle.Bold);
+            dgvClientes.ColumnHeadersDefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dgvClientes.ColumnHeadersHeight = 38;
+            dgvClientes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+
+            // Filas normales
+            dgvClientes.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(22, 34, 48);
+            dgvClientes.DefaultCellStyle.ForeColor = System.Drawing.Color.White;
+            dgvClientes.DefaultCellStyle.Font = new System.Drawing.Font("Segoe UI", 9.5f);
+            dgvClientes.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+
+            // Fila seleccionada
+            dgvClientes.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(7, 16, 30);
+            dgvClientes.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White;
+
+            // Filas alternadas
+            dgvClientes.AlternatingRowsDefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(18, 28, 40);
+            dgvClientes.AlternatingRowsDefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(26, 95, 80);
+            dgvClientes.AlternatingRowsDefaultCellStyle.SelectionForeColor = System.Drawing.Color.White;
+
+            dgvClientes.RowTemplate.Height = 32;
         }
 
         private void CargarClientes()

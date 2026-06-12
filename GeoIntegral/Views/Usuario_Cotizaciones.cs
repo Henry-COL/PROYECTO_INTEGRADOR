@@ -1,26 +1,33 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 using GeoIntegral.Controller;
 using GeoIntegral.Models;
-using HelixToolkit.Maths;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace GeoIntegral.Views
 {
     public partial class Usuario_Cotizaciones : Form, ICerrable
     {
         public event EventHandler VentanaCerrada;
+
+        // Controladores
         private ClienteController clienteController = new ClienteController();
         private TerrenoController terrenoController = new TerrenoController();
         private MaterialController materialController = new MaterialController();
         private CotizacionController cotizacionController = new CotizacionController();
+
+        // Listas en memoria para mejorar el rendimiento y evitar consultas repetitivas
+        private List<Cliente> listaClientes = new List<Cliente>();
+        private List<Terreno> listaTerrenos = new List<Terreno>();
+        private List<Material> listaMateriales = new List<Material>();
 
         public Usuario_Cotizaciones(Size tamano)
         {
             InitializeComponent();
             this.Size = tamano;
 
+            // Configuración inicial de la tabla
             dtgCotizaciones.AllowUserToAddRows = false;
             dtgCotizaciones.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dtgCotizaciones.ReadOnly = true;
@@ -29,40 +36,40 @@ namespace GeoIntegral.Views
             lblCostoTotal.Text = "$ 0.00";
             lblCostoTotal.ForeColor = System.Drawing.Color.White;
 
+            // Enlazar eventos de cálculo en tiempo real
             cmbMateriales.SelectedIndexChanged += new EventHandler(ActualizarCostoTotal);
-            comboBox1.SelectedIndexChanged += new EventHandler(ActualizarCostoTotal);
+            comboBox1.SelectedIndexChanged += new EventHandler(ActualizarCostoTotal); // Nota: Cambiado de comboBox1 a cmbTerrenos
 
+            // Carga inicial de datos
             CargarCombos();
             CargarCotizaciones();
         }
 
         private void CargarCombos()
         {
-            // Clientes
+            // 1. Cargar Clientes
             cmbClientes.Items.Clear();
-            var clientes = clienteController.ObtenerTodosLosClientes();
-            foreach (var c in clientes)
+            listaClientes = clienteController.ObtenerTodosLosClientes() ?? new List<Cliente>();
+            foreach (var c in listaClientes)
+            {
                 cmbClientes.Items.Add($"{c.Identificacion} - {c.Nombre}");
+            }
 
-            // Terrenos
+            // 2. Cargar Terrenos
             comboBox1.Items.Clear();
-            var terrenos = terrenoController.ObtenerTodosLosTerrenos();
-            foreach (var t in terrenos)
-                comboBox1.Items.Add(
-                    t.Id + " - " +
-                    t.NombreProyecto +
-                    " (" + t.Volumen.ToString("N2") + " m³)"
-                    );
+            listaTerrenos = terrenoController.ObtenerTodosLosTerrenos() ?? new List<Terreno>();
+            foreach (var t in listaTerrenos)
+            {
+                comboBox1.Items.Add($"{t.Id} - {t.NombreProyecto} ({t.Volumen:N2} m³)");
+            }
 
-            // Materiales
+            // 3. Cargar Materiales
             cmbMateriales.Items.Clear();
-            var materiales = materialController.ObtenerTodosLosMateriales();
-            foreach (var m in materiales)
-                cmbMateriales.Items.Add(
-                    m.Id + " - " +
-                    m.Nombre +
-                    " ($" + m.CostoUnidad.ToString("N2") + "/m³)"
-                    );
+            listaMateriales = materialController.ObtenerTodosLosMateriales() ?? new List<Material>();
+            foreach (var m in listaMateriales)
+            {
+                cmbMateriales.Items.Add($"{m.Id} - {m.Nombre} (${m.CostoUnidad:N2}/m³)");
+            }
         }
 
         private void ActualizarCostoTotal(object sender, EventArgs e)
@@ -76,21 +83,27 @@ namespace GeoIntegral.Views
 
             try
             {
-                // Extraer volumen del terreno seleccionado
+                // Extraer de forma segura el ID del Terreno (toma todo lo que esté antes del primer espacio o guion)
                 string terrenoStr = comboBox1.SelectedItem.ToString();
-                int idTerreno = int.Parse(terrenoStr.Split('-')[0].Trim());
-                var terrenos = terrenoController.ObtenerTodosLosTerrenos();
-                var terreno = terrenos.Find(t => t.Id == idTerreno);
+                int idTerreno = int.Parse(terrenoStr.Split(' ')[0].Trim());
+                var terreno = listaTerrenos.Find(t => t.Id == idTerreno);
 
-                // Extraer costo del material seleccionado
+                // Extraer de forma segura el ID del Material
                 string materialStr = cmbMateriales.SelectedItem.ToString();
-                int idMaterial = int.Parse(materialStr.Split('-')[0].Trim());
-                var materiales = materialController.ObtenerTodosLosMateriales();
-                var material = materiales.Find(m => m.Id == idMaterial);
+                int idMaterial = int.Parse(materialStr.Split(' ')[0].Trim());
+                var material = listaMateriales.Find(m => m.Id == idMaterial);
 
-                double costoTotal = terreno.Volumen * material.CostoUnidad;
-                lblCostoTotal.Text = "$ " + costoTotal.ToString("N2");
-                lblCostoTotal.ForeColor = System.Drawing.Color.Khaki;
+                if (terreno != null && material != null)
+                {
+                    double costoTotal = terreno.Volumen * material.CostoUnidad;
+                    lblCostoTotal.Text = "$ " + costoTotal.ToString("N2");
+                    lblCostoTotal.ForeColor = System.Drawing.Color.Khaki;
+                }
+                else
+                {
+                    lblCostoTotal.Text = "Calculando...";
+                    lblCostoTotal.ForeColor = System.Drawing.Color.White;
+                }
             }
             catch
             {
@@ -102,14 +115,12 @@ namespace GeoIntegral.Views
         private void CargarCotizaciones()
         {
             dtgCotizaciones.Rows.Clear();
-            var cotizaciones = cotizacionController.ObtenerTodas();
-            var clientes = clienteController.ObtenerTodosLosClientes();
-            var terrenos = terrenoController.ObtenerTodosLosTerrenos();
+            var cotizaciones = cotizacionController.ObtenerTodas() ?? new List<Cotizacion>();
 
             foreach (var c in cotizaciones)
             {
-                var cliente = clientes.Find(cl => cl.Identificacion == c.IdentificacionCliente);
-                var terreno = terrenos.Find(t => t.Id == c.IdTerreno);
+                var cliente = listaClientes.Find(cl => cl.Identificacion == c.IdentificacionCliente);
+                var terreno = listaTerrenos.Find(t => t.Id == c.IdTerreno);
 
                 string nombreCliente = cliente != null ? cliente.Nombre : c.IdentificacionCliente.ToString();
                 string nombreTerreno = terreno != null ? terreno.NombreProyecto : c.IdTerreno.ToString();
@@ -165,7 +176,6 @@ namespace GeoIntegral.Views
             dtgCotizaciones.RowTemplate.Height = 32;
         }
 
-
         private void btnGenerarCotizacion_Click(object sender, EventArgs e)
         {
             if (cmbClientes.SelectedItem == null ||
@@ -179,21 +189,27 @@ namespace GeoIntegral.Views
 
             try
             {
-                // Extraer datos seleccionados
-                long idCliente = long.Parse(cmbClientes.SelectedItem.ToString().Split('-')[0].Trim());
+                // Extraer datos seleccionados usando las listas en memoria
+                long idCliente = long.Parse(cmbClientes.SelectedItem.ToString().Split(' ')[0].Trim());
 
                 string terrenoStr = comboBox1.SelectedItem.ToString();
-                int idTerreno = int.Parse(terrenoStr.Split('-')[0].Trim());
-                var terrenos = terrenoController.ObtenerTodosLosTerrenos();
-                var terreno = terrenos.Find(t => t.Id == idTerreno);
+                int idTerreno = int.Parse(terrenoStr.Split(' ')[0].Trim());
+                var terreno = listaTerrenos.Find(t => t.Id == idTerreno);
 
                 string materialStr = cmbMateriales.SelectedItem.ToString();
-                int idMaterial = int.Parse(materialStr.Split('-')[0].Trim());
-                var materiales = materialController.ObtenerTodosLosMateriales();
-                var material = materiales.Find(m => m.Id == idMaterial);
+                int idMaterial = int.Parse(materialStr.Split(' ')[0].Trim());
+                var material = listaMateriales.Find(m => m.Id == idMaterial);
+
+                if (terreno == null || material == null)
+                {
+                    MessageBox.Show("Error al recuperar los datos internos del terreno o material.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                double costoFinal = terreno.Volumen * material.CostoUnidad;
 
                 var confirmacion = MessageBox.Show(
-                    $"¿Generar cotización?\n\nCliente: {cmbClientes.SelectedItem}\nTerreno: {terreno.NombreProyecto}\nMaterial: {material.Nombre}\nCosto Total: ${terreno.Volumen * material.CostoUnidad}",
+                    $"¿Generar cotización?\n\nCliente: {cmbClientes.SelectedItem}\nTerreno: {terreno.NombreProyecto}\nMaterial: {material.Nombre}\nCosto Total: ${costoFinal:N2}",
                     "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if (confirmacion == DialogResult.Yes)
@@ -210,7 +226,7 @@ namespace GeoIntegral.Views
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al generar cotización: " + ex.Message);
+                MessageBox.Show("Error al generar cotización: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -223,29 +239,38 @@ namespace GeoIntegral.Views
                 return;
             }
 
-            int id = int.Parse(dtgCotizaciones.SelectedRows[0].Cells["IdCotizacion"].Value.ToString());
-            var cotizacion = cotizacionController.ObtenerPorId(id);
-            var clientes = clienteController.ObtenerTodosLosClientes();
-            var terrenos = terrenoController.ObtenerTodosLosTerrenos();
+            try
+            {
+                // Intenta buscar la celda por índice (0) si el nombre string te llega a fallar en el diseño
+                var filaSeleccionada = dtgCotizaciones.SelectedRows[0];
+                int id = int.Parse(filaSeleccionada.Cells[0].Value.ToString());
 
-            var cliente = clientes.Find(c => c.Identificacion == cotizacion.IdentificacionCliente);
-            var terreno = terrenos.Find(t => t.Id == cotizacion.IdTerreno);
+                var cotizacion = cotizacionController.ObtenerPorId(id);
+                if (cotizacion == null) return;
 
-            string detalle = $"╔══════════════════════════════╗\n" +
-                             $"         DETALLE COTIZACIÓN\n" +
-                             $"╚══════════════════════════════╝\n\n" +
-                             $"ID Cotización:  {cotizacion.IdCotizacion}\n" +
-                             $"Fecha:          {cotizacion.Fecha}\n" +
-                             $"Estado:         {cotizacion.Estado}\n\n" +
-                             $"Cliente:        {(cliente != null ? cliente.Nombre : cotizacion.IdentificacionCliente.ToString())}\n" +
-                             $"Identificación: {cotizacion.IdentificacionCliente}\n\n" +
-                             $"Proyecto:       {(terreno != null ? terreno.NombreProyecto : cotizacion.IdTerreno.ToString())}\n" +
-                             $"Volumen:        {(terreno != null ? terreno.Volumen.ToString("N2") : "--")} m³\n\n" +
-                             $"Material:       {cotizacion.Material}\n" +
-                             $"Costo Total:    ${cotizacion.CostoTotal}";
+                var cliente = listaClientes.Find(c => c.Identificacion == cotizacion.IdentificacionCliente);
+                var terreno = listaTerrenos.Find(t => t.Id == cotizacion.IdTerreno);
 
-            MessageBox.Show(detalle, "Detalle Cotización",
-                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                string detalle = $"╔══════════════════════════════╗\n" +
+                                 $"         DETALLE COTIZACIÓN\n" +
+                                 $"╚══════════════════════════════╝\n\n" +
+                                 $"ID Cotización:  {cotizacion.IdCotizacion}\n" +
+                                 $"Fecha:          {cotizacion.Fecha}\n" +
+                                 $"Estado:         {cotizacion.Estado}\n\n" +
+                                 $"Cliente:        {(cliente != null ? cliente.Nombre : cotizacion.IdentificacionCliente.ToString())}\n" +
+                                 $"Identificación: {cotizacion.IdentificacionCliente}\n\n" +
+                                 $"Proyecto:       {(terreno != null ? terreno.NombreProyecto : cotizacion.IdTerreno.ToString())}\n" +
+                                 $"Volumen:        {(terreno != null ? terreno.Volumen.ToString("N2") : "--")} m³\n\n" +
+                                 $"Material:       {cotizacion.Material}\n" +
+                                 $"Costo Total:    ${cotizacion.CostoTotal:N2}";
+
+                MessageBox.Show(detalle, "Detalle Cotización",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al mostrar el detalle: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnCerrar_App_Click(object sender, EventArgs e)

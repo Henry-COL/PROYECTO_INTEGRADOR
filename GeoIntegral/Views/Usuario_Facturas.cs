@@ -21,6 +21,7 @@ namespace GeoIntegral.Views
             this.Size = tamano;
             _esAdmin = esAdmin;
 
+            EstilarTabla();
             btnCambiarEstado.Visible = esAdmin;
             btnEliminar.Visible = esAdmin;
 
@@ -40,6 +41,47 @@ namespace GeoIntegral.Views
         }
 
         // ── CARGA INICIAL ────────────────────────────────────────
+
+
+        private void EstilarTabla()
+        {
+            dgvFacturas.BackgroundColor = System.Drawing.Color.FromArgb(15, 23, 33);
+            dgvFacturas.GridColor = System.Drawing.Color.FromArgb(30, 45, 60);
+            dgvFacturas.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dgvFacturas.RowHeadersVisible = false;
+            dgvFacturas.AllowUserToAddRows = false;
+            dgvFacturas.AllowUserToResizeRows = false;
+            dgvFacturas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            dgvFacturas.ReadOnly = true;
+            dgvFacturas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dgvFacturas.EnableHeadersVisualStyles = false;
+
+            // Encabezado
+            dgvFacturas.ColumnHeadersDefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(20, 32, 46);
+            dgvFacturas.ColumnHeadersDefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(180, 210, 230);
+            dgvFacturas.ColumnHeadersDefaultCellStyle.Font = new System.Drawing.Font("Segoe UI", 10f, System.Drawing.FontStyle.Bold);
+            dgvFacturas.ColumnHeadersDefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dgvFacturas.ColumnHeadersHeight = 38;
+            dgvFacturas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+
+            // Filas normales
+            dgvFacturas.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(22, 34, 48);
+            dgvFacturas.DefaultCellStyle.ForeColor = System.Drawing.Color.White;
+            dgvFacturas.DefaultCellStyle.Font = new System.Drawing.Font("Segoe UI", 9.5f);
+            dgvFacturas.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+
+            // Fila seleccionada
+            dgvFacturas.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(7, 16, 30);
+            dgvFacturas.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White;
+
+            // Filas alternadas
+            dgvFacturas.AlternatingRowsDefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(18, 28, 40);
+            dgvFacturas.AlternatingRowsDefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(26, 95, 80);
+            dgvFacturas.AlternatingRowsDefaultCellStyle.SelectionForeColor = System.Drawing.Color.White;
+
+            dgvFacturas.RowTemplate.Height = 32;
+        }
+
 
         private void CargarFiltroClientes()
         {

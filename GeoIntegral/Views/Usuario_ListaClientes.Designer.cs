@@ -36,7 +36,12 @@
             this.btnCerrar_App = new Guna.UI2.WinForms.Guna2Button();
             this.btnRegistrarCliente = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.txtBuscar = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnLimpiar = new Guna.UI2.WinForms.Guna2Button();
+            this.btnBuscar = new Guna.UI2.WinForms.Guna2Button();
+            this.btnEliminar = new Guna.UI2.WinForms.Guna2Button();
             this.gbDatosCotizacion = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblMensaje_Limpiar_Campos = new System.Windows.Forms.Label();
             this.lblCliente = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
@@ -54,18 +59,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblMensaje_Identificacion = new System.Windows.Forms.Label();
             this.lblMensaje_Usuario = new System.Windows.Forms.Label();
-            this.txtBuscar = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.btnLimpiar = new Guna.UI2.WinForms.Guna2Button();
-            this.btnBuscar = new Guna.UI2.WinForms.Guna2Button();
-            this.btnEliminar = new Guna.UI2.WinForms.Guna2Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             this.guna2Panel2.SuspendLayout();
             this.gbDatosCotizacion.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -73,7 +74,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvClientes
@@ -182,6 +182,110 @@
             this.guna2Panel2.Size = new System.Drawing.Size(1591, 597);
             this.guna2Panel2.TabIndex = 23;
             // 
+            // txtBuscar
+            // 
+            this.txtBuscar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(41)))), ((int)(((byte)(76)))));
+            this.txtBuscar.BorderRadius = 8;
+            this.txtBuscar.BorderThickness = 3;
+            this.txtBuscar.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtBuscar.DefaultText = "";
+            this.txtBuscar.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtBuscar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtBuscar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtBuscar.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtBuscar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(28)))), ((int)(((byte)(63)))));
+            this.txtBuscar.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtBuscar.Font = new System.Drawing.Font("Poppins", 8F);
+            this.txtBuscar.ForeColor = System.Drawing.Color.Black;
+            this.txtBuscar.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtBuscar.Location = new System.Drawing.Point(75, 524);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(150)))), ((int)(((byte)(185)))));
+            this.txtBuscar.PlaceholderText = "Escriba un dato respectivo a un usuario.";
+            this.txtBuscar.SelectedText = "";
+            this.txtBuscar.Size = new System.Drawing.Size(444, 35);
+            this.txtBuscar.TabIndex = 25;
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLimpiar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(41)))), ((int)(((byte)(76)))));
+            this.btnLimpiar.BorderRadius = 8;
+            this.btnLimpiar.BorderThickness = 4;
+            this.btnLimpiar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLimpiar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLimpiar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLimpiar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLimpiar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(24)))), ((int)(((byte)(46)))));
+            this.btnLimpiar.Font = new System.Drawing.Font("Poppins Medium", 9F);
+            this.btnLimpiar.ForeColor = System.Drawing.Color.White;
+            this.btnLimpiar.HoverState.BorderColor = System.Drawing.Color.Silver;
+            this.btnLimpiar.HoverState.FillColor = System.Drawing.Color.Gray;
+            this.btnLimpiar.Image = global::GeoIntegral.Properties.Resources.App_Limpiar;
+            this.btnLimpiar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnLimpiar.ImageOffset = new System.Drawing.Point(-18, 0);
+            this.btnLimpiar.ImageSize = new System.Drawing.Size(70, 46);
+            this.btnLimpiar.Location = new System.Drawing.Point(691, 514);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnLimpiar.Size = new System.Drawing.Size(151, 51);
+            this.btnLimpiar.TabIndex = 24;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.TextOffset = new System.Drawing.Point(13, 0);
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBuscar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(41)))), ((int)(((byte)(76)))));
+            this.btnBuscar.BorderRadius = 8;
+            this.btnBuscar.BorderThickness = 4;
+            this.btnBuscar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnBuscar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnBuscar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBuscar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBuscar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(24)))), ((int)(((byte)(46)))));
+            this.btnBuscar.Font = new System.Drawing.Font("Poppins Medium", 9F);
+            this.btnBuscar.ForeColor = System.Drawing.Color.White;
+            this.btnBuscar.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnBuscar.HoverState.FillColor = System.Drawing.Color.Green;
+            this.btnBuscar.Image = global::GeoIntegral.Properties.Resources.App_Buscar;
+            this.btnBuscar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnBuscar.ImageOffset = new System.Drawing.Point(-17, 0);
+            this.btnBuscar.ImageSize = new System.Drawing.Size(70, 46);
+            this.btnBuscar.Location = new System.Drawing.Point(535, 514);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(150, 51);
+            this.btnBuscar.TabIndex = 23;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.TextOffset = new System.Drawing.Point(7, 0);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEliminar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(41)))), ((int)(((byte)(76)))));
+            this.btnEliminar.BorderRadius = 8;
+            this.btnEliminar.BorderThickness = 4;
+            this.btnEliminar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnEliminar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnEliminar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnEliminar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnEliminar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(24)))), ((int)(((byte)(46)))));
+            this.btnEliminar.Font = new System.Drawing.Font("Poppins Medium", 9F);
+            this.btnEliminar.ForeColor = System.Drawing.Color.White;
+            this.btnEliminar.HoverState.BorderColor = System.Drawing.Color.Maroon;
+            this.btnEliminar.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnEliminar.Image = global::GeoIntegral.Properties.Resources.App_Borrar;
+            this.btnEliminar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnEliminar.ImageOffset = new System.Drawing.Point(-8, 0);
+            this.btnEliminar.ImageSize = new System.Drawing.Size(60, 36);
+            this.btnEliminar.Location = new System.Drawing.Point(1413, 514);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(150, 51);
+            this.btnEliminar.TabIndex = 22;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.TextOffset = new System.Drawing.Point(14, 2);
+            // 
             // gbDatosCotizacion
             // 
             this.gbDatosCotizacion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -199,6 +303,17 @@
             this.gbDatosCotizacion.TabIndex = 0;
             this.gbDatosCotizacion.TabStop = false;
             this.gbDatosCotizacion.Text = "Lista de clientes registrados";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::GeoIntegral.Properties.Resources.App_Perfil;
+            this.pictureBox1.Location = new System.Drawing.Point(30, 524);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(47, 35);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 25;
+            this.pictureBox1.TabStop = false;
             // 
             // lblMensaje_Limpiar_Campos
             // 
@@ -502,31 +617,6 @@
             this.lblMensaje_Usuario.Text = "Campo obligatorio*";
             this.lblMensaje_Usuario.Visible = false;
             // 
-            // txtBuscar
-            // 
-            this.txtBuscar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(41)))), ((int)(((byte)(76)))));
-            this.txtBuscar.BorderRadius = 8;
-            this.txtBuscar.BorderThickness = 3;
-            this.txtBuscar.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtBuscar.DefaultText = "";
-            this.txtBuscar.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtBuscar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtBuscar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtBuscar.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtBuscar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(28)))), ((int)(((byte)(63)))));
-            this.txtBuscar.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBuscar.Font = new System.Drawing.Font("Poppins", 8F);
-            this.txtBuscar.ForeColor = System.Drawing.Color.Black;
-            this.txtBuscar.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBuscar.Location = new System.Drawing.Point(75, 524);
-            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(184)))), ((int)(((byte)(249)))));
-            this.txtBuscar.PlaceholderText = "Escriba un dato respectivo a un usuario.";
-            this.txtBuscar.SelectedText = "";
-            this.txtBuscar.Size = new System.Drawing.Size(444, 35);
-            this.txtBuscar.TabIndex = 25;
-            // 
             // guna2PictureBox1
             // 
             this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
@@ -575,96 +665,6 @@
             this.guna2PictureBox4.TabIndex = 18;
             this.guna2PictureBox4.TabStop = false;
             // 
-            // btnLimpiar
-            // 
-            this.btnLimpiar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnLimpiar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(41)))), ((int)(((byte)(76)))));
-            this.btnLimpiar.BorderRadius = 8;
-            this.btnLimpiar.BorderThickness = 4;
-            this.btnLimpiar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnLimpiar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnLimpiar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnLimpiar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnLimpiar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(24)))), ((int)(((byte)(46)))));
-            this.btnLimpiar.Font = new System.Drawing.Font("Poppins Medium", 9F);
-            this.btnLimpiar.ForeColor = System.Drawing.Color.White;
-            this.btnLimpiar.HoverState.BorderColor = System.Drawing.Color.Silver;
-            this.btnLimpiar.HoverState.FillColor = System.Drawing.Color.Gray;
-            this.btnLimpiar.Image = global::GeoIntegral.Properties.Resources.App_Limpiar;
-            this.btnLimpiar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnLimpiar.ImageOffset = new System.Drawing.Point(-18, 0);
-            this.btnLimpiar.ImageSize = new System.Drawing.Size(70, 46);
-            this.btnLimpiar.Location = new System.Drawing.Point(691, 514);
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnLimpiar.Size = new System.Drawing.Size(151, 51);
-            this.btnLimpiar.TabIndex = 24;
-            this.btnLimpiar.Text = "Limpiar";
-            this.btnLimpiar.TextOffset = new System.Drawing.Point(13, 0);
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBuscar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(41)))), ((int)(((byte)(76)))));
-            this.btnBuscar.BorderRadius = 8;
-            this.btnBuscar.BorderThickness = 4;
-            this.btnBuscar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnBuscar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnBuscar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnBuscar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnBuscar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(24)))), ((int)(((byte)(46)))));
-            this.btnBuscar.Font = new System.Drawing.Font("Poppins Medium", 9F);
-            this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnBuscar.HoverState.FillColor = System.Drawing.Color.Green;
-            this.btnBuscar.Image = global::GeoIntegral.Properties.Resources.App_Buscar;
-            this.btnBuscar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnBuscar.ImageOffset = new System.Drawing.Point(-17, 0);
-            this.btnBuscar.ImageSize = new System.Drawing.Size(70, 46);
-            this.btnBuscar.Location = new System.Drawing.Point(535, 514);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(150, 51);
-            this.btnBuscar.TabIndex = 23;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.TextOffset = new System.Drawing.Point(7, 0);
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEliminar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(41)))), ((int)(((byte)(76)))));
-            this.btnEliminar.BorderRadius = 8;
-            this.btnEliminar.BorderThickness = 4;
-            this.btnEliminar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnEliminar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnEliminar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnEliminar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnEliminar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(24)))), ((int)(((byte)(46)))));
-            this.btnEliminar.Font = new System.Drawing.Font("Poppins Medium", 9F);
-            this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.HoverState.BorderColor = System.Drawing.Color.Maroon;
-            this.btnEliminar.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnEliminar.Image = global::GeoIntegral.Properties.Resources.App_Borrar;
-            this.btnEliminar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnEliminar.ImageOffset = new System.Drawing.Point(-8, 0);
-            this.btnEliminar.ImageSize = new System.Drawing.Size(60, 36);
-            this.btnEliminar.Location = new System.Drawing.Point(1413, 514);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(150, 51);
-            this.btnEliminar.TabIndex = 22;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.TextOffset = new System.Drawing.Point(14, 2);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::GeoIntegral.Properties.Resources.App_Perfil;
-            this.pictureBox1.Location = new System.Drawing.Point(30, 524);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(47, 35);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 25;
-            this.pictureBox1.TabStop = false;
-            // 
             // Usuario_ListaClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -681,6 +681,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
             this.guna2Panel2.ResumeLayout(false);
             this.gbDatosCotizacion.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -690,7 +691,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

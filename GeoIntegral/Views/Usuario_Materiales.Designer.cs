@@ -32,6 +32,10 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblCosto = new System.Windows.Forms.Label();
             this.gbRegistrarMaterial = new System.Windows.Forms.GroupBox();
+            this.numCostoUnidad = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.btnLimpiarCampos = new Guna.UI2.WinForms.Guna2Button();
+            this.btnGuardarMaterial = new Guna.UI2.WinForms.Guna2Button();
+            this.txtNombreMaterial = new Guna.UI2.WinForms.Guna2TextBox();
             this.gbListaMateriales = new System.Windows.Forms.GroupBox();
             this.dgvMateriales = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -39,19 +43,15 @@
             this.CostoPorUnidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnCerrar_App = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnEliminarMaterial = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnEliminarMaterial = new Guna.UI2.WinForms.Guna2Button();
-            this.txtNombreMaterial = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnGuardarMaterial = new Guna.UI2.WinForms.Guna2Button();
-            this.btnLimpiarCampos = new Guna.UI2.WinForms.Guna2Button();
-            this.numCostoUnidad = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.gbRegistrarMaterial.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numCostoUnidad)).BeginInit();
             this.gbListaMateriales.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMateriales)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numCostoUnidad)).BeginInit();
             this.SuspendLayout();
             // 
             // lblMensaje_Nombre
@@ -109,6 +109,107 @@
             this.gbRegistrarMaterial.TabIndex = 8;
             this.gbRegistrarMaterial.TabStop = false;
             this.gbRegistrarMaterial.Text = "Registrar nuevo material";
+            // 
+            // numCostoUnidad
+            // 
+            this.numCostoUnidad.BackColor = System.Drawing.Color.Transparent;
+            this.numCostoUnidad.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(41)))), ((int)(((byte)(76)))));
+            this.numCostoUnidad.BorderRadius = 4;
+            this.numCostoUnidad.BorderThickness = 2;
+            this.numCostoUnidad.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.numCostoUnidad.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(28)))), ((int)(((byte)(63)))));
+            this.numCostoUnidad.Font = new System.Drawing.Font("Poppins Medium", 9F);
+            this.numCostoUnidad.ForeColor = System.Drawing.Color.White;
+            this.numCostoUnidad.Increment = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numCostoUnidad.Location = new System.Drawing.Point(29, 157);
+            this.numCostoUnidad.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.numCostoUnidad.Maximum = new decimal(new int[] {
+            1410065408,
+            2,
+            0,
+            0});
+            this.numCostoUnidad.Minimum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.numCostoUnidad.Name = "numCostoUnidad";
+            this.numCostoUnidad.Size = new System.Drawing.Size(369, 38);
+            this.numCostoUnidad.TabIndex = 12;
+            this.numCostoUnidad.ThousandsSeparator = true;
+            this.numCostoUnidad.UpDownButtonFillColor = System.Drawing.Color.Chocolate;
+            this.numCostoUnidad.UpDownButtonForeColor = System.Drawing.Color.White;
+            this.numCostoUnidad.Value = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            // 
+            // btnLimpiarCampos
+            // 
+            this.btnLimpiarCampos.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(41)))), ((int)(((byte)(76)))));
+            this.btnLimpiarCampos.BorderRadius = 8;
+            this.btnLimpiarCampos.BorderThickness = 4;
+            this.btnLimpiarCampos.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLimpiarCampos.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLimpiarCampos.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLimpiarCampos.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLimpiarCampos.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(24)))), ((int)(((byte)(46)))));
+            this.btnLimpiarCampos.Font = new System.Drawing.Font("Poppins Medium", 9F);
+            this.btnLimpiarCampos.ForeColor = System.Drawing.Color.White;
+            this.btnLimpiarCampos.Location = new System.Drawing.Point(470, 143);
+            this.btnLimpiarCampos.Name = "btnLimpiarCampos";
+            this.btnLimpiarCampos.Size = new System.Drawing.Size(162, 45);
+            this.btnLimpiarCampos.TabIndex = 14;
+            this.btnLimpiarCampos.Text = "Limpiar";
+            this.btnLimpiarCampos.Click += new System.EventHandler(this.btnLimpiarCampos_Click);
+            // 
+            // btnGuardarMaterial
+            // 
+            this.btnGuardarMaterial.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(41)))), ((int)(((byte)(76)))));
+            this.btnGuardarMaterial.BorderRadius = 8;
+            this.btnGuardarMaterial.BorderThickness = 4;
+            this.btnGuardarMaterial.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnGuardarMaterial.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnGuardarMaterial.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnGuardarMaterial.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnGuardarMaterial.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(24)))), ((int)(((byte)(46)))));
+            this.btnGuardarMaterial.Font = new System.Drawing.Font("Poppins Medium", 9F);
+            this.btnGuardarMaterial.ForeColor = System.Drawing.Color.White;
+            this.btnGuardarMaterial.Location = new System.Drawing.Point(470, 77);
+            this.btnGuardarMaterial.Name = "btnGuardarMaterial";
+            this.btnGuardarMaterial.Size = new System.Drawing.Size(162, 45);
+            this.btnGuardarMaterial.TabIndex = 13;
+            this.btnGuardarMaterial.Text = "Registrar";
+            this.btnGuardarMaterial.Click += new System.EventHandler(this.btnGuardarMaterial_Click);
+            // 
+            // txtNombreMaterial
+            // 
+            this.txtNombreMaterial.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(41)))), ((int)(((byte)(76)))));
+            this.txtNombreMaterial.BorderRadius = 8;
+            this.txtNombreMaterial.BorderThickness = 2;
+            this.txtNombreMaterial.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNombreMaterial.DefaultText = "";
+            this.txtNombreMaterial.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtNombreMaterial.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtNombreMaterial.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNombreMaterial.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNombreMaterial.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(28)))), ((int)(((byte)(63)))));
+            this.txtNombreMaterial.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNombreMaterial.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtNombreMaterial.ForeColor = System.Drawing.Color.White;
+            this.txtNombreMaterial.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNombreMaterial.Location = new System.Drawing.Point(29, 77);
+            this.txtNombreMaterial.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtNombreMaterial.Name = "txtNombreMaterial";
+            this.txtNombreMaterial.PlaceholderText = "Ingrese el nombre del material";
+            this.txtNombreMaterial.SelectedText = "";
+            this.txtNombreMaterial.Size = new System.Drawing.Size(369, 31);
+            this.txtNombreMaterial.TabIndex = 6;
             // 
             // gbListaMateriales
             // 
@@ -190,41 +291,13 @@
             this.guna2Panel1.BorderRadius = 8;
             this.guna2Panel1.BorderThickness = 8;
             this.guna2Panel1.Controls.Add(this.btnEliminarMaterial);
+            this.guna2Panel1.Controls.Add(this.label1);
             this.guna2Panel1.Controls.Add(this.gbListaMateriales);
             this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(24)))), ((int)(((byte)(42)))));
             this.guna2Panel1.Location = new System.Drawing.Point(18, 65);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1610, 605);
             this.guna2Panel1.TabIndex = 23;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Poppins", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(244)))), ((int)(((byte)(248)))));
-            this.label1.Location = new System.Drawing.Point(1009, 70);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(533, 28);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Selecciona a un usuario de la tabla para visualizar su cotizacón. *";
-            // 
-            // guna2Panel2
-            // 
-            this.guna2Panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2Panel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Panel2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(45)))), ((int)(((byte)(74)))));
-            this.guna2Panel2.BorderRadius = 8;
-            this.guna2Panel2.BorderThickness = 8;
-            this.guna2Panel2.Controls.Add(this.gbRegistrarMaterial);
-            this.guna2Panel2.Controls.Add(this.label1);
-            this.guna2Panel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(24)))), ((int)(((byte)(42)))));
-            this.guna2Panel2.Location = new System.Drawing.Point(18, 693);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(1610, 281);
-            this.guna2Panel2.TabIndex = 24;
             // 
             // btnEliminarMaterial
             // 
@@ -252,106 +325,33 @@
             this.btnEliminarMaterial.TextOffset = new System.Drawing.Point(14, 2);
             this.btnEliminarMaterial.Click += new System.EventHandler(this.btnEliminarMaterial_Click);
             // 
-            // txtNombreMaterial
+            // label1
             // 
-            this.txtNombreMaterial.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(41)))), ((int)(((byte)(76)))));
-            this.txtNombreMaterial.BorderRadius = 8;
-            this.txtNombreMaterial.BorderThickness = 2;
-            this.txtNombreMaterial.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNombreMaterial.DefaultText = "";
-            this.txtNombreMaterial.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtNombreMaterial.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtNombreMaterial.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNombreMaterial.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNombreMaterial.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(28)))), ((int)(((byte)(63)))));
-            this.txtNombreMaterial.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNombreMaterial.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtNombreMaterial.ForeColor = System.Drawing.Color.White;
-            this.txtNombreMaterial.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNombreMaterial.Location = new System.Drawing.Point(29, 77);
-            this.txtNombreMaterial.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtNombreMaterial.Name = "txtNombreMaterial";
-            this.txtNombreMaterial.PlaceholderText = "Ingrese el nombre del material";
-            this.txtNombreMaterial.SelectedText = "";
-            this.txtNombreMaterial.Size = new System.Drawing.Size(369, 31);
-            this.txtNombreMaterial.TabIndex = 6;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Poppins", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(244)))), ((int)(((byte)(248)))));
+            this.label1.Location = new System.Drawing.Point(1014, 546);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(413, 28);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Selecciona un material de la tabla para borrarlo. *";
             // 
-            // btnGuardarMaterial
+            // guna2Panel2
             // 
-            this.btnGuardarMaterial.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(41)))), ((int)(((byte)(76)))));
-            this.btnGuardarMaterial.BorderRadius = 8;
-            this.btnGuardarMaterial.BorderThickness = 4;
-            this.btnGuardarMaterial.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnGuardarMaterial.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnGuardarMaterial.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnGuardarMaterial.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnGuardarMaterial.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(24)))), ((int)(((byte)(46)))));
-            this.btnGuardarMaterial.Font = new System.Drawing.Font("Poppins Medium", 9F);
-            this.btnGuardarMaterial.ForeColor = System.Drawing.Color.White;
-            this.btnGuardarMaterial.Location = new System.Drawing.Point(470, 77);
-            this.btnGuardarMaterial.Name = "btnGuardarMaterial";
-            this.btnGuardarMaterial.Size = new System.Drawing.Size(162, 45);
-            this.btnGuardarMaterial.TabIndex = 13;
-            this.btnGuardarMaterial.Text = "Registrar";
-            this.btnGuardarMaterial.Click += new System.EventHandler(this.btnGuardarMaterial_Click);
-            // 
-            // btnLimpiarCampos
-            // 
-            this.btnLimpiarCampos.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(41)))), ((int)(((byte)(76)))));
-            this.btnLimpiarCampos.BorderRadius = 8;
-            this.btnLimpiarCampos.BorderThickness = 4;
-            this.btnLimpiarCampos.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnLimpiarCampos.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnLimpiarCampos.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnLimpiarCampos.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnLimpiarCampos.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(24)))), ((int)(((byte)(46)))));
-            this.btnLimpiarCampos.Font = new System.Drawing.Font("Poppins Medium", 9F);
-            this.btnLimpiarCampos.ForeColor = System.Drawing.Color.White;
-            this.btnLimpiarCampos.Location = new System.Drawing.Point(470, 143);
-            this.btnLimpiarCampos.Name = "btnLimpiarCampos";
-            this.btnLimpiarCampos.Size = new System.Drawing.Size(162, 45);
-            this.btnLimpiarCampos.TabIndex = 14;
-            this.btnLimpiarCampos.Text = "Limpiar";
-            this.btnLimpiarCampos.Click += new System.EventHandler(this.btnLimpiarCampos_Click);
-            // 
-            // numCostoUnidad
-            // 
-            this.numCostoUnidad.BackColor = System.Drawing.Color.Transparent;
-            this.numCostoUnidad.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(41)))), ((int)(((byte)(76)))));
-            this.numCostoUnidad.BorderRadius = 4;
-            this.numCostoUnidad.BorderThickness = 2;
-            this.numCostoUnidad.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.numCostoUnidad.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(28)))), ((int)(((byte)(63)))));
-            this.numCostoUnidad.Font = new System.Drawing.Font("Poppins Medium", 9F);
-            this.numCostoUnidad.ForeColor = System.Drawing.Color.White;
-            this.numCostoUnidad.Increment = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.numCostoUnidad.Location = new System.Drawing.Point(29, 157);
-            this.numCostoUnidad.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.numCostoUnidad.Maximum = new decimal(new int[] {
-            1410065408,
-            2,
-            0,
-            0});
-            this.numCostoUnidad.Minimum = new decimal(new int[] {
-            100000,
-            0,
-            0,
-            0});
-            this.numCostoUnidad.Name = "numCostoUnidad";
-            this.numCostoUnidad.Size = new System.Drawing.Size(369, 38);
-            this.numCostoUnidad.TabIndex = 12;
-            this.numCostoUnidad.ThousandsSeparator = true;
-            this.numCostoUnidad.UpDownButtonFillColor = System.Drawing.Color.Chocolate;
-            this.numCostoUnidad.UpDownButtonForeColor = System.Drawing.Color.White;
-            this.numCostoUnidad.Value = new decimal(new int[] {
-            100000,
-            0,
-            0,
-            0});
+            this.guna2Panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2Panel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(45)))), ((int)(((byte)(74)))));
+            this.guna2Panel2.BorderRadius = 8;
+            this.guna2Panel2.BorderThickness = 8;
+            this.guna2Panel2.Controls.Add(this.gbRegistrarMaterial);
+            this.guna2Panel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(24)))), ((int)(((byte)(42)))));
+            this.guna2Panel2.Location = new System.Drawing.Point(18, 693);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.Size = new System.Drawing.Size(1610, 281);
+            this.guna2Panel2.TabIndex = 24;
             // 
             // Usuario_Materiales
             // 
@@ -369,12 +369,12 @@
             this.Text = "Usuario_Materiales";
             this.gbRegistrarMaterial.ResumeLayout(false);
             this.gbRegistrarMaterial.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numCostoUnidad)).EndInit();
             this.gbListaMateriales.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMateriales)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
+            this.guna2Panel1.PerformLayout();
             this.guna2Panel2.ResumeLayout(false);
-            this.guna2Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numCostoUnidad)).EndInit();
             this.ResumeLayout(false);
 
         }
