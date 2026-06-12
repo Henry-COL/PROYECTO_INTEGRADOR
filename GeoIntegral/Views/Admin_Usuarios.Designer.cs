@@ -31,16 +31,16 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnCerrar_App = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.cmbFiltro = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.btnFiltrar_Busqueda = new Guna.UI2.WinForms.Guna2Button();
+            this.btnCambiar_Estado = new Guna.UI2.WinForms.Guna2Button();
             this.grp = new System.Windows.Forms.GroupBox();
             this.dgvListaUsuarios = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cmbFiltro = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.btnFiltrar_Busqueda = new Guna.UI2.WinForms.Guna2Button();
             this.cmbUsuario = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.btnCambiar_Estado = new Guna.UI2.WinForms.Guna2Button();
             this.panel2.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.grp.SuspendLayout();
@@ -93,7 +93,6 @@
             this.guna2Panel1.BorderThickness = 8;
             this.guna2Panel1.Controls.Add(this.cmbFiltro);
             this.guna2Panel1.Controls.Add(this.btnFiltrar_Busqueda);
-            this.guna2Panel1.Controls.Add(this.cmbUsuario);
             this.guna2Panel1.Controls.Add(this.btnCambiar_Estado);
             this.guna2Panel1.Controls.Add(this.grp);
             this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(25)))), ((int)(((byte)(46)))));
@@ -102,12 +101,78 @@
             this.guna2Panel1.Size = new System.Drawing.Size(1597, 894);
             this.guna2Panel1.TabIndex = 19;
             // 
+            // cmbFiltro
+            // 
+            this.cmbFiltro.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.cmbFiltro.BackColor = System.Drawing.Color.Transparent;
+            this.cmbFiltro.BorderRadius = 8;
+            this.cmbFiltro.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbFiltro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbFiltro.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbFiltro.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbFiltro.Font = new System.Drawing.Font("Poppins Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbFiltro.ForeColor = System.Drawing.Color.Black;
+            this.cmbFiltro.IntegralHeight = false;
+            this.cmbFiltro.ItemHeight = 30;
+            this.cmbFiltro.Items.AddRange(new object[] {
+            "Todos",
+            "Activo",
+            "Inactivo"});
+            this.cmbFiltro.Location = new System.Drawing.Point(244, 834);
+            this.cmbFiltro.MaxDropDownItems = 3;
+            this.cmbFiltro.Name = "cmbFiltro";
+            this.cmbFiltro.Size = new System.Drawing.Size(153, 36);
+            this.cmbFiltro.StartIndex = 0;
+            this.cmbFiltro.TabIndex = 1;
+            // 
+            // btnFiltrar_Busqueda
+            // 
+            this.btnFiltrar_Busqueda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnFiltrar_Busqueda.BorderColor = System.Drawing.Color.DarkGreen;
+            this.btnFiltrar_Busqueda.BorderRadius = 8;
+            this.btnFiltrar_Busqueda.BorderThickness = 3;
+            this.btnFiltrar_Busqueda.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnFiltrar_Busqueda.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnFiltrar_Busqueda.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnFiltrar_Busqueda.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnFiltrar_Busqueda.FillColor = System.Drawing.Color.LimeGreen;
+            this.btnFiltrar_Busqueda.Font = new System.Drawing.Font("Poppins Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFiltrar_Busqueda.ForeColor = System.Drawing.Color.White;
+            this.btnFiltrar_Busqueda.HoverState.FillColor = System.Drawing.Color.ForestGreen;
+            this.btnFiltrar_Busqueda.Location = new System.Drawing.Point(25, 832);
+            this.btnFiltrar_Busqueda.Name = "btnFiltrar_Busqueda";
+            this.btnFiltrar_Busqueda.Size = new System.Drawing.Size(212, 39);
+            this.btnFiltrar_Busqueda.TabIndex = 0;
+            this.btnFiltrar_Busqueda.Text = "Filtrar busqueda";
+            // 
+            // btnCambiar_Estado
+            // 
+            this.btnCambiar_Estado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnCambiar_Estado.BorderColor = System.Drawing.Color.Teal;
+            this.btnCambiar_Estado.BorderRadius = 8;
+            this.btnCambiar_Estado.BorderThickness = 3;
+            this.btnCambiar_Estado.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCambiar_Estado.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCambiar_Estado.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCambiar_Estado.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCambiar_Estado.FillColor = System.Drawing.Color.LightSeaGreen;
+            this.btnCambiar_Estado.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold);
+            this.btnCambiar_Estado.ForeColor = System.Drawing.Color.White;
+            this.btnCambiar_Estado.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnCambiar_Estado.Location = new System.Drawing.Point(1356, 829);
+            this.btnCambiar_Estado.Name = "btnCambiar_Estado";
+            this.btnCambiar_Estado.Size = new System.Drawing.Size(212, 39);
+            this.btnCambiar_Estado.TabIndex = 6;
+            this.btnCambiar_Estado.Text = "Cambiar estado";
+            this.btnCambiar_Estado.Click += new System.EventHandler(this.btnCambiar_Estado_Click);
+            // 
             // grp
             // 
             this.grp.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grp.Controls.Add(this.dgvListaUsuarios);
+            this.grp.Controls.Add(this.cmbUsuario);
             this.grp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grp.ForeColor = System.Drawing.SystemColors.Window;
             this.grp.Location = new System.Drawing.Point(25, 28);
@@ -131,7 +196,6 @@
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
-            this.dgvListaUsuarios.Enabled = false;
             this.dgvListaUsuarios.Location = new System.Drawing.Point(14, 31);
             this.dgvListaUsuarios.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvListaUsuarios.MultiSelect = false;
@@ -164,50 +228,6 @@
             this.dataGridViewTextBoxColumn4.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             // 
-            // cmbFiltro
-            // 
-            this.cmbFiltro.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.cmbFiltro.BackColor = System.Drawing.Color.Transparent;
-            this.cmbFiltro.BorderRadius = 8;
-            this.cmbFiltro.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbFiltro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbFiltro.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbFiltro.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbFiltro.Font = new System.Drawing.Font("Poppins Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbFiltro.ForeColor = System.Drawing.Color.Black;
-            this.cmbFiltro.IntegralHeight = false;
-            this.cmbFiltro.ItemHeight = 30;
-            this.cmbFiltro.Items.AddRange(new object[] {
-            "Todos",
-            "Activo",
-            "Inactivo"});
-            this.cmbFiltro.Location = new System.Drawing.Point(894, 831);
-            this.cmbFiltro.MaxDropDownItems = 3;
-            this.cmbFiltro.Name = "cmbFiltro";
-            this.cmbFiltro.Size = new System.Drawing.Size(153, 36);
-            this.cmbFiltro.StartIndex = 0;
-            this.cmbFiltro.TabIndex = 1;
-            // 
-            // btnFiltrar_Busqueda
-            // 
-            this.btnFiltrar_Busqueda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnFiltrar_Busqueda.BorderColor = System.Drawing.Color.DarkGreen;
-            this.btnFiltrar_Busqueda.BorderRadius = 8;
-            this.btnFiltrar_Busqueda.BorderThickness = 3;
-            this.btnFiltrar_Busqueda.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnFiltrar_Busqueda.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnFiltrar_Busqueda.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnFiltrar_Busqueda.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnFiltrar_Busqueda.FillColor = System.Drawing.Color.LimeGreen;
-            this.btnFiltrar_Busqueda.Font = new System.Drawing.Font("Poppins Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFiltrar_Busqueda.ForeColor = System.Drawing.Color.White;
-            this.btnFiltrar_Busqueda.HoverState.FillColor = System.Drawing.Color.ForestGreen;
-            this.btnFiltrar_Busqueda.Location = new System.Drawing.Point(675, 829);
-            this.btnFiltrar_Busqueda.Name = "btnFiltrar_Busqueda";
-            this.btnFiltrar_Busqueda.Size = new System.Drawing.Size(212, 39);
-            this.btnFiltrar_Busqueda.TabIndex = 0;
-            this.btnFiltrar_Busqueda.Text = "Filtrar busqueda";
-            // 
             // cmbUsuario
             // 
             this.cmbUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -220,30 +240,10 @@
             this.cmbUsuario.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cmbUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cmbUsuario.ItemHeight = 30;
-            this.cmbUsuario.Location = new System.Drawing.Point(1280, 830);
+            this.cmbUsuario.Location = new System.Drawing.Point(942, 529);
             this.cmbUsuario.Name = "cmbUsuario";
             this.cmbUsuario.Size = new System.Drawing.Size(289, 36);
             this.cmbUsuario.TabIndex = 7;
-            // 
-            // btnCambiar_Estado
-            // 
-            this.btnCambiar_Estado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnCambiar_Estado.BorderColor = System.Drawing.Color.Teal;
-            this.btnCambiar_Estado.BorderRadius = 8;
-            this.btnCambiar_Estado.BorderThickness = 3;
-            this.btnCambiar_Estado.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnCambiar_Estado.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnCambiar_Estado.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnCambiar_Estado.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnCambiar_Estado.FillColor = System.Drawing.Color.LightSeaGreen;
-            this.btnCambiar_Estado.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold);
-            this.btnCambiar_Estado.ForeColor = System.Drawing.Color.White;
-            this.btnCambiar_Estado.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnCambiar_Estado.Location = new System.Drawing.Point(1062, 828);
-            this.btnCambiar_Estado.Name = "btnCambiar_Estado";
-            this.btnCambiar_Estado.Size = new System.Drawing.Size(212, 39);
-            this.btnCambiar_Estado.TabIndex = 6;
-            this.btnCambiar_Estado.Text = "Cambiar estado";
             // 
             // Admin_Usuarios
             // 
@@ -275,8 +275,8 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2ComboBox cmbFiltro;
         private Guna.UI2.WinForms.Guna2Button btnFiltrar_Busqueda;
-        private Guna.UI2.WinForms.Guna2ComboBox cmbUsuario;
         private Guna.UI2.WinForms.Guna2Button btnCambiar_Estado;
         private Guna.UI2.WinForms.Guna2Button btnCerrar_App;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbUsuario;
     }
 }

@@ -1,4 +1,4 @@
-﻿using GeoIntegral.Repositorys;
+﻿using GeoIntegral.Controller;
 using GeoIntegral.Models;
 using GeoIntegral.Enums;
 using System;
@@ -13,7 +13,7 @@ namespace GeoIntegral.Views
     public partial class Admin_Usuarios : Form, ICerrable
     {
         public event EventHandler VentanaCerrada;
-        private UsuarioRepository repo = new UsuarioRepository();
+        private readonly UsuarioController _usuarioController = new UsuarioController();
 
         public Admin_Usuarios(Size size)
         {
@@ -22,13 +22,11 @@ namespace GeoIntegral.Views
             EstilarTabla();
             CargarUsuarios();
 
-            
             this.Shown += (s, e) =>
             {
                 dgvListaUsuarios.ClearSelection();
                 dgvListaUsuarios.CurrentCell = null;
             };
-
         }
 
         private void CargarUsuarios()
@@ -36,15 +34,12 @@ namespace GeoIntegral.Views
             try
             {
                 dgvListaUsuarios.Rows.Clear();
-                var lineas = repo.ObtenerLineas();
-                foreach (var datos in lineas)
+                var usuarios = _usuarioController.ObtenerTodosLosUsuarios();
+
+                foreach (var u in usuarios)
                 {
-                    if (datos.Length < 5) continue;
-                    string usuario = datos[0]?.Trim();
-                    string gmail = datos[2]?.Trim();
-                    string rol = datos[3]?.Trim();
-                    string estado = datos[4]?.Trim();
-                    dgvListaUsuarios.Rows.Add(usuario, gmail, rol, estado);
+                    // CORRECCIÓN DEFINITIVA: Se usa Nombre_Usuario según el mapeo de tu repositorio
+                    dgvListaUsuarios.Rows.Add(u.Nombre_Usuario, u.Gmail, u.Rol.ToString(), u.Estado.ToString());
                 }
             }
             catch (Exception ex)
@@ -60,20 +55,21 @@ namespace GeoIntegral.Views
             {
                 var filtro = cmbFiltro.SelectedItem?.ToString() ?? "Todos";
                 dgvListaUsuarios.Rows.Clear();
-                var lineas = repo.ObtenerLineas();
-                foreach (var datos in lineas)
+
+                var usuarios = _usuarioController.ObtenerTodosLosUsuarios();
+                foreach (var u in usuarios)
                 {
-                    if (datos.Length < 5) continue;
-                    string estado = datos[4]?.Trim();
+                    string estado = u.Estado.ToString();
                     if (filtro == "Todos" || estado.Equals(filtro, StringComparison.OrdinalIgnoreCase))
                     {
-                        dgvListaUsuarios.Rows.Add(datos[0].Trim(), datos[2].Trim(), datos[3].Trim(), estado);
+                        // CORRECCIÓN DEFINITIVA: Mismo ajuste para el filtro de filas
+                        dgvListaUsuarios.Rows.Add(u.Nombre_Usuario, u.Gmail, u.Rol.ToString(), estado);
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al filtrar: " + ex.Message);
+                MessageBox.Show("Error al filtrar: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -116,7 +112,6 @@ namespace GeoIntegral.Views
             dgvListaUsuarios.RowTemplate.Height = 32;
         }
 
-
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             // event handler placeholder
@@ -133,27 +128,57 @@ namespace GeoIntegral.Views
             {
                 if (dgvListaUsuarios.SelectedRows.Count == 0)
                 {
-                    MessageBox.Show("Seleccione un usuario primero.");
+                    MessageBox.Show("Por favor, seleccione un usuario de la tabla primero.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
                 var fila = dgvListaUsuarios.SelectedRows[0];
-                string nombreUsuario = fila.Cells[0].Value?.ToString();
-                string estadoActual = fila.Cells[3].Value?.ToString();
-                string nuevoEstado = estadoActual.Equals("Activo", StringComparison.OrdinalIgnoreCase) ? "Inactivo" : "Activo";
+                string nombreUsuario = fila.Cells[0].Value?.ToString()?.Trim();
+                string estadoActual = fila.Cells[3].Value?.ToString()?.Trim();
 
-                bool ok = repo.ActualizarCampo(nombreUsuario, 4, nuevoEstado);
-                if (ok) CargarUsuarios();
-                else MessageBox.Show("No se pudo cambiar el estado del usuario.");
+                if (string.IsNullOrEmpty(nombreUsuario) || string.IsNullOrEmpty(estadoActual)) return;
+
+                EstadoUsuario nuevoEstadoEnum;
+                if (estadoActual.Equals(EstadoUsuario.Activo.ToString(), StringComparison.OrdinalIgnoreCase))
+                {
+                    nuevoEstadoEnum = EstadoUsuario.Inactivo;
+                }
+                else
+                {
+                    nuevoEstadoEnum = EstadoUsuario.Activo;
+                }
+
+                var resultado = MessageBox.Show($"¿Está seguro de cambiar el estado del usuario '{nombreUsuario}' a {nuevoEstadoEnum}?",
+                                                "Confirmar Cambio", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (resultado != DialogResult.Yes) return;
+
+                bool ok = _usuarioController.CambiarEstadoUsuario(nombreUsuario, nuevoEstadoEnum.ToString());
+
+                if (ok)
+                {
+                    CargarUsuarios();
+                    MessageBox.Show($"El estado se actualizó a {nuevoEstadoEnum} correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo cambiar el estado a través del controlador.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al cambiar estado: " + ex.Message);
+                MessageBox.Show("Error al cambiar estado: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         private void btnCerrar_App_Click(object sender, EventArgs e)
         {
             VentanaCerrada?.Invoke(this, EventArgs.Empty);
+        }
+
+        private void btnCambiar_Estado_Click(object sender, EventArgs e)
+        {
+            btnCambiarEstado_Click(sender, e);
         }
     }
 }

@@ -68,7 +68,7 @@ namespace GeoIntegral.Views
 
                 if (txtContrasena.Text != txtConfirmar_Contrasena.Text)
                 {
-                    lblMensaje_Contrasena_Confirmar.Text = "Las contraseñas no coinciden*";
+                    lblMensaje_Contrasena_Confirmar.Text = "Contraseña diferente*";
                     lblMensaje_Contrasena_Confirmar.Visible = true;
                     return;
                 }
@@ -76,7 +76,8 @@ namespace GeoIntegral.Views
                 // Validar seguridad de la contraseña
                 if (!ValidarContrasena(txtContrasena.Text))
                 {
-                    lblMensaje_Contrasena_.Text = "Mínimo 8 caracteres, una mayúscula, un número y un carácter especial*";
+                    MessageBox.Show("Mínimo 8 caracteres, una mayúscula, un número y un carácter especial*", "GeoIntegral",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     lblMensaje_Contrasena_.Visible = true;
                     return;
                 }

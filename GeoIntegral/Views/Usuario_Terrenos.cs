@@ -44,12 +44,25 @@ namespace GeoIntegral.Views
             lblArea.Text = "Área: --";
             lblVolumen.Text = "Volumen: --";
 
+            EstilarTabla();
+
+            // Forzar el doble buffer en el formulario
+            this.DoubleBuffered = true;
+
+            // Activar estilos de control avanzado para evitar el lag gráfico
+            this.SetStyle(ControlStyles.OptimizedDoubleBuffer |
+                          ControlStyles.UserPaint |
+                          ControlStyles.AllPaintingInWmPaint, true);
+            this.UpdateStyles();
+
+            // Enlace de eventos
             btnAgregarPunto.Click += btnAgregarPunto_Click;
             btnEliminarPunto.Click += btnEliminarPunto_Click;
             btnLimpiarPuntos.Click += btnLimpiarPuntos_Click;
             btnCalcular.Click += btnCalcular_Click;
             btnGuardar.Click += btnGuardar_Click;
-           
+            btnVerTerreno.Click += btnVerTerreno_Click;
+
             CargarProyectosGuardados();
 
             glControl.Load += GlControl_Load;
@@ -111,7 +124,6 @@ namespace GeoIntegral.Views
 
         private void DibujarEjes()
         {
-            // ejes en la esquina inferior izquierda de la superficie
             float orig = -0.5f;
             float len = 0.5f;
 
@@ -125,7 +137,6 @@ namespace GeoIntegral.Views
 
         private void DibujarSuperficie()
         {
-            // 1 — superficie rellena con iluminación suave
             GL.PolygonMode(MaterialFace.FrontAndBack, PolygonMode.Fill);
             GL.Begin(PrimitiveType.Quads);
             foreach (var c in celdas)
@@ -139,7 +150,6 @@ namespace GeoIntegral.Views
             }
             GL.End();
 
-            // 2 — malla encima con transparencia para dar efecto de rejilla
             GL.PolygonMode(MaterialFace.FrontAndBack, PolygonMode.Line);
             GL.LineWidth(0.4f);
             GL.Begin(PrimitiveType.Quads);
@@ -148,10 +158,8 @@ namespace GeoIntegral.Views
                 GL.Vertex3(c.x, c.y, c.z);
             GL.End();
 
-            // restaurar modo fill
             GL.PolygonMode(MaterialFace.FrontAndBack, PolygonMode.Fill);
 
-            // 3 — puntos originales sobre la superficie
             GL.PointSize(10f);
             GL.Begin(PrimitiveType.Points);
             GL.Color3(1f, 1f, 0f);
@@ -159,7 +167,6 @@ namespace GeoIntegral.Views
                 GL.Vertex3(p.x, p.y, p.z);
             GL.End();
 
-            // 4 — ejes en esquina
             DibujarEjes();
         }
 
@@ -215,7 +222,6 @@ namespace GeoIntegral.Views
             float ry = glYMax - glYMin == 0 ? 1 : glYMax - glYMin;
             float rz = glZMax - glZMin == 0 ? 1 : glZMax - glZMin;
 
-            // puntos normalizados entre -0.5 y 0.5
             puntosGL.Clear();
             foreach (var p in puntos)
                 puntosGL.Add((
@@ -224,7 +230,6 @@ namespace GeoIntegral.Views
                     ((float)p.Z - glZMin) / rz - 0.5f
                 ));
 
-            // cuadrícula de celdas Riemann (misma que el cálculo)
             celdas.Clear();
             int n = 30;
             float dx = (glXMax - glXMin) / n;
@@ -243,14 +248,12 @@ namespace GeoIntegral.Views
                     float zc = (float)terrenoController.ObtenerZPublico(xc, yc);
                     float t = rz == 0 ? 0.5f : (zc - glZMin) / rz;
 
-                    // 4 vértices del quad normalizados
                     float nx0 = (x0 - glXMin) / rx - 0.5f;
                     float nx1 = (x1 - glXMin) / rx - 0.5f;
                     float ny0 = (y0 - glYMin) / ry - 0.5f;
                     float ny1 = (y1 - glYMin) / ry - 0.5f;
                     float nz = (zc - glZMin) / rz - 0.5f;
 
-                    // agrego 4 vértices del quad (un quad = 4 entradas)
                     celdas.Add((nx0, ny0, nz, t));
                     celdas.Add((nx1, ny0, nz, t));
                     celdas.Add((nx1, ny1, nz, t));
@@ -295,6 +298,45 @@ namespace GeoIntegral.Views
             celdas.Clear();
             puntosGL.Clear();
             glControl.Invalidate();
+        }
+
+        private void EstilarTabla()
+        {
+            dgvPuntos.BackgroundColor = System.Drawing.Color.FromArgb(15, 23, 33);
+            dgvPuntos.GridColor = System.Drawing.Color.FromArgb(30, 45, 60);
+            dgvPuntos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dgvPuntos.RowHeadersVisible = false;
+            dgvPuntos.AllowUserToAddRows = false;
+            dgvPuntos.AllowUserToResizeRows = false;
+            dgvPuntos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            dgvPuntos.ReadOnly = true;
+            dgvPuntos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dgvPuntos.EnableHeadersVisualStyles = false;
+
+            // Encabezado
+            dgvPuntos.ColumnHeadersDefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(20, 32, 46);
+            dgvPuntos.ColumnHeadersDefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(180, 210, 230);
+            dgvPuntos.ColumnHeadersDefaultCellStyle.Font = new System.Drawing.Font("Segoe UI", 10f, System.Drawing.FontStyle.Bold);
+            dgvPuntos.ColumnHeadersDefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dgvPuntos.ColumnHeadersHeight = 38;
+            dgvPuntos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+
+            // Filas normales
+            dgvPuntos.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(22, 34, 48);
+            dgvPuntos.DefaultCellStyle.ForeColor = System.Drawing.Color.White;
+            dgvPuntos.DefaultCellStyle.Font = new System.Drawing.Font("Segoe UI", 9.5f);
+            dgvPuntos.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+
+            // Fila seleccionada
+            dgvPuntos.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(7, 16, 30);
+            dgvPuntos.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White;
+
+            // Filas alternadas
+            dgvPuntos.AlternatingRowsDefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(18, 28, 40);
+            dgvPuntos.AlternatingRowsDefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(26, 95, 80);
+            dgvPuntos.AlternatingRowsDefaultCellStyle.SelectionForeColor = System.Drawing.Color.White;
+
+            dgvPuntos.RowTemplate.Height = 32;
         }
 
         private void btnEliminarPunto_Click(object sender, EventArgs e)
@@ -383,45 +425,54 @@ namespace GeoIntegral.Views
         }
 
         private void btnVerTerreno_Click(object sender, EventArgs e)
-{
-    if (cmbProyectos.Items.Count == 0 ||
-        cmbProyectos.SelectedItem.ToString() == "Sin proyectos guardados")
-    {
-        MessageBox.Show("No hay proyectos guardados para visualizar.",
-            "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        return;
-    }
+        {
+            if (cmbProyectos.Items.Count == 0 ||
+                cmbProyectos.SelectedItem.ToString() == "Sin proyectos guardados")
+            {
+                MessageBox.Show("No hay proyectos guardados para visualizar.",
+                    "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
 
-    int idTerreno = int.Parse(cmbProyectos.SelectedItem.ToString().Split('-')[0].Trim());
-    var terreno = terrenoController.ObtenerTerrenoPorId(idTerreno);
-    var puntos = terrenoController.ObtenerCoordenadas(idTerreno);
+            int idTerreno = int.Parse(cmbProyectos.SelectedItem.ToString().Split('-')[0].Trim());
+            var terreno = terrenoController.ObtenerTerrenoPorId(idTerreno);
+            var puntos = terrenoController.ObtenerCoordenadas(idTerreno);
 
-    if (puntos.Count == 0)
-    {
-        MessageBox.Show("Este terreno no tiene coordenadas registradas.",
-            "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        return;
-    }
+            if (puntos.Count == 0)
+            {
+                boxShowError("Este terreno no tiene coordenadas registradas.");
+                return;
+            }
 
-    terrenoController.LimpiarPuntos();
-    foreach (var p in puntos)
-        terrenoController.AgregarPunto(p.X, p.Y, p.Z);
+            terrenoController.LimpiarPuntos();
+            dgvPuntos.Rows.Clear();
 
-    lblArea.Text = "Área: " + terreno.Area + " m²";
-    lblVolumen.Text = "Volumen: " + terreno.Volumen + " m³";
+            foreach (var p in puntos)
+            {
+                terrenoController.AgregarPunto(p.X, p.Y, p.Z);
+                dgvPuntos.Rows.Add(p.X, p.Y, p.Z);
+            }
 
-    calculado = true;
-    PrepararDatosGL();
-    glControl.Invalidate();
+            lblArea.Text = "Área: " + terreno.Area + " m²";
+            lblVolumen.Text = "Volumen: " + terreno.Volumen + " m³";
 
-    MessageBox.Show(
-        "Terreno: " + terreno.NombreProyecto +
-        "\nFecha: " + terreno.FechaRegistro +
-        "\nÁrea: " + terreno.Area + " m²" +
-        "\nVolumen: " + terreno.Volumen + " m³" +
-        "\nObservaciones: " + terreno.Observaciones,
-        "Detalle del Proyecto", MessageBoxButtons.OK, MessageBoxIcon.Information);
-}
+            calculado = true;
+            PrepararDatosGL();
+            glControl.Invalidate();
+
+            MessageBox.Show(
+                "Terreno: " + terreno.NombreProyecto +
+                "\nFecha: " + terreno.FechaRegistro +
+                "\nÁrea: " + terreno.Area + " m²" +
+                "\nVolumen: " + terreno.Volumen + " m³" +
+                "\nObservaciones: " + terreno.Observaciones,
+                "Detalle del Proyecto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void boxShowError(string msg)
+        {
+            MessageBox.Show(msg, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
@@ -456,6 +507,8 @@ namespace GeoIntegral.Views
                 celdas.Clear();
                 puntosGL.Clear();
                 glControl.Invalidate();
+
+                CargarProyectosGuardados();
             }
         }
     }
