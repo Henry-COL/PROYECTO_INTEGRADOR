@@ -12,6 +12,8 @@ namespace GeoIntegral.Views
         public Registrar_Screen()
         {
             InitializeComponent();
+
+            txtUsuario.KeyPress += TxtUsuario_KeyPress;
         }
 
         private void btnCerrar_App_Click(object sender, EventArgs e)
@@ -29,43 +31,96 @@ namespace GeoIntegral.Views
                 lblMensaje_Contrasena_.Visible = false;
                 lblMensaje_Contrasena_Confirmar.Visible = false;
 
+                // Limpiar espacios
+                txtUsuario.Text = txtUsuario.Text.Trim();
+                txtGmail.Text = txtGmail.Text.Trim();
+                txtGmail_Confirmar.Text = txtGmail_Confirmar.Text.Trim();
+
                 bool validar = true;
 
+                // Campos obligatorios
                 if (txtUsuario.Text == "")
                 {
+                    lblMensaje_Usuario.Text = "Campo obligatorio*";
                     lblMensaje_Usuario.Visible = true;
                     validar = false;
                 }
+
                 if (txtGmail.Text == "")
                 {
+                    lblMensaje_Gmail_.Text = "Campo obligatorio*";
                     lblMensaje_Gmail_.Visible = true;
                     validar = false;
                 }
+
                 if (txtGmail_Confirmar.Text == "")
                 {
+                    lblMensaje_Gmail_Confirmar.Text = "Campo obligatorio*";
                     lblMensaje_Gmail_Confirmar.Visible = true;
                     validar = false;
                 }
+
                 if (txtContrasena.Text == "")
                 {
+                    lblMensaje_Contrasena_.Text = "Campo obligatorio*";
                     lblMensaje_Contrasena_.Visible = true;
                     validar = false;
                 }
+
                 if (txtConfirmar_Contrasena.Text == "")
                 {
+                    lblMensaje_Contrasena_Confirmar.Text = "Campo obligatorio*";
                     lblMensaje_Contrasena_Confirmar.Visible = true;
                     validar = false;
                 }
 
                 if (!validar) return;
 
+                // Usuario mínimo 4 caracteres
+                if (txtUsuario.Text.Length < 4)
+                {
+                    lblMensaje_Usuario.Text = "Mínimo 4 caracteres*";
+                    lblMensaje_Usuario.Visible = true;
+                    return;
+                }
+
+                // Usuario sin espacios
+                if (txtUsuario.Text.Contains(" "))
+                {
+                    lblMensaje_Usuario.Text = "No se permiten espacios*";
+                    lblMensaje_Usuario.Visible = true;
+                    return;
+                }
+
+                // Validar formato del correo
+                try
+                {
+                    var correo = new System.Net.Mail.MailAddress(txtGmail.Text);
+                }
+                catch
+                {
+                    lblMensaje_Gmail_.Text = "Correo inválido*";
+                    lblMensaje_Gmail_.Visible = true;
+                    return;
+                }
+
+                // Confirmación de correo
                 if (txtGmail.Text != txtGmail_Confirmar.Text)
                 {
-                    lblMensaje_Gmail_Confirmar.Text = "Los Gmail no coinciden*";
+                    lblMensaje_Gmail_Confirmar.Text = "Los correos no coinciden*";
                     lblMensaje_Gmail_Confirmar.Visible = true;
                     return;
                 }
 
+                // Correo duplicado
+                if (controller.GmailExiste(txtGmail.Text))
+                {
+                    lblMensaje_Gmail_.Text = "Ese correo ya está registrado*";
+                    lblMensaje_Gmail_.Visible = true;
+                    return;
+                }
+
+                // Confirmación de contraseña
                 if (txtContrasena.Text != txtConfirmar_Contrasena.Text)
                 {
                     lblMensaje_Contrasena_Confirmar.Text = "Contraseña diferente*";
@@ -73,15 +128,20 @@ namespace GeoIntegral.Views
                     return;
                 }
 
-                // Validar seguridad de la contraseña
+                // Seguridad de contraseña
                 if (!ValidarContrasena(txtContrasena.Text))
                 {
-                    MessageBox.Show("Mínimo 8 caracteres, una mayúscula, un número y un carácter especial*", "GeoIntegral",
-                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show(
+                        "La contraseña debe tener mínimo 8 caracteres, una mayúscula, un número y un carácter especial.",
+                        "GeoIntegral",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning);
+
                     lblMensaje_Contrasena_.Visible = true;
                     return;
                 }
 
+                // Usuario duplicado
                 if (controller.UsuarioExiste(txtUsuario.Text))
                 {
                     lblMensaje_Usuario.Text = "Ese usuario ya existe*";
@@ -99,15 +159,22 @@ namespace GeoIntegral.Views
 
                 if (controller.RegistrarUsuario(usuarioParaRegistrar))
                 {
-                    MessageBox.Show("¡Usuario registrado con éxito!", "GeoIntegral",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(
+                        "¡Usuario registrado con éxito!",
+                        "GeoIntegral",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
+
                     this.Close();
                 }
             }
             catch (Exception ex) when (ex.Message == "INACTIVO")
             {
-                MessageBox.Show("Tu cuenta está inactiva. Contacta al administrador.",
-                    "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(
+                    "Tu cuenta está inactiva. Contacta al administrador.",
+                    "Acceso denegado",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
             }
             catch (Exception ex)
             {
@@ -136,6 +203,16 @@ namespace GeoIntegral.Views
         private void lblIniciar_Sesion_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void TxtUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetterOrDigit(e.KeyChar) &&
+                e.KeyChar != '_' &&
+                !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

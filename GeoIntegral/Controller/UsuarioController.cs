@@ -128,5 +128,18 @@ namespace GeoIntegral.Controller
                 throw new Exception("Error al cambiar estado: " + ex.Message);
             }
         }
+
+        public bool GmailExiste(string gmail)
+        {
+            var usuarios = ObtenerTodosLosUsuarios();
+
+            foreach (var usuario in usuarios)
+            {
+                if (usuario.Gmail.Equals(gmail, StringComparison.OrdinalIgnoreCase))
+                    return true;
+            }
+
+            return false;
+        }
     }
 }

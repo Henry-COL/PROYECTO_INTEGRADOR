@@ -27,6 +27,8 @@ namespace GeoIntegral.Views
             btnLimpiarCampos.Click += new EventHandler(btnLimpiarCampos_Click);
             btnEliminarMaterial.Click += new EventHandler(btnEliminarMaterial_Click);
 
+            txtNombreMaterial.KeyPress += TxtNombreMaterial_KeyPress;
+
             CargarMateriales();
         }
 
@@ -155,6 +157,16 @@ namespace GeoIntegral.Views
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                     CargarMateriales();
                 }
+            }
+        }
+
+        private void TxtNombreMaterial_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetterOrDigit(e.KeyChar) &&
+                !char.IsWhiteSpace(e.KeyChar) &&
+                !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
             }
         }
     }

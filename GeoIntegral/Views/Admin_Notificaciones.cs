@@ -132,10 +132,23 @@ namespace GeoIntegral.Views
                 $"Ingrese la nueva contraseña para '{usuarioSeleccionado}':",
                 "Restablecer contraseña", "");
 
+            nuevaContrasena = nuevaContrasena.Trim();
+
             if (string.IsNullOrWhiteSpace(nuevaContrasena))
             {
                 MessageBox.Show("La contraseña no puede estar vacía.",
                     "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (!ValidarContrasena(nuevaContrasena))
+            {
+                MessageBox.Show(
+                    "La contraseña debe tener mínimo 8 caracteres, una mayúscula, un número y un carácter especial.",
+                    "GeoIntegral",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+
                 return;
             }
 
@@ -153,5 +166,23 @@ namespace GeoIntegral.Views
         {
             this.Close();
         }
+        private bool ValidarContrasena(string contrasena)
+        {
+            if (contrasena.Length < 8) return false;
+
+            bool tieneMayuscula = false;
+            bool tieneNumero = false;
+            bool tieneEspecial = false;
+
+            foreach (char c in contrasena)
+            {
+                if (char.IsUpper(c)) tieneMayuscula = true;
+                if (char.IsDigit(c)) tieneNumero = true;
+                if (!char.IsLetterOrDigit(c)) tieneEspecial = true;
+            }
+
+            return tieneMayuscula && tieneNumero && tieneEspecial;
+        }
+
     }
 }

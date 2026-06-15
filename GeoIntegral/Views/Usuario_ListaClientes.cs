@@ -28,6 +28,10 @@ namespace GeoIntegral.Views
             btnLimpiar.Click += new EventHandler(btnLimpiar_Click);
             btnEliminar.Click += new EventHandler(btnEliminar_Click);
 
+            txtNombre.KeyPress += TxtNombre_KeyPress;
+            txtIndentificacion.KeyPress += SoloNumeros_KeyPress;
+            txtTelefono.KeyPress += SoloNumeros_KeyPress;
+
             CargarClientes();
         }
 
@@ -233,6 +237,25 @@ namespace GeoIntegral.Views
             lblMensaje_Limpiar_Campos.Visible = true;
             await Task.Delay(1000);
             lblMensaje_Limpiar_Campos.Visible = false;
+        }
+
+        private void TxtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) &&
+                !char.IsWhiteSpace(e.KeyChar) &&
+                !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void SoloNumeros_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) &&
+                !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

@@ -138,6 +138,17 @@ namespace GeoIntegral.Views
         {
             var todas = facturaController.ObtenerTodas();
 
+            if (dtpDesde.Value.Date > dtpHasta.Value.Date)
+            {
+                MessageBox.Show(
+                    "La fecha inicial no puede ser mayor que la fecha final.",
+                    "Aviso",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+
+                return;
+            }
+
             if (cmbFiltroCliente.SelectedIndex > 0)
             {
                 long idCliente = long.Parse(cmbFiltroCliente.SelectedItem.ToString().Split('-')[0].Trim());

@@ -61,17 +61,19 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Enabled = false;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(648, 62);
+            this.panel1.Size = new System.Drawing.Size(432, 40);
             this.panel1.TabIndex = 13;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::GeoIntegral.Properties.Resources.GeoIntegral_Logo;
-            this.pictureBox1.Location = new System.Drawing.Point(6, 6);
+            this.pictureBox1.Location = new System.Drawing.Point(4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(51, 45);
+            this.pictureBox1.Size = new System.Drawing.Size(34, 29);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 31;
             this.pictureBox1.TabStop = false;
@@ -80,9 +82,10 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::GeoIntegral.Properties.Resources.GeoIntegral_LogoTipo;
-            this.pictureBox2.Location = new System.Drawing.Point(54, 8);
+            this.pictureBox2.Location = new System.Drawing.Point(36, 5);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(188, 43);
+            this.pictureBox2.Size = new System.Drawing.Size(125, 28);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 32;
             this.pictureBox2.TabStop = false;
@@ -106,9 +109,10 @@
             this.btnCerrar_App.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrar_App.ForeColor = System.Drawing.Color.White;
             this.btnCerrar_App.HoverState.FillColor = System.Drawing.Color.Maroon;
-            this.btnCerrar_App.Location = new System.Drawing.Point(566, 8);
+            this.btnCerrar_App.Location = new System.Drawing.Point(377, 5);
+            this.btnCerrar_App.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCerrar_App.Name = "btnCerrar_App";
-            this.btnCerrar_App.Size = new System.Drawing.Size(69, 45);
+            this.btnCerrar_App.Size = new System.Drawing.Size(46, 29);
             this.btnCerrar_App.TabIndex = 15;
             this.btnCerrar_App.Text = "X";
             this.btnCerrar_App.Click += new System.EventHandler(this.btnCerrar_App_Click_1);
@@ -120,9 +124,10 @@
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.guna2Panel1);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(0, 58);
+            this.panel2.Location = new System.Drawing.Point(0, 38);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(648, 582);
+            this.panel2.Size = new System.Drawing.Size(432, 378);
             this.panel2.TabIndex = 14;
             // 
             // label11
@@ -131,9 +136,10 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
             this.label11.ForeColor = System.Drawing.Color.Khaki;
-            this.label11.Location = new System.Drawing.Point(50, 108);
+            this.label11.Location = new System.Drawing.Point(33, 70);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(489, 17);
+            this.label11.Size = new System.Drawing.Size(359, 13);
             this.label11.TabIndex = 31;
             this.label11.Text = "Para poder restaurar tu contraseña, comparte la información que se te pide.";
             // 
@@ -149,9 +155,10 @@
             this.guna2Panel1.Controls.Add(this.btnEnviarReporte);
             this.guna2Panel1.Controls.Add(this.lblMensaje_Usuario);
             this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(27)))), ((int)(((byte)(56)))));
-            this.guna2Panel1.Location = new System.Drawing.Point(68, 182);
+            this.guna2Panel1.Location = new System.Drawing.Point(45, 118);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(512, 236);
+            this.guna2Panel1.Size = new System.Drawing.Size(341, 153);
             this.guna2Panel1.TabIndex = 30;
             // 
             // txtGmail
@@ -167,13 +174,13 @@
             this.txtGmail.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtGmail.ForeColor = System.Drawing.Color.Black;
             this.txtGmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtGmail.Location = new System.Drawing.Point(39, 115);
-            this.txtGmail.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.txtGmail.Location = new System.Drawing.Point(26, 75);
+            this.txtGmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtGmail.Name = "txtGmail";
             this.txtGmail.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtGmail.PlaceholderText = "Ingrece una cuenta de Gmail.";
+            this.txtGmail.PlaceholderText = "Ingrese su correo electrónico";
             this.txtGmail.SelectedText = "";
-            this.txtGmail.Size = new System.Drawing.Size(435, 28);
+            this.txtGmail.Size = new System.Drawing.Size(290, 18);
             this.txtGmail.TabIndex = 29;
             // 
             // label3
@@ -181,20 +188,22 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(33, 86);
+            this.label3.Location = new System.Drawing.Point(22, 56);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 22);
+            this.label3.Size = new System.Drawing.Size(47, 15);
             this.label3.TabIndex = 28;
-            this.label3.Text = "Gmail:";
+            this.label3.Text = "Correo:";
             // 
             // lblMensaje_Gmail_
             // 
             this.lblMensaje_Gmail_.AutoSize = true;
             this.lblMensaje_Gmail_.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMensaje_Gmail_.ForeColor = System.Drawing.Color.Red;
-            this.lblMensaje_Gmail_.Location = new System.Drawing.Point(313, 86);
+            this.lblMensaje_Gmail_.Location = new System.Drawing.Point(209, 56);
+            this.lblMensaje_Gmail_.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMensaje_Gmail_.Name = "lblMensaje_Gmail_";
-            this.lblMensaje_Gmail_.Size = new System.Drawing.Size(162, 22);
+            this.lblMensaje_Gmail_.Size = new System.Drawing.Size(113, 15);
             this.lblMensaje_Gmail_.TabIndex = 30;
             this.lblMensaje_Gmail_.Text = "Campo obligatorio*";
             this.lblMensaje_Gmail_.Visible = false;
@@ -212,13 +221,13 @@
             this.txtUsuario.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtUsuario.ForeColor = System.Drawing.Color.Black;
             this.txtUsuario.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUsuario.Location = new System.Drawing.Point(39, 49);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.txtUsuario.Location = new System.Drawing.Point(26, 32);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.PlaceholderForeColor = System.Drawing.Color.DarkGray;
             this.txtUsuario.PlaceholderText = "Ingrese su nombre de usuario.";
             this.txtUsuario.SelectedText = "";
-            this.txtUsuario.Size = new System.Drawing.Size(435, 28);
+            this.txtUsuario.Size = new System.Drawing.Size(290, 18);
             this.txtUsuario.TabIndex = 11;
             // 
             // label2
@@ -226,9 +235,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(33, 22);
+            this.label2.Location = new System.Drawing.Point(22, 14);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(167, 22);
+            this.label2.Size = new System.Drawing.Size(116, 15);
             this.label2.TabIndex = 10;
             this.label2.Text = "Nombre de usuario:";
             // 
@@ -242,9 +252,10 @@
             this.btnEnviarReporte.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(147)))), ((int)(((byte)(81)))));
             this.btnEnviarReporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEnviarReporte.ForeColor = System.Drawing.Color.White;
-            this.btnEnviarReporte.Location = new System.Drawing.Point(111, 170);
+            this.btnEnviarReporte.Location = new System.Drawing.Point(74, 110);
+            this.btnEnviarReporte.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEnviarReporte.Name = "btnEnviarReporte";
-            this.btnEnviarReporte.Size = new System.Drawing.Size(289, 45);
+            this.btnEnviarReporte.Size = new System.Drawing.Size(193, 29);
             this.btnEnviarReporte.TabIndex = 16;
             this.btnEnviarReporte.Text = "Notificar al administrador";
             this.btnEnviarReporte.Click += new System.EventHandler(this.btnRecuperarContraseña_Click);
@@ -254,9 +265,10 @@
             this.lblMensaje_Usuario.AutoSize = true;
             this.lblMensaje_Usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMensaje_Usuario.ForeColor = System.Drawing.Color.Red;
-            this.lblMensaje_Usuario.Location = new System.Drawing.Point(311, 22);
+            this.lblMensaje_Usuario.Location = new System.Drawing.Point(207, 14);
+            this.lblMensaje_Usuario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMensaje_Usuario.Name = "lblMensaje_Usuario";
-            this.lblMensaje_Usuario.Size = new System.Drawing.Size(162, 22);
+            this.lblMensaje_Usuario.Size = new System.Drawing.Size(113, 15);
             this.lblMensaje_Usuario.TabIndex = 14;
             this.lblMensaje_Usuario.Text = "Campo obligatorio*";
             this.lblMensaje_Usuario.Visible = false;
@@ -267,23 +279,25 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(38, 35);
+            this.label1.Location = new System.Drawing.Point(25, 23);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(508, 59);
+            this.label1.Size = new System.Drawing.Size(344, 39);
             this.label1.TabIndex = 29;
             this.label1.Text = "Soporte Contraseña";
             // 
             // Recuperar_Screen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(15)))), ((int)(((byte)(33)))));
-            this.ClientSize = new System.Drawing.Size(648, 645);
+            this.ClientSize = new System.Drawing.Size(432, 419);
             this.Controls.Add(this.btnCerrar_App);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Recuperar_Screen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Soporte Contraseña";

@@ -58,7 +58,6 @@ namespace GeoIntegral.Views
 
             // Enlace de eventos
             btnAgregarPunto.Click += btnAgregarPunto_Click;
-            btnEliminarPunto.Click += btnEliminarPunto_Click;
             btnLimpiarPuntos.Click += btnLimpiarPuntos_Click;
             btnCalcular.Click += btnCalcular_Click;
             btnGuardar.Click += btnGuardar_Click;
@@ -72,6 +71,12 @@ namespace GeoIntegral.Views
             glControl.MouseDown += GlControl_MouseDown;
             glControl.MouseMove += GlControl_MouseMove;
             glControl.MouseUp += GlControl_MouseUp;
+
+            txtX.KeyPress += SoloNumerosDecimales;
+            txtY.KeyPress += SoloNumerosDecimales;
+            txtZ.KeyPress += SoloNumerosDecimales;
+
+            txtNombreProyecto.KeyPress += NombreProyecto_KeyPress;
         }
 
         // ── OPENGL EVENTOS ───────────────────────────────────────
@@ -512,9 +517,10 @@ namespace GeoIntegral.Views
         {
             lblMensaje_Proyecto.Visible = false;
 
-            if (txtNombreProyecto.Text.Trim() == "")
+            if (txtNombreProyecto.Text.Trim().Length < 3)
             {
-                lblMensaje_Proyecto.Text = "El nombre del proyecto es obligatorio*";
+                lblMensaje_Proyecto.Text =
+                    "El nombre debe tener mínimo 3 caracteres*";
                 lblMensaje_Proyecto.Visible = true;
                 return;
             }
@@ -545,5 +551,41 @@ namespace GeoIntegral.Views
                 CargarProyectosGuardados();
             }
         }
+
+        private void SoloNumerosDecimales(object sender, System.Windows.Forms.KeyPressEventArgs e)
+        {
+            TextBox txt = sender as TextBox;
+
+            if (!char.IsDigit(e.KeyChar) &&
+                e.KeyChar != '.' &&
+                e.KeyChar != ',' &&
+                e.KeyChar != '-' &&
+                !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+
+            if ((e.KeyChar == '.' || e.KeyChar == ',') &&
+                (txt.Text.Contains(".") || txt.Text.Contains(",")))
+            {
+                e.Handled = true;
+            }
+
+            if (e.KeyChar == '-' && txt.SelectionStart != 0)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void NombreProyecto_KeyPress(object sender, System.Windows.Forms.KeyPressEventArgs e)
+        {
+            if (!char.IsLetterOrDigit(e.KeyChar) &&
+                !char.IsWhiteSpace(e.KeyChar) &&
+                !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
     }
 }

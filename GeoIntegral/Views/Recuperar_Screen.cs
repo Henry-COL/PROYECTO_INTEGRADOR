@@ -12,6 +12,8 @@ namespace GeoIntegral.Views
         public Recuperar_Screen()
         {
             InitializeComponent();
+
+            txtUsuario.KeyPress += TxtUsuario_KeyPress;
         }
 
         private void btnCerrar_App_Click_1(object sender, EventArgs e)
@@ -32,6 +34,7 @@ namespace GeoIntegral.Views
         {
             try
             {
+                
                 lblMensaje_Usuario.Visible = false;
                 lblMensaje_Gmail_.Visible = false;
 
@@ -49,6 +52,20 @@ namespace GeoIntegral.Views
                 }
 
                 if (!validar) return;
+
+                txtUsuario.Text = txtUsuario.Text.Trim();
+                txtGmail.Text = txtGmail.Text.Trim();
+
+                try
+                {
+                    var correo = new System.Net.Mail.MailAddress(txtGmail.Text);
+                }
+                catch
+                {
+                    lblMensaje_Gmail_.Text = "Correo inválido*";
+                    lblMensaje_Gmail_.Visible = true;
+                    return;
+                }
 
                 UsuarioController control = new UsuarioController();
                 bool encontrado = control.VerificarUsuarioYGmail(txtUsuario.Text, txtGmail.Text);
@@ -93,31 +110,15 @@ namespace GeoIntegral.Views
                 MessageBox.Show("Ocurrió un error al procesar la solicitud: " + ex.Message,
                     "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-
-            //string nuevaContrasena = Microsoft.VisualBasic.Interaction.InputBox(
-            //    "Ingrese la nueva contraseña:",
-            //    "Nueva contraseña",
-            //    "");
-
-            //if (string.IsNullOrWhiteSpace(nuevaContrasena))
-            //{
-            //    MessageBox.Show("La contraseña no puede estar vacía.",
-            //        "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //    return;
-            //}
-
-            //if (control.CambiarContrasena(txtUsuario.Text, nuevaContrasena))
-            //{
-            //    MessageBox.Show("¡Contraseña actualizada con éxito! Ya puede iniciar sesión.",
-            //        "GeoIntegral", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //    this.Close();
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Ocurrió un error al actualizar la contraseña.",
-            //        "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
+        }
+        private void TxtUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetterOrDigit(e.KeyChar) &&
+                e.KeyChar != '_' &&
+                !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

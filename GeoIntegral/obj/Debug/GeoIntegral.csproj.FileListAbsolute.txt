@@ -125,7 +125,6 @@ C:\Users\David Esper\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\
 C:\Users\David Esper\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\GeoIntegral.exe
 C:\Users\David Esper\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\GeoIntegral.pdb
 C:\Users\David Esper\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\BCrypt-Net-Next.dll
-C:\Users\David Esper\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\BouncyCastle.Crypto.dll
 C:\Users\David Esper\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\CommunityToolkit.Common.dll
 C:\Users\David Esper\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\CommunityToolkit.Diagnostics.dll
 C:\Users\David Esper\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\CommunityToolkit.Mvvm.dll
@@ -184,3 +183,5 @@ C:\Users\David Esper\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\obj\Debug\
 C:\Users\David Esper\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\obj\Debug\GeoInteg.74D226CE.Up2Date
 C:\Users\David Esper\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\obj\Debug\GeoIntegral.exe
 C:\Users\David Esper\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\obj\Debug\GeoIntegral.pdb
+C:\Users\David Esper\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\BouncyCastle.Cryptography.dll
+C:\Users\David Esper\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\BouncyCastle.Cryptography.xml
