@@ -70,7 +70,7 @@ namespace GeoIntegral.Views
             {
                 cerrable.VentanaCerrada += (s, e) =>
                 {
-                    MessageBox.Show("Evento recibido en CargarVentana");
+                    
                     NavegacionService.LiberarBoton();
                     Panel_Ventanas.Controls.Remove(formulario);
                 };

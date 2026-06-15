@@ -5,6 +5,7 @@ using OpenTK.Graphics.OpenGL;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace GeoIntegral.Views
@@ -61,7 +62,7 @@ namespace GeoIntegral.Views
             btnLimpiarPuntos.Click += btnLimpiarPuntos_Click;
             btnCalcular.Click += btnCalcular_Click;
             btnGuardar.Click += btnGuardar_Click;
-            btnVerTerreno.Click += btnVerTerreno_Click;
+            
 
             CargarProyectosGuardados();
 
@@ -204,24 +205,18 @@ namespace GeoIntegral.Views
             var puntos = terrenoController.ObtenerPuntos();
             if (puntos.Count == 0) return;
 
-            glXMin = (float)puntos[0].X; glXMax = glXMin;
-            glYMin = (float)puntos[0].Y; glYMax = glYMin;
-            glZMin = (float)puntos[0].Z; glZMax = glZMin;
-
-            foreach (var p in puntos)
-            {
-                if ((float)p.X < glXMin) glXMin = (float)p.X;
-                if ((float)p.X > glXMax) glXMax = (float)p.X;
-                if ((float)p.Y < glYMin) glYMin = (float)p.Y;
-                if ((float)p.Y > glYMax) glYMax = (float)p.Y;
-                if ((float)p.Z < glZMin) glZMin = (float)p.Z;
-                if ((float)p.Z > glZMax) glZMax = (float)p.Z;
-            }
+            glXMin = (float)puntos.Min(p => p.X);
+            glXMax = (float)puntos.Max(p => p.X);
+            glYMin = (float)puntos.Min(p => p.Y);
+            glYMax = (float)puntos.Max(p => p.Y);
+            glZMin = 0f; // base siempre en 0
+            glZMax = (float)puntos.Max(p => p.Z);
 
             float rx = glXMax - glXMin == 0 ? 1 : glXMax - glXMin;
             float ry = glYMax - glYMin == 0 ? 1 : glYMax - glYMin;
             float rz = glZMax - glZMin == 0 ? 1 : glZMax - glZMin;
 
+            // Puntos de control normalizados
             puntosGL.Clear();
             foreach (var p in puntos)
                 puntosGL.Add((
@@ -230,6 +225,7 @@ namespace GeoIntegral.Views
                     ((float)p.Z - glZMin) / rz - 0.5f
                 ));
 
+            // Construir celdas como prismas (base en Z=0, techo en Z=superficie)
             celdas.Clear();
             int n = 30;
             float dx = (glXMax - glXMin) / n;
@@ -243,21 +239,59 @@ namespace GeoIntegral.Views
                     float y0 = glYMin + j * dy;
                     float x1 = x0 + dx;
                     float y1 = y0 + dy;
+
                     float xc = (x0 + x1) / 2f;
                     float yc = (y0 + y1) / 2f;
                     float zc = (float)terrenoController.ObtenerZPublico(xc, yc);
+
+                    // Solo dibujar si hay algo que excavar
+                    if (zc <= 0) continue;
+
                     float t = rz == 0 ? 0.5f : (zc - glZMin) / rz;
 
+                    // Normalizar
                     float nx0 = (x0 - glXMin) / rx - 0.5f;
                     float nx1 = (x1 - glXMin) / rx - 0.5f;
                     float ny0 = (y0 - glYMin) / ry - 0.5f;
                     float ny1 = (y1 - glYMin) / ry - 0.5f;
-                    float nz = (zc - glZMin) / rz - 0.5f;
+                    float nzTop = (zc - glZMin) / rz - 0.5f;
+                    float nzBot = -0.5f; // base en Z=0 normalizado
 
-                    celdas.Add((nx0, ny0, nz, t));
-                    celdas.Add((nx1, ny0, nz, t));
-                    celdas.Add((nx1, ny1, nz, t));
-                    celdas.Add((nx0, ny1, nz, t));
+                    // Cara superior (superficie del terreno)
+                    celdas.Add((nx0, ny0, nzTop, t));
+                    celdas.Add((nx1, ny0, nzTop, t));
+                    celdas.Add((nx1, ny1, nzTop, t));
+                    celdas.Add((nx0, ny1, nzTop, t));
+
+                    // Cara inferior (nivel 0)
+                    celdas.Add((nx0, ny1, nzBot, 0f));
+                    celdas.Add((nx1, ny1, nzBot, 0f));
+                    celdas.Add((nx1, ny0, nzBot, 0f));
+                    celdas.Add((nx0, ny0, nzBot, 0f));
+
+                    // Cara frontal (Y mínimo)
+                    celdas.Add((nx0, ny0, nzBot, 0f));
+                    celdas.Add((nx1, ny0, nzBot, 0f));
+                    celdas.Add((nx1, ny0, nzTop, t));
+                    celdas.Add((nx0, ny0, nzTop, t));
+
+                    // Cara trasera (Y máximo)
+                    celdas.Add((nx0, ny1, nzTop, t));
+                    celdas.Add((nx1, ny1, nzTop, t));
+                    celdas.Add((nx1, ny1, nzBot, 0f));
+                    celdas.Add((nx0, ny1, nzBot, 0f));
+
+                    // Cara izquierda (X mínimo)
+                    celdas.Add((nx0, ny0, nzBot, 0f));
+                    celdas.Add((nx0, ny0, nzTop, t));
+                    celdas.Add((nx0, ny1, nzTop, t));
+                    celdas.Add((nx0, ny1, nzBot, 0f));
+
+                    // Cara derecha (X máximo)
+                    celdas.Add((nx1, ny0, nzTop, t));
+                    celdas.Add((nx1, ny0, nzBot, 0f));
+                    celdas.Add((nx1, ny1, nzBot, 0f));
+                    celdas.Add((nx1, ny1, nzTop, t));
                 }
             }
         }
