@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Usuario_Materiales));
             this.lblMensaje_Nombre = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblCosto = new System.Windows.Forms.Label();
@@ -43,9 +44,9 @@
             this.CostoPorUnidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnCerrar_App = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnEliminarMaterial = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnEliminarMaterial = new Guna.UI2.WinForms.Guna2Button();
             this.gbRegistrarMaterial.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numCostoUnidad)).BeginInit();
             this.gbListaMateriales.SuspendLayout();
@@ -142,7 +143,6 @@
             this.numCostoUnidad.TabIndex = 12;
             this.numCostoUnidad.ThousandsSeparator = true;
             this.numCostoUnidad.UpDownButtonFillColor = System.Drawing.Color.Chocolate;
-            this.numCostoUnidad.UpDownButtonForeColor = System.Drawing.Color.White;
             this.numCostoUnidad.Value = new decimal(new int[] {
             100000,
             0,
@@ -280,6 +280,7 @@
             this.btnCerrar_App.Size = new System.Drawing.Size(188, 45);
             this.btnCerrar_App.TabIndex = 19;
             this.btnCerrar_App.Text = "Volver al inicio";
+            this.btnCerrar_App.Click += new System.EventHandler(this.btnCerrar_App_Click);
             // 
             // guna2Panel1
             // 
@@ -298,6 +299,32 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1610, 605);
             this.guna2Panel1.TabIndex = 23;
+            // 
+            // btnEliminarMaterial
+            // 
+            this.btnEliminarMaterial.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(41)))), ((int)(((byte)(76)))));
+            this.btnEliminarMaterial.BorderRadius = 8;
+            this.btnEliminarMaterial.BorderThickness = 4;
+            this.btnEliminarMaterial.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnEliminarMaterial.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnEliminarMaterial.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnEliminarMaterial.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnEliminarMaterial.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(24)))), ((int)(((byte)(46)))));
+            this.btnEliminarMaterial.Font = new System.Drawing.Font("Poppins Medium", 9F);
+            this.btnEliminarMaterial.ForeColor = System.Drawing.Color.White;
+            this.btnEliminarMaterial.HoverState.BorderColor = System.Drawing.Color.Maroon;
+            this.btnEliminarMaterial.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnEliminarMaterial.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminarMaterial.Image")));
+            this.btnEliminarMaterial.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnEliminarMaterial.ImageOffset = new System.Drawing.Point(-8, 0);
+            this.btnEliminarMaterial.ImageSize = new System.Drawing.Size(60, 36);
+            this.btnEliminarMaterial.Location = new System.Drawing.Point(1434, 535);
+            this.btnEliminarMaterial.Name = "btnEliminarMaterial";
+            this.btnEliminarMaterial.Size = new System.Drawing.Size(150, 51);
+            this.btnEliminarMaterial.TabIndex = 24;
+            this.btnEliminarMaterial.Text = "Eliminar";
+            this.btnEliminarMaterial.TextOffset = new System.Drawing.Point(14, 2);
+            this.btnEliminarMaterial.Click += new System.EventHandler(this.btnEliminarMaterial_Click);
             // 
             // label1
             // 
@@ -326,32 +353,6 @@
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(803, 281);
             this.guna2Panel2.TabIndex = 24;
-            // 
-            // btnEliminarMaterial
-            // 
-            this.btnEliminarMaterial.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(41)))), ((int)(((byte)(76)))));
-            this.btnEliminarMaterial.BorderRadius = 8;
-            this.btnEliminarMaterial.BorderThickness = 4;
-            this.btnEliminarMaterial.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnEliminarMaterial.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnEliminarMaterial.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnEliminarMaterial.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnEliminarMaterial.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(24)))), ((int)(((byte)(46)))));
-            this.btnEliminarMaterial.Font = new System.Drawing.Font("Poppins Medium", 9F);
-            this.btnEliminarMaterial.ForeColor = System.Drawing.Color.White;
-            this.btnEliminarMaterial.HoverState.BorderColor = System.Drawing.Color.Maroon;
-            this.btnEliminarMaterial.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnEliminarMaterial.Image = global::GeoIntegral.Properties.Resources.App_Borrar;
-            this.btnEliminarMaterial.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnEliminarMaterial.ImageOffset = new System.Drawing.Point(-8, 0);
-            this.btnEliminarMaterial.ImageSize = new System.Drawing.Size(60, 36);
-            this.btnEliminarMaterial.Location = new System.Drawing.Point(1434, 535);
-            this.btnEliminarMaterial.Name = "btnEliminarMaterial";
-            this.btnEliminarMaterial.Size = new System.Drawing.Size(150, 51);
-            this.btnEliminarMaterial.TabIndex = 24;
-            this.btnEliminarMaterial.Text = "Eliminar";
-            this.btnEliminarMaterial.TextOffset = new System.Drawing.Point(14, 2);
-            this.btnEliminarMaterial.Click += new System.EventHandler(this.btnEliminarMaterial_Click);
             // 
             // Usuario_Materiales
             // 

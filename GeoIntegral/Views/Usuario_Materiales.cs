@@ -25,7 +25,6 @@ namespace GeoIntegral.Views
             lblMensaje_Nombre.ForeColor = System.Drawing.Color.Red;
             btnGuardarMaterial.Click += new EventHandler(btnGuardarMaterial_Click);
             btnLimpiarCampos.Click += new EventHandler(btnLimpiarCampos_Click);
-            btnEliminarMaterial.Click += new EventHandler(btnEliminarMaterial_Click);
 
             txtNombreMaterial.KeyPress += TxtNombreMaterial_KeyPress;
 
@@ -168,6 +167,11 @@ namespace GeoIntegral.Views
             {
                 e.Handled = true;
             }
+        }
+
+        private void btnCerrar_App_Click(object sender, EventArgs e)
+        {
+            VentanaCerrada?.Invoke(this, EventArgs.Empty);
         }
     }
 }

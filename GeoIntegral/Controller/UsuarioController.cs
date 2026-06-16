@@ -13,7 +13,7 @@ namespace GeoIntegral.Controller
 
         // --- Metodo para registrar --- \\\
 
-        public bool RegistrarUsuario(Usuario nuevoUsuario, string gmailConfirmar, string passConfirmar)
+        public bool  RegistrarUsuario(Usuario nuevoUsuario, string gmailConfirmar, string passConfirmar)
         {
             if (!NombreEsValido(nuevoUsuario.Nombre_Usuario))
                 throw new Exception("Usuario inválido: mínimo 4 caracteres, sin espacios ni símbolos no permitidos.");

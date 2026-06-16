@@ -19,6 +19,7 @@ namespace GeoIntegral.Views
             InitializeComponent();
             this.Size = tamano;
             EstilarTabla();
+            
             btnRegistrarCliente.Click += new EventHandler(btnRegistrarCliente_Click);
             dgvClientes.AllowUserToAddRows = false;
             dgvClientes.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -34,6 +35,7 @@ namespace GeoIntegral.Views
 
             CargarClientes();
         }
+
 
         private void EstilarTabla()
         {
@@ -225,6 +227,7 @@ namespace GeoIntegral.Views
             {
                 MessageBox.Show("Error al registrar cliente: " + ex.Message);
             }
+            CargarClientes();
         }
 
         private async void btnLimpiar_Campos_Click(object sender, EventArgs e)
@@ -260,7 +263,7 @@ namespace GeoIntegral.Views
 
         private void btnCerrar_App_Click(object sender, EventArgs e)
         {
-            this.Close();
+            VentanaCerrada?.Invoke(this, EventArgs.Empty);
         }
     }
 }

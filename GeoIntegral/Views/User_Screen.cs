@@ -6,8 +6,9 @@ using System.Windows.Forms;
 
 namespace GeoIntegral.Views
 {
-    public partial class User_Screen : Form
+    public partial class User_Screen : Form, ICerrable
     {
+        public event EventHandler VentanaCerrada;
         private Usuario _usuarioSesion;
         // Instanciamos el controlador para manejar la lógica
         private UsuarioController _usuarioController = new UsuarioController();
@@ -112,6 +113,11 @@ namespace GeoIntegral.Views
                     MessageBox.Show($"Error crítico en el proceso: {ex.Message}", "Error catastrófico", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void btnCerrar_App_Click(object sender, EventArgs e)
+        {
+            VentanaCerrada?.Invoke(this, EventArgs.Empty);
         }
     }
 }

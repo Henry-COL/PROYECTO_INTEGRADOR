@@ -91,5 +91,10 @@ namespace GeoIntegral.Views
                 e.Handled = true;
             }
         }
+
+        private void btnVer1_Click(object sender, EventArgs e)
+        {
+            txtContrasena.UseSystemPasswordChar = !txtContrasena.UseSystemPasswordChar;
+        }
     }
 }

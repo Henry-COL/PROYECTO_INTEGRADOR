@@ -36,6 +36,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnVer1 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.txtUsuario = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnIniciar_Sesion = new Guna.UI2.WinForms.Guna2Button();
@@ -48,7 +49,6 @@
             this.lblRecuperar_Contrasena = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2HtmlToolTip1 = new Guna.UI2.WinForms.Guna2HtmlToolTip();
-            this.btnVer1 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.panel2.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -95,7 +95,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackgroundImage = global::GeoIntegral.Properties.Resources.App_Login_Wallpaper_;
+            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.guna2Panel1);
@@ -139,6 +139,30 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(453, 217);
             this.guna2Panel1.TabIndex = 12;
+            // 
+            // btnVer1
+            // 
+            this.btnVer1.BorderColor = System.Drawing.Color.Gray;
+            this.btnVer1.BorderThickness = 2;
+            this.btnVer1.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
+            this.btnVer1.CheckedState.BorderColor = System.Drawing.Color.White;
+            this.btnVer1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnVer1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVer1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnVer1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnVer1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnVer1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnVer1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(27)))), ((int)(((byte)(56)))));
+            this.btnVer1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnVer1.ForeColor = System.Drawing.Color.White;
+            this.btnVer1.HoverState.BorderColor = System.Drawing.Color.White;
+            this.btnVer1.Location = new System.Drawing.Point(401, 109);
+            this.btnVer1.Name = "btnVer1";
+            this.btnVer1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnVer1.Size = new System.Drawing.Size(26, 26);
+            this.btnVer1.TabIndex = 44;
+            this.guna2HtmlToolTip1.SetToolTip(this.btnVer1, "Mostrar contraseña");
+            this.btnVer1.Click += new System.EventHandler(this.btnVer1_Click);
             // 
             // txtUsuario
             // 
@@ -255,7 +279,7 @@
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = global::GeoIntegral.Properties.Resources.GeoIntegral_LogoTipo;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(354, 95);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(512, 177);
@@ -295,7 +319,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::GeoIntegral.Properties.Resources.GeoIntegral_Logo;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(198, 95);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(168, 177);
@@ -307,29 +331,6 @@
             // 
             this.guna2HtmlToolTip1.AllowLinksHandling = true;
             this.guna2HtmlToolTip1.MaximumSize = new System.Drawing.Size(0, 0);
-            // 
-            // btnVer1
-            // 
-            this.btnVer1.BorderColor = System.Drawing.Color.Gray;
-            this.btnVer1.BorderThickness = 2;
-            this.btnVer1.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
-            this.btnVer1.CheckedState.BorderColor = System.Drawing.Color.White;
-            this.btnVer1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.btnVer1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnVer1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnVer1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnVer1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnVer1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnVer1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(27)))), ((int)(((byte)(56)))));
-            this.btnVer1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnVer1.ForeColor = System.Drawing.Color.White;
-            this.btnVer1.HoverState.BorderColor = System.Drawing.Color.White;
-            this.btnVer1.Location = new System.Drawing.Point(401, 109);
-            this.btnVer1.Name = "btnVer1";
-            this.btnVer1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnVer1.Size = new System.Drawing.Size(26, 26);
-            this.btnVer1.TabIndex = 44;
-            this.guna2HtmlToolTip1.SetToolTip(this.btnVer1, "Mostrar contraseña");
             // 
             // Login_Screen
             // 

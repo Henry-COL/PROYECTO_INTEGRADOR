@@ -7,6 +7,7 @@ namespace GeoIntegral.Views
 {
     public partial class Admin_Notificaciones : Form
     {
+        public event EventHandler VentanaCerrada;
         private NotificacionController notificacionController = new NotificacionController();
         private UsuarioController usuarioController = new UsuarioController();
 
@@ -161,7 +162,7 @@ namespace GeoIntegral.Views
 
         private void btnCerrar_App_Click(object sender, EventArgs e)
         {
-            this.Close();
+            VentanaCerrada?.Invoke(this, EventArgs.Empty);
         }
         private bool ValidarContrasena(string contrasena)
         {

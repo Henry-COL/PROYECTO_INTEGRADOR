@@ -14,8 +14,9 @@ using ITextRectangle = iTextSharp.text.Rectangle;
 
 namespace GeoIntegral.Views
 {
-    public partial class Usuario_Facturas : Form
+    public partial class Usuario_Facturas : Form, ICerrable
     {
+        public event EventHandler VentanaCerrada;
         private readonly bool _esAdmin;
         private readonly TerrenoController terrenoController = new TerrenoController();
         private readonly ClienteController clienteController = new ClienteController();
@@ -682,7 +683,7 @@ namespace GeoIntegral.Views
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            VentanaCerrada?.Invoke(this, EventArgs.Empty);
         }
     }
 }

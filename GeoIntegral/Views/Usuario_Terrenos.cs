@@ -59,7 +59,6 @@ namespace GeoIntegral.Views
             // Enlace de eventos
             btnAgregarPunto.Click += btnAgregarPunto_Click;
             btnLimpiarPuntos.Click += btnLimpiarPuntos_Click;
-            btnCalcular.Click += btnCalcular_Click;
             btnGuardar.Click += btnGuardar_Click;
             
 
@@ -555,6 +554,7 @@ namespace GeoIntegral.Views
         private void SoloNumerosDecimales(object sender, System.Windows.Forms.KeyPressEventArgs e)
         {
             TextBox txt = sender as TextBox;
+            if (txt == null) return;
 
             if (!char.IsDigit(e.KeyChar) &&
                 e.KeyChar != '.' &&

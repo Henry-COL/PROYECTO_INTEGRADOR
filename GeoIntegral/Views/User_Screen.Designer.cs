@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(User_Screen));
             this.grp = new System.Windows.Forms.GroupBox();
+            this.btnCambiarContraseña = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.lbl = new System.Windows.Forms.Label();
@@ -40,7 +42,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblNombre_Usuario = new System.Windows.Forms.Label();
             this.btnCerrar_App = new Guna.UI2.WinForms.Guna2Button();
-            this.btnCambiarContraseña = new Guna.UI2.WinForms.Guna2Button();
             this.grp.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -61,6 +62,21 @@
             this.grp.TabIndex = 18;
             this.grp.TabStop = false;
             this.grp.Text = "Información de perfil: Datos personales";
+            // 
+            // btnCambiarContraseña
+            // 
+            this.btnCambiarContraseña.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCambiarContraseña.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCambiarContraseña.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCambiarContraseña.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCambiarContraseña.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnCambiarContraseña.ForeColor = System.Drawing.Color.White;
+            this.btnCambiarContraseña.Location = new System.Drawing.Point(1312, 238);
+            this.btnCambiarContraseña.Name = "btnCambiarContraseña";
+            this.btnCambiarContraseña.Size = new System.Drawing.Size(245, 45);
+            this.btnCambiarContraseña.TabIndex = 1;
+            this.btnCambiarContraseña.Text = "Cambiar contraseña";
+            this.btnCambiarContraseña.Click += new System.EventHandler(this.btnCambiarContraseña_Click);
             // 
             // guna2Panel1
             // 
@@ -151,7 +167,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(10)))), ((int)(((byte)(30)))));
-            this.pictureBox1.Image = global::GeoIntegral.Properties.Resources.App_Perfil;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(22, 27);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(201, 194);
@@ -190,21 +206,7 @@
             this.btnCerrar_App.Size = new System.Drawing.Size(188, 45);
             this.btnCerrar_App.TabIndex = 19;
             this.btnCerrar_App.Text = "Volver al inicio";
-            // 
-            // btnCambiarContraseña
-            // 
-            this.btnCambiarContraseña.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnCambiarContraseña.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnCambiarContraseña.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnCambiarContraseña.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnCambiarContraseña.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnCambiarContraseña.ForeColor = System.Drawing.Color.White;
-            this.btnCambiarContraseña.Location = new System.Drawing.Point(1312, 238);
-            this.btnCambiarContraseña.Name = "btnCambiarContraseña";
-            this.btnCambiarContraseña.Size = new System.Drawing.Size(245, 45);
-            this.btnCambiarContraseña.TabIndex = 1;
-            this.btnCambiarContraseña.Text = "Cambiar contraseña";
-            this.btnCambiarContraseña.Click += new System.EventHandler(this.btnCambiarContraseña_Click);
+            this.btnCerrar_App.Click += new System.EventHandler(this.btnCerrar_App_Click);
             // 
             // User_Screen
             // 
