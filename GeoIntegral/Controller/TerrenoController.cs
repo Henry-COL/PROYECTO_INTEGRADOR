@@ -8,11 +8,19 @@ namespace GeoIntegral.Controller
 {
     public class TerrenoController
     {
+        // --- Instanciamos de manera privada "TerrenoRepository" para esta clase --- \\\
         private TerrenoRepository repo = new TerrenoRepository();
+        // --- Lista de puntos que solo esta clase puede leer y modificar --- \\\
         private List<PuntoTerreno> puntos = new List<PuntoTerreno>();
 
-        public void AgregarPunto(double x, double y, double z) => puntos.Add(new PuntoTerreno(x, y, z));
-        public void LimpiarPuntos() => puntos.Clear();
+        public void AgregarPunto(double x, double y, double z)
+        {
+            puntos.Add(new PuntoTerreno(x, y, z));
+        }
+        public void LimpiarPuntos()
+        {
+            puntos.Clear();
+        } 
         public List<PuntoTerreno> ObtenerPuntos() => puntos;
 
         public double CalcularArea()

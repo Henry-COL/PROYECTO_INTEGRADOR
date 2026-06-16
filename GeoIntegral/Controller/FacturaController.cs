@@ -21,15 +21,7 @@ namespace GeoIntegral.Controller
         public bool GenerarFactura(int idCotizacion, long identificacionCliente)
         {
             int nuevoNumero = facturaRepository.GenerarNuevoNumero();
-
-            var factura = new Factura(
-                nuevoNumero,
-                idCotizacion,
-                identificacionCliente,
-                System.DateTime.Now.ToString("yyyy-MM-dd"),
-                "Activa"
-            );
-
+            var factura = new Factura(nuevoNumero, idCotizacion, identificacionCliente, System.DateTime.Now.ToString("yyyy-MM-dd"), "Activa");
             return facturaRepository.Guardar(factura);
         }
 

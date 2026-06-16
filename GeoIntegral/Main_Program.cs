@@ -15,7 +15,8 @@ namespace GeoIntegral
         static void Main(string[] args)
         {
             Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
+            // Use GDI text rendering to avoid System.Drawing.TextRenderingHint errors in some custom controls (Guna2)
+            Application.SetCompatibleTextRenderingDefault(true);
 
             ArchivosCSV archivos = new ArchivosCSV();
             archivos.CrearInfraestructura();

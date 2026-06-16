@@ -112,7 +112,6 @@ C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\obj\Deb
 C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\obj\Debug\GeoIntegral.Views.Usuario_Materiales.resources
 C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\obj\Debug\GeoIntegral.Views.Usuario_Terrenos.resources
 C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\obj\Debug\GeoIntegral.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\BouncyCastle.Crypto.dll
 C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\OpenTK.dll
 C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\OpenTK.GLControl.dll
@@ -185,3 +184,7 @@ C:\Users\David Esper\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\obj\Debug\
 C:\Users\David Esper\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\obj\Debug\GeoIntegral.pdb
 C:\Users\David Esper\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\BouncyCastle.Cryptography.dll
 C:\Users\David Esper\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\BouncyCastle.Cryptography.xml
+C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\BouncyCastle.Cryptography.dll
+C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\BouncyCastle.Cryptography.xml
+C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\itextsharp.dll
+C:\Users\Henry Quintero\Documents\GitHub\PROYECTO_INTEGRADOR\GeoIntegral\bin\Debug\itextsharp.xml

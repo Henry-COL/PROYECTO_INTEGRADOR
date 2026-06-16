@@ -32,8 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registrar_Screen));
             this.btnCerrar_App = new Guna.UI2.WinForms.Guna2Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.Guna2_Bordes = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
@@ -57,11 +55,16 @@
             this.btnRegistrar = new Guna.UI2.WinForms.Guna2Button();
             this.lblMensaje_Usuario = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnVer2 = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.btnVer1 = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.ToolTip = new Guna.UI2.WinForms.Guna2HtmlToolTip();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCerrar_App
@@ -76,10 +79,9 @@
             this.btnCerrar_App.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrar_App.ForeColor = System.Drawing.Color.White;
             this.btnCerrar_App.HoverState.FillColor = System.Drawing.Color.Maroon;
-            this.btnCerrar_App.Location = new System.Drawing.Point(392, 6);
-            this.btnCerrar_App.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCerrar_App.Location = new System.Drawing.Point(588, 9);
             this.btnCerrar_App.Name = "btnCerrar_App";
-            this.btnCerrar_App.Size = new System.Drawing.Size(46, 29);
+            this.btnCerrar_App.Size = new System.Drawing.Size(69, 45);
             this.btnCerrar_App.TabIndex = 18;
             this.btnCerrar_App.Text = "X";
             this.btnCerrar_App.Click += new System.EventHandler(this.btnCerrar_App_Click);
@@ -92,34 +94,9 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Enabled = false;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(446, 40);
+            this.panel1.Size = new System.Drawing.Size(669, 62);
             this.panel1.TabIndex = 16;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::GeoIntegral.Properties.Resources.GeoIntegral_Logo;
-            this.pictureBox1.Location = new System.Drawing.Point(8, 6);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(34, 29);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 19;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = global::GeoIntegral.Properties.Resources.GeoIntegral_LogoTipo;
-            this.pictureBox2.Location = new System.Drawing.Point(40, 8);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(125, 28);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 20;
-            this.pictureBox2.TabStop = false;
             // 
             // Guna2_Bordes
             // 
@@ -135,10 +112,9 @@
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.guna2Panel1);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(0, 40);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Location = new System.Drawing.Point(0, 62);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(445, 445);
+            this.panel2.Size = new System.Drawing.Size(668, 685);
             this.panel2.TabIndex = 17;
             // 
             // label11
@@ -147,10 +123,9 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
             this.label11.ForeColor = System.Drawing.Color.Khaki;
-            this.label11.Location = new System.Drawing.Point(113, 54);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Location = new System.Drawing.Point(170, 70);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(212, 13);
+            this.label11.Size = new System.Drawing.Size(284, 17);
             this.label11.TabIndex = 28;
             this.label11.Text = "Crea una nueva cuenta de manera gratuita.";
             // 
@@ -158,6 +133,8 @@
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel1.BorderRadius = 8;
+            this.guna2Panel1.Controls.Add(this.btnVer1);
+            this.guna2Panel1.Controls.Add(this.btnVer2);
             this.guna2Panel1.Controls.Add(this.txtConfirmar_Contrasena);
             this.guna2Panel1.Controls.Add(this.label9);
             this.guna2Panel1.Controls.Add(this.lblMensaje_Contrasena_Confirmar);
@@ -177,10 +154,9 @@
             this.guna2Panel1.Controls.Add(this.btnRegistrar);
             this.guna2Panel1.Controls.Add(this.lblMensaje_Usuario);
             this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(27)))), ((int)(((byte)(56)))));
-            this.guna2Panel1.Location = new System.Drawing.Point(47, 86);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel1.Location = new System.Drawing.Point(71, 126);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(341, 315);
+            this.guna2Panel1.Size = new System.Drawing.Size(520, 491);
             this.guna2Panel1.TabIndex = 1;
             // 
             // txtConfirmar_Contrasena
@@ -196,37 +172,37 @@
             this.txtConfirmar_Contrasena.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtConfirmar_Contrasena.ForeColor = System.Drawing.Color.Black;
             this.txtConfirmar_Contrasena.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtConfirmar_Contrasena.Location = new System.Drawing.Point(26, 202);
+            this.txtConfirmar_Contrasena.Location = new System.Drawing.Point(39, 311);
+            this.txtConfirmar_Contrasena.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.txtConfirmar_Contrasena.Name = "txtConfirmar_Contrasena";
             this.txtConfirmar_Contrasena.PlaceholderForeColor = System.Drawing.Color.DarkGray;
             this.txtConfirmar_Contrasena.PlaceholderText = "Ingrse nuevamente la contraseña.";
             this.txtConfirmar_Contrasena.SelectedText = "";
-            this.txtConfirmar_Contrasena.Size = new System.Drawing.Size(290, 18);
+            this.txtConfirmar_Contrasena.Size = new System.Drawing.Size(435, 28);
             this.txtConfirmar_Contrasena.TabIndex = 38;
+            this.txtConfirmar_Contrasena.UseSystemPasswordChar = true;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.Control;
-            this.label9.Location = new System.Drawing.Point(22, 183);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Location = new System.Drawing.Point(33, 282);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(128, 15);
+            this.label9.Size = new System.Drawing.Size(187, 22);
             this.label9.TabIndex = 37;
             this.label9.Text = "Confirmar contraseña:";
             // 
             // lblMensaje_Contrasena_Confirmar
             // 
-            this.lblMensaje_Contrasena_Confirmar.AutoSize = true;
             this.lblMensaje_Contrasena_Confirmar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMensaje_Contrasena_Confirmar.ForeColor = System.Drawing.Color.Red;
-            this.lblMensaje_Contrasena_Confirmar.Location = new System.Drawing.Point(186, 183);
-            this.lblMensaje_Contrasena_Confirmar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblMensaje_Contrasena_Confirmar.Location = new System.Drawing.Point(231, 282);
             this.lblMensaje_Contrasena_Confirmar.Name = "lblMensaje_Contrasena_Confirmar";
-            this.lblMensaje_Contrasena_Confirmar.Size = new System.Drawing.Size(113, 15);
+            this.lblMensaje_Contrasena_Confirmar.Size = new System.Drawing.Size(243, 34);
             this.lblMensaje_Contrasena_Confirmar.TabIndex = 39;
             this.lblMensaje_Contrasena_Confirmar.Text = "Campo obligatorio*";
+            this.lblMensaje_Contrasena_Confirmar.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.lblMensaje_Contrasena_Confirmar.Visible = false;
             // 
             // txtContrasena
@@ -242,37 +218,37 @@
             this.txtContrasena.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtContrasena.ForeColor = System.Drawing.Color.Black;
             this.txtContrasena.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtContrasena.Location = new System.Drawing.Point(26, 159);
+            this.txtContrasena.Location = new System.Drawing.Point(39, 245);
+            this.txtContrasena.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.PlaceholderForeColor = System.Drawing.Color.DarkGray;
             this.txtContrasena.PlaceholderText = "Ingrese una contraseña.";
             this.txtContrasena.SelectedText = "";
-            this.txtContrasena.Size = new System.Drawing.Size(290, 18);
+            this.txtContrasena.Size = new System.Drawing.Size(435, 28);
             this.txtContrasena.TabIndex = 35;
+            this.txtContrasena.UseSystemPasswordChar = true;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.Control;
-            this.label7.Location = new System.Drawing.Point(22, 140);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(33, 215);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(73, 15);
+            this.label7.Size = new System.Drawing.Size(108, 22);
             this.label7.TabIndex = 34;
             this.label7.Text = "Contraseña:";
             // 
             // lblMensaje_Contrasena_
             // 
-            this.lblMensaje_Contrasena_.AutoSize = true;
             this.lblMensaje_Contrasena_.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMensaje_Contrasena_.ForeColor = System.Drawing.Color.Red;
-            this.lblMensaje_Contrasena_.Location = new System.Drawing.Point(186, 140);
-            this.lblMensaje_Contrasena_.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblMensaje_Contrasena_.Location = new System.Drawing.Point(231, 215);
             this.lblMensaje_Contrasena_.Name = "lblMensaje_Contrasena_";
-            this.lblMensaje_Contrasena_.Size = new System.Drawing.Size(113, 15);
+            this.lblMensaje_Contrasena_.Size = new System.Drawing.Size(243, 34);
             this.lblMensaje_Contrasena_.TabIndex = 36;
             this.lblMensaje_Contrasena_.Text = "Campo obligatorio*";
+            this.lblMensaje_Contrasena_.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.lblMensaje_Contrasena_.Visible = false;
             // 
             // txtGmail_Confirmar
@@ -288,12 +264,13 @@
             this.txtGmail_Confirmar.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtGmail_Confirmar.ForeColor = System.Drawing.Color.Black;
             this.txtGmail_Confirmar.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtGmail_Confirmar.Location = new System.Drawing.Point(26, 117);
+            this.txtGmail_Confirmar.Location = new System.Drawing.Point(39, 180);
+            this.txtGmail_Confirmar.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.txtGmail_Confirmar.Name = "txtGmail_Confirmar";
             this.txtGmail_Confirmar.PlaceholderForeColor = System.Drawing.Color.DarkGray;
             this.txtGmail_Confirmar.PlaceholderText = "Ingrese nuevamente su Gmail.";
             this.txtGmail_Confirmar.SelectedText = "";
-            this.txtGmail_Confirmar.Size = new System.Drawing.Size(290, 18);
+            this.txtGmail_Confirmar.Size = new System.Drawing.Size(435, 28);
             this.txtGmail_Confirmar.TabIndex = 32;
             // 
             // label5
@@ -301,24 +278,22 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.Control;
-            this.label5.Location = new System.Drawing.Point(22, 98);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(33, 151);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(104, 15);
+            this.label5.Size = new System.Drawing.Size(153, 22);
             this.label5.TabIndex = 31;
             this.label5.Text = "Confirmar Correo:";
             // 
             // lblMensaje_Gmail_Confirmar
             // 
-            this.lblMensaje_Gmail_Confirmar.AutoSize = true;
             this.lblMensaje_Gmail_Confirmar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMensaje_Gmail_Confirmar.ForeColor = System.Drawing.Color.Red;
-            this.lblMensaje_Gmail_Confirmar.Location = new System.Drawing.Point(186, 98);
-            this.lblMensaje_Gmail_Confirmar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblMensaje_Gmail_Confirmar.Location = new System.Drawing.Point(231, 151);
             this.lblMensaje_Gmail_Confirmar.Name = "lblMensaje_Gmail_Confirmar";
-            this.lblMensaje_Gmail_Confirmar.Size = new System.Drawing.Size(113, 15);
+            this.lblMensaje_Gmail_Confirmar.Size = new System.Drawing.Size(243, 34);
             this.lblMensaje_Gmail_Confirmar.TabIndex = 33;
             this.lblMensaje_Gmail_Confirmar.Text = "Campo obligatorio*";
+            this.lblMensaje_Gmail_Confirmar.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.lblMensaje_Gmail_Confirmar.Visible = false;
             // 
             // txtGmail
@@ -334,12 +309,13 @@
             this.txtGmail.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtGmail.ForeColor = System.Drawing.Color.Black;
             this.txtGmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtGmail.Location = new System.Drawing.Point(26, 75);
+            this.txtGmail.Location = new System.Drawing.Point(39, 115);
+            this.txtGmail.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.txtGmail.Name = "txtGmail";
             this.txtGmail.PlaceholderForeColor = System.Drawing.Color.DarkGray;
             this.txtGmail.PlaceholderText = "Ingrece una cuenta de Gmail.";
             this.txtGmail.SelectedText = "";
-            this.txtGmail.Size = new System.Drawing.Size(290, 18);
+            this.txtGmail.Size = new System.Drawing.Size(435, 28);
             this.txtGmail.TabIndex = 29;
             // 
             // label3
@@ -347,24 +323,22 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(22, 56);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(33, 86);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 15);
+            this.label3.Size = new System.Drawing.Size(70, 22);
             this.label3.TabIndex = 28;
             this.label3.Text = "Correo:";
             // 
             // lblMensaje_Gmail_
             // 
-            this.lblMensaje_Gmail_.AutoSize = true;
             this.lblMensaje_Gmail_.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMensaje_Gmail_.ForeColor = System.Drawing.Color.Red;
-            this.lblMensaje_Gmail_.Location = new System.Drawing.Point(186, 56);
-            this.lblMensaje_Gmail_.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblMensaje_Gmail_.Location = new System.Drawing.Point(231, 86);
             this.lblMensaje_Gmail_.Name = "lblMensaje_Gmail_";
-            this.lblMensaje_Gmail_.Size = new System.Drawing.Size(113, 15);
+            this.lblMensaje_Gmail_.Size = new System.Drawing.Size(243, 34);
             this.lblMensaje_Gmail_.TabIndex = 30;
             this.lblMensaje_Gmail_.Text = "Campo obligatorio*";
+            this.lblMensaje_Gmail_.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.lblMensaje_Gmail_.Visible = false;
             // 
             // label10
@@ -372,10 +346,9 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.Control;
-            this.label10.Location = new System.Drawing.Point(59, 275);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Location = new System.Drawing.Point(96, 429);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(111, 15);
+            this.label10.Size = new System.Drawing.Size(164, 22);
             this.label10.TabIndex = 27;
             this.label10.Text = "¿Ya tienes cuenta?";
             // 
@@ -387,10 +360,9 @@
             this.lblIniciar_Sesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblIniciar_Sesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIniciar_Sesion.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lblIniciar_Sesion.Location = new System.Drawing.Point(180, 275);
-            this.lblIniciar_Sesion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblIniciar_Sesion.Location = new System.Drawing.Point(281, 429);
             this.lblIniciar_Sesion.Name = "lblIniciar_Sesion";
-            this.lblIniciar_Sesion.Size = new System.Drawing.Size(79, 15);
+            this.lblIniciar_Sesion.Size = new System.Drawing.Size(114, 22);
             this.lblIniciar_Sesion.TabIndex = 26;
             this.lblIniciar_Sesion.Text = "Iniciar sesión";
             this.lblIniciar_Sesion.Click += new System.EventHandler(this.lblIniciar_Sesion_Click);
@@ -408,12 +380,13 @@
             this.txtUsuario.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtUsuario.ForeColor = System.Drawing.Color.Black;
             this.txtUsuario.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUsuario.Location = new System.Drawing.Point(26, 32);
+            this.txtUsuario.Location = new System.Drawing.Point(39, 49);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.PlaceholderForeColor = System.Drawing.Color.DarkGray;
             this.txtUsuario.PlaceholderText = "Ingrese su nombre de usuario.";
             this.txtUsuario.SelectedText = "";
-            this.txtUsuario.Size = new System.Drawing.Size(290, 18);
+            this.txtUsuario.Size = new System.Drawing.Size(435, 28);
             this.txtUsuario.TabIndex = 11;
             // 
             // label2
@@ -421,16 +394,17 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(22, 14);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(33, 22);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(116, 15);
+            this.label2.Size = new System.Drawing.Size(167, 22);
             this.label2.TabIndex = 10;
             this.label2.Text = "Nombre de usuario:";
             // 
             // btnRegistrar
             // 
+            this.btnRegistrar.BorderColor = System.Drawing.Color.DarkGreen;
             this.btnRegistrar.BorderRadius = 7;
+            this.btnRegistrar.BorderThickness = 3;
             this.btnRegistrar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnRegistrar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnRegistrar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -438,25 +412,23 @@
             this.btnRegistrar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(147)))), ((int)(((byte)(81)))));
             this.btnRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrar.ForeColor = System.Drawing.Color.White;
-            this.btnRegistrar.Location = new System.Drawing.Point(83, 237);
-            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRegistrar.Location = new System.Drawing.Point(103, 364);
             this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(176, 29);
+            this.btnRegistrar.Size = new System.Drawing.Size(309, 52);
             this.btnRegistrar.TabIndex = 16;
             this.btnRegistrar.Text = "Registrar Cuenta";
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // lblMensaje_Usuario
             // 
-            this.lblMensaje_Usuario.AutoSize = true;
             this.lblMensaje_Usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMensaje_Usuario.ForeColor = System.Drawing.Color.Red;
-            this.lblMensaje_Usuario.Location = new System.Drawing.Point(186, 14);
-            this.lblMensaje_Usuario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblMensaje_Usuario.Location = new System.Drawing.Point(231, 16);
             this.lblMensaje_Usuario.Name = "lblMensaje_Usuario";
-            this.lblMensaje_Usuario.Size = new System.Drawing.Size(113, 15);
+            this.lblMensaje_Usuario.Size = new System.Drawing.Size(243, 34);
             this.lblMensaje_Usuario.TabIndex = 14;
             this.lblMensaje_Usuario.Text = "Campo obligatorio*";
+            this.lblMensaje_Usuario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.lblMensaje_Usuario.Visible = false;
             // 
             // label1
@@ -465,35 +437,108 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(119, 5);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(178, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(186, 39);
+            this.label1.Size = new System.Drawing.Size(271, 59);
             this.label1.TabIndex = 0;
             this.label1.Text = "Registrate";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::GeoIntegral.Properties.Resources.GeoIntegral_Logo;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 9);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(51, 45);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 19;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = global::GeoIntegral.Properties.Resources.GeoIntegral_LogoTipo;
+            this.pictureBox2.Location = new System.Drawing.Point(60, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(188, 43);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 20;
+            this.pictureBox2.TabStop = false;
+            // 
+            // btnVer2
+            // 
+            this.btnVer2.BorderColor = System.Drawing.Color.Gray;
+            this.btnVer2.BorderThickness = 2;
+            this.btnVer2.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
+            this.btnVer2.CheckedState.BorderColor = System.Drawing.Color.White;
+            this.btnVer2.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnVer2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVer2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnVer2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnVer2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnVer2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnVer2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(27)))), ((int)(((byte)(56)))));
+            this.btnVer2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnVer2.ForeColor = System.Drawing.Color.White;
+            this.btnVer2.HoverState.BorderColor = System.Drawing.Color.White;
+            this.btnVer2.Location = new System.Drawing.Point(480, 311);
+            this.btnVer2.Name = "btnVer2";
+            this.btnVer2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnVer2.Size = new System.Drawing.Size(26, 26);
+            this.btnVer2.TabIndex = 42;
+            this.ToolTip.SetToolTip(this.btnVer2, "Mostrar confirmación");
+            this.btnVer2.Click += new System.EventHandler(this.btnVer2_Click);
+            // 
+            // btnVer1
+            // 
+            this.btnVer1.BorderColor = System.Drawing.Color.Gray;
+            this.btnVer1.BorderThickness = 2;
+            this.btnVer1.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
+            this.btnVer1.CheckedState.BorderColor = System.Drawing.Color.White;
+            this.btnVer1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnVer1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVer1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnVer1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnVer1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnVer1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnVer1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(27)))), ((int)(((byte)(56)))));
+            this.btnVer1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnVer1.ForeColor = System.Drawing.Color.White;
+            this.btnVer1.HoverState.BorderColor = System.Drawing.Color.White;
+            this.btnVer1.Location = new System.Drawing.Point(480, 245);
+            this.btnVer1.Name = "btnVer1";
+            this.btnVer1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnVer1.Size = new System.Drawing.Size(26, 26);
+            this.btnVer1.TabIndex = 43;
+            this.ToolTip.SetToolTip(this.btnVer1, "Mostrar contraseña");
+            this.btnVer1.Click += new System.EventHandler(this.btnVer1_Click);
+            // 
+            // ToolTip
+            // 
+            this.ToolTip.AllowLinksHandling = true;
+            this.ToolTip.MaximumSize = new System.Drawing.Size(0, 0);
+            // 
             // Registrar_Screen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(15)))), ((int)(((byte)(33)))));
-            this.ClientSize = new System.Drawing.Size(446, 484);
+            this.ClientSize = new System.Drawing.Size(669, 745);
             this.Controls.Add(this.btnCerrar_App);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Registrar_Screen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registrar Cuenta";
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -527,5 +572,8 @@
         private Guna.UI2.WinForms.Guna2TextBox txtConfirmar_Contrasena;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label lblMensaje_Contrasena_Confirmar;
+        private Guna.UI2.WinForms.Guna2CircleButton btnVer2;
+        private Guna.UI2.WinForms.Guna2CircleButton btnVer1;
+        private Guna.UI2.WinForms.Guna2HtmlToolTip ToolTip;
     }
 }

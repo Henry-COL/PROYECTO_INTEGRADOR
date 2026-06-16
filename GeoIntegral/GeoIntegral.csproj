@@ -63,6 +63,9 @@
     <Reference Include="Guna.UI2">
       <HintPath>..\..\HENZO\Corte_2\EjerciciosPractica\EjerciciosClase\app_inventario\packages\Guna.UI2.WinForms.2.0.4.7\lib\net45\Guna.UI2.dll</HintPath>
     </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.5, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\iTextSharp.5.5.13.5\lib\net461\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="MathNet.Numerics, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\MathNet.Numerics.5.0.0\lib\net48\MathNet.Numerics.dll</HintPath>
     </Reference>
@@ -169,7 +172,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controller\AdministradorController.cs" />
     <Compile Include="Controller\ClienteController.cs" />
     <Compile Include="Controller\CotizacionController.cs" />
     <Compile Include="Controller\FacturaController.cs" />
@@ -182,7 +184,6 @@
     <Compile Include="Enums\EstadoUsuario.cs" />
     <Compile Include="Enums\RolUsuario.cs" />
     <Compile Include="Main_Program.cs" />
-    <Compile Include="Models\Administrador.cs" />
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\Cotizacion.cs" />
     <Compile Include="Models\Factura.cs" />
@@ -339,6 +340,7 @@
     <Content Include="Multimedia\App_Costo_Total.png" />
     <Content Include="Multimedia\App_CuentaEmpresa_Imagen.png" />
     <Content Include="Multimedia\App_CuentaPersonal_Imagen.png" />
+    <Content Include="Multimedia\App_DescargarPDF.png" />
     <Content Include="Multimedia\App_Detalles.png" />
     <Content Include="Multimedia\App_Gmail.png" />
     <Content Include="Multimedia\App_Identificacion.png" />
@@ -355,6 +357,7 @@
     <Content Include="Multimedia\App_Telefono.png" />
     <Content Include="Multimedia\App_Terreno.png" />
     <Content Include="Multimedia\App_TipoCuenta_Wallpaper.png" />
+    <Content Include="Multimedia\App_Ver_Contrasena.png" />
     <Content Include="Multimedia\App_Wallpaper_Principal.png" />
     <Content Include="Multimedia\GeoIntegral-Logo.png" />
     <Content Include="Multimedia\GeoIntegral-LogoTipo.png" />

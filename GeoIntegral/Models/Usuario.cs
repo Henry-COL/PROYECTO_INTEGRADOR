@@ -8,7 +8,7 @@ namespace GeoIntegral.Models
         public string PasswordHash { get; set; }
         public string Gmail { get; set; }
         public RolUsuario Rol { get; set; }
-        public EstadoUsuario Estado { get; set; } = EstadoUsuario.Activo;
+        public EstadoUsuario Estado { get; set; }
 
         public Usuario(string nombreUsuario, string passwordHash, string gmail, RolUsuario rol, EstadoUsuario estado)
         {

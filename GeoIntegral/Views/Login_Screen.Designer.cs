@@ -48,6 +48,7 @@
             this.lblRecuperar_Contrasena = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2HtmlToolTip1 = new Guna.UI2.WinForms.Guna2HtmlToolTip();
+            this.btnVer1 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.panel2.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -125,6 +126,7 @@
             this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(41)))), ((int)(((byte)(76)))));
             this.guna2Panel1.BorderRadius = 7;
             this.guna2Panel1.BorderThickness = 6;
+            this.guna2Panel1.Controls.Add(this.btnVer1);
             this.guna2Panel1.Controls.Add(this.txtUsuario);
             this.guna2Panel1.Controls.Add(this.label1);
             this.guna2Panel1.Controls.Add(this.btnIniciar_Sesion);
@@ -133,9 +135,9 @@
             this.guna2Panel1.Controls.Add(this.label2);
             this.guna2Panel1.Controls.Add(this.lblMensaje_Contrasena);
             this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(24)))), ((int)(((byte)(42)))));
-            this.guna2Panel1.Location = new System.Drawing.Point(339, 258);
+            this.guna2Panel1.Location = new System.Drawing.Point(305, 258);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(398, 217);
+            this.guna2Panel1.Size = new System.Drawing.Size(453, 217);
             this.guna2Panel1.TabIndex = 12;
             // 
             // txtUsuario
@@ -151,7 +153,7 @@
             this.txtUsuario.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtUsuario.ForeColor = System.Drawing.Color.Black;
             this.txtUsuario.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUsuario.Location = new System.Drawing.Point(24, 45);
+            this.txtUsuario.Location = new System.Drawing.Point(49, 43);
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.PlaceholderForeColor = System.Drawing.Color.DarkGray;
@@ -165,7 +167,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(18, 20);
+            this.label1.Location = new System.Drawing.Point(43, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(77, 22);
             this.label1.TabIndex = 3;
@@ -184,7 +186,7 @@
             this.btnIniciar_Sesion.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(147)))), ((int)(((byte)(81)))));
             this.btnIniciar_Sesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIniciar_Sesion.ForeColor = System.Drawing.Color.White;
-            this.btnIniciar_Sesion.Location = new System.Drawing.Point(81, 154);
+            this.btnIniciar_Sesion.Location = new System.Drawing.Point(106, 152);
             this.btnIniciar_Sesion.Name = "btnIniciar_Sesion";
             this.btnIniciar_Sesion.Size = new System.Drawing.Size(230, 45);
             this.btnIniciar_Sesion.TabIndex = 9;
@@ -205,7 +207,7 @@
             this.txtContrasena.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtContrasena.ForeColor = System.Drawing.Color.Black;
             this.txtContrasena.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtContrasena.Location = new System.Drawing.Point(24, 111);
+            this.txtContrasena.Location = new System.Drawing.Point(49, 109);
             this.txtContrasena.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.PlaceholderForeColor = System.Drawing.Color.DarkGray;
@@ -220,7 +222,7 @@
             this.lblMensaje_Usuario.AutoSize = true;
             this.lblMensaje_Usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMensaje_Usuario.ForeColor = System.Drawing.Color.Red;
-            this.lblMensaje_Usuario.Location = new System.Drawing.Point(211, 20);
+            this.lblMensaje_Usuario.Location = new System.Drawing.Point(236, 18);
             this.lblMensaje_Usuario.Name = "lblMensaje_Usuario";
             this.lblMensaje_Usuario.Size = new System.Drawing.Size(162, 22);
             this.lblMensaje_Usuario.TabIndex = 7;
@@ -232,7 +234,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(18, 86);
+            this.label2.Location = new System.Drawing.Point(43, 84);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(108, 22);
             this.label2.TabIndex = 5;
@@ -243,7 +245,7 @@
             this.lblMensaje_Contrasena.AutoSize = true;
             this.lblMensaje_Contrasena.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMensaje_Contrasena.ForeColor = System.Drawing.Color.Red;
-            this.lblMensaje_Contrasena.Location = new System.Drawing.Point(209, 86);
+            this.lblMensaje_Contrasena.Location = new System.Drawing.Point(234, 84);
             this.lblMensaje_Contrasena.Name = "lblMensaje_Contrasena";
             this.lblMensaje_Contrasena.Size = new System.Drawing.Size(162, 22);
             this.lblMensaje_Contrasena.TabIndex = 8;
@@ -306,6 +308,29 @@
             this.guna2HtmlToolTip1.AllowLinksHandling = true;
             this.guna2HtmlToolTip1.MaximumSize = new System.Drawing.Size(0, 0);
             // 
+            // btnVer1
+            // 
+            this.btnVer1.BorderColor = System.Drawing.Color.Gray;
+            this.btnVer1.BorderThickness = 2;
+            this.btnVer1.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
+            this.btnVer1.CheckedState.BorderColor = System.Drawing.Color.White;
+            this.btnVer1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnVer1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVer1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnVer1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnVer1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnVer1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnVer1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(27)))), ((int)(((byte)(56)))));
+            this.btnVer1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnVer1.ForeColor = System.Drawing.Color.White;
+            this.btnVer1.HoverState.BorderColor = System.Drawing.Color.White;
+            this.btnVer1.Location = new System.Drawing.Point(401, 109);
+            this.btnVer1.Name = "btnVer1";
+            this.btnVer1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnVer1.Size = new System.Drawing.Size(26, 26);
+            this.btnVer1.TabIndex = 44;
+            this.guna2HtmlToolTip1.SetToolTip(this.btnVer1, "Mostrar contraseña");
+            // 
             // Login_Screen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -350,5 +375,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2HtmlToolTip guna2HtmlToolTip1;
+        private Guna.UI2.WinForms.Guna2CircleButton btnVer1;
     }
 }

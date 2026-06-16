@@ -20,6 +20,7 @@ namespace GeoIntegral.Views
             InitializeComponent();
             this.Size = size;
             EstilarTabla();
+            CargarFiltroEstados();
             CargarUsuarios();
 
             this.Shown += (s, e) =>
@@ -48,22 +49,48 @@ namespace GeoIntegral.Views
             }
         }
 
+        private void CargarFiltroEstados()
+        {
+            cmbFiltro.Items.Clear();
+            cmbFiltro.Items.Add("Todos");
+
+            foreach (EstadoUsuario estado in Enum.GetValues(typeof(EstadoUsuario)))
+            {
+                cmbFiltro.Items.Add(estado.ToString());
+            }
+
+            cmbFiltro.SelectedIndex = 0;
+            cmbFiltro.Refresh(); // fuerza redibujado, por si el control no se actualiza visualmente
+        }
+
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            // Filtrar por estado
             try
             {
                 var filtro = cmbFiltro.SelectedItem?.ToString() ?? "Todos";
                 dgvListaUsuarios.Rows.Clear();
 
                 var usuarios = _usuarioController.ObtenerTodosLosUsuarios();
+
+                bool filtrarTodos = filtro.Equals("Todos", StringComparison.OrdinalIgnoreCase);
+                EstadoUsuario estadoFiltro = default;
+
+                if (!filtrarTodos)
+                {
+                    // Si el filtro no es un valor válido del enum, no debería pasar porque
+                    // el combo solo contiene "Todos" + valores del enum, pero por seguridad:
+                    if (!Enum.TryParse(filtro, true, out estadoFiltro))
+                    {
+                        MessageBox.Show("Filtro inválido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                }
+
                 foreach (var u in usuarios)
                 {
-                    string estado = u.Estado.ToString();
-                    if (filtro == "Todos" || estado.Equals(filtro, StringComparison.OrdinalIgnoreCase))
+                    if (filtrarTodos || u.Estado == estadoFiltro)
                     {
-                        // CORRECCIÓN DEFINITIVA: Mismo ajuste para el filtro de filas
-                        dgvListaUsuarios.Rows.Add(u.Nombre_Usuario, u.Gmail, u.Rol.ToString(), estado);
+                        dgvListaUsuarios.Rows.Add(u.Nombre_Usuario, u.Gmail, u.Rol.ToString(), u.Estado.ToString());
                     }
                 }
             }
@@ -179,6 +206,89 @@ namespace GeoIntegral.Views
         private void btnCambiar_Estado_Click(object sender, EventArgs e)
         {
             btnCambiarEstado_Click(sender, e);
+        }
+
+        private void btnEliminarUsuario_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dgvListaUsuarios.SelectedRows.Count == 0)
+                {
+                    MessageBox.Show("Por favor, seleccione un usuario de la tabla primero.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                var fila = dgvListaUsuarios.SelectedRows[0];
+                string nombreUsuario = fila.Cells[0].Value?.ToString()?.Trim();
+
+                if (string.IsNullOrEmpty(nombreUsuario)) return;
+
+                var confirmacion = MessageBox.Show(
+                    $"¿Está seguro de eliminar al usuario '{nombreUsuario}'? Esta acción no se puede deshacer.",
+                    "Confirmar Eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (confirmacion != DialogResult.Yes) return;
+
+                bool ok = _usuarioController.EliminarUsuario(nombreUsuario);
+
+                if (ok)
+                {
+                    CargarUsuarios();
+                    MessageBox.Show("Usuario eliminado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo eliminar el usuario.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al eliminar usuario: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnCambiarRol_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dgvListaUsuarios.SelectedRows.Count == 0)
+                {
+                    MessageBox.Show("Por favor, seleccione un usuario de la tabla primero.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                var fila = dgvListaUsuarios.SelectedRows[0];
+                string nombreUsuario = fila.Cells[0].Value?.ToString()?.Trim();
+                string rolActual = fila.Cells[2].Value?.ToString()?.Trim(); // columna 2 = Rol en el DataGridView
+
+                if (string.IsNullOrEmpty(nombreUsuario) || string.IsNullOrEmpty(rolActual)) return;
+
+                RolUsuario nuevoRolEnum = rolActual.Equals(RolUsuario.Usuario.ToString(), StringComparison.OrdinalIgnoreCase)
+                    ? RolUsuario.Administrador
+                    : RolUsuario.Usuario;
+
+                var confirmacion = MessageBox.Show(
+                    $"¿Está seguro de cambiar el rol del usuario '{nombreUsuario}' a {nuevoRolEnum}?",
+                    "Confirmar Cambio", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (confirmacion != DialogResult.Yes) return;
+
+                bool ok = _usuarioController.CambiarRolUsuario(nombreUsuario, nuevoRolEnum.ToString());
+
+                if (ok)
+                {
+                    CargarUsuarios();
+                    MessageBox.Show($"El rol se actualizó a {nuevoRolEnum} correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo cambiar el rol.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cambiar rol: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

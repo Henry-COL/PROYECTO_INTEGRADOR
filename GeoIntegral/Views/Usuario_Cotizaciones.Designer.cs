@@ -152,7 +152,7 @@
             // 
             // lblCostoTotal
             // 
-            this.lblCostoTotal.AutoSize = true;
+            this.lblCostoTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblCostoTotal.Font = new System.Drawing.Font("Poppins", 18F, System.Drawing.FontStyle.Bold);
             this.lblCostoTotal.ForeColor = System.Drawing.Color.Khaki;
             this.lblCostoTotal.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -511,7 +511,6 @@
             this.gbDatosCotizacion.PerformLayout();
             this.guna2Panel3.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();

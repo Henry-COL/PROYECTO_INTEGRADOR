@@ -11,8 +11,37 @@ namespace GeoIntegral.Controller
     {
         private readonly UsuarioRepository repo = new UsuarioRepository();
 
-        public bool RegistrarUsuario(Usuario nuevoUsuario)
+        // --- Metodo para registrar --- \\\
+
+        public bool RegistrarUsuario(Usuario nuevoUsuario, string gmailConfirmar, string passConfirmar)
         {
+            if (!NombreEsValido(nuevoUsuario.Nombre_Usuario))
+                throw new Exception("Usuario inválido: mínimo 4 caracteres, sin espacios ni símbolos no permitidos.");
+
+            try
+            {
+                var correo = new System.Net.Mail.MailAddress(nuevoUsuario.Gmail);
+            }
+            catch
+            {
+                throw new Exception("Correo inválido.");
+            }
+
+            if (nuevoUsuario.Gmail != gmailConfirmar)
+                throw new Exception("Los correos no coinciden.");
+
+            if (GmailExiste(nuevoUsuario.Gmail))
+                throw new Exception("Ese correo ya está registrado.");
+
+            if (nuevoUsuario.PasswordHash != passConfirmar)
+                throw new Exception("Las contraseñas no coinciden.");
+
+            if (!ContrasenaEsValida(nuevoUsuario.PasswordHash))
+                throw new Exception("La contraseña debe tener mínimo 8 caracteres, una mayúscula, un número y un carácter especial.");
+
+            if (UsuarioExiste(nuevoUsuario.Nombre_Usuario))
+                throw new Exception("Ese usuario ya existe.");
+
             try
             {
                 nuevoUsuario.PasswordHash = BCrypt.Net.BCrypt.HashPassword(nuevoUsuario.PasswordHash);
@@ -24,6 +53,38 @@ namespace GeoIntegral.Controller
             }
         }
 
+
+        // --- Metodo para validar requisitos de contraseña --- \\\
+        public bool ContrasenaEsValida(string contrasena)
+        {
+            if (string.IsNullOrEmpty(contrasena) || contrasena.Length < 8)
+                return false;
+
+            bool tieneMayuscula = false;
+            bool tieneNumero = false;
+            bool tieneEspecial = false;
+
+            foreach (char c in contrasena)
+            {
+                if (char.IsUpper(c)) tieneMayuscula = true;
+                if (char.IsDigit(c)) tieneNumero = true;
+                if (!char.IsLetterOrDigit(c)) tieneEspecial = true;
+            }
+            return tieneMayuscula && tieneNumero && tieneEspecial;
+        }
+
+        // --- Metodo para validar requisitos de nombre de usuario --- \\\
+        public bool NombreEsValido(string nombre)
+        {
+            if (string.IsNullOrEmpty(nombre) || nombre.Length <= 3) { return false; }
+            foreach (char c in nombre)
+            {
+                if (!char.IsLetterOrDigit(c) && c != '_' && c != '-') { return false; }
+            }
+            return true;
+        }
+
+        // --- Metodo para autenticar --- \\\
         public Usuario Autenticar(string usuario, string password)
         {
             try
@@ -56,6 +117,7 @@ namespace GeoIntegral.Controller
             }
         }
 
+        // --- Metodo para cambiar contraseña --- \\\
         public bool CambiarContrasena(string nombreUsuario, string nuevaContrasena)
         {
             try
@@ -69,10 +131,12 @@ namespace GeoIntegral.Controller
             }
         }
 
+        // --- Metodo para verificar existencia de usuario --- \\\
         public bool UsuarioExiste(string nombreUsuario)
         {
             foreach (var datos in repo.ObtenerLineas())
             {
+                // --- Validamos el dato con la nueva variable a comparar --- \\\
                 if (datos[0].Trim() == nombreUsuario.Trim())
                 {
                     return true;
@@ -81,6 +145,7 @@ namespace GeoIntegral.Controller
             return false;
         }
 
+        // --- Metodo para verificar existencia de usuario y gmail --- \\\
         public bool VerificarUsuarioYGmail(string nombreUsuario, string gmail)
         {
             try
@@ -89,7 +154,7 @@ namespace GeoIntegral.Controller
                 {
                     if (datos[0].Trim() == nombreUsuario.Trim() && datos[2].Trim() == gmail.Trim())
                     {
-                        // Corrección menor: Validamos contra el Enum o ignorando mayúsculas/minúsculas
+                        // --- Validamos contra el Enum o ignorando mayúsculas/minúsculas --- \\\
                         if (datos[4].Trim().Equals("Inactivo", StringComparison.OrdinalIgnoreCase))
                         {
                             throw new Exception("INACTIVO");
@@ -117,6 +182,7 @@ namespace GeoIntegral.Controller
             return lista;
         }
 
+        // --- Metodo para cambiar estado de usuario --- \\\
         public bool CambiarEstadoUsuario(string nombreUsuario, string nuevoEstado)
         {
             try
@@ -129,6 +195,20 @@ namespace GeoIntegral.Controller
             }
         }
 
+        // --- Metodo para cambiar rol de usuario --- \\\
+        public bool CambiarRolUsuario(string nombreUsuario, string nuevoRol)
+        {
+            try
+            {
+                return repo.ActualizarCampo(nombreUsuario, 3, nuevoRol);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al cambiar rol: " + ex.Message);
+            }
+        }
+
+        // --- Metodo para verificar existencia de gmail --- \\\
         public bool GmailExiste(string gmail)
         {
             var usuarios = ObtenerTodosLosUsuarios();
@@ -138,8 +218,20 @@ namespace GeoIntegral.Controller
                 if (usuario.Gmail.Equals(gmail, StringComparison.OrdinalIgnoreCase))
                     return true;
             }
-
             return false;
+        }
+
+        // --- Metodo para eliminar usuario --- \\\
+        public bool EliminarUsuario(string nombreUsuario)
+        {
+            try
+            {
+                return repo.Eliminar(nombreUsuario);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al eliminar usuario: " + ex.Message);
+            }
         }
     }
 }

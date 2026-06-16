@@ -56,6 +56,26 @@ namespace GeoIntegral.Repositorys
             return true;
         }
 
+        // UsuarioRepository.cs
+        public bool Eliminar(string nombreUsuario)
+        {
+            if (!File.Exists(rutaUsuarios)) return false;
+
+            var lineas = File.ReadAllLines(rutaUsuarios).ToList();
+            var encabezado = lineas[0];
+            var datosFiltrados = lineas.Skip(1)
+                .Where(l => !string.IsNullOrWhiteSpace(l))
+                .Where(l => l.Split(';')[0].Trim() != nombreUsuario.Trim())
+                .ToList();
+
+            var resultado = new List<string> { encabezado };
+            resultado.AddRange(datosFiltrados);
+
+            File.WriteAllLines(rutaUsuarios, resultado);
+            return true;
+        }
+
+
         public List<string[]> ObtenerLineas()
         {
             if (!File.Exists(rutaUsuarios))

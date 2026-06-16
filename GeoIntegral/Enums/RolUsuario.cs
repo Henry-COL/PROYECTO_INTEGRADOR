@@ -2,6 +2,6 @@
 {
     public enum RolUsuario
     {
-        Administrador, Usuario, Cliente
+        Administrador, Usuario
     }
 }

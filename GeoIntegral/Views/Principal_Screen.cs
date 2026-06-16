@@ -54,37 +54,37 @@ namespace GeoIntegral.Views
 
         private void CargarVentana(Form formulario, Control botonOrigen = null)
         {
-            NavegacionService.ActivarBoton(botonOrigen);
-
-            Panel_Ventanas.Resize -= Panel_Ventanas_Resize;
+            // 1. Limpiar el panel antes de añadir la nueva ventana
             Panel_Ventanas.Controls.Clear();
-            Panel_Ventanas.PerformLayout();
 
             formulario.TopLevel = false;
             formulario.FormBorderStyle = FormBorderStyle.None;
             formulario.Dock = DockStyle.Fill;
-            formulario.MinimumSize = new Size(0, 0);
-            formulario.MaximumSize = new Size(0, 0);
 
+            // 2. Usar tu interfaz ICerrable para detectar el cierre
             if (formulario is ICerrable cerrable)
             {
                 cerrable.VentanaCerrada += (s, e) =>
                 {
-                    
-                    NavegacionService.LiberarBoton();
+                    // Cuando la ventana avisa que se cerró, reactivamos el botón original
+                    if (botonOrigen != null)
+                    {
+                        botonOrigen.Enabled = true;
+                    }
+
+                    // Opcional: Limpiar referencia si es necesario
                     Panel_Ventanas.Controls.Remove(formulario);
                 };
             }
 
+            // 3. Mostrar la ventana
             Panel_Ventanas.Controls.Add(formulario);
+            formulario.BringToFront(); // Garantiza que se traiga al frente
             formulario.Show();
 
-            formulario.Size = Panel_Ventanas.ClientSize;
-            formulario.Location = new Point(0, 0);
-
-            Panel_Ventanas.Resize += Panel_Ventanas_Resize;
+            // 4. Activar el estilo del botón (tu lógica original)
+            NavegacionService.ActivarBoton(botonOrigen);
         }
-
         private void Panel_Ventanas_Resize(object sender, EventArgs e)
         {
             if (Panel_Ventanas.Controls.Count > 0)

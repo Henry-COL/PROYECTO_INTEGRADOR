@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnCerrar_App = new Guna.UI2.WinForms.Guna2Button();
@@ -45,6 +45,8 @@
             this.Mensaje = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnModificarManual = new Guna.UI2.WinForms.Guna2Button();
+            this.cmbUsuarios = new Guna.UI2.WinForms.Guna2ComboBox();
             this.panel1.SuspendLayout();
             this.grp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaUsuarios)).BeginInit();
@@ -59,6 +61,8 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(10)))), ((int)(((byte)(30)))));
             this.panel1.BackgroundImage = global::GeoIntegral.Properties.Resources.App_Wallpaper_Principal;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.cmbUsuarios);
+            this.panel1.Controls.Add(this.btnModificarManual);
             this.panel1.Controls.Add(this.btnCerrar_App);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.lbl);
@@ -115,11 +119,11 @@
             // 
             this.lbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl.AutoSize = true;
-            this.lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold);
             this.lbl.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.lbl.Location = new System.Drawing.Point(888, 912);
+            this.lbl.Location = new System.Drawing.Point(860, 907);
             this.lbl.Name = "lbl";
-            this.lbl.Size = new System.Drawing.Size(165, 20);
+            this.lbl.Size = new System.Drawing.Size(192, 31);
             this.lbl.TabIndex = 20;
             this.lbl.Text = "Nombre de usuario:";
             // 
@@ -157,7 +161,7 @@
             this.btnModificar.FillColor = System.Drawing.Color.Green;
             this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.ForeColor = System.Drawing.Color.White;
-            this.btnModificar.Location = new System.Drawing.Point(1376, 899);
+            this.btnModificar.Location = new System.Drawing.Point(1376, 901);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(230, 44);
             this.btnModificar.TabIndex = 18;
@@ -171,7 +175,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grp.BackColor = System.Drawing.Color.Transparent;
             this.grp.Controls.Add(this.dgvListaUsuarios);
-            this.grp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grp.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold);
             this.grp.ForeColor = System.Drawing.SystemColors.Window;
             this.grp.Location = new System.Drawing.Point(26, 72);
             this.grp.Name = "grp";
@@ -183,23 +187,23 @@
             // dgvListaUsuarios
             // 
             this.dgvListaUsuarios.AllowUserToAddRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.dgvListaUsuarios.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            this.dgvListaUsuarios.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvListaUsuarios.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvListaUsuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvListaUsuarios.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(24)))), ((int)(((byte)(42)))));
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Blue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvListaUsuarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Blue;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvListaUsuarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvListaUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvListaUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IDNotificacion,
@@ -207,7 +211,6 @@
             this.Mensaje,
             this.Fecha,
             this.Estado});
-            this.dgvListaUsuarios.Enabled = false;
             this.dgvListaUsuarios.Location = new System.Drawing.Point(14, 31);
             this.dgvListaUsuarios.Name = "dgvListaUsuarios";
             this.dgvListaUsuarios.ReadOnly = true;
@@ -251,6 +254,47 @@
             this.Estado.Name = "Estado";
             this.Estado.ReadOnly = true;
             // 
+            // btnModificarManual
+            // 
+            this.btnModificarManual.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnModificarManual.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(41)))), ((int)(((byte)(76)))));
+            this.btnModificarManual.BorderRadius = 8;
+            this.btnModificarManual.BorderThickness = 3;
+            this.btnModificarManual.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnModificarManual.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnModificarManual.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnModificarManual.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnModificarManual.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(24)))), ((int)(((byte)(46)))));
+            this.btnModificarManual.Font = new System.Drawing.Font("Poppins SemiBold", 9F, System.Drawing.FontStyle.Bold);
+            this.btnModificarManual.ForeColor = System.Drawing.Color.White;
+            this.btnModificarManual.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnModificarManual.Location = new System.Drawing.Point(26, 907);
+            this.btnModificarManual.Name = "btnModificarManual";
+            this.btnModificarManual.Size = new System.Drawing.Size(212, 51);
+            this.btnModificarManual.TabIndex = 48;
+            this.btnModificarManual.Text = "Modificar Manual";
+            this.btnModificarManual.Click += new System.EventHandler(this.btnModificarManual_Click);
+            // 
+            // cmbUsuarios
+            // 
+            this.cmbUsuarios.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbUsuarios.BackColor = System.Drawing.Color.Transparent;
+            this.cmbUsuarios.BorderColor = System.Drawing.Color.Silver;
+            this.cmbUsuarios.BorderRadius = 8;
+            this.cmbUsuarios.BorderThickness = 3;
+            this.cmbUsuarios.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbUsuarios.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbUsuarios.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbUsuarios.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbUsuarios.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbUsuarios.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmbUsuarios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(10)))), ((int)(((byte)(30)))));
+            this.cmbUsuarios.ItemHeight = 30;
+            this.cmbUsuarios.Location = new System.Drawing.Point(244, 914);
+            this.cmbUsuarios.Name = "cmbUsuarios";
+            this.cmbUsuarios.Size = new System.Drawing.Size(389, 36);
+            this.cmbUsuarios.TabIndex = 49;
+            // 
             // Admin_Notificaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -284,5 +328,7 @@
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Button btnCerrar_App;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbUsuarios;
+        private Guna.UI2.WinForms.Guna2Button btnModificarManual;
     }
 }

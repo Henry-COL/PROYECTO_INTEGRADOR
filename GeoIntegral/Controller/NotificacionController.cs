@@ -8,6 +8,7 @@ namespace GeoIntegral.Controller
 {
     public class NotificacionController
     {
+        // --- Variable que solo sirve para esta clase, y solo lee esta clase --- \\\
         private readonly NotificacionRepository repo = new NotificacionRepository();
 
         public bool RegistrarNotificacion(Notificacion notificacion)
@@ -26,20 +27,11 @@ namespace GeoIntegral.Controller
         public List<Notificacion> ObtenerNotificaciones()
         {
             var lista = new List<Notificacion>();
-
             foreach (var datos in repo.ObtenerLineas())
             {
                 EstadoNotificacion estado = (EstadoNotificacion)Enum.Parse(typeof(EstadoNotificacion), datos[4].Trim());
-
-                lista.Add(new Notificacion(
-                    long.Parse(datos[0].Trim()),
-                    datos[1].Trim(),
-                    datos[2].Trim(),
-                    datos[3].Trim(),
-                    estado
-                ));
+                lista.Add(new Notificacion(long.Parse(datos[0].Trim()), datos[1].Trim(), datos[2].Trim(), datos[3].Trim(), estado));
             }
-
             return lista;
         }
 
@@ -48,8 +40,9 @@ namespace GeoIntegral.Controller
             try
             {
                 if (long.TryParse(idNotificacion, out long id))
+                {
                     return repo.ActualizarCampo(id, 4, EstadoNotificacion.Leida.ToString());
-
+                }
                 return false;
             }
             catch (Exception ex)
@@ -82,7 +75,6 @@ namespace GeoIntegral.Controller
                         repo.ActualizarCampo(id, 4, EstadoNotificacion.Leida.ToString());
                     }
                 }
-
                 return true;
             }
             catch (Exception ex)

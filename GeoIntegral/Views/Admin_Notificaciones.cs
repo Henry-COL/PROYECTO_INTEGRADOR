@@ -17,6 +17,8 @@ namespace GeoIntegral.Views
             EstilarTabla();
             CargarNotificaciones();
             CargarUsuariosEnCombo();
+            CargarTodosLosUsuariosEnCombo();
+
             this.Shown += (s, e) =>
             {
                 dgvListaUsuarios.ClearSelection();
@@ -119,44 +121,39 @@ namespace GeoIntegral.Views
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            if (cmbListaUsuarios.SelectedItem == null)
+            // 1. Validar que haya una fila seleccionada en el DataGridView
+            if (dgvListaUsuarios.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Seleccione un usuario de la lista.",
+                MessageBox.Show("Por favor, seleccione un usuario de la lista en la tabla.",
                     "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            string usuarioSeleccionado = cmbListaUsuarios.SelectedItem.ToString();
+            // 2. Obtener el nombre del usuario de la columna que corresponde (índice 1 según tu código)
+            string usuarioSeleccionado = dgvListaUsuarios.SelectedRows[0].Cells[1].Value.ToString();
 
+            // 3. Proceso de cambio de contraseña
             string nuevaContrasena = Microsoft.VisualBasic.Interaction.InputBox(
                 $"Ingrese la nueva contraseña para '{usuarioSeleccionado}':",
                 "Restablecer contraseña", "");
 
-            nuevaContrasena = nuevaContrasena.Trim();
+            if (string.IsNullOrWhiteSpace(nuevaContrasena)) return;
 
-            if (string.IsNullOrWhiteSpace(nuevaContrasena))
+            if (!ValidarContrasena(nuevaContrasena.Trim()))
             {
-                MessageBox.Show("La contraseña no puede estar vacía.",
-                    "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("La contraseña debe tener mínimo 8 caracteres, una mayúscula, un número y un carácter especial.",
+                    "GeoIntegral", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            if (!ValidarContrasena(nuevaContrasena))
-            {
-                MessageBox.Show(
-                    "La contraseña debe tener mínimo 8 caracteres, una mayúscula, un número y un carácter especial.",
-                    "GeoIntegral",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning);
-
-                return;
-            }
-
-            if (usuarioController.CambiarContrasena(usuarioSeleccionado, nuevaContrasena))
+            // 4. Ejecutar lógica
+            if (usuarioController.CambiarContrasena(usuarioSeleccionado, nuevaContrasena.Trim()))
             {
                 notificacionController.MarcarNotificacionPorUsuario(usuarioSeleccionado);
+                MessageBox.Show($"Contraseña de '{usuarioSeleccionado}' actualizada con éxito.",
+                    "GeoIntegral", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                MessageBox.Show($"Contraseña de '{usuarioSeleccionado}' actualizada con éxito.", "GeoIntegral", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // Refrescar vistas
                 CargarNotificaciones();
                 CargarUsuariosEnCombo();
             }
@@ -184,5 +181,59 @@ namespace GeoIntegral.Views
             return tieneMayuscula && tieneNumero && tieneEspecial;
         }
 
+        private void CargarTodosLosUsuariosEnCombo()
+        {
+            cmbListaUsuarios.Items.Clear();
+            cmbListaUsuarios.DropDownStyle = ComboBoxStyle.DropDownList;
+
+            // Aquí obtienes la lista total de usuarios
+            // Asegúrate de que este método retorne una lista de nombres (string) o el objeto completo
+            var todosLosUsuarios = usuarioController.ObtenerTodosLosUsuarios();
+
+            foreach (var usuario in todosLosUsuarios)
+            {
+                cmbUsuarios.Items.Add(usuario.Nombre_Usuario);
+            }
+
+            cmbUsuarios.SelectedIndex = -1;
+        }
+
+        private void btnModificarManual_Click(object sender, EventArgs e)
+        {
+            // 1. Validar que se haya seleccionado algo en el ComboBox
+            if (cmbUsuarios.SelectedItem == null)
+            {
+                MessageBox.Show("Por favor, seleccione un usuario de la lista desplegable.",
+                    "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // 2. Obtener el usuario directamente del ComboBox
+            string usuarioSeleccionado = cmbUsuarios.SelectedItem.ToString();
+
+            // 3. Proceso de cambio de contraseña
+            string nuevaContrasena = Microsoft.VisualBasic.Interaction.InputBox(
+                $"Ingrese la nueva contraseña para el usuario '{usuarioSeleccionado}':",
+                "Modificación Manual de Contraseña", "");
+
+            if (string.IsNullOrWhiteSpace(nuevaContrasena)) return;
+
+            if (!ValidarContrasena(nuevaContrasena.Trim()))
+            {
+                MessageBox.Show("La contraseña debe tener mínimo 8 caracteres, una mayúscula, un número y un carácter especial.",
+                    "GeoIntegral", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // 4. Actualizar en base de datos
+            if (usuarioController.CambiarContrasena(usuarioSeleccionado, nuevaContrasena.Trim()))
+            {
+                MessageBox.Show($"La contraseña de '{usuarioSeleccionado}' ha sido actualizada manualmente.",
+                    "GeoIntegral", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                // Refrescar para asegurar que los cambios se reflejen en la tabla
+                CargarNotificaciones();
+            }
+        }
     }
 }

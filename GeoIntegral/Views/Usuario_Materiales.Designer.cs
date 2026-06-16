@@ -43,9 +43,9 @@
             this.CostoPorUnidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnCerrar_App = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnEliminarMaterial = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnEliminarMaterial = new Guna.UI2.WinForms.Guna2Button();
             this.gbRegistrarMaterial.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numCostoUnidad)).BeginInit();
             this.gbListaMateriales.SuspendLayout();
@@ -101,7 +101,7 @@
             this.gbRegistrarMaterial.Controls.Add(this.lblCosto);
             this.gbRegistrarMaterial.Font = new System.Drawing.Font("Poppins", 8F, System.Drawing.FontStyle.Bold);
             this.gbRegistrarMaterial.ForeColor = System.Drawing.SystemColors.Control;
-            this.gbRegistrarMaterial.Location = new System.Drawing.Point(19, 22);
+            this.gbRegistrarMaterial.Location = new System.Drawing.Point(54, 22);
             this.gbRegistrarMaterial.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gbRegistrarMaterial.Name = "gbRegistrarMaterial";
             this.gbRegistrarMaterial.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -299,6 +299,34 @@
             this.guna2Panel1.Size = new System.Drawing.Size(1610, 605);
             this.guna2Panel1.TabIndex = 23;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Poppins", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(244)))), ((int)(((byte)(248)))));
+            this.label1.Location = new System.Drawing.Point(1014, 546);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(413, 28);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Selecciona un material de la tabla para borrarlo. *";
+            // 
+            // guna2Panel2
+            // 
+            this.guna2Panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2Panel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(45)))), ((int)(((byte)(74)))));
+            this.guna2Panel2.BorderRadius = 8;
+            this.guna2Panel2.BorderThickness = 8;
+            this.guna2Panel2.Controls.Add(this.gbRegistrarMaterial);
+            this.guna2Panel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(24)))), ((int)(((byte)(42)))));
+            this.guna2Panel2.Location = new System.Drawing.Point(399, 692);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.Size = new System.Drawing.Size(803, 281);
+            this.guna2Panel2.TabIndex = 24;
+            // 
             // btnEliminarMaterial
             // 
             this.btnEliminarMaterial.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(41)))), ((int)(((byte)(76)))));
@@ -324,34 +352,6 @@
             this.btnEliminarMaterial.Text = "Eliminar";
             this.btnEliminarMaterial.TextOffset = new System.Drawing.Point(14, 2);
             this.btnEliminarMaterial.Click += new System.EventHandler(this.btnEliminarMaterial_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Poppins", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(244)))), ((int)(((byte)(248)))));
-            this.label1.Location = new System.Drawing.Point(1014, 546);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(413, 28);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Selecciona un material de la tabla para borrarlo. *";
-            // 
-            // guna2Panel2
-            // 
-            this.guna2Panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2Panel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Panel2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(45)))), ((int)(((byte)(74)))));
-            this.guna2Panel2.BorderRadius = 8;
-            this.guna2Panel2.BorderThickness = 8;
-            this.guna2Panel2.Controls.Add(this.gbRegistrarMaterial);
-            this.guna2Panel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(24)))), ((int)(((byte)(42)))));
-            this.guna2Panel2.Location = new System.Drawing.Point(18, 693);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(1610, 281);
-            this.guna2Panel2.TabIndex = 24;
             // 
             // Usuario_Materiales
             // 

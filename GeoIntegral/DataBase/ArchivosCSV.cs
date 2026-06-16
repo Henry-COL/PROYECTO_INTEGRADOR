@@ -1,12 +1,40 @@
 ﻿using System;
 using System.IO;
 using System.Windows.Forms;
+using System.Security.AccessControl;
+using System.Security.Principal;
 
 namespace GeoIntegral.DataBase
 {
     internal class ArchivosCSV
     {
         private string rutaBase = Path.GetFullPath(Path.Combine(Application.StartupPath, "..", "..", "DataBase"));
+
+        public void BloquearModificacionExterna(string rutaArchivo)
+        {
+            try
+            {
+                FileInfo archivo = new FileInfo(rutaArchivo);
+                FileSecurity seguridad = archivo.GetAccessControl();
+
+                // Identifica a "todos" los usuarios
+                SecurityIdentifier todos = new SecurityIdentifier(WellKnownSidType.WorldSid, null);
+
+                // Deniega escritura, modificación y eliminación
+                FileSystemAccessRule regla = new FileSystemAccessRule(
+                    todos,
+                    FileSystemRights.Write | FileSystemRights.Delete | FileSystemRights.Modify,
+                    AccessControlType.Deny
+                );
+
+                seguridad.AddAccessRule(regla);
+                archivo.SetAccessControl(seguridad);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al bloquear el archivo: " + ex.Message);
+            }
+        }
 
         public void CrearInfraestructura()
         {

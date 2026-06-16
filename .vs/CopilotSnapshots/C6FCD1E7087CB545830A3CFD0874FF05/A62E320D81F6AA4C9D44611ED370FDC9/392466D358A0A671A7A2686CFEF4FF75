@@ -1,0 +1,611 @@
+﻿using GeoIntegral.Controller;
+using GeoIntegral.Models;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Linq;
+using System.Windows.Forms;
+
+namespace GeoIntegral.Views
+{
+    public partial class Usuario_Facturas : Form
+    {
+        private readonly bool _esAdmin;
+        private readonly ClienteController clienteController = new ClienteController();
+        private readonly FacturaController facturaController = new FacturaController();
+        private readonly CotizacionController cotizacionController = new CotizacionController();
+
+        public Usuario_Facturas(Size tamano, bool esAdmin)
+        {
+            InitializeComponent();
+            this.Size = tamano;
+            _esAdmin = esAdmin;
+
+            EstilarTabla();
+            btnCambiarEstado.Visible = esAdmin;
+            btnEliminar.Visible = esAdmin;
+
+            dtpDesde.Value = DateTime.Now.AddMonths(-1);
+            dtpHasta.Value = DateTime.Now;
+            CargarFiltroClientes();
+            CargarFacturas();
+        }
+
+        // ── CARGA INICIAL ────────────────────────────────────────
+
+
+        private void EstilarTabla()
+        {
+            dgvFacturas.BackgroundColor = System.Drawing.Color.FromArgb(15, 23, 33);
+            dgvFacturas.GridColor = System.Drawing.Color.FromArgb(30, 45, 60);
+            dgvFacturas.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dgvFacturas.RowHeadersVisible = false;
+            dgvFacturas.AllowUserToAddRows = false;
+            dgvFacturas.AllowUserToResizeRows = false;
+            dgvFacturas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            dgvFacturas.ReadOnly = true;
+            dgvFacturas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dgvFacturas.EnableHeadersVisualStyles = false;
+
+            // Encabezado
+            dgvFacturas.ColumnHeadersDefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(20, 32, 46);
+            dgvFacturas.ColumnHeadersDefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(180, 210, 230);
+            dgvFacturas.ColumnHeadersDefaultCellStyle.Font = new System.Drawing.Font("Segoe UI", 10f, System.Drawing.FontStyle.Bold);
+            dgvFacturas.ColumnHeadersDefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dgvFacturas.ColumnHeadersHeight = 38;
+            dgvFacturas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+
+            // Filas normales
+            dgvFacturas.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(22, 34, 48);
+            dgvFacturas.DefaultCellStyle.ForeColor = System.Drawing.Color.White;
+            dgvFacturas.DefaultCellStyle.Font = new System.Drawing.Font("Segoe UI", 9.5f);
+            dgvFacturas.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+
+            // Fila seleccionada
+            dgvFacturas.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(7, 16, 30);
+            dgvFacturas.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White;
+
+            // Filas alternadas
+            dgvFacturas.AlternatingRowsDefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(18, 28, 40);
+            dgvFacturas.AlternatingRowsDefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(26, 95, 80);
+            dgvFacturas.AlternatingRowsDefaultCellStyle.SelectionForeColor = System.Drawing.Color.White;
+
+            dgvFacturas.RowTemplate.Height = 32;
+        }
+
+
+        private void CargarFiltroClientes()
+        {
+            cmbFiltroCliente.Items.Clear();
+            cmbFiltroCliente.Items.Add("Todos");
+
+            var clientes = clienteController.ObtenerTodosLosClientes();
+            foreach (var c in clientes)
+                cmbFiltroCliente.Items.Add(c.Identificacion + " - " + c.Nombre);
+
+            cmbFiltroCliente.SelectedIndex = 0;
+
+            if (cmbFiltroEstado.Items.Count == 0)
+            {
+                cmbFiltroEstado.Items.Add("Todos");
+                cmbFiltroEstado.Items.Add("Activa");
+                cmbFiltroEstado.Items.Add("Inactiva");
+            }
+            cmbFiltroEstado.SelectedIndex = 0;
+        }
+
+        private void CargarFacturas(List<Factura> lista = null)
+        {
+            dgvFacturas.Rows.Clear();
+
+            var facturas = lista ?? facturaController.ObtenerTodas();
+            var clientes = clienteController.ObtenerTodosLosClientes();
+            var cotizaciones = cotizacionController.ObtenerTodas();
+
+            foreach (var f in facturas)
+            {
+                var cliente = clientes.Find(c => c.Identificacion == f.IdentificacionCliente);
+                var cotizacion = cotizaciones.Find(c => c.IdCotizacion == f.IdCotizacion);
+
+                string nombreCliente = cliente != null ? cliente.Nombre : f.IdentificacionCliente.ToString();
+                string costoTotal = cotizacion != null ? "$" + cotizacion.CostoTotal.ToString() : "--";
+
+                dgvFacturas.Rows.Add(
+                    f.NumeroFactura,
+                    nombreCliente,
+                    f.IdCotizacion,
+                    costoTotal,
+                    f.FechaEmision,
+                    f.Estado
+                );
+            }
+
+            lblTotalFacturas.Text = dgvFacturas.Rows.Count + " factura(s)";
+        }
+
+        // ── FILTROS ──────────────────────────────────────────────
+
+        private void btnFiltrar_Click(object sender, EventArgs e)
+        {
+            var todas = facturaController.ObtenerTodas();
+
+            if (dtpDesde.Value.Date > dtpHasta.Value.Date)
+            {
+                MessageBox.Show(
+                    "La fecha inicial no puede ser mayor que la fecha final.",
+                    "Aviso",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+
+                return;
+            }
+
+            if (cmbFiltroCliente.SelectedIndex > 0)
+            {
+                long idCliente = long.Parse(cmbFiltroCliente.SelectedItem.ToString().Split('-')[0].Trim());
+                todas = todas.Where(f => f.IdentificacionCliente == idCliente).ToList();
+            }
+
+            if (cmbFiltroEstado.SelectedItem.ToString() != "Todos")
+                todas = todas.Where(f => f.Estado == cmbFiltroEstado.SelectedItem.ToString()).ToList();
+
+            todas = todas.Where(f =>
+            {
+                if (DateTime.TryParse(f.FechaEmision, out DateTime fecha))
+                    return fecha >= dtpDesde.Value.Date && fecha <= dtpHasta.Value.Date;
+                return true;
+            }).ToList();
+
+            CargarFacturas(todas);
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            cmbFiltroCliente.SelectedIndex = 0;
+            cmbFiltroEstado.SelectedIndex = 0;
+            dtpDesde.Value = DateTime.Now.AddMonths(-1);
+            dtpHasta.Value = DateTime.Now;
+            CargarFacturas();
+        }
+
+        // ── ACCIONES ─────────────────────────────────────────────
+
+        private void btnConvertir_Click(object sender, EventArgs e)
+        {
+            var cotizaciones = cotizacionController.ObtenerTodas()
+                .Where(c => c.Estado == "Pendiente").ToList();
+
+            if (cotizaciones.Count == 0)
+            {
+                MessageBox.Show("No hay cotizaciones pendientes para convertir.",
+                    "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            var opciones = cotizaciones.Select(c =>
+                c.IdCotizacion + " - " + c.Material + " - $" + c.CostoTotal + " (" + c.Fecha + ")").ToArray();
+
+            string seleccion = null;
+
+            using (var dialogo = new Form())
+            {
+                dialogo.Text = "Seleccionar Cotización";
+                dialogo.Size = new Size(450, 300);
+                dialogo.StartPosition = FormStartPosition.CenterParent;
+
+                var lista = new ListBox { Dock = DockStyle.Fill };
+                lista.Items.AddRange(opciones);
+
+                var btnOk = new Button
+                {
+                    Text = "Convertir",
+                    Dock = DockStyle.Bottom,
+                    Height = 40
+                };
+
+                btnOk.Click += (s, ev) =>
+                {
+                    if (lista.SelectedItem != null)
+                    {
+                        seleccion = lista.SelectedItem.ToString();
+                        dialogo.DialogResult = DialogResult.OK;
+                    }
+                    else
+                        MessageBox.Show("Seleccione una cotización.");
+                };
+
+                dialogo.Controls.Add(lista);
+                dialogo.Controls.Add(btnOk);
+                dialogo.ShowDialog();
+            }
+
+            if (seleccion == null) return;
+
+            int idCotizacion = int.Parse(seleccion.Split('-')[0].Trim());
+            var cotizacion = cotizaciones.Find(c => c.IdCotizacion == idCotizacion);
+
+            var confirmacion = MessageBox.Show(
+                "¿Convertir cotización #" + idCotizacion + " en factura?\n\nMaterial: " + cotizacion.Material + "\nCosto: $" + cotizacion.CostoTotal,
+                "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (confirmacion != DialogResult.Yes) return;
+
+            if (facturaController.GenerarFactura(idCotizacion, cotizacion.IdentificacionCliente))
+            {
+                cotizacionController.CambiarEstado(idCotizacion, "Facturada");
+                MessageBox.Show("Factura generada con éxito.", "GeoIntegral",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                CargarFacturas();
+            }
+            else
+            {
+                MessageBox.Show("Error al generar la factura.", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnVerDetalle_Click(object sender, EventArgs e)
+        {
+            if (dgvFacturas.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Seleccione una factura de la tabla.",
+                    "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            int numero = int.Parse(dgvFacturas.SelectedRows[0].Cells["NumeroFactura"].Value.ToString());
+            var factura = facturaController.ObtenerPorNumero(numero);
+            var cotizacion = cotizacionController.ObtenerPorId(factura.IdCotizacion);
+            var clientes = clienteController.ObtenerTodosLosClientes();
+            var cliente = clientes.Find(c => c.Identificacion == factura.IdentificacionCliente);
+
+            string nombreCliente = cliente != null ? cliente.Nombre : factura.IdentificacionCliente.ToString();
+            string costoTotal = cotizacion != null ? "$" + cotizacion.CostoTotal.ToString() : "--";
+            string material = cotizacion != null ? cotizacion.Material : "--";
+
+            string detalle =
+                "N° Factura:     " + factura.NumeroFactura + "\n" +
+                "Fecha Emisión:  " + factura.FechaEmision + "\n" +
+                "Estado:         " + factura.Estado + "\n\n" +
+                "Cliente:        " + nombreCliente + "\n" +
+                "Identificación: " + factura.IdentificacionCliente + "\n\n" +
+                "Cotización Ref: #" + factura.IdCotizacion + "\n" +
+                "Material:       " + material + "\n" +
+                "Costo Total:    " + costoTotal;
+
+            MessageBox.Show(detalle, "Detalle Factura",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void btnCambiarEstado_Click(object sender, EventArgs e)
+        {
+            if (dgvFacturas.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Seleccione una factura de la tabla.",
+                    "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            int numero = int.Parse(dgvFacturas.SelectedRows[0].Cells["NumeroFactura"].Value.ToString());
+            var factura = facturaController.ObtenerPorNumero(numero);
+
+            string nuevoEstado = factura.Estado == "Activa" ? "Inactiva" : "Activa";
+
+            var confirmacion = MessageBox.Show(
+                "¿Cambiar estado de la factura #" + numero + " a '" + nuevoEstado + "'?",
+                "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (confirmacion == DialogResult.Yes)
+            {
+                facturaController.CambiarEstado(numero, nuevoEstado);
+                CargarFacturas();
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (dgvFacturas.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Seleccione una factura de la tabla.",
+                    "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            int numero = int.Parse(dgvFacturas.SelectedRows[0].Cells["NumeroFactura"].Value.ToString());
+
+            var confirmacion = MessageBox.Show(
+                "¿Está seguro de eliminar la factura #" + numero + "? Esta acción no se puede deshacer.",
+                "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (confirmacion == DialogResult.Yes)
+            {
+                facturaController.Eliminar(numero);
+                CargarFacturas();
+                MessageBox.Show("Factura eliminada.", "GeoIntegral",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        // ── DESCARGAR PDF ────────────────────────────────────────
+
+        private void btnDescargar_Click(object sender, EventArgs e)
+        {
+            if (dgvFacturas.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Seleccione una factura de la tabla.",
+                    "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            int numero = int.Parse(dgvFacturas.SelectedRows[0].Cells["NumeroFactura"].Value.ToString());
+            var factura = facturaController.ObtenerPorNumero(numero);
+            var cotizacion = cotizacionController.ObtenerPorId(factura.IdCotizacion);
+            var cliente = clienteController.ObtenerTodosLosClientes()
+                .Find(c => c.Identificacion == factura.IdentificacionCliente);
+
+            using (var sfd = new SaveFileDialog())
+            {
+                sfd.Filter = "Archivo PDF (*.pdf)|*.pdf";
+                sfd.FileName = "Factura_" + factura.NumeroFactura + ".pdf";
+
+                if (sfd.ShowDialog() != DialogResult.OK) return;
+
+                try
+                {
+                    GenerarPdfFactura(sfd.FileName, factura, cotizacion, cliente);
+                    MessageBox.Show("PDF generado con éxito.", "GeoIntegral",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al generar el PDF: " + ex.Message,
+                        "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void GenerarPdfFactura(string ruta, Models.Factura factura, Models.Cotizacion cotizacion, Models.Cliente cliente)
+        {
+            // Paleta tomada de tu interfaz (fondo azul-marino oscuro, acentos verdes/celestes, naranja para acciones)
+            BaseColor azulFondo = new BaseColor(15, 23, 33);
+            BaseColor azulPanel = new BaseColor(20, 32, 46);
+            BaseColor verdeAcento = new BaseColor(26, 95, 80);
+            BaseColor celesteTexto = new BaseColor(180, 210, 230);
+            BaseColor naranjaAcento = new BaseColor(237, 137, 54);
+            BaseColor blanco = BaseColor.WHITE;
+            BaseColor grisLinea = new BaseColor(30, 45, 60);
+
+            Document doc = new Document(PageSize.A4, 40, 40, 30, 40);
+            PdfWriter writer = PdfWriter.GetInstance(doc, new System.IO.FileStream(ruta, System.IO.FileMode.Create));
+            doc.Open();
+
+            PdfContentByte canvas = writer.DirectContentUnder;
+
+            // ── Fondo de página completo ──
+            canvas.SetColorFill(azulFondo);
+            canvas.Rectangle(0, 0, PageSize.A4.Width, PageSize.A4.Height);
+            canvas.Fill();
+
+            // ── Encabezado tipo "header" oscuro con logo ──
+            float headerHeight = 90f;
+            float pageHeight = PageSize.A4.Height;
+            canvas.SetColorFill(azulPanel);
+            canvas.Rectangle(0, pageHeight - headerHeight, PageSize.A4.Width, headerHeight);
+            canvas.Fill();
+
+            // Línea de acento naranja debajo del header
+            canvas.SetColorFill(naranjaAcento);
+            canvas.Rectangle(0, pageHeight - headerHeight - 3, PageSize.A4.Width, 3);
+            canvas.Fill();
+
+            // Logo: usa el isotipo GeoIntegral-Logo desde Multimedia
+            string rutaLogo = System.IO.Path.Combine(
+                AppDomain.CurrentDomain.BaseDirectory,
+                @"..\..\Multimedia\GeoIntegral-Logo.png");
+
+            if (System.IO.File.Exists(rutaLogo))
+            {
+                iTextSharp.text.Image logo = iTextSharp.text.Image.GetInstance(rutaLogo);
+                logo.ScaleToFit(55, 55);
+                logo.SetAbsolutePosition(40, pageHeight - headerHeight + 17);
+                canvas.AddImage(logo);
+            }
+
+            // Título "GeoIntegral" junto al logo, estilo celeste
+            Font fuenteTitulo = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 20, blanco);
+            Font fuenteSub = FontFactory.GetFont(FontFactory.HELVETICA, 9, celesteTexto);
+
+            ColumnText.ShowTextAligned(canvas, Element.ALIGN_LEFT,
+                new Phrase("GeoIntegral", fuenteTitulo),
+                105, pageHeight - 45, 0);
+
+            ColumnText.ShowTextAligned(canvas, Element.ALIGN_LEFT,
+                new Phrase("Gestión Geológica y Topográfica", fuenteSub),
+                105, pageHeight - 62, 0);
+
+            // "FACTURA" alineado a la derecha en el header
+            Font fuenteFacturaTag = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 18, naranjaAcento);
+            ColumnText.ShowTextAligned(canvas, Element.ALIGN_RIGHT,
+                new Phrase("FACTURA", fuenteFacturaTag),
+                PageSize.A4.Width - 40, pageHeight - 40, 0);
+
+            Font fuenteNumero = FontFactory.GetFont(FontFactory.HELVETICA, 11, blanco);
+            ColumnText.ShowTextAligned(canvas, Element.ALIGN_RIGHT,
+                new Phrase("N° " + factura.NumeroFactura.ToString("D6"), fuenteNumero),
+                PageSize.A4.Width - 40, pageHeight - 58, 0);
+
+            // ── Cuerpo del documento (usamos el flujo normal de Document) ──
+            doc.Add(new Paragraph(" ") { SpacingBefore = headerHeight + 10 });
+
+            Font fuenteEtiqueta = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 10, celesteTexto);
+            Font fuenteValor = FontFactory.GetFont(FontFactory.HELVETICA, 10, blanco);
+            Font fuenteSeccion = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 13, blanco);
+
+            // Panel "Datos de la factura" + "Datos del cliente" en dos columnas
+            PdfPTable tablaInfo = new PdfPTable(2);
+            tablaInfo.WidthPercentage = 100;
+            tablaInfo.SetWidths(new float[] { 1f, 1f });
+            tablaInfo.SpacingAfter = 20f;
+
+            PdfPCell celdaFactura = CrearCeldaInfo(
+                "DATOS DE LA FACTURA",
+                new[]
+                {
+                    ("Fecha emisión:", factura.FechaEmision),
+                    ("Estado:", factura.Estado),
+                    ("Cotización Ref:", "#" + factura.IdCotizacion)
+                },
+                azulPanel, grisLinea, fuenteSeccion, fuenteEtiqueta, fuenteValor, naranjaAcento);
+
+            PdfPCell celdaCliente = CrearCeldaInfo(
+                "DATOS DEL CLIENTE",
+                new[]
+                {
+                    ("Nombre:", cliente != null ? cliente.Nombre : "--"),
+                    ("Identificación:", factura.IdentificacionCliente.ToString()),
+                    ("", "")
+                },
+                azulPanel, grisLinea, fuenteSeccion, fuenteEtiqueta, fuenteValor, naranjaAcento);
+
+            celdaFactura.PaddingRight = 8f;
+            celdaCliente.PaddingLeft = 8f;
+            celdaFactura.Border = Rectangle.NO_BORDER;
+            celdaCliente.Border = Rectangle.NO_BORDER;
+
+            tablaInfo.AddCell(celdaFactura);
+            tablaInfo.AddCell(celdaCliente);
+            doc.Add(tablaInfo);
+
+            // Detalle de cotización/material en tabla estilo tu dgvFacturas
+            doc.Add(new Paragraph("Detalle del servicio", fuenteSeccion) { SpacingAfter = 8f });
+
+            PdfPTable tablaDetalle = new PdfPTable(2);
+            tablaDetalle.WidthPercentage = 100;
+            tablaDetalle.SetWidths(new float[] { 2.5f, 1f });
+
+            AgregarEncabezadoTabla(tablaDetalle, "Material", azulPanel, celesteTexto);
+            AgregarEncabezadoTabla(tablaDetalle, "Costo", azulPanel, celesteTexto);
+
+            string material = cotizacion != null ? cotizacion.Material : "--";
+            string costoTotal = cotizacion != null ? "$" + cotizacion.CostoTotal.ToString("N0") : "--";
+
+            AgregarCeldaDetalle(tablaDetalle, material, new BaseColor(22, 34, 48), blanco, Element.ALIGN_LEFT);
+            AgregarCeldaDetalle(tablaDetalle, costoTotal, new BaseColor(22, 34, 48), blanco, Element.ALIGN_RIGHT);
+
+            doc.Add(tablaDetalle);
+
+            // Total destacado en verde, estilo "fila alterna seleccionada" de tu tabla
+            PdfPTable tablaTotal = new PdfPTable(2);
+            tablaTotal.WidthPercentage = 100;
+            tablaTotal.SetWidths(new float[] { 2.5f, 1f });
+            tablaTotal.SpacingBefore = 0f;
+
+            PdfPCell etiquetaTotal = new PdfPCell(new Phrase("TOTAL A PAGAR", FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 12, blanco)));
+            etiquetaTotal.BackgroundColor = verdeAcento;
+            etiquetaTotal.Border = Rectangle.NO_BORDER;
+            etiquetaTotal.Padding = 10f;
+            etiquetaTotal.VerticalAlignment = Element.ALIGN_MIDDLE;
+
+            PdfPCell valorTotal = new PdfPCell(new Phrase(costoTotal, FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 14, blanco)));
+            valorTotal.BackgroundColor = verdeAcento;
+            valorTotal.Border = Rectangle.NO_BORDER;
+            valorTotal.Padding = 10f;
+            valorTotal.HorizontalAlignment = Element.ALIGN_RIGHT;
+            valorTotal.VerticalAlignment = Element.ALIGN_MIDDLE;
+
+            tablaTotal.AddCell(etiquetaTotal);
+            tablaTotal.AddCell(valorTotal);
+            doc.Add(tablaTotal);
+
+            // ── Pie de página con logotipo completo y línea de acento ──
+            Font fuentePie = FontFactory.GetFont(FontFactory.HELVETICA_OBLIQUE, 8, celesteTexto);
+            Paragraph pie = new Paragraph(
+                "GeoIntegral · Documento generado automáticamente el " + DateTime.Now.ToString("dd/MM/yyyy HH:mm"),
+                fuentePie);
+            pie.Alignment = Element.ALIGN_CENTER;
+            pie.SpacingBefore = 40f;
+            doc.Add(pie);
+
+            doc.Close();
+            writer.Close();
+        }
+
+        private PdfPCell CrearCeldaInfo(
+            string titulo,
+            (string etiqueta, string valor)[] filas,
+            BaseColor fondoPanel,
+            BaseColor borde,
+            Font fuenteSeccion,
+            Font fuenteEtiqueta,
+            Font fuenteValor,
+            BaseColor colorBarra)
+        {
+            PdfPTable contenedor = new PdfPTable(1);
+            contenedor.WidthPercentage = 100;
+
+            PdfPCell celdaTitulo = new PdfPCell(new Phrase(titulo, FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 11, BaseColor.WHITE)));
+            celdaTitulo.BackgroundColor = colorBarra;
+            celdaTitulo.Border = Rectangle.NO_BORDER;
+            celdaTitulo.Padding = 8f;
+            contenedor.AddCell(celdaTitulo);
+
+            foreach (var fila in filas)
+            {
+                if (string.IsNullOrEmpty(fila.etiqueta)) continue;
+
+                PdfPTable filaTabla = new PdfPTable(2);
+                filaTabla.SetWidths(new float[] { 1.1f, 1.5f });
+
+                PdfPCell celdaEtq = new PdfPCell(new Phrase(fila.etiqueta, fuenteEtiqueta));
+                celdaEtq.Border = Rectangle.NO_BORDER;
+                celdaEtq.BackgroundColor = fondoPanel;
+                celdaEtq.PaddingTop = 6f;
+                celdaEtq.PaddingBottom = 6f;
+                celdaEtq.PaddingLeft = 8f;
+
+                PdfPCell celdaVal = new PdfPCell(new Phrase(fila.valor, fuenteValor));
+                celdaVal.Border = Rectangle.NO_BORDER;
+                celdaVal.BackgroundColor = fondoPanel;
+                celdaVal.PaddingTop = 6f;
+                celdaVal.PaddingBottom = 6f;
+
+                filaTabla.AddCell(celdaEtq);
+                filaTabla.AddCell(celdaVal);
+
+                PdfPCell envoltorio = new PdfPCell(filaTabla);
+                envoltorio.Border = Rectangle.NO_BORDER;
+                envoltorio.Padding = 0f;
+                envoltorio.BackgroundColor = fondoPanel;
+                contenedor.AddCell(envoltorio);
+            }
+
+            PdfPCell celdaFinal = new PdfPCell(contenedor);
+            celdaFinal.Border = Rectangle.BOX;
+            celdaFinal.BorderColor = borde;
+            celdaFinal.Padding = 0f;
+            return celdaFinal;
+        }
+
+        private void AgregarEncabezadoTabla(PdfPTable tabla, string texto, BaseColor fondo, BaseColor color)
+        {
+            PdfPCell celda = new PdfPCell(new Phrase(texto, FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 10, color)));
+            celda.BackgroundColor = fondo;
+            celda.Border = Rectangle.NO_BORDER;
+            celda.Padding = 8f;
+            celda.HorizontalAlignment = texto == "Costo" ? Element.ALIGN_RIGHT : Element.ALIGN_LEFT;
+            tabla.AddCell(celda);
+        }
+
+        private void AgregarCeldaDetalle(PdfPTable tabla, string texto, BaseColor fondo, BaseColor color, int alineacion)
+        {
+            PdfPCell celda = new PdfPCell(new Phrase(texto, FontFactory.GetFont(FontFactory.HELVETICA, 10, color)));
+            celda.BackgroundColor = fondo;
+            celda.Border = Rectangle.NO_BORDER;
+            celda.Padding = 8f;
+            celda.HorizontalAlignment = alineacion;
+            tabla.AddCell(celda);
+        }
+    }
+}

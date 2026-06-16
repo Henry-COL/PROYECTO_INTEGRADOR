@@ -12,17 +12,7 @@ namespace GeoIntegral.Controller
         {
             double costoTotal = volumen * costoUnidad;
             string fecha = System.DateTime.Now.ToString("yyyy-MM-dd");
-
-            Cotizacion cotizacion = new Cotizacion(
-                repo.GenerarNuevoId(),
-                idCliente,
-                idTerreno,
-                material,
-                costoTotal,
-                fecha,
-                "Pendiente"
-            );
-
+            Cotizacion cotizacion = new Cotizacion(repo.GenerarNuevoId(),idCliente,idTerreno, material, costoTotal, fecha, "Pendiente");
             return repo.Guardar(cotizacion);
         }
 

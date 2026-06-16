@@ -153,6 +153,16 @@ namespace GeoIntegral.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap App_DescargarPDF {
+            get {
+                object obj = ResourceManager.GetObject("App_DescargarPDF", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap App_Detalles {
             get {
                 object obj = ResourceManager.GetObject("App_Detalles", resourceCulture);
@@ -306,6 +316,16 @@ namespace GeoIntegral.Properties {
         internal static System.Drawing.Bitmap App_TipoCuenta_Wallpaper {
             get {
                 object obj = ResourceManager.GetObject("App_TipoCuenta_Wallpaper", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap App_Ver_Contrasena {
+            get {
+                object obj = ResourceManager.GetObject("App_Ver_Contrasena", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
