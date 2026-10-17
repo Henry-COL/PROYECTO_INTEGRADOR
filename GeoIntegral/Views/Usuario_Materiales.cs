@@ -19,7 +19,8 @@ namespace GeoIntegral.Views
             dgvMateriales.AllowUserToAddRows = false;
             dgvMateriales.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvMateriales.ReadOnly = true;
-            dgvMateriales.Columns["ID"].Visible = false;
+            if (dgvMateriales.Columns.Contains("ID"))
+                dgvMateriales.Columns["ID"].Visible = false;
 
             lblMensaje_Nombre.Visible = false;
             lblMensaje_Nombre.ForeColor = System.Drawing.Color.Red;
@@ -141,21 +142,47 @@ namespace GeoIntegral.Views
                 return;
             }
 
-            string nombre = dgvMateriales.SelectedRows[0].Cells["Nombre"].Value.ToString();
-            int id = int.Parse(dgvMateriales.SelectedRows[0].Cells["ID"].Value.ToString());
+            try
+            {
+                var row = dgvMateriales.SelectedRows[0];
+
+                DataGridViewCell nombreCell = null;
+                DataGridViewCell idCell = null;
+
+                if (dgvMateriales.Columns.Contains("Nombre"))
+                    nombreCell = row.Cells[dgvMateriales.Columns["Nombre"].Index];
+                else if (row.Cells.Count > 1)
+                    nombreCell = row.Cells[1];
+
+                if (dgvMateriales.Columns.Contains("ID"))
+                    idCell = row.Cells[dgvMateriales.Columns["ID"].Index];
+                else if (row.Cells.Count > 0)
+                    idCell = row.Cells[0];
+
+                string nombre = nombreCell?.Value?.ToString() ?? string.Empty;
+                if (!int.TryParse(idCell?.Value?.ToString(), out int id))
+                {
+                    MessageBox.Show("No se pudo obtener el identificador del material seleccionado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
 
             var confirmacion = MessageBox.Show(
                 $"¿Está seguro de eliminar el material '{nombre}'?",
                 "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
-            if (confirmacion == DialogResult.Yes)
-            {
-                if (materialController.EliminarMaterial(id))
+                if (confirmacion == DialogResult.Yes)
                 {
-                    MessageBox.Show("Material eliminado con éxito.", "GeoIntegral",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    CargarMateriales();
+                    if (materialController.EliminarMaterial(id))
+                    {
+                        MessageBox.Show("Material eliminado con éxito.", "GeoIntegral",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        CargarMateriales();
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocurrió un error al procesar la fila seleccionada: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
